@@ -1,10 +1,10 @@
 import os
 import json
-import google.generativeai as genai
+from google import genai
 
 # 1. 깃허브 금고에서 열쇠(API KEY) 꺼내서 세팅하기
 API_KEY = os.environ.get("GEMINI_API_KEY")
-genai.configure(api_key=API_KEY)
+client = genai.Client(api_key=API_KEY)
 
 # 2. 제미나이 AI에게 지시할 내용
 prompt = """
@@ -25,8 +25,10 @@ prompt = """
 """
 
 # 3. AI에게 물어보기
-model = genai.GenerativeModel('gemini-1.5-flash')
-response = model.generate_content(prompt)
+response = client.models.generate_content(
+    model='gemini-2.5-flash',
+    contents=prompt
+)
 new_questions = json.loads(response.text.strip('` \njson'))
 
 # 4. 기존 메모장(quiz_updates.json) 열어서 새로운 문제 추가하기
