@@ -1,0 +1,40 @@
+name: 매일 퀴즈 업데이트 로봇
+
+# 언제 실행할까?
+on:
+  schedule:
+    - cron: '0 0 * * *' # 매일 자정 (UTC 기준)
+  workflow_dispatch: # 수동으로 버튼 눌러서 실행하게 해줌
+
+jobs:
+  build:
+    runs-on: ubuntu-latest # 우분투(리눅스) 컴퓨터 한 대를 무료로 빌립니다.
+    
+    # 로봇에게 저장소 쓰기 권한 부여 (에러 방지)
+    permissions:
+      contents: write
+
+    steps:
+    - name: 저장소 코드 가져오기
+      uses: actions/checkout@v3
+
+    - name: 파이썬(Python) 설치하기
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.10'
+
+    - name: 필요한 준비물(라이브러리) 설치
+      run: pip install google-generativeai
+
+    - name: 로봇 조수 실행! (파이썬 코드 돌리기)
+      env:
+        GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }} # 비밀금고에서 키 꺼내기
+      run: python update_quiz.py
+
+    - name: 새로 만든 문제 깃허브 메모장에 저장(Commit & Push)하기
+      run: |
+        git config --global user.name "Quiz Robot"
+        git config --global user.email "robot@example.com"
+        git add quiz_updates.json
+        git commit -m "🤖 퀴즈 자동 업데이트 완료!" || echo "새로운 문제가 없습니다."
+        git push
