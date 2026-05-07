@@ -25,7 +25,7 @@ prompt = """
 """
 
 # 3. AI에게 물어보기
-model = genai.GenerativeModel('gemini-pro')
+model = genai.GenerativeModel('gemini-1.5-flash')
 response = model.generate_content(prompt)
 new_questions = json.loads(response.text.strip('` \njson'))
 
