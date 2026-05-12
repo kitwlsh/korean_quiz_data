@@ -1,6 +1,6 @@
 import os
 import json
-from google import genai
+import google.generativeai as genai
 
 # 1. 깃허브 금고에서 열쇠(API KEY) 꺼내서 세팅하기
 API_KEY = os.environ.get("GEMINI_API_KEY")
@@ -8,7 +8,8 @@ if not API_KEY:
     print("오류: GEMINI_API_KEY 환경변수가 설정되지 않았습니다. GitHub Secrets를 확인해 주세요.")
     exit(1)
 
-client = genai.Client(api_key=API_KEY)
+genai.configure(api_key=API_KEY)
+model = genai.GenerativeModel('gemini-2.5-flash')
 
 # 2. 제미나이 AI에게 지시할 내용 (프롬프트 고도화)
 prompt = """
@@ -49,10 +50,7 @@ prompt = """
 # 3. AI에게 물어보기
 try:
     print("AI에게 문제를 요청 중입니다...")
-    response = client.models.generate_content(
-        model='gemini-1.5-flash',
-        contents=prompt
-    )
+    response = model.generate_content(prompt)
     
     # JSON 부분만 추출하기 위한 더 강력한 로직
     raw_text = response.text.strip()
@@ -69,8 +67,6 @@ try:
 
 except Exception as e:
     print(f"문제 발생: {str(e)}")
-    if 'response' in locals():
-        print(f"AI 응답 원문: {response.text}")
     exit(1)
 
 # 4. 생성된 문제를 카테고리별로 분류하여 저장하기
@@ -81,7 +77,6 @@ category_map = {
     "세계 여행": "travel.json"
 }
 
-# 기본적으로는 quiz_updates.json에도 기록을 남기되, 각 카테고리 파일로 분산 저장
 for question in new_questions:
     category = question.get("category")
     file_name = category_map.get(category, "quiz_updates.json")
