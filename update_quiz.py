@@ -4,6 +4,10 @@ from google import genai
 
 # 1. 깃허브 금고에서 열쇠(API KEY) 꺼내서 세팅하기
 API_KEY = os.environ.get("GEMINI_API_KEY")
+if not API_KEY:
+    print("오류: GEMINI_API_KEY 환경변수가 설정되지 않았습니다. GitHub Secrets를 확인해 주세요.")
+    exit(1)
+
 client = genai.Client(api_key=API_KEY)
 
 # 2. 제미나이 AI에게 지시할 내용 (프롬프트 고도화)
@@ -43,11 +47,31 @@ prompt = """
 """
 
 # 3. AI에게 물어보기
-response = client.models.generate_content(
-    model='gemini-1.5-flash',
-    contents=prompt
-)
-new_questions = json.loads(response.text.strip('` \njson'))
+try:
+    print("AI에게 문제를 요청 중입니다...")
+    response = client.models.generate_content(
+        model='gemini-1.5-flash',
+        contents=prompt
+    )
+    
+    # JSON 부분만 추출하기 위한 더 강력한 로직
+    raw_text = response.text.strip()
+    start_idx = raw_text.find('[')
+    end_idx = raw_text.rfind(']') + 1
+    
+    if start_idx == -1 or end_idx == 0:
+        print(f"오류: AI 응답에서 JSON 배열을 찾을 수 없습니다. 응답 내용: {raw_text}")
+        exit(1)
+        
+    json_text = raw_text[start_idx:end_idx]
+    new_questions = json.loads(json_text)
+    print(f"AI가 {len(new_questions)}개의 문제를 생성했습니다.")
+
+except Exception as e:
+    print(f"문제 발생: {str(e)}")
+    if 'response' in locals():
+        print(f"AI 응답 원문: {response.text}")
+    exit(1)
 
 # 4. 생성된 문제를 카테고리별로 분류하여 저장하기
 category_map = {
