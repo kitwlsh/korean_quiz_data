@@ -1,0 +1,57 @@
+[
+  {
+    "id": 10001,
+    "type": "MULTIPLE_CHOICE",
+    "category": "우리말 겨루기",
+    "subCategory": "맞춤법",
+    "question": "다음 중 올바른 표기는?",
+    "options": ["금새 바뀌었다", "금세 바뀌었다", "금새 바뀌었따", "금세 바뀌었따"],
+    "answer": "금세 바뀌었다",
+    "explanation": "'금세'는 '금시에'가 줄어든 말로, '금세'가 바른 표기입니다.",
+    "semanticHint": "'금시에'를 빨리 발음해 보세요."
+  },
+  {
+    "id": 10002,
+    "type": "MULTIPLE_CHOICE",
+    "category": "우리말 겨루기",
+    "subCategory": "사자성어",
+    "question": "남의 흉내를 내다가 도리어 자기의 본분을 잃음을 비유하는 말은?",
+    "options": ["함흥차사", "조변석개", "한단지보", "연목구어"],
+    "answer": "한단지보",
+    "explanation": "한단지보(邯鄲之步)는 한단의 걸음걸이라는 뜻으로, 자기 것을 잊고 남의 것을 배우려다 둘 다 잃음을 뜻합니다.",
+    "semanticHint": "중국 조나라의 수도 '한단'과 관련이 있습니다."
+  },
+  {
+    "id": 10003,
+    "type": "SUBJECTIVE",
+    "category": "우리말 겨루기",
+    "subCategory": "순우리말",
+    "question": "비가 온 뒤에 갓 피어난 풀잎이나 나무의 냄새를 뜻하는 말은?",
+    "options": null,
+    "answer": "풀내음",
+    "explanation": "'풀내음'은 풀에서 나는 싱그러운 냄새를 뜻합니다.",
+    "semanticHint": "비 온 뒤 산책할 때 느껴지는 향기예요."
+  },
+  {
+    "id": 10004,
+    "type": "MULTIPLE_CHOICE",
+    "category": "우리말 겨루기",
+    "subCategory": "맞춤법",
+    "question": "다음 중 띄어쓰기가 올바른 것은?",
+    "options": ["집에서 만큼은", "집에서만큼은", "집 에서 만큼은", "집 에서만큼은"],
+    "answer": "집에서만큼은",
+    "explanation": "'만큼'과 '은'은 조사이므로 앞말인 '집에서'에 붙여 씁니다.",
+    "semanticHint": "조사는 체언 뒤에 딱 달라붙어요."
+  },
+  {
+    "id": 10005,
+    "type": "SUBJECTIVE",
+    "category": "우리말 겨루기",
+    "subCategory": "고유어",
+    "question": "물건이 거듭 쌓이거나 일이 겹쳐 일어남을 뜻하는 부사는?",
+    "options": null,
+    "answer": "곰비임비",
+    "explanation": "'곰비임비'는 일이 계속해서 일어나는 모양을 뜻합니다.",
+    "semanticHint": "ㄱㅂㅇㅂ"
+  }
+]

@@ -1,0 +1,57 @@
+[
+  {
+    "id": 40001,
+    "type": "MULTIPLE_CHOICE",
+    "category": "세계 여행",
+    "subCategory": "국가수도",
+    "question": "독일의 수도는?",
+    "options": ["뮌헨", "베를린", "프랑크푸르트", "함부르크"],
+    "answer": "베를린",
+    "explanation": "독일의 수도는 역사적 유산이 많은 베를린입니다.",
+    "semanticHint": "장벽으로 유명했던 도시입니다."
+  },
+  {
+    "id": 40002,
+    "type": "MULTIPLE_CHOICE",
+    "category": "세계 여행",
+    "subCategory": "랜드마크",
+    "question": "피사의 사탑이 있는 나라는?",
+    "options": ["프랑스", "이탈리아", "스페인", "영국"],
+    "answer": "이탈리아",
+    "explanation": "기울어진 탑으로 유명한 피사의 사탑은 이탈리아에 있습니다.",
+    "semanticHint": "피자와 파스타의 나라입니다."
+  },
+  {
+    "id": 40003,
+    "type": "SUBJECTIVE",
+    "category": "세계 여행",
+    "subCategory": "국기",
+    "question": "캐나다 국기의 가운데에 그려진 식물 잎은?",
+    "options": null,
+    "answer": "단풍잎",
+    "explanation": "캐나다는 단풍나무가 많아 국기에도 단풍잎이 그려져 있습니다.",
+    "semanticHint": "메이플 시럽의 원료예요."
+  },
+  {
+    "id": 40004,
+    "type": "MULTIPLE_CHOICE",
+    "category": "세계 여행",
+    "subCategory": "국가수도",
+    "question": "베트남의 수도는?",
+    "options": ["호치민", "하노이", "다낭", "나트랑"],
+    "answer": "하노이",
+    "explanation": "베트남의 수도는 북부에 위치한 하노이입니다.",
+    "semanticHint": "호치민보다 북쪽에 있어요."
+  },
+  {
+    "id": 40005,
+    "type": "SUBJECTIVE",
+    "category": "세계 여행",
+    "subCategory": "명소",
+    "question": "자유의 여신상이 서 있는 미국의 도시는?",
+    "options": null,
+    "answer": "뉴욕",
+    "explanation": "자유의 여신상은 뉴욕 리버티 섬에 위치해 있습니다.",
+    "semanticHint": "빅 애플(Big Apple)이라고 불리는 도시입니다."
+  }
+]

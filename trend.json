@@ -1,0 +1,57 @@
+[
+  {
+    "id": 20001,
+    "type": "MULTIPLE_CHOICE",
+    "category": "트렌드 말하기",
+    "subCategory": "신조어",
+    "question": "'디토(Ditto)'라는 말의 의미로 가장 적절한 것은?",
+    "options": ["나도 그래", "싫어", "멋져", "어려워"],
+    "answer": "나도 그래",
+    "explanation": "'Ditto'는 라틴어에서 유래하여 '마찬가지', '동감'이라는 뜻으로 쓰입니다.",
+    "semanticHint": "뉴진스의 노래 제목이기도 하죠."
+  },
+  {
+    "id": 20002,
+    "type": "MULTIPLE_CHOICE",
+    "category": "트렌드 말하기",
+    "subCategory": "신조어",
+    "question": "'스불재'의 줄임말 의미는?",
+    "options": ["스스로 불러온 재앙", "스트레스 불타는 재능", "스피드 불타는 재치", "스스로 불타는 재능"],
+    "answer": "스스로 불러온 재앙",
+    "explanation": "자신이 자초한 일을 비유적으로 표현할 때 사용하는 신조어입니다.",
+    "semanticHint": "내가 왜 그랬을까... 후회할 때 써요."
+  },
+  {
+    "id": 20003,
+    "type": "SUBJECTIVE",
+    "category": "트렌드 말하기",
+    "subCategory": "신조어",
+    "question": "오늘 운동 완료를 뜻하는 세 글자 줄임말은?",
+    "options": null,
+    "answer": "오운완",
+    "explanation": "SNS에서 운동 인증을 할 때 자주 사용하는 해시태그입니다.",
+    "semanticHint": "ㅇㅇㅇ"
+  },
+  {
+    "id": 20004,
+    "type": "MULTIPLE_CHOICE",
+    "category": "트렌드 말하기",
+    "subCategory": "신조어",
+    "question": "'T발 C야?'라는 유행어의 유래와 관련 깊은 것은?",
+    "options": ["MBTI", "혈액형", "별자리", "나이"],
+    "answer": "MBTI",
+    "explanation": "MBTI 성격 유형 중 사고형(T)의 공감 능력이 부족해 보일 때 농담처럼 사용하는 표현입니다.",
+    "semanticHint": "너 혹시 MBTI가...?"
+  },
+  {
+    "id": 20005,
+    "type": "SUBJECTIVE",
+    "category": "트렌드 말하기",
+    "subCategory": "신조어",
+    "question": "음식을 맛있게 먹는 방법을 잘 아는 사람을 뜻하는 말은?",
+    "options": null,
+    "answer": "쩝쩝박사",
+    "explanation": "음식 조합이나 맛집에 정통한 사람을 귀엽게 부르는 말입니다.",
+    "semanticHint": "맛있게 먹으면 0칼로리!"
+  }
+]

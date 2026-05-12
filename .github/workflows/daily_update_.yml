@@ -35,6 +35,6 @@ jobs:
       run: |
         git config --global user.name "Quiz Robot"
         git config --global user.email "robot@example.com"
-        git add quiz_updates.json
-        git commit -m "🤖 퀴즈 자동 업데이트 완료!" || echo "새로운 문제가 없습니다."
+        git add *.json
+        git commit -m "🤖 퀴즈 자동 업데이트 완료 (카테고리별 분산 저장)" || echo "새로운 문제가 없습니다."
         git push
