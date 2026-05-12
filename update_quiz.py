@@ -44,7 +44,7 @@ prompt = """
 
 # 3. AI에게 물어보기
 response = client.models.generate_content(
-    model='gemini-2.5-flash',
+    model='gemini-1.5-flash',
     contents=prompt
 )
 new_questions = json.loads(response.text.strip('` \njson'))
