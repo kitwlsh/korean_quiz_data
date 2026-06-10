@@ -77,11 +77,7 @@ category_map = {
     "세계 여행": "travel.json"
 }
 
-for question in new_questions:
-    category = question.get("category")
-    file_name = category_map.get(category, "quiz_updates.json")
-    
-    # 해당 파일 열기
+def save_question_to_file(file_name, question):
     if os.path.exists(file_name):
         with open(file_name, "r", encoding="utf-8") as f:
             try:
@@ -93,8 +89,18 @@ for question in new_questions:
         
     data.append(question)
     
-    # 다시 저장
     with open(file_name, "w", encoding="utf-8") as f:
         json.dump(data, f, ensure_ascii=False, indent=2)
 
-print(f"성공적으로 {len(new_questions)}개의 새로운 퀴즈가 각 카테고리 파일에 분산 저장되었습니다!")
+for question in new_questions:
+    category = question.get("category")
+    file_name = category_map.get(category, "quiz_updates.json")
+    
+    # 1. 카테고리별 파일에 저장
+    save_question_to_file(file_name, question)
+    
+    # 2. 특정 카테고리 파일로 분류된 경우라도 전체 업데이트 파일인 quiz_updates.json에 이중 기록
+    if file_name != "quiz_updates.json":
+        save_question_to_file("quiz_updates.json", question)
+
+print(f"성공적으로 {len(new_questions)}개의 새로운 퀴즈가 각 카테고리 파일 및 quiz_updates.json에 분산 저장되었습니다!")
