@@ -29,7 +29,8 @@ prompt = """
 - 절대 answer(정답) 항목이나 options(보기) 항목에 한자(漢字)나 괄호()를 넣지 마세요. 오직 순수 한글로만 작성하세요.
 - explanation(해설)에는 왜 정답인지 상세히 적어주세요.
 - semanticHint(의미적 힌트)에는 정답을 유추할 수 있는 재미있는 힌트를 적어주세요.
-- id 값은 10000에서 99999 사이의 무작위 숫자를 넣어주세요.
+- id 값은 0으로 두세요. (저장 시 프로그램이 전역 유니크 ID를 자동 부여합니다.)
+- '갓생', '오운완', '자만추' 처럼 이미 흔한 신조어의 '뜻을 묻는' 문제는 피하고, 새롭고 다양한 주제로 출제해주세요.
 - 반드시 아래 JSON 배열 형식으로만 대답해주세요. 추가적인 말이나 마크다운 백틱(`)은 절대 하지 마세요.
 
 [
@@ -70,37 +71,72 @@ except Exception as e:
     exit(1)
 
 # 4. 생성된 문제를 카테고리별로 분류하여 저장하기
+#    (주의) quiz_updates.json 이중 기록은 폐지함 — 앱이 모든 파일을 합쳐 읽으므로
+#    이중 기록은 'ID 충돌 시 문제 소실' 또는 '동일 문제 반복 출제'를 유발했음.
+ALL_FILES = ["korean.json", "trend.json", "knowledge.json", "travel.json", "quiz_updates.json"]
 category_map = {
     "우리말 겨루기": "korean.json",
     "트렌드 말하기": "trend.json",
     "상식 백과": "knowledge.json",
     "세계 여행": "travel.json"
 }
+# 카테고리별 ID 시작 대역 (정리된 데이터 규칙과 동일하게 유지)
+id_base = {"korean.json": 10001, "trend.json": 20001, "knowledge.json": 30001, "travel.json": 40001}
 
-def save_question_to_file(file_name, question):
+def load_json(file_name):
     if os.path.exists(file_name):
         with open(file_name, "r", encoding="utf-8") as f:
             try:
-                data = json.load(f)
+                return json.load(f)
             except json.JSONDecodeError:
-                data = []
-    else:
-        data = []
-        
-    data.append(question)
-    
-    with open(file_name, "w", encoding="utf-8") as f:
-        json.dump(data, f, ensure_ascii=False, indent=2)
+                return []
+    return []
+
+def norm(s):
+    return "".join(str(s).split())
+
+# 전역에서 이미 사용 중인 모든 ID와 (카테고리, 질문) 키 수집 — 중복/충돌 방지용
+used_ids = set()
+existing_questions = set()
+for fn in ALL_FILES:
+    for q in load_json(fn):
+        if isinstance(q.get("id"), int):
+            used_ids.add(q["id"])
+        existing_questions.add((q.get("category", ""), norm(q.get("question", ""))))
+
+def next_unique_id(file_name):
+    base = id_base.get(file_name, 50001)
+    candidate = base
+    # 해당 대역에서 비어 있는 다음 ID 탐색
+    while candidate in used_ids:
+        candidate += 1
+    used_ids.add(candidate)
+    return candidate
+
+saved = 0
+skipped = 0
+file_buffers = {fn: load_json(fn) for fn in ALL_FILES}
 
 for question in new_questions:
     category = question.get("category")
     file_name = category_map.get(category, "quiz_updates.json")
-    
-    # 1. 카테고리별 파일에 저장
-    save_question_to_file(file_name, question)
-    
-    # 2. 특정 카테고리 파일로 분류된 경우라도 전체 업데이트 파일인 quiz_updates.json에 이중 기록
-    if file_name != "quiz_updates.json":
-        save_question_to_file("quiz_updates.json", question)
 
-print(f"성공적으로 {len(new_questions)}개의 새로운 퀴즈가 각 카테고리 파일 및 quiz_updates.json에 분산 저장되었습니다!")
+    # 중복 문제 가드 — 같은 카테고리에 동일 질문이 이미 있으면 건너뜀
+    key = (category, norm(question.get("question", "")))
+    if key in existing_questions:
+        skipped += 1
+        print(f"  ↪ 중복 문제 건너뜀: {question.get('question', '')[:30]}...")
+        continue
+    existing_questions.add(key)
+
+    # 전역 유니크 ID 부여 (AI가 준 id는 무시)
+    question["id"] = next_unique_id(file_name)
+    file_buffers[file_name].append(question)
+    saved += 1
+
+# 변경된 파일만 한 번에 기록
+for fn in ALL_FILES:
+    with open(fn, "w", encoding="utf-8") as f:
+        json.dump(file_buffers[fn], f, ensure_ascii=False, indent=2)
+
+print(f"성공적으로 {saved}개의 새로운 퀴즈가 카테고리 파일에 저장되었습니다! (중복 {skipped}개 건너뜀)")
