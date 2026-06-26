@@ -1,4 +1,5 @@
 import os
+import re
 import json
 import google.generativeai as genai
 
@@ -40,11 +41,26 @@ def norm(s):
     return "".join(str(s).split()).lower()
 
 
+def trend_concept(q):
+    """트렌드(신조어) 개념 키: 정답이 짧은 단어면 그 단어, 아니면 질문 속 인용된 신조어.
+    같은 신조어를 '단어 묻기'(정답=단어)와 '뜻 묻기'(정답=정의) 양방향으로 중복 출제하는 것을 막기 위함."""
+    ans = q.get("answer", "").strip()
+    if 0 < len(ans) <= 6 and " " not in ans:
+        return norm(ans)
+    m = re.findall(r"['\"‘’“”「」]([^'\"‘’“”「」]{2,10})['\"‘’“”「」]", q.get("question", ""))
+    if m:
+        return norm(m[0])
+    return None
+
+
 used_ids = set()
 existing_questions = set()                 # (category, norm question)
 existing_answers = set()                   # (category, norm answer)
+trend_concepts = set()                     # 이미 다룬 신조어 개념(정규화)
+trend_concepts_display = []                 # 프롬프트 표시용(원문)
 answers_by_category = {c: [] for c in CATEGORIES}  # 프롬프트 회피 목록(표시용 원문 정답)
 _seen_answer_display = set()
+_seen_concept_display = set()
 
 for fn in ALL_FILES:
     for q in load_json(fn):
@@ -59,6 +75,15 @@ for fn in ALL_FILES:
             if disp_key not in _seen_answer_display:
                 _seen_answer_display.add(disp_key)
                 answers_by_category[cat].append(ans)
+        if cat == "트렌드 말하기":
+            c = trend_concept(q)
+            if c:
+                trend_concepts.add(c)
+                # 표시용: 단어형 정답이면 그 단어, 아니면 질문 속 인용 단어
+                disp = ans.strip() if (0 < len(ans.strip()) <= 6 and " " not in ans.strip()) else c
+                if disp not in _seen_concept_display:
+                    _seen_concept_display.add(disp)
+                    trend_concepts_display.append(disp)
 
 # 이미 출제된 정답 목록(카테고리별)을 프롬프트에 주입 → 같은 정답 반복 생성 방지
 avoid_lines = []
@@ -66,6 +91,9 @@ for c in CATEGORIES:
     if answers_by_category[c]:
         avoid_lines.append(f"- {c}: " + ", ".join(answers_by_category[c]))
 avoid_block = "\n".join(avoid_lines) if avoid_lines else "(아직 없음)"
+
+# 트렌드(신조어)는 단어/뜻 양방향 중복을 막기 위해 '이미 다룬 신조어' 목록을 별도 주입
+trend_avoid = ", ".join(trend_concepts_display) if trend_concepts_display else "(아직 없음)"
 
 # ---------------------------------------------------------------------------
 # 2. 제미나이 AI에게 지시할 내용 (프롬프트 고도화)
@@ -82,6 +110,10 @@ prompt = f"""
 [이미 출제된 정답 — 같은 정답이 나오는 문제는 절대로 만들지 마세요]
 아래는 카테고리별로 이미 출제된 정답(answer) 목록입니다. 질문을 다르게 바꾸더라도 '정답'이 아래 목록에 이미 있는 것과 같으면 절대 출제하지 마세요. 반드시 목록에 '없는' 새로운 정답이 나오는 문제만 만드세요.
 {avoid_block}
+
+[이미 다룬 신조어 — 단어/뜻 어느 방향으로도 다시 출제 금지]
+아래 신조어들은 이미 출제되었습니다. '이 신조어의 뜻은?'(정답=뜻)이든 '이런 뜻의 신조어는?'(정답=신조어)이든, 아래 단어가 관련된 문제는 절대 만들지 마세요. 완전히 새로운 신조어만 다루세요.
+{trend_avoid}
 
 [필수 조건]
 - category는 반드시 '우리말 겨루기', '트렌드 말하기', '상식 백과', '세계 여행' 중 하나를 선택하세요.
@@ -149,6 +181,7 @@ def next_unique_id(file_name):
 saved = 0
 skipped_q = 0
 skipped_a = 0
+skipped_c = 0
 file_buffers = {fn: load_json(fn) for fn in ALL_FILES}
 
 for question in new_questions:
@@ -168,9 +201,17 @@ for question in new_questions:
         skipped_a += 1
         print(f"  ↪ 중복 정답 건너뜀: '{question.get('answer', '')}' ({question.get('question', '')[:24]}...)")
         continue
+    # 중복 가드 ③ 트렌드: 같은 신조어를 단어/뜻 양방향으로 이미 다뤘으면 건너뜀
+    concept = trend_concept(question) if category == "트렌드 말하기" else None
+    if concept and concept in trend_concepts:
+        skipped_c += 1
+        print(f"  ↪ 중복 신조어 건너뜀: '{concept}' ({question.get('question', '')[:24]}...)")
+        continue
 
     existing_questions.add(q_key)
     existing_answers.add(a_key)
+    if concept:
+        trend_concepts.add(concept)
 
     # 전역 유니크 ID 부여 (AI가 준 id는 무시)
     question["id"] = next_unique_id(file_name)
@@ -182,4 +223,4 @@ for fn in ALL_FILES:
     with open(fn, "w", encoding="utf-8") as f:
         json.dump(file_buffers[fn], f, ensure_ascii=False, indent=2)
 
-print(f"성공적으로 {saved}개의 새로운 퀴즈가 저장되었습니다! (중복 질문 {skipped_q}개, 중복 정답 {skipped_a}개 건너뜀)")
+print(f"성공적으로 {saved}개의 새로운 퀴즈가 저장되었습니다! (중복 질문 {skipped_q}, 중복 정답 {skipped_a}, 중복 신조어 {skipped_c} 건너뜀)")
