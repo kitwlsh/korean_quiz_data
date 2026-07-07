@@ -188,6 +188,21 @@ for question in new_questions:
     category = question.get("category")
     file_name = category_map.get(category, "quiz_updates.json")
 
+    # 유효성 가드 ⓪ type이 규격(MULTIPLE_CHOICE/SUBJECTIVE)에 맞을 때만 저장.
+    # (AI가 "MULTIPLE_CHOENCE" 같은 오타를 내면 앱 파싱이 깨져 카테고리 전체가 안 보였음)
+    q_type = str(question.get("type", "")).strip().upper()
+    if q_type == "MULTIPLE_CHOICE":
+        question["type"] = "MULTIPLE_CHOICE"
+        opts = question.get("options")
+        if not isinstance(opts, list) or len(opts) != 4:
+            print(f"  ↪ 보기 4개 아님 건너뜀: {str(question.get('question', ''))[:30]}...")
+            continue
+    elif q_type == "SUBJECTIVE":
+        question["type"] = "SUBJECTIVE"
+    else:
+        print(f"  ↪ 알 수 없는 type 건너뜀: '{question.get('type')}' ({str(question.get('question', ''))[:24]}...)")
+        continue
+
     q_key = (category, norm(question.get("question", "")))
     a_key = (category, norm(question.get("answer", "")))
 

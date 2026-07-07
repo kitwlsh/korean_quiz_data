@@ -31,6 +31,9 @@ jobs:
         GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }} # 비밀금고에서 키 꺼내기
       run: python update_quiz.py
 
+    - name: 데이터 유효성 검사 (불량 데이터면 여기서 실패 → push 차단)
+      run: python validate.py
+
     - name: 새로 만든 문제 깃허브 메모장에 저장(Commit & Push)하기
       run: |
         git config --global user.name "Quiz Robot"
