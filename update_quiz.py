@@ -1,6 +1,8 @@
 import os
 import re
 import json
+from datetime import datetime, timezone
+
 import google.generativeai as genai
 
 # 1. 깃허브 금고에서 열쇠(API KEY) 꺼내서 세팅하기
@@ -10,7 +12,110 @@ if not API_KEY:
     exit(1)
 
 genai.configure(api_key=API_KEY)
-model = genai.GenerativeModel('gemini-2.5-flash')
+
+# ---------------------------------------------------------------------------
+# 1-1. 사용할 모델 — 버전을 하나만 박아두지 않는다 (2026-09-04)
+#
+# 배경: 이 스크립트는 오랫동안 'gemini-2.5-flash'를 하드코딩하고 있었다.
+#   그런데 **바로 그 모델이 KDailyUtil 앱에서 신규 계정 404로 죽었던 모델**이다(2026-08-12 장애).
+#   지금은 이 저장소의 개발자 키로 돌기 때문에 아직 통하지만, 구글이 모델을 내리는 날
+#   이 로봇은 **아무 소리 없이 멈춘다** — 실패해도 알려 주는 사람이 없기 때문이다.
+#   앱의 「오늘의 퀴즈」가 이 공급에 의존하게 됐으므로(2026-09-04) 같은 방어를 여기에도 넣는다.
+#
+# 규칙(앱 GeminiManager와 같다):
+#   - 404(모델 없음)·503(과부하)이면 **다음 후보로 넘어간다**
+#   - 429(할당량)·키 오류는 모델을 바꿔도 소용없다 → 넘어가지 않고 즉시 실패
+#   - QUIZ_MODEL 환경변수로 **코드 수정 없이** 모델을 갈아끼울 수 있다(비상 레버)
+# ---------------------------------------------------------------------------
+MODEL_CANDIDATES = [
+    m for m in [
+        os.environ.get("QUIZ_MODEL", "").strip(),  # 비상 레버(Actions 변수)
+        "gemini-flash-latest",                     # 별칭 — 구글이 알아서 최신으로 매핑한다
+        "gemini-3.5-flash",
+        "gemini-3.6-flash",
+    ] if m
+]
+
+HEARTBEAT_FILE = "last_run.json"
+
+
+def _looks_like(err_text, needles):
+    low = str(err_text).lower()
+    return any(n in low for n in needles)
+
+
+def is_model_unavailable(err):
+    """이 모델이 없거나(404) 지금 붐빈다(503) → 다른 모델로 넘어갈 만한 실패인가."""
+    return _looks_like(err, ["404", "not found", "is not supported", "503", "unavailable", "overloaded"])
+
+
+def is_quota_or_key_error(err):
+    """모델을 바꿔도 소용없는 실패(할당량·키). 넘어가지 않고 즉시 멈춘다."""
+    return _looks_like(err, ["429", "resource_exhausted", "quota", "api key", "api_key", "permission", "401", "403"])
+
+
+def write_heartbeat(status, model_used=None, saved=0, skipped=None, error=None):
+    """
+    **실패해도 반드시 남기는 생존 신호.**
+
+    두 가지 목적이 있다.
+      1. 사람이 파일 하나만 열어 보면 «로봇이 살아 있나»를 안다(며칠 방치해도).
+      2. GitHub은 **60일간 활동이 없는 저장소의 예약 워크플로를 자동으로 끈다.**
+         로봇이 실패하면 새 문제가 없어 커밋도 안 생기고, 그대로 두 달이 지나면
+         스케줄 자체가 꺼져 **되살릴 때까지 영구 정지**한다.
+         매 실행마다 이 파일이 바뀌어 커밋이 생기므로 그 침묵사(死)를 막는다.
+    """
+    totals = {}
+    for fn in ALL_FILES:
+        try:
+            totals[fn] = len(load_json(fn))
+        except Exception:
+            totals[fn] = None
+
+    payload = {
+        "status": status,                     # ok | failed
+        "ranAtUtc": datetime.now(timezone.utc).isoformat(timespec="seconds"),
+        "model": model_used,
+        "savedThisRun": saved,
+        "skipped": skipped or {},
+        "totals": totals,
+        "totalAll": sum(v for v in totals.values() if isinstance(v, int)),
+        "error": error,
+    }
+    try:
+        with open(HEARTBEAT_FILE, "w", encoding="utf-8") as f:
+            json.dump(payload, f, ensure_ascii=False, indent=2)
+        print(f"🫀 생존 신호 기록: {status} (모델 {model_used}, 누적 {payload['totalAll']}문항)")
+    except Exception as e:
+        print(f"생존 신호 기록 실패(무시하고 계속): {e}")
+
+
+def fail(message, model_used=None):
+    """실패하더라도 **생존 신호를 남긴 뒤** 죽는다. 조용히 사라지는 것이 가장 나쁘다."""
+    print(f"문제 발생: {message}")
+    write_heartbeat("failed", model_used=model_used, error=str(message)[:500])
+    exit(1)
+
+
+def generate_with_fallback(prompt):
+    """후보 모델을 차례로 시도한다. 성공하면 (응답, 쓴 모델 이름)."""
+    last_error = None
+    for name in MODEL_CANDIDATES:
+        try:
+            print(f"모델 시도: {name}")
+            response = genai.GenerativeModel(name).generate_content(prompt)
+            print(f"✅ 모델 {name} 응답 성공")
+            return response, name
+        except Exception as e:
+            last_error = e
+            if is_quota_or_key_error(e):
+                # 할당량·키 문제는 모델을 바꿔도 그대로다 → 후보를 더 태우지 않는다
+                fail(f"할당량 또는 키 문제로 중단: {e}", model_used=name)
+            if is_model_unavailable(e):
+                print(f"  ↪ {name} 사용 불가({str(e)[:120]}) — 다음 후보로")
+                continue
+            print(f"  ↪ {name} 실패({str(e)[:120]}) — 다음 후보로")
+    fail(f"모든 후보 모델이 실패했습니다. 마지막 사유: {last_error}")
 
 # ---------------------------------------------------------------------------
 # 0. 기존 데이터 로드 — 중복 방지(정답/질문)와 프롬프트 회피 목록 구성에 사용
@@ -142,27 +247,27 @@ prompt = f"""
 ]
 """
 
-# 3. AI에게 물어보기
-try:
-    print("AI에게 문제를 요청 중입니다...")
-    response = model.generate_content(prompt)
+# 3. AI에게 물어보기 (모델 폴백 경유)
+print("AI에게 문제를 요청 중입니다...")
+response, MODEL_USED = generate_with_fallback(prompt)
 
+try:
     # JSON 부분만 추출하기 위한 더 강력한 로직
     raw_text = response.text.strip()
     start_idx = raw_text.find('[')
     end_idx = raw_text.rfind(']') + 1
 
     if start_idx == -1 or end_idx == 0:
-        print(f"오류: AI 응답에서 JSON 배열을 찾을 수 없습니다. 응답 내용: {raw_text}")
-        exit(1)
+        fail(f"AI 응답에서 JSON 배열을 찾을 수 없습니다. 응답 내용: {raw_text[:300]}", model_used=MODEL_USED)
 
     json_text = raw_text[start_idx:end_idx]
     new_questions = json.loads(json_text)
     print(f"AI가 {len(new_questions)}개의 문제를 생성했습니다.")
 
+except SystemExit:
+    raise
 except Exception as e:
-    print(f"문제 발생: {str(e)}")
-    exit(1)
+    fail(str(e), model_used=MODEL_USED)
 
 # ---------------------------------------------------------------------------
 # 4. 생성된 문제를 카테고리별로 분류하여 저장 (정답/질문 중복 가드)
@@ -239,3 +344,13 @@ for fn in ALL_FILES:
         json.dump(file_buffers[fn], f, ensure_ascii=False, indent=2)
 
 print(f"성공적으로 {saved}개의 새로운 퀴즈가 저장되었습니다! (중복 질문 {skipped_q}, 중복 정답 {skipped_a}, 중복 신조어 {skipped_c} 건너뜀)")
+
+# 새 문제가 0개여도(전부 중복이어도) 생존 신호는 남긴다 —
+# 「문제가 안 늘었다」와 「로봇이 죽었다」는 완전히 다른 상황인데,
+# 이 파일이 없으면 밖에서는 둘을 구별할 수 없다.
+write_heartbeat(
+    "ok",
+    model_used=MODEL_USED,
+    saved=saved,
+    skipped={"question": skipped_q, "answer": skipped_a, "concept": skipped_c},
+)

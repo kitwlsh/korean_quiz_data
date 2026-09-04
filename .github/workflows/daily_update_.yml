@@ -9,10 +9,12 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest # 우분투(리눅스) 컴퓨터 한 대를 무료로 빌립니다.
-    
+
     # 로봇에게 저장소 쓰기 권한 부여 (에러 방지)
+    # issues: 실패했을 때 이슈로 알리기 위해 필요 (2026-09-04 추가)
     permissions:
       contents: write
+      issues: write
 
     steps:
     - name: 저장소 코드 가져오기
@@ -26,18 +28,103 @@ jobs:
     - name: 필요한 준비물(라이브러리) 설치
       run: pip install google-generativeai
 
+    # ⚠️ continue-on-error: 여기서 멈춰 버리면 아래 「생존 신호 커밋」이 돌지 않는다.
+    #    실패해도 생존 신호(last_run.json)는 남기고 커밋해야 저장소가 조용히 잠들지 않는다.
+    #    (실행 자체의 실패 표시는 맨 마지막 단계에서 다시 세운다)
     - name: 로봇 조수 실행! (파이썬 코드 돌리기)
+      id: robot
+      continue-on-error: true
       env:
         GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }} # 비밀금고에서 키 꺼내기
+        # 🔧 비상 레버: 저장소 Variables에 QUIZ_MODEL을 넣으면 코드 수정 없이 모델을 갈아끼운다.
+        #    비어 있으면 update_quiz.py의 기본 후보 목록을 쓴다.
+        QUIZ_MODEL: ${{ vars.QUIZ_MODEL }}
       run: python update_quiz.py
 
     - name: 데이터 유효성 검사 (불량 데이터면 여기서 실패 → push 차단)
+      id: validate
+      continue-on-error: true
       run: python validate.py
 
+    # 데이터가 불량이면 절대 푸시하지 않는다. 그 외에는 (로봇이 실패했더라도)
+    # 생존 신호만이라도 커밋한다 — 아래 「왜 매일 커밋하나」 참고.
     - name: 새로 만든 문제 깃허브 메모장에 저장(Commit & Push)하기
+      if: steps.validate.outcome == 'success'
       run: |
         git config --global user.name "Quiz Robot"
         git config --global user.email "robot@example.com"
+
+        # 퀴즈 데이터가 실제로 바뀌었는지 먼저 본다(생존 신호만 바뀐 날과 구분하기 위해).
+        if git diff --quiet -- korean.json trend.json knowledge.json travel.json quiz_updates.json; then
+          DATA_CHANGED=0
+        else
+          DATA_CHANGED=1
+        fi
+
         git add *.json
-        git commit -m "🤖 퀴즈 자동 업데이트 완료 (카테고리별 분산 저장)" || echo "새로운 문제가 없습니다."
-        git push
+
+        if git diff --cached --quiet; then
+          echo "커밋할 변경이 없습니다."
+        elif [ "$DATA_CHANGED" = "1" ]; then
+          git commit -m "🤖 퀴즈 자동 업데이트 완료 (카테고리별 분산 저장)"
+          git push
+        else
+          # 왜 매일 커밋하나:
+          # GitHub은 60일간 활동이 없는 저장소의 예약 워크플로를 자동으로 끈다.
+          # 새 문제가 없거나 로봇이 실패하는 날이 이어지면 커밋이 끊기고, 그대로 두 달이
+          # 지나면 스케줄 자체가 꺼져 사람이 되살릴 때까지 영구 정지한다.
+          # 생존 신호(last_run.json)를 매일 갱신·커밋해 그 침묵사를 막는다.
+          git commit -m "🫀 생존 신호 갱신 (새 문제 없음)"
+          git push
+        fi
+
+    # 조용히 죽지 않게 한다. 이 로봇이 만드는 문제를 앱의 「오늘의 퀴즈」가 쓰기 때문에,
+    # 며칠씩 실패를 모르고 지나가면 사용자에게는 앱이 멈춘 것처럼 보인다.
+    # 같은 문제로 이슈가 쌓이지 않도록, 열려 있는 이슈가 있으면 댓글만 단다.
+    - name: 실패하면 이슈로 알리기
+      if: steps.robot.outcome != 'success' || steps.validate.outcome != 'success'
+      env:
+        GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      run: |
+        TITLE="🚨 퀴즈 자동 업데이트 로봇 실패"
+        RUN_URL="${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID}"
+        DETAIL="생성 단계: ${{ steps.robot.outcome }} / 검사 단계: ${{ steps.validate.outcome }}"
+        HEARTBEAT="$(cat last_run.json 2>/dev/null || echo '(생존 신호 파일 없음)')"
+
+        {
+          echo "자동 생성 로봇이 실패했습니다."
+          echo
+          echo "- $DETAIL"
+          echo "- 실행 기록: $RUN_URL"
+          echo
+          echo "<details><summary>last_run.json</summary>"
+          echo
+          echo '```json'
+          echo "$HEARTBEAT"
+          echo '```'
+          echo
+          echo "</details>"
+          echo
+          echo "---"
+          echo "확인할 것:"
+          echo "1. 모델이 전부 막혔나 → 저장소 Variables의 \`QUIZ_MODEL\`로 갈아끼울 수 있습니다."
+          echo "2. API 키 할당량·유효성(\`GEMINI_API_KEY\`)."
+          echo "3. 데이터 검사 실패라면 \`validate.py\` 출력에 어떤 문항이 문제인지 나옵니다."
+        } > issue_body.md
+
+        EXISTING=$(gh issue list --state open --limit 1 --search "in:title 퀴즈 자동 업데이트 로봇 실패" --json number --jq '.[0].number // empty')
+
+        if [ -n "$EXISTING" ]; then
+          echo "이미 열린 이슈 #$EXISTING 에 댓글을 답니다."
+          gh issue comment "$EXISTING" --body-file issue_body.md
+        else
+          gh issue create --title "$TITLE" --body-file issue_body.md
+        fi
+
+    # 위에서 continue-on-error로 넘겼으므로, 실제 실패를 여기서 다시 세운다.
+    # (Actions 목록에서 초록불로 보이면 실패를 영영 눈치채지 못한다)
+    - name: 실패했으면 이 실행을 실패로 표시
+      if: steps.robot.outcome != 'success' || steps.validate.outcome != 'success'
+      run: |
+        echo "생성 단계: ${{ steps.robot.outcome }} / 검사 단계: ${{ steps.validate.outcome }}"
+        exit 1
