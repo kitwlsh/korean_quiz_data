@@ -1,0 +1,20 @@
+{
+  "status": "ok",
+  "ranAtUtc": "2026-09-05T02:06:02+00:00",
+  "model": "gemini-flash-latest",
+  "savedThisRun": 5,
+  "skipped": {
+    "question": 0,
+    "answer": 0,
+    "concept": 0
+  },
+  "totals": {
+    "korean.json": 116,
+    "trend.json": 90,
+    "knowledge.json": 211,
+    "travel.json": 93,
+    "quiz_updates.json": 0
+  },
+  "totalAll": 510,
+  "error": null
+}
