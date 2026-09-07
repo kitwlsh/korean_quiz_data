@@ -41,6 +41,20 @@ jobs:
         QUIZ_MODEL: ${{ vars.QUIZ_MODEL }}
       run: python update_quiz.py
 
+    # 🔴 지문 생성은 퀴즈와 **실패 반경을 나눈다** — 별도 스크립트·별도 스텝.
+    #    퀴즈가 실패해도 지문은 저장되고, 그 반대도 된다. 한 호출에 둘을 섞으면
+    #    한쪽 실패가 다른 쪽을 끌고 죽는다(KDailyUtil/doc/FEATURE_DAILY_PASSAGES.md §8).
+    # ⚠️ 순서가 중요하다: 퀴즈 스텝이 last_run.json을 새로 쓰므로 지문은 그 **뒤에** 돌아
+    #    자기 `passages` 블록만 얹어야 한다. 앞에 두면 그 블록이 지워진다.
+    - name: 읽기 지문 만들기 (독서 훈련용)
+      id: passages
+      continue-on-error: true
+      env:
+        GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        # 🔧 비상 레버는 퀴즈와 같은 것 하나를 쓴다(감시할 레버를 늘리지 않는다).
+        QUIZ_MODEL: ${{ vars.QUIZ_MODEL }}
+      run: python update_passages.py
+
     - name: 데이터 유효성 검사 (불량 데이터면 여기서 실패 → push 차단)
       id: validate
       continue-on-error: true
@@ -55,7 +69,7 @@ jobs:
         git config --global user.email "robot@example.com"
 
         # 퀴즈 데이터가 실제로 바뀌었는지 먼저 본다(생존 신호만 바뀐 날과 구분하기 위해).
-        if git diff --quiet -- korean.json trend.json knowledge.json travel.json quiz_updates.json; then
+        if git diff --quiet -- korean.json trend.json knowledge.json travel.json quiz_updates.json passages_*.json; then
           DATA_CHANGED=0
         else
           DATA_CHANGED=1
@@ -66,7 +80,7 @@ jobs:
         if git diff --cached --quiet; then
           echo "커밋할 변경이 없습니다."
         elif [ "$DATA_CHANGED" = "1" ]; then
-          git commit -m "🤖 퀴즈 자동 업데이트 완료 (카테고리별 분산 저장)"
+          git commit -m "🤖 자동 업데이트 완료 (퀴즈·읽기 지문)"
           git push
         else
           # 왜 매일 커밋하나:
@@ -82,13 +96,13 @@ jobs:
     # 며칠씩 실패를 모르고 지나가면 사용자에게는 앱이 멈춘 것처럼 보인다.
     # 같은 문제로 이슈가 쌓이지 않도록, 열려 있는 이슈가 있으면 댓글만 단다.
     - name: 실패하면 이슈로 알리기
-      if: steps.robot.outcome != 'success' || steps.validate.outcome != 'success'
+      if: steps.robot.outcome != 'success' || steps.passages.outcome != 'success' || steps.validate.outcome != 'success'
       env:
         GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
         TITLE="🚨 퀴즈 자동 업데이트 로봇 실패"
         RUN_URL="${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID}"
-        DETAIL="생성 단계: ${{ steps.robot.outcome }} / 검사 단계: ${{ steps.validate.outcome }}"
+        DETAIL="퀴즈 단계: ${{ steps.robot.outcome }} / 지문 단계: ${{ steps.passages.outcome }} / 검사 단계: ${{ steps.validate.outcome }}"
         HEARTBEAT="$(cat last_run.json 2>/dev/null || echo '(생존 신호 파일 없음)')"
 
         {
@@ -110,6 +124,7 @@ jobs:
           echo "1. 모델이 전부 막혔나 → 저장소 Variables의 \`QUIZ_MODEL\`로 갈아끼울 수 있습니다."
           echo "2. API 키 할당량·유효성(\`GEMINI_API_KEY\`)."
           echo "3. 데이터 검사 실패라면 \`validate.py\` 출력에 어떤 문항이 문제인지 나옵니다."
+          echo "4. 지문 단계만 실패했다면 \`last_run.json\`의 \`passages\` 블록에 사유가 있습니다(퀴즈는 정상)."
         } > issue_body.md
 
         EXISTING=$(gh issue list --state open --limit 1 --search "in:title 퀴즈 자동 업데이트 로봇 실패" --json number --jq '.[0].number // empty')
@@ -124,7 +139,7 @@ jobs:
     # 위에서 continue-on-error로 넘겼으므로, 실제 실패를 여기서 다시 세운다.
     # (Actions 목록에서 초록불로 보이면 실패를 영영 눈치채지 못한다)
     - name: 실패했으면 이 실행을 실패로 표시
-      if: steps.robot.outcome != 'success' || steps.validate.outcome != 'success'
+      if: steps.robot.outcome != 'success' || steps.passages.outcome != 'success' || steps.validate.outcome != 'success'
       run: |
-        echo "생성 단계: ${{ steps.robot.outcome }} / 검사 단계: ${{ steps.validate.outcome }}"
+        echo "퀴즈 단계: ${{ steps.robot.outcome }} / 지문 단계: ${{ steps.passages.outcome }} / 검사 단계: ${{ steps.validate.outcome }}"
         exit 1
