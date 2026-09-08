@@ -1,6 +1,6 @@
 {
   "status": "failed",
-  "ranAtUtc": "2026-09-08T01:11:56+00:00",
+  "ranAtUtc": "2026-09-08T01:34:51+00:00",
   "model": "gemini-flash-latest",
   "savedThisRun": 0,
   "skipped": {},
@@ -12,13 +12,13 @@
     "quiz_updates.json": 0
   },
   "totalAll": 525,
-  "error": "할당량 또는 키 문제로 중단: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-3.8-flash\nPlease retry in 3.032692834s. [links {\n  description: \"Learn more about Gemini API quotas\"\n  url: \"http",
+  "error": "할당량 또는 키 문제로 중단: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-3.8-flash\nPlease retry in 8.405707679s. [links {\n  description: \"Learn more about Gemini API quotas\"\n  url: \"http",
   "passages": {
     "status": "failed",
-    "ranAtUtc": "2026-09-08T01:11:57+00:00",
+    "ranAtUtc": "2026-09-08T01:34:58+00:00",
     "model": "gemini-flash-latest",
     "savedThisRun": 0,
     "total": null,
-    "error": "할당량 또는 키 문제로 중단: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-3.8-flash\nPlease retry in 2.453310444s. [links {\n  description: \"Learn more about Gemini API quotas\"\n  url: \"http"
+    "error": "할당량 또는 키 문제로 중단: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-3.8-flash\nPlease retry in 1.883126413s. [links {\n  description: \"Learn more about Gemini API quotas\"\n  url: \"http"
   }
 }
