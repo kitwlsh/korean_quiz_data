@@ -1,24 +1,35 @@
 {
-  "status": "failed",
-  "ranAtUtc": "2026-09-09T02:14:11+00:00",
-  "model": "gemini-flash-latest",
-  "savedThisRun": 0,
-  "skipped": {},
+  "status": "ok",
+  "ranAtUtc": "2026-09-09T05:48:39+00:00",
+  "model": "gemini-3.5-flash",
+  "savedThisRun": 5,
+  "skipped": {
+    "question": 0,
+    "answer": 0,
+    "concept": 0
+  },
   "totals": {
-    "korean.json": 119,
-    "trend.json": 93,
-    "knowledge.json": 217,
-    "travel.json": 96,
+    "korean.json": 120,
+    "trend.json": 94,
+    "knowledge.json": 219,
+    "travel.json": 97,
     "quiz_updates.json": 0
   },
-  "totalAll": 525,
-  "error": "할당량 또는 키 문제로 중단: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 5, model: gemini-3.8-flash\nPlease retry in 48.631034482s. [links {\n  description: \"Learn more about Gemini API quotas\"\n  url: \"http",
+  "totalAll": 530,
+  "quotaWaits": 0,
+  "error": null,
   "passages": {
-    "status": "failed",
-    "ranAtUtc": "2026-09-09T02:14:17+00:00",
-    "model": "gemini-flash-latest",
-    "savedThisRun": 0,
-    "total": null,
-    "error": "할당량 또는 키 문제로 중단: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 5, model: gemini-3.8-flash\nPlease retry in 42.895473768s. [links {\n  description: \"Learn more about Gemini API quotas\"\n  url: \"http"
+    "status": "ok",
+    "ranAtUtc": "2026-09-09T05:48:40+00:00",
+    "model": "gemini-3.5-flash",
+    "savedThisRun": 1,
+    "skipped": {
+      "length": 0,
+      "duplicate": 0,
+      "malformed": 0
+    },
+    "file": "passages_2026.json",
+    "total": 3,
+    "error": null
   }
 }
