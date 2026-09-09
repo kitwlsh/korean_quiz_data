@@ -1,6 +1,7 @@
 import os
 import re
 import json
+import time
 from datetime import datetime, timezone
 
 import google.generativeai as genai
@@ -38,6 +39,11 @@ MODEL_CANDIDATES = [
 
 HEARTBEAT_FILE = "last_run.json"
 
+# 🔴 429는 «치명적»이 아니다(2026-09-09 실측 - 창이 수십 초다). 잠깐 자고 다시 묻는다.
+RETRY_ON_429 = 2      # 한 모델에서 재시도할 횟수
+RETRY_SLEEP_CAP = 90  # 오류가 말한 대기 시간을 믿되 상한을 둔다(하루치면 무한정 자게 된다)
+QUOTA_WAITS = 0       # 이번 실행에서 429로 잔 횟수 - 생존 신호에 남긴다
+
 
 def _looks_like(err_text, needles):
     low = str(err_text).lower()
@@ -49,9 +55,28 @@ def is_model_unavailable(err):
     return _looks_like(err, ["404", "not found", "is not supported", "503", "unavailable", "overloaded"])
 
 
-def is_quota_or_key_error(err):
-    """모델을 바꿔도 소용없는 실패(할당량·키). 넘어가지 않고 즉시 멈춘다."""
-    return _looks_like(err, ["429", "resource_exhausted", "quota", "api key", "api_key", "permission", "401", "403"])
+def is_key_error(err):
+    """키·권한 문제. 자거나 모델을 바꿔도 소용없다 -> 즉시 멈춘다."""
+    return _looks_like(err, ["api key", "api_key", "permission", "401", "403"])
+
+
+def is_quota_error(err):
+    """429(한도 초과).
+
+    🔴 **2026-09-09 실측으로 다루는 법이 바뀌었다**(KDailyUtil/doc/AI_KEY_NOTES.md 3-2).
+      - 창이 «수십 초»다 - 오류가 `Please retry in 9.4s`처럼 직접 말해 주고, 65초 뒤엔 풀렸다
+      - 한도가 «모델마다 다르다» - 같은 키·같은 날에 `gemini-3.8-flash`=5 / `gemini-3.5-flash`=20
+    ⚠️ 08-25에는 «한도는 키 단위라 모델을 바꿔도 그대로»로 보고 **즉시 중단**했다.
+       그 전제가 실측으로 뒤집혀서 지금은 **«자고 재시도 -> 그래도 막히면 다음 모델»**이다.
+    🔴 키 문제(401·403)는 여기서 뺐다 - 그것은 자도 낫지 않는다."""
+    return _looks_like(err, ["429", "resource_exhausted", "quota"])
+
+
+def retry_after_seconds(err, default=20):
+    """오류 본문의 «Please retry in 12.3s»를 그대로 쓴다(없으면 기본값·상한 적용)."""
+    m = re.search(r"retry in ([0-9.]+)s", str(err), re.IGNORECASE)
+    wait = float(m.group(1)) + 2 if m else float(default)
+    return int(min(max(wait, 5), RETRY_SLEEP_CAP))
 
 
 def write_heartbeat(status, model_used=None, saved=0, skipped=None, error=None):
@@ -80,6 +105,7 @@ def write_heartbeat(status, model_used=None, saved=0, skipped=None, error=None):
         "skipped": skipped or {},
         "totals": totals,
         "totalAll": sum(v for v in totals.values() if isinstance(v, int)),
+        "quotaWaits": QUOTA_WAITS,            # 429로 자고 재시도한 횟수(0이면 한도에 안 걸렸다)
         "error": error,
     }
     try:
@@ -98,23 +124,40 @@ def fail(message, model_used=None):
 
 
 def generate_with_fallback(prompt):
-    """후보 모델을 차례로 시도한다. 성공하면 (응답, 쓴 모델 이름)."""
+    """후보 모델을 차례로 시도한다. 성공하면 (응답, 쓴 모델 이름).
+
+    🔴 **이 스크립트는 실행당 API를 «한 번»만 부른다**(호출부 1곳). 그래서 429가 나는 것은
+       «우리가 몰아 쳐서»가 아니라 **한도 자체가 짜기 때문**이다(2026-09-09 실측: 별칭이
+       가리키는 모델의 무료 한도가 5였다). 대응은 둘 — **자고 다시 묻기**와 **모델 바꾸기**.
+    """
+    global QUOTA_WAITS
     last_error = None
     for name in MODEL_CANDIDATES:
-        try:
-            print(f"모델 시도: {name}")
-            response = genai.GenerativeModel(name).generate_content(prompt)
-            print(f"✅ 모델 {name} 응답 성공")
-            return response, name
-        except Exception as e:
-            last_error = e
-            if is_quota_or_key_error(e):
-                # 할당량·키 문제는 모델을 바꿔도 그대로다 → 후보를 더 태우지 않는다
-                fail(f"할당량 또는 키 문제로 중단: {e}", model_used=name)
-            if is_model_unavailable(e):
-                print(f"  ↪ {name} 사용 불가({str(e)[:120]}) — 다음 후보로")
-                continue
-            print(f"  ↪ {name} 실패({str(e)[:120]}) — 다음 후보로")
+        for attempt in range(RETRY_ON_429 + 1):
+            try:
+                print(f"모델 시도: {name}" + (f" (재시도 {attempt})" if attempt else ""))
+                response = genai.GenerativeModel(name).generate_content(prompt)
+                print(f"✅ 모델 {name} 응답 성공")
+                return response, name
+            except Exception as e:
+                last_error = e
+                if is_key_error(e):
+                    # 키·권한은 자도 낫지 않는다 → 즉시 멈춘다
+                    fail(f"키 또는 권한 문제로 중단: {e}", model_used=name)
+                if is_quota_error(e):
+                    if attempt < RETRY_ON_429:
+                        wait = retry_after_seconds(e)
+                        QUOTA_WAITS += 1
+                        print(f"  ⏳ {name} 한도 초과(429) — {wait}초 자고 다시 묻는다")
+                        time.sleep(wait)
+                        continue
+                    print(f"  ↪ {name} 한도 초과(429)가 계속된다 — 다음 후보로(한도는 모델마다 다르다)")
+                    break
+                if is_model_unavailable(e):
+                    print(f"  ↪ {name} 사용 불가({str(e)[:120]}) — 다음 후보로")
+                    break
+                print(f"  ↪ {name} 실패({str(e)[:120]}) — 다음 후보로")
+                break
     fail(f"모든 후보 모델이 실패했습니다. 마지막 사유: {last_error}")
 
 # ---------------------------------------------------------------------------

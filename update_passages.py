@@ -24,6 +24,7 @@ KDailyUtil의 「빠른 독서 훈련」은 오랫동안 **앱에 하드코딩�
 import json
 import os
 import re
+import time
 from datetime import datetime, timezone
 
 import google.generativeai as genai
@@ -49,6 +50,11 @@ HEARTBEAT_FILE = "last_run.json"
 # ── 규격 (KDailyUtil/doc/FEATURE_DAILY_PASSAGES.md §3·§7·§11) ────────────────
 # 하루 1편. 🔴 3편 이상 만들지 않는다 — 소비 속도를 넘으면 «못 본 지문»이 쌓여 부담이 된다(§9).
 PASSAGES_PER_RUN = 1
+
+# 🔴 429는 «치명적»이 아니다(2026-09-09 실측 - 창이 수십 초다). 퀴즈 쪽과 같은 값을 쓴다.
+RETRY_ON_429 = 2
+RETRY_SLEEP_CAP = 90
+QUOTA_WAITS = 0
 # 200자 ± 50자. 내장 19편이 150~200자 안팎이고, RSVP·페이서 한 세션에 맞는 크기다.
 MIN_CHARS = 150
 MAX_CHARS = 250
@@ -73,9 +79,28 @@ def is_model_unavailable(err):
     return _looks_like(err, ["404", "not found", "is not supported", "503", "unavailable", "overloaded"])
 
 
-def is_quota_or_key_error(err):
-    """모델을 바꿔도 소용없는 실패(할당량·키) → 후보를 더 태우지 않는다."""
-    return _looks_like(err, ["429", "resource_exhausted", "quota", "api key", "api_key", "permission", "401", "403"])
+def is_key_error(err):
+    """키·권한 문제. 자거나 모델을 바꿔도 소용없다 -> 즉시 멈춘다."""
+    return _looks_like(err, ["api key", "api_key", "permission", "401", "403"])
+
+
+def is_quota_error(err):
+    """429(한도 초과).
+
+    🔴 **2026-09-09 실측으로 다루는 법이 바뀌었다**(KDailyUtil/doc/AI_KEY_NOTES.md 3-2).
+      - 창이 «수십 초»다 - 오류가 `Please retry in 9.4s`처럼 직접 말해 주고, 65초 뒤엔 풀렸다
+      - 한도가 «모델마다 다르다» - 같은 키·같은 날에 `gemini-3.8-flash`=5 / `gemini-3.5-flash`=20
+    ⚠️ 08-25에는 «한도는 키 단위라 모델을 바꿔도 그대로»로 보고 **즉시 중단**했다.
+       그 전제가 실측으로 뒤집혀서 지금은 **«자고 재시도 -> 그래도 막히면 다음 모델»**이다.
+    🔴 키 문제(401·403)는 여기서 뺐다 - 그것은 자도 낫지 않는다."""
+    return _looks_like(err, ["429", "resource_exhausted", "quota"])
+
+
+def retry_after_seconds(err, default=20):
+    """오류 본문의 «Please retry in 12.3s»를 그대로 쓴다(없으면 기본값·상한 적용)."""
+    m = re.search(r"retry in ([0-9.]+)s", str(err), re.IGNORECASE)
+    wait = float(m.group(1)) + 2 if m else float(default)
+    return int(min(max(wait, 5), RETRY_SLEEP_CAP))
 
 
 def year_file(year=None):
@@ -139,21 +164,35 @@ def fail(message, model_used=None, total=None):
 
 
 def generate_with_fallback(prompt):
+    """🔴 이 스크립트도 실행당 API를 «한 번»만 부른다 — 429는 우리가 몰아 친 결과가 아니라
+    한도가 짜기 때문이다(2026-09-09 실측). 대응 = 자고 다시 묻기 + 모델 바꾸기."""
+    global QUOTA_WAITS
     last_error = None
     for name in MODEL_CANDIDATES:
-        try:
-            print("모델 시도: {}".format(name))
-            response = genai.GenerativeModel(name).generate_content(prompt)
-            print("✅ 모델 {} 응답 성공".format(name))
-            return response, name
-        except Exception as e:
-            last_error = e
-            if is_quota_or_key_error(e):
-                fail("할당량 또는 키 문제로 중단: {}".format(e), model_used=name)
-            if is_model_unavailable(e):
-                print("  ↪ {} 사용 불가({}) — 다음 후보로".format(name, str(e)[:120]))
-                continue
-            print("  ↪ {} 실패({}) — 다음 후보로".format(name, str(e)[:120]))
+        for attempt in range(RETRY_ON_429 + 1):
+            try:
+                print("모델 시도: {}{}".format(name, " (재시도 {})".format(attempt) if attempt else ""))
+                response = genai.GenerativeModel(name).generate_content(prompt)
+                print("✅ 모델 {} 응답 성공".format(name))
+                return response, name
+            except Exception as e:
+                last_error = e
+                if is_key_error(e):
+                    fail("키 또는 권한 문제로 중단: {}".format(e), model_used=name)
+                if is_quota_error(e):
+                    if attempt < RETRY_ON_429:
+                        wait = retry_after_seconds(e)
+                        QUOTA_WAITS += 1
+                        print("  ⏳ {} 한도 초과(429) — {}초 자고 다시 묻는다".format(name, wait))
+                        time.sleep(wait)
+                        continue
+                    print("  ↪ {} 한도 초과(429)가 계속된다 — 다음 후보로".format(name))
+                    break
+                if is_model_unavailable(e):
+                    print("  ↪ {} 사용 불가({}) — 다음 후보로".format(name, str(e)[:120]))
+                    break
+                print("  ↪ {} 실패({}) — 다음 후보로".format(name, str(e)[:120]))
+                break
     fail("모든 후보 모델이 실패했습니다. 마지막 사유: {}".format(last_error))
 
 
