@@ -2,23 +2,32 @@
 #
 # 왜 있나 (2026-09-09)
 #   로봇이 09-08부터 429로 죽는다. 한도 숫자가 하루 만에 20 → 5로 줄었고,
-#   09-09에는 퀴즈·지문이 **둘 다** 막혀 지문 공급이 2편에서 멈췄다.
+#   09-09 11:14 KST에는 퀴즈·지문이 **둘 다** 막혀 지문 공급이 2편에서 멈췄다.
 #   고칠 방향이 셋인데 **어느 것이 맞는지는 실측 없이 정할 수 없다**:
 #     ① 한도가 «모델별»이면  → 429에도 다음 모델로 폴백(앱 vc10 + 로봇)
 #     ② 한도가 «키 단위»면    → 폴백은 무의미. 지금 동작이 맞다(08-25 판단 유지)
 #     ③ 창이 «분 단위»면      → 앱은 그대로 두고 **로봇의 요청 간격만** 넓히면 된다
 #   🔴 실측 없이 ①을 켜면 «한도가 그대로인데 모델만 계속 바꿔 태우는» 반대 사고가 된다.
 #
-# 왜 워크플로인가
-#   키(`GEMINI_API_KEY`)는 이 저장소의 Secret에만 있다. 개발 기기에는 없다.
-#   여기서 돌리면 **키를 밖으로 꺼내지 않고** 상태 코드만 얻는다.
+# 1차 실행(09-09 14:17 KST)에서 안 것 — 로그에 남았다
+#   A/B/C 세 모델 전부 200(로봇이 3시간 전 429로 죽은 그 별칭 포함) → **일일 한도가 아니다**
+#   D 연속 호출에서 45초 안에 7~8번째가 429 → **짧은 창에 아주 작은 수**다
+#   🔴 그런데 «그 순간 다른 모델은 되는가»(= 판단의 핵심)를 재기 직전에 스크립트가 죽었다
+#
+# 🔴 1차 실행이 죽은 이유 = 이 파일의 버그였다 (API 문제가 아니다)
+#   GitHub Actions는 `run:`을 **`bash -e`**로 돌린다. 거기에 `pipefail`까지 켜 놓아서
+#   **429가 처음 나온 순간** 안쪽 `grep`·`head` 파이프의 비정상 종료가 그대로 치명타가 됐다.
+#   고친 것 셋:
+#     1) `shell: bash {0}` — `-e`를 끈다(이 스크립트는 «실패해도 계속 재는» 것이 일이다)
+#     2) `head -1` 파이프를 없앤다(SIGPIPE로 죽던 자리)
+#     3) 결과 커밋 스텝에 `if: always()` — **스크립트가 죽어도 찍힌 데까지는 남긴다**
 #
 # 결과를 어디서 보나
 #   ① Actions 로그, ② **`diag_quota_result.txt`로 커밋한다**(매 실행 덮어쓴다).
 #   ②가 있어야 개발 기기에서 `git pull`만으로 결과를 읽는다(이 기기에는 gh CLI가 없다).
 #
-# ⚠️ 이 워크플로는 무료 한도를 **12번 남짓 소모한다.** 같은 키를 앱에서도 쓰고 있다면
-#    잠깐 AI가 막힐 수 있다(창이 분 단위면 1분 안에 풀린다).
+# ⚠️ 무료 한도를 **20번 남짓 소모한다.** 같은 키를 앱에서도 쓰고 있다면 잠깐 AI가 막힐 수 있다
+#    (1차 실측대로 창이 분 단위라면 1분 안에 풀린다).
 # 🟢 데이터 파일(`*.json`)은 건드리지 않는다 — 만드는 것은 결과 텍스트 하나뿐이다.
 # 📖 배경·판독법 = KDailyUtil/doc/AI_KEY_NOTES.md §3-2
 
@@ -42,29 +51,49 @@ jobs:
         uses: actions/checkout@v4
 
       - name: 한도 실측 (상태 코드만 찍는다 · 키는 찍지 않는다)
+        # 🔴 기본값(`bash -e`)을 쓰지 않는다 — 429는 이 스크립트에게 «오류»가 아니라 «측정값»이다.
+        shell: bash {0}
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: |
-          set -uo pipefail
+          set -u
+
+          ALIAS="gemini-flash-latest"
+          M1="gemini-3.5-flash"
+          M2="gemini-3.6-flash"
 
           # 🔴 혹시라도 본문에 키가 섞여 나오면 가린다 (로그·커밋은 공개될 수 있다)
           scrub() { sed -e 's/AIza[0-9A-Za-z_-]\{10,\}/<KEY-가려짐>/g'; }
 
-          # 한 번 호출하고 «HTTP 코드 + 한도 정보»만 출력한다.
+          # 호출하고 HTTP 코드를 전역 LAST_CODE에 담는다.
+          # 🔴 파이프를 쓰지 않는다 — 1차 실행이 head -1 파이프에서 죽었다.
           # 🔴 키는 URL이 아니라 헤더로 보낸다 — URL은 로그·중계에 남기 쉽다.
-          probe() {
+          call() {
             m="$1"
-            code=$(curl -sS -o /tmp/body.json -w '%{http_code}' \
+            LAST_CODE=$(curl -sS -o /tmp/body.json -w '%{http_code}' \
               -H 'Content-Type: application/json' \
               -H "x-goog-api-key: ${GEMINI_API_KEY}" \
               -d '{"contents":[{"parts":[{"text":"OK"}]}],"generationConfig":{"maxOutputTokens":1}}' \
-              "https://generativelanguage.googleapis.com/v1beta/models/${m}:generateContent" 2>/dev/null || echo "000")
-            echo "HTTP ${code}  <- ${m}"
-            if [ "${code}" != "200" ]; then
-              grep -o 'limit: [0-9]*, model: [A-Za-z0-9.-]*' /tmp/body.json | head -1 | sed 's/^/    /'
-              grep -o 'Please retry in [0-9.]*s' /tmp/body.json | head -1 | sed 's/^/    /'
-              grep -o '"message": *"[^"]*"' /tmp/body.json | head -1 | cut -c1-300 | scrub | sed 's/^/    /'
+              "https://generativelanguage.googleapis.com/v1beta/models/${m}:generateContent" 2>/dev/null)
+            [ -z "${LAST_CODE}" ] && LAST_CODE="000"
+          }
+
+          # 429일 때만 한도·재시도 정보를 덧붙인다.
+          detail() {
+            lim=$(grep -o 'limit: [0-9]*, model: [A-Za-z0-9.-]*' /tmp/body.json)
+            rty=$(grep -o 'Please retry in [0-9.]*s' /tmp/body.json)
+            [ -n "${lim}" ] && echo "      ${lim}"
+            [ -n "${rty}" ] && echo "      ${rty}"
+            if [ -z "${lim}" ] && [ -z "${rty}" ]; then
+              echo "      $(head -c 200 /tmp/body.json | tr '\n' ' ' | scrub)"
             fi
+            return 0
+          }
+
+          probe() {
+            call "$1"
+            echo "HTTP ${LAST_CODE}  <- $1"
+            [ "${LAST_CODE}" != "200" ] && detail
             return 0
           }
 
@@ -72,43 +101,72 @@ jobs:
             echo "실행 시각(UTC): $(date -u '+%F %T')  = KST $(TZ=Asia/Seoul date '+%F %T')"
             echo
 
-            echo "===== A. 별칭 gemini-flash-latest — 로봇이 실제로 쓰는 것 ====="
-            probe gemini-flash-latest
+            echo "===== A. 별칭 ${ALIAS} — 로봇이 실제로 쓰는 것 ====="
+            probe "${ALIAS}"
             echo
-            echo "===== B. gemini-3.5-flash — 같은 키로 «다른 모델»은 되는가 (이 한 줄이 판단의 전부) ====="
-            probe gemini-3.5-flash
+            echo "===== B. ${M1} ====="
+            probe "${M1}"
             echo
-            echo "===== C. gemini-3.6-flash — 폴백 후보 하나 더 ====="
-            probe gemini-3.6-flash
+            echo "===== C. ${M2} ====="
+            probe "${M2}"
             echo
 
-            echo "===== D. 연속 7회 (gemini-3.5-flash · 1초 간격) — 숫자 한도를 직접 센다 ====="
-            for i in $(seq 1 7); do
-              printf '%s회 ' "${i}"
-              probe gemini-3.5-flash | head -1
+            echo "===== D. ${M1}을 429가 날 때까지 연달아 부른다 (1초 간격 · 최대 15회) ====="
+            HIT=0
+            for i in $(seq 1 15); do
+              call "${M1}"
+              echo "  ${i}회: HTTP ${LAST_CODE}"
+              if [ "${LAST_CODE}" = "429" ]; then
+                HIT="${i}"
+                detail
+                break
+              fi
               sleep 1
             done
+            if [ "${HIT}" = "0" ]; then
+              echo "  → 15회를 다 부를 때까지 429가 나지 않았다(한도가 그새 넉넉해졌다)"
+            else
+              echo "  → ${HIT}회째에 429. 이 근처가 «짧은 창의 한도»다"
+            fi
             echo
 
-            echo "===== E. 65초 자고 한 번 더 — 창이 «분 단위»인가 ====="
+            echo "===== F. 🔴 결정적 시험 — ${M1}이 막힌 «바로 그 순간» 다른 모델은 되는가 ====="
+            if [ "${HIT}" = "0" ]; then
+              echo "  (D에서 429를 못 만들어 이번엔 못 잰다)"
+            else
+              echo "  F-1. ${M2}:"
+              probe "${M2}"
+              echo "  F-2. ${ALIAS}:"
+              probe "${ALIAS}"
+              echo "  F-3. ${M1} 다시(대조군 — 아직 막혀 있어야 한다):"
+              probe "${M1}"
+            fi
+            echo
+
+            echo "===== E. 65초 자고 ${M1} 재시도 — 창이 «분 단위»인가 ====="
             sleep 65
-            probe gemini-3.5-flash
+            probe "${M1}"
             echo
 
             cat <<'HOWTO'
           ===== 판독법 =====
-          A=429 인데 B=200      -> 한도는 «모델별». 429에도 폴백하는 것이 맞다(앱 vc10 + 로봇)
-          A·B 둘 다 429         -> «키 단위». 지금 동작(폴백 안 함)이 맞다. 08-25 판단을 유지한다
-          A=200 (이미 풀렸다)   -> 창이 짧다는 뜻. D·E가 진짜 답이다
-          D에서 N회째부터 429   -> 그 N이 «분당 한도»다. 로봇이 몰아 쳐서 걸린 것이다
-          E=200                 -> 창은 «분 단위». 앱은 손대지 말고 로봇 요청 간격만 넓히면 된다
-          E=429                 -> 창이 길다(시간~하루). 그때는 폴백·안내 문구가 진짜 문제다
+          [F가 핵심]
+            F-1·F-2가 200 인데 F-3이 429   -> 한도는 «모델별». 429에도 폴백하는 것이 맞다(앱 vc10 + 로봇)
+            F-1·F-2도 429                  -> «키 단위». 폴백은 헛수고다. 08-25 판단을 유지한다
+          [D]
+            N회째에 429                    -> 그 N이 «짧은 창의 한도». 로봇이 몰아 쳐서 걸린 것이다
+          [E]
+            200                            -> 창은 «분 단위». 로봇 요청 간격만 넓히면 로봇은 산다
+            429                            -> 창이 길다(시간~하루). 폴백·안내 문구가 진짜 문제다
           🔴 어느 경우든 «안내 문구 수정»(«잠시 뒤 풀립니다»)은 결과와 무관하게 맞는 수정이다
           HOWTO
           } 2>&1 | tee diag_quota_result.txt
 
-      # 결과를 커밋한다 — 개발 기기에서 git으로 읽기 위해서다(Actions 로그는 gh 없이는 못 본다).
+      # 🔴 always(): 위 스크립트가 죽어도 «찍힌 데까지»는 남긴다.
+      #    1차 실행(09-09)에서 스크립트가 중간에 죽자 이 스텝이 통째로 건너뛰어져
+      #    측정값이 Actions 로그에만 남고 저장소에는 하나도 안 남았다.
       - name: 결과 파일 커밋
+        if: always()
         run: |
           git config --global user.name "Quiz Robot"
           git config --global user.email "robot@example.com"
