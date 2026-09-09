@@ -1,0 +1,46 @@
+실행 시각(UTC): 2026-09-09 05:24:00  = KST 2026-09-09 14:24:00
+
+===== A. 별칭 gemini-flash-latest — 로봇이 실제로 쓰는 것 =====
+HTTP 200  <- gemini-flash-latest
+
+===== B. gemini-3.5-flash =====
+HTTP 200  <- gemini-3.5-flash
+
+===== C. gemini-3.6-flash =====
+HTTP 200  <- gemini-3.6-flash
+
+===== D. gemini-3.5-flash을 429가 날 때까지 연달아 부른다 (1초 간격 · 최대 15회) =====
+  1회: HTTP 200
+  2회: HTTP 200
+  3회: HTTP 200
+  4회: HTTP 503
+  5회: HTTP 200
+  6회: HTTP 200
+  7회: HTTP 200
+  8회: HTTP 200
+  9회: HTTP 429
+      limit: 20, model: gemini-3.5-flash
+      Please retry in 9.416868123s
+  → 9회째에 429. 이 근처가 «짧은 창의 한도»다
+
+===== F. 🔴 결정적 시험 — gemini-3.5-flash이 막힌 «바로 그 순간» 다른 모델은 되는가 =====
+  F-1. gemini-3.6-flash:
+HTTP 200  <- gemini-3.6-flash
+  F-2. gemini-flash-latest:
+HTTP 200  <- gemini-flash-latest
+  F-3. gemini-3.5-flash 다시(대조군 — 아직 막혀 있어야 한다):
+HTTP 200  <- gemini-3.5-flash
+
+===== E. 65초 자고 gemini-3.5-flash 재시도 — 창이 «분 단위»인가 =====
+HTTP 200  <- gemini-3.5-flash
+
+===== 판독법 =====
+[F가 핵심]
+  F-1·F-2가 200 인데 F-3이 429   -> 한도는 «모델별». 429에도 폴백하는 것이 맞다(앱 vc10 + 로봇)
+  F-1·F-2도 429                  -> «키 단위». 폴백은 헛수고다. 08-25 판단을 유지한다
+[D]
+  N회째에 429                    -> 그 N이 «짧은 창의 한도». 로봇이 몰아 쳐서 걸린 것이다
+[E]
+  200                            -> 창은 «분 단위». 로봇 요청 간격만 넓히면 로봇은 산다
+  429                            -> 창이 길다(시간~하루). 폴백·안내 문구가 진짜 문제다
+🔴 어느 경우든 «안내 문구 수정»(«잠시 뒤 풀립니다»)은 결과와 무관하게 맞는 수정이다
