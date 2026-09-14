@@ -58,6 +58,30 @@ QUOTA_WAITS = 0
 # 200자 ± 50자. 내장 19편이 150~200자 안팎이고, RSVP·페이서 한 세션에 맞는 크기다.
 MIN_CHARS = 150
 MAX_CHARS = 250
+
+# ── 🔴 주 1회 «장문» (2026-09-14 · 실측에서 나왔다) ─────────────────────────
+# 평소 지문 224자는 300 WPM에서 **약 11초**다. 훈련 한 판으로는 너무 짧고,
+# 11초짜리 표본으로 WPM을 재니 기록도 흔들린다. 그래서 일주일에 하루는 길게 준다.
+#   800~1,200자 ≈ 300 WPM에서 **40~60초**.
+# 🔴 **요일은 UTC 기준**이다. 예약 실행이 02:09 UTC = 11:09 KST라 두 시간대의 «날짜»가
+#    같은 날이므로 어긋나지 않는다. (실행 시각을 저녁으로 옮기면 이 전제가 깨진다)
+# 🔴 앱은 이 «장문»을 **글자 수로 판정한다**(별도 필드를 두지 않았다) — JSON 형식을 바꾸지
+#    않아야 구버전 앱도 그대로 읽는다. 경계값은 앱의 PassageLength.LONG_CHARS(500자)다.
+LONG_WEEKDAY = 6          # 월=0 … 일=6
+LONG_MIN_CHARS = 800
+LONG_MAX_CHARS = 1200
+
+
+def is_long_day(today):
+    """오늘이 «장문의 날»인가. 🔴 날짜만으로 정한다 — 재실행해도 같은 판정이어야 한다."""
+    return today.weekday() == LONG_WEEKDAY
+
+
+def char_range(today):
+    """오늘 만들 지문의 길이 규격 (min, max)."""
+    if is_long_day(today):
+        return LONG_MIN_CHARS, LONG_MAX_CHARS
+    return MIN_CHARS, MAX_CHARS
 # 프롬프트에 넣어 «같은 글을 다시 쓰지 않게» 하는 회피 목록 크기(최근 것부터).
 AVOID_RECENT = 40
 
@@ -208,12 +232,20 @@ def build_prompt(today, existing):
         "- {} / {}…".format(p.get("title", ""), str(p.get("text", ""))[:40]) for p in recent
     ) or "- (아직 없음)"
 
-    return """당신은 한국어 읽기 훈련용 «짧은 산문»을 쓰는 작가입니다.
+    min_chars, max_chars = char_range(today)
+    long_day = is_long_day(today)
+    style = (
+        "평서문 위주의 담백한 산문. 12~18개 문장을 3~4개 문단으로. 대화·따옴표·목록·이모지 없이."
+        if long_day else
+        "평서문 위주의 담백한 산문. 3~5개 문장. 대화·따옴표·목록·이모지 없이."
+    )
+
+    return """당신은 한국어 읽기 훈련용 «산문»을 쓰는 작가입니다.
 아래 조건을 모두 지켜 **오늘의 지문 {count}편**을 새로 창작해 주세요.
 
 [주제] {theme}
 [길이] 본문 {min_chars}~{max_chars}자 (한국어 기준, 공백 포함)
-[문체] 평서문 위주의 담백한 산문. 3~5개 문장. 대화·따옴표·목록·이모지 없이.
+[문체] {style}
 [내용] 일반 상식이나 보편적인 관찰을 자기 문장으로 풀어쓴 창작물. 마지막 문장에 작은 통찰 한 줄.
 
 🔴 반드시 지킬 금지 사항 (어기면 사용할 수 없습니다)
@@ -237,8 +269,9 @@ def build_prompt(today, existing):
 """.format(
         count=PASSAGES_PER_RUN,
         theme=theme,
-        min_chars=MIN_CHARS,
-        max_chars=MAX_CHARS,
+        min_chars=min_chars,
+        max_chars=max_chars,
+        style=style,
         avoid=avoid_lines,
     )
 
@@ -302,10 +335,12 @@ def main():
             skipped["malformed"] += 1
             print("  ↪ 제목·본문이 비어 건너뜀")
             continue
-        # 길이 가드: 짧으면 훈련이 안 되고, 길면 RSVP 한 세션을 넘긴다.
-        if not (MIN_CHARS <= len(text) <= MAX_CHARS):
+        # 길이 가드: 짧으면 훈련이 안 되고, 길면 한 세션에 안 끝난다.
+        # 🔴 «장문의 날»에는 규격 자체가 다르다(char_range) — 같은 잣대로 재면 전부 버려진다.
+        lo, hi = char_range(today)
+        if not (lo <= len(text) <= hi):
             skipped["length"] += 1
-            print("  ↪ 길이 {}자로 규격({}~{}) 밖 — 건너뜀".format(len(text), MIN_CHARS, MAX_CHARS))
+            print("  ↪ 길이 {}자로 규격({}~{}) 밖 — 건너뜀".format(len(text), lo, hi))
             continue
         if norm(title) in seen_titles or norm(text) in seen_texts:
             skipped["duplicate"] += 1
@@ -340,6 +375,8 @@ def main():
         "skipped": skipped,
         "file": file_name,
         "total": len(existing),
+        # 🔴 «장문의 날»이었는지 남긴다 — 나중에 「왜 그날만 길지?」를 로그 없이 확인하려면 필요하다.
+        "longDay": is_long_day(today),
         "error": None,
     })
     print("지문 {}편 저장 완료 (누적 {}편 · {})".format(saved, len(existing), file_name))
