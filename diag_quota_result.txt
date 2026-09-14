@@ -1,10 +1,11 @@
-실행 시각(UTC): 2026-09-14 01:23:45  = KST 2026-09-14 10:23:45
+실행 시각(UTC): 2026-09-14 02:31:11  = KST 2026-09-14 11:31:11
 
 ===== A. 별칭 gemini-flash-latest — 로봇이 실제로 쓰는 것 =====
 HTTP 200  <- gemini-flash-latest
 
 ===== B. gemini-3.5-flash =====
-HTTP 200  <- gemini-3.5-flash
+HTTP 503  <- gemini-3.5-flash
+      {   "error": {     "code": 503,     "message": "This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.",     "status": "UNAVAILABLE"   } } 
 
 ===== C. gemini-3.6-flash =====
 HTTP 200  <- gemini-3.6-flash
@@ -15,10 +16,14 @@ HTTP 200  <- gemini-3.6-flash
   3회: HTTP 200
   4회: HTTP 200
   5회: HTTP 200
-  6회: HTTP 429
-      limit: 5, model: gemini-3.5-flash
-      Please retry in 3.463834992s
-  → 6회째에 429. 이 근처가 «짧은 창의 한도»다
+  6회: HTTP 200
+  7회: HTTP 200
+  8회: HTTP 200
+  9회: HTTP 200
+  10회: HTTP 429
+      limit: 20, model: gemini-3.5-flash
+      Please retry in 38.377136107s
+  → 10회째에 429. 이 근처가 «짧은 창의 한도»다
 
 ===== F. 🔴 결정적 시험 — gemini-3.5-flash이 막힌 «바로 그 순간» 다른 모델은 되는가 =====
       🔴 2026-09-14 수정: **교대로 던진다**(M1→M2→M1→M2→M1→M2).
@@ -26,21 +31,23 @@ HTTP 200  <- gemini-3.6-flash
       («다른 모델이라 됐다»와 «그새 풀려서 됐다»가 구분되지 않아 판정 불가였다)
   1회 · gemini-3.5-flash (대조군): HTTP 200
   1회 · gemini-3.6-flash         : HTTP 200
-  2회 · gemini-3.5-flash (대조군): HTTP 200
-  2회 · gemini-3.6-flash         : HTTP 200
-  3회 · gemini-3.5-flash (대조군): HTTP 429
+  2회 · gemini-3.5-flash (대조군): HTTP 429
       limit: 5, model: gemini-3.5-flash
-      Please retry in 1.276578867s
+      Please retry in 36.961893878s
+  2회 · gemini-3.6-flash         : HTTP 200
+  3회 · gemini-3.5-flash (대조군): HTTP 200
   3회 · gemini-3.6-flash         : HTTP 200
   참고 · 별칭 gemini-flash-latest:
 HTTP 200  <- gemini-flash-latest
 
-  >> 요약  gemini-3.5-flash(대조군) = 200 200 429
+  >> 요약  gemini-3.5-flash(대조군) = 200 429 200
   >>       gemini-3.6-flash          = 200 200 200
   >> 대조군이 막힌 회차가 있다 — 그 회차의 gemini-3.6-flash 값으로 판정한다(아래 판독법)
 
 ===== E. 65초 자고 gemini-3.5-flash 재시도 — 창이 «분 단위»인가 =====
-HTTP 200  <- gemini-3.5-flash
+HTTP 429  <- gemini-3.5-flash
+      limit: 20, model: gemini-3.5-flash
+      Please retry in 28.26252504s
 
 ===== 판독법 =====
 [F가 핵심 — 🔴 «같은 회차»끼리 짝지어 읽는다]
