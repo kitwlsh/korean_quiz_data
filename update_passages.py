@@ -25,9 +25,17 @@ import json
 import os
 import re
 import time
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 
 import google.generativeai as genai
+
+# ── 🔴 로봇의 «오늘»은 한국시간이다 (2026-09-15) ──────────────────────────────
+# 예약 실행을 **19:40 UTC = 다음날 04:40 KST**로 옮겼다(사용자가 자는 동안 돌고,
+# 아침에 새 지문을 받아 보게 하려고). 그 시각은 **UTC로는 전날**이라 UTC 날짜를 그대로
+# 쓰면 ① 일요일 장문이 «토요일 것»으로 만들어지고 ② createdAt·id가 하루 밀린다.
+# 그래서 날짜·요일·id·createdAt은 전부 KST로 정한다.
+# 🔴 예외 = last_run.json의 `ranAtUtc` — 이름 그대로 «실제 실행 시각(UTC)»을 남긴다.
+KST = timezone(timedelta(hours=9))
 
 API_KEY = os.environ.get("GEMINI_API_KEY")
 if not API_KEY:
@@ -63,8 +71,9 @@ MAX_CHARS = 250
 # 평소 지문 224자는 300 WPM에서 **약 11초**다. 훈련 한 판으로는 너무 짧고,
 # 11초짜리 표본으로 WPM을 재니 기록도 흔들린다. 그래서 일주일에 하루는 길게 준다.
 #   800~1,200자 ≈ 300 WPM에서 **40~60초**.
-# 🔴 **요일은 UTC 기준**이다. 예약 실행이 02:09 UTC = 11:09 KST라 두 시간대의 «날짜»가
-#    같은 날이므로 어긋나지 않는다. (실행 시각을 저녁으로 옮기면 이 전제가 깨진다)
+# 🔴 **요일은 KST 기준**이다(2026-09-15에 UTC에서 바꿨다). 예약 실행이 19:40 UTC =
+#    **다음날 04:40 KST**라 UTC로 보면 «토요일»이 사용자에게는 «일요일»이다.
+#    앱은 기기 로컬 날짜(=KST)로 「오늘의 지문」을 고르므로 여기도 KST여야 맞는다.
 # 🔴 앱은 이 «장문»을 **글자 수로 판정한다**(별도 필드를 두지 않았다) — JSON 형식을 바꾸지
 #    않아야 구버전 앱도 그대로 읽는다. 경계값은 앱의 PassageLength.LONG_CHARS(500자)다.
 LONG_WEEKDAY = 6          # 월=0 … 일=6
@@ -130,7 +139,7 @@ def retry_after_seconds(err, default=20):
 def year_file(year=None):
     """🔴 연도로 쪼갠다 — 앱은 동기화 때마다 파일 전체를 다시 받는다(조건부 요청이 없다).
     퀴즈가 이미 매 동기화 438KB인 길을 갔다. 연도로 나누면 앱은 «올해+작년» 2개만 받으면 된다."""
-    y = year or datetime.now(timezone.utc).year
+    y = year or datetime.now(KST).year  # 🔴 KST 기준 — 연말 경계에서 createdAt과 어긋나지 않게
     return "passages_{}.json".format(y)
 
 
@@ -300,7 +309,7 @@ def next_id(today, existing):
 
 
 def main():
-    today = datetime.now(timezone.utc)
+    today = datetime.now(KST)  # 🔴 KST다(맨 위 KST 주석 참고)
     file_name = year_file()
 
     try:
@@ -369,7 +378,8 @@ def main():
 
     merge_heartbeat({
         "status": "ok",
-        "ranAtUtc": today.isoformat(timespec="seconds"),
+        # 🔴 today는 이제 KST다 — 이 칸은 이름대로 «UTC 실행 시각»이어야 한다.
+        "ranAtUtc": datetime.now(timezone.utc).isoformat(timespec="seconds"),
         "model": model_used,
         "savedThisRun": saved,
         "skipped": skipped,
