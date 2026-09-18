@@ -145,6 +145,141 @@
       "choices": [],
       "accepted": [],
       "level": "normal"
+    },
+    {
+      "id": "cho-별빛",
+      "answer": "별빛",
+      "definition": "별의 반짝이는 빛.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=431479",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-햇살",
+      "answer": "햇살",
+      "definition": "해에서 나오는 빛의 줄기. 또는 그 기운.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=367507",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-그늘",
+      "answer": "그늘",
+      "definition": "어두운 부분.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=401231",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-골목",
+      "answer": "골목",
+      "definition": "큰길에서 들어가 동네 안을 이리저리 통하는 좁은 길.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=397158",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-언덕",
+      "answer": "언덕",
+      "definition": "땅이 비탈지고 조금 높은 곳.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=225496",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-바다",
+      "answer": "바다",
+      "definition": "지구 위에서 육지를 제외한 부분으로 짠물이 괴어 하나로 이어진 넓고 큰 부분. 지구 표면적의 약 70.8%를 차지하는데, 이는 육지 면적의 2.43배이다.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=430018",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-강물",
+      "answer": "강물",
+      "definition": "강에 흐르는 물.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=391806",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-들판",
+      "answer": "들판",
+      "definition": "들을 이룬 벌판.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=94186",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-나무",
+      "answer": "나무",
+      "definition": "줄기나 가지가 목질로 된 여러해살이 식물.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=404765",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-보리",
+      "answer": "보리",
+      "definition": "볏과의 두해살이풀. 줄기는 높이가 1미터 정도이고 곧고 속이 비었으며, 마디가 길다. 잎은 어긋나고 긴 선 모양으로 겉이 매끄러우며 나란히맥이 있다. 꽃은 5월에 수상(穗狀) 화서로 달리는데 이삭에는 까끄라기가 있다. 알이 껍질에서 잘 떨어지는지에 따라 쌀보리와 겉보리로, 파종 시기에 따라 가을보리와 봄보리로 나눈다. 보리쌀은 보리밥·맥주·된장·빵 따위의 원료이고, 줄기는 여름 모자·공예품·제지용·퇴비 따위에 쓴다. 서남아시아, 이집트가 원산지로 전 세계 온대 지방에서 재배한다.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=436472",
+      "pos": "명사",
+      "choices": [
+        "바람",
+        "버릇",
+        "벼락",
+        "보리"
+      ],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-벼락",
+      "answer": "벼락",
+      "definition": "공중의 전기와 땅 위의 물체에 흐르는 전기 사이에 방전 작용으로 일어나는 자연 현상.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=435533",
+      "pos": "명사",
+      "choices": [
+        "바람",
+        "버릇",
+        "벼락",
+        "보리"
+      ],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-버릇",
+      "answer": "버릇",
+      "definition": "오랫동안 자꾸 반복하여 몸에 익어 버린 행동.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=434034",
+      "pos": "명사",
+      "choices": [
+        "바람",
+        "버릇",
+        "벼락",
+        "보리"
+      ],
+      "accepted": [],
+      "level": "normal"
     }
   ]
 }

@@ -216,6 +216,222 @@
       "rule": "",
       "note": "",
       "level": "normal"
+    },
+    {
+      "id": "gen-def-노을",
+      "kind": "definition",
+      "question": "다음 뜻풀이에 해당하는 낱말은?",
+      "prompt": "해가 뜨거나 질 무렵에, 하늘이 햇빛에 물들어 벌겋게 보이는 현상.",
+      "answer": "노을",
+      "choices": [
+        "노을",
+        "마음",
+        "바람",
+        "사람"
+      ],
+      "definition": "해가 뜨거나 질 무렵에, 하늘이 햇빛에 물들어 벌겋게 보이는 현상.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=409358",
+      "rule": "",
+      "note": "",
+      "level": "normal"
+    },
+    {
+      "id": "gen-def-이슬",
+      "kind": "definition",
+      "question": "다음 뜻풀이에 해당하는 낱말은?",
+      "prompt": "공기 중의 수증기가 기온이 내려가거나 찬 물체에 부딪힐 때 엉겨서 생기는 물방울.",
+      "answer": "이슬",
+      "choices": [
+        "마음",
+        "바람",
+        "사람",
+        "이슬"
+      ],
+      "definition": "공기 중의 수증기가 기온이 내려가거나 찬 물체에 부딪힐 때 엉겨서 생기는 물방울.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=470005",
+      "rule": "",
+      "note": "",
+      "level": "normal"
+    },
+    {
+      "id": "gen-def-서리",
+      "kind": "definition",
+      "question": "다음 뜻풀이에 해당하는 낱말은?",
+      "prompt": "떼를 지어 남의 과일, 곡식, 가축 따위를 훔쳐 먹는 장난.",
+      "answer": "서리",
+      "choices": [
+        "마음",
+        "바람",
+        "사람",
+        "서리"
+      ],
+      "definition": "떼를 지어 남의 과일, 곡식, 가축 따위를 훔쳐 먹는 장난.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=175491",
+      "rule": "",
+      "note": "",
+      "level": "normal"
+    },
+    {
+      "id": "gen-def-안개",
+      "kind": "definition",
+      "question": "다음 뜻풀이에 해당하는 낱말은?",
+      "prompt": "지표면 가까이에 아주 작은 물방울이 부옇게 떠 있는 현상.",
+      "answer": "안개",
+      "choices": [
+        "마음",
+        "바람",
+        "사람",
+        "안개"
+      ],
+      "definition": "지표면 가까이에 아주 작은 물방울이 부옇게 떠 있는 현상.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=216005",
+      "rule": "",
+      "note": "",
+      "level": "normal"
+    },
+    {
+      "id": "gen-def-구름",
+      "kind": "definition",
+      "question": "다음 뜻풀이에 해당하는 낱말은?",
+      "prompt": "공기 중의 수분이 엉기어서 미세한 물방울이나 얼음 결정의 덩어리가 되어 공중에 떠 있는 것.",
+      "answer": "구름",
+      "choices": [
+        "구름",
+        "마음",
+        "바람",
+        "사람"
+      ],
+      "definition": "공기 중의 수분이 엉기어서 미세한 물방울이나 얼음 결정의 덩어리가 되어 공중에 떠 있는 것.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=36385",
+      "rule": "",
+      "note": "",
+      "level": "normal"
+    },
+    {
+      "id": "gen-def-달빛",
+      "kind": "definition",
+      "question": "다음 뜻풀이에 해당하는 낱말은?",
+      "prompt": "달에서 비쳐 오는 빛.",
+      "answer": "달빛",
+      "choices": [
+        "달빛",
+        "마음",
+        "바람",
+        "사람"
+      ],
+      "definition": "달에서 비쳐 오는 빛.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=77317",
+      "rule": "",
+      "note": "",
+      "level": "normal"
+    },
+    {
+      "id": "gen-idiom-귀",
+      "kind": "idiom",
+      "question": "다음 뜻의 관용구는?",
+      "prompt": "소리가 날카롭고 커서 듣기에 괴롭다.",
+      "answer": "귀(가) 따갑다",
+      "choices": [
+        "귀(가) 따갑다",
+        "귀(가) 아프다",
+        "귀(가) 여리다",
+        "귀(가) 질기다"
+      ],
+      "definition": "소리가 날카롭고 커서 듣기에 괴롭다.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=525531",
+      "rule": "",
+      "note": "",
+      "level": "normal"
+    },
+    {
+      "id": "gen-idiom-입",
+      "kind": "idiom",
+      "question": "다음 뜻의 관용구는?",
+      "prompt": "말을 하지 아니하거나 하던 말을 그치다.",
+      "answer": "입(을) 다물다",
+      "choices": [
+        "입(을) 다물다",
+        "입(을) 막다",
+        "입(을) 맞추다",
+        "입(을) 모으다"
+      ],
+      "definition": "말을 하지 아니하거나 하던 말을 그치다.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=531080",
+      "rule": "",
+      "note": "",
+      "level": "normal"
+    },
+    {
+      "id": "gen-idiom-코",
+      "kind": "idiom",
+      "question": "다음 뜻의 관용구는?",
+      "prompt": "근심에 싸여 기가 죽고 맥이 빠지다.",
+      "answer": "코(가) 빠지다",
+      "choices": [
+        "코(가) 빠지다",
+        "코(가) 세다",
+        "코가 꿰이다",
+        "코가 납작해지다"
+      ],
+      "definition": "근심에 싸여 기가 죽고 맥이 빠지다.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=532486",
+      "rule": "",
+      "note": "",
+      "level": "normal"
+    },
+    {
+      "id": "gen-proverb-귀",
+      "kind": "proverb",
+      "question": "다음 뜻의 속담은?",
+      "prompt": "배우지 않았으나 얻어들어서 아는 것이 많음을 비유적으로 이르는 말.",
+      "answer": "귀가 도자전 마룻구멍이라",
+      "choices": [
+        "귀 막고 방울 도둑질한다[도적질하기]",
+        "귀가 도자전 마룻구멍이라",
+        "귀가 보배라[도자전이라/산홋가지라]",
+        "귀가 항아리만 하다"
+      ],
+      "definition": "배우지 않았으나 얻어들어서 아는 것이 많음을 비유적으로 이르는 말.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=525520",
+      "rule": "",
+      "note": "",
+      "level": "normal"
+    },
+    {
+      "id": "gen-proverb-입",
+      "kind": "proverb",
+      "question": "다음 뜻의 속담은?",
+      "prompt": "얕은꾀로 남을 속이려는 어리석음을 비유적으로 이르는 말.",
+      "answer": "입 가리고 고양이 흉내",
+      "choices": [
+        "입 가리고 고양이 흉내",
+        "입 아래 코",
+        "입도 염치 믿고 산다",
+        "입만 가지면[있으면] 서울 이 서방 집도 찾아간다"
+      ],
+      "definition": "얕은꾀로 남을 속이려는 어리석음을 비유적으로 이르는 말.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=531038",
+      "rule": "",
+      "note": "",
+      "level": "normal"
+    },
+    {
+      "id": "gen-proverb-코",
+      "kind": "proverb",
+      "question": "다음 뜻의 속담은?",
+      "prompt": "근심이 쌓이고 고통스러운 일이 있어 맥이 빠진 경우를 비유적으로 이르는 말.",
+      "answer": "코가 쉰댓[석] 자나 빠졌다",
+      "choices": [
+        "코 떼어 주머니에 넣다",
+        "코가 쉰댓[석] 자나 빠졌다",
+        "코가 어디 붙은지 모른다",
+        "코를 잡아도 모르겠다"
+      ],
+      "definition": "근심이 쌓이고 고통스러운 일이 있어 맥이 빠진 경우를 비유적으로 이르는 말.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=532471",
+      "rule": "",
+      "note": "",
+      "level": "normal"
     }
   ]
 }
