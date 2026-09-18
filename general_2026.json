@@ -432,6 +432,186 @@
       "rule": "",
       "note": "",
       "level": "normal"
+    },
+    {
+      "id": "gen-def-별빛",
+      "kind": "definition",
+      "question": "다음 뜻풀이에 해당하는 낱말은?",
+      "prompt": "별의 반짝이는 빛.",
+      "answer": "별빛",
+      "choices": [
+        "마음",
+        "바람",
+        "별빛",
+        "사람"
+      ],
+      "definition": "별의 반짝이는 빛.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=431479",
+      "rule": "",
+      "note": "",
+      "level": "normal"
+    },
+    {
+      "id": "gen-def-햇살",
+      "kind": "definition",
+      "question": "다음 뜻풀이에 해당하는 낱말은?",
+      "prompt": "해에서 나오는 빛의 줄기. 또는 그 기운.",
+      "answer": "햇살",
+      "choices": [
+        "마음",
+        "바람",
+        "사람",
+        "햇살"
+      ],
+      "definition": "해에서 나오는 빛의 줄기. 또는 그 기운.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=367507",
+      "rule": "",
+      "note": "",
+      "level": "normal"
+    },
+    {
+      "id": "gen-def-그늘",
+      "kind": "definition",
+      "question": "다음 뜻풀이에 해당하는 낱말은?",
+      "prompt": "어두운 부분.",
+      "answer": "그늘",
+      "choices": [
+        "그늘",
+        "마음",
+        "바람",
+        "사람"
+      ],
+      "definition": "어두운 부분.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=401231",
+      "rule": "",
+      "note": "",
+      "level": "normal"
+    },
+    {
+      "id": "gen-def-골목",
+      "kind": "definition",
+      "question": "다음 뜻풀이에 해당하는 낱말은?",
+      "prompt": "큰길에서 들어가 동네 안을 이리저리 통하는 좁은 길.",
+      "answer": "골목",
+      "choices": [
+        "골목",
+        "마음",
+        "바람",
+        "사람"
+      ],
+      "definition": "큰길에서 들어가 동네 안을 이리저리 통하는 좁은 길.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=397158",
+      "rule": "",
+      "note": "",
+      "level": "normal"
+    },
+    {
+      "id": "gen-def-언덕",
+      "kind": "definition",
+      "question": "다음 뜻풀이에 해당하는 낱말은?",
+      "prompt": "땅이 비탈지고 조금 높은 곳.",
+      "answer": "언덕",
+      "choices": [
+        "마음",
+        "바람",
+        "사람",
+        "언덕"
+      ],
+      "definition": "땅이 비탈지고 조금 높은 곳.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=225496",
+      "rule": "",
+      "note": "",
+      "level": "normal"
+    },
+    {
+      "id": "gen-def-바다",
+      "kind": "definition",
+      "question": "다음 뜻풀이에 해당하는 낱말은?",
+      "prompt": "지구 위에서 육지를 제외한 부분으로 짠물이 괴어 하나로 이어진 넓고 큰 부분. 지구 표면적의 약 70.8%를 차지하는데, 이는 육지 면적의 2.43배이다.",
+      "answer": "바다",
+      "choices": [
+        "마음",
+        "바다",
+        "바람",
+        "사람"
+      ],
+      "definition": "지구 위에서 육지를 제외한 부분으로 짠물이 괴어 하나로 이어진 넓고 큰 부분. 지구 표면적의 약 70.8%를 차지하는데, 이는 육지 면적의 2.43배이다.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=430018",
+      "rule": "",
+      "note": "",
+      "level": "normal"
+    },
+    {
+      "id": "gen-idiom-머리",
+      "kind": "idiom",
+      "question": "다음 뜻의 관용구는?",
+      "prompt": "사고방식이나 사상 따위가 완고하다.",
+      "answer": "머리(가) 굳다",
+      "choices": [
+        "머리(가) 굳다",
+        "머리(가) 굵다",
+        "머리(가) 썩다",
+        "머리(가) 크다"
+      ],
+      "definition": "사고방식이나 사상 따위가 완고하다.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=527494",
+      "rule": "",
+      "note": "",
+      "level": "normal"
+    },
+    {
+      "id": "gen-idiom-가슴",
+      "kind": "idiom",
+      "question": "다음 뜻의 관용구는?",
+      "prompt": "안달하여 마음의 고통을 느끼다.",
+      "answer": "가슴(을) 앓다",
+      "choices": [
+        "가슴(을) 앓다",
+        "가슴(을) 저미다",
+        "가슴(을) 치다",
+        "가슴(을) 태우다"
+      ],
+      "definition": "안달하여 마음의 고통을 느끼다.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=525106",
+      "rule": "",
+      "note": "",
+      "level": "normal"
+    },
+    {
+      "id": "gen-idiom-어깨",
+      "kind": "idiom",
+      "question": "다음 뜻의 관용구는?",
+      "prompt": "서로 비슷한 지위나 힘을 가지다.",
+      "answer": "어깨(를) 견주다",
+      "choices": [
+        "어깨(를) 견주다",
+        "어깨가 가볍다",
+        "어깨가 무겁다",
+        "어깨가[어깨를] 으쓱거리다"
+      ],
+      "definition": "서로 비슷한 지위나 힘을 가지다.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=530196",
+      "rule": "",
+      "note": "",
+      "level": "normal"
+    },
+    {
+      "id": "gen-proverb-머리",
+      "kind": "proverb",
+      "question": "다음 뜻의 속담은?",
+      "prompt": "머리털이 하얗게 세어 늙었다는 말.",
+      "answer": "머리가 모시 바구니가 되었다",
+      "choices": [
+        "머리 간 데 끝 간 데 없다",
+        "머리 검은 고양이 귀해 말라",
+        "머리 검은 짐승은 남의 공을 모른다",
+        "머리가 모시 바구니가 되었다"
+      ],
+      "definition": "머리털이 하얗게 세어 늙었다는 말.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=527482",
+      "rule": "",
+      "note": "",
+      "level": "normal"
     }
   ]
 }

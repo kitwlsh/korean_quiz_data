@@ -280,6 +280,146 @@
       ],
       "accepted": [],
       "level": "normal"
+    },
+    {
+      "id": "cho-수레",
+      "answer": "수레",
+      "definition": "바퀴를 달아서 굴러가게 만든 기구. 사람이 타거나 짐을 싣는다.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=447785",
+      "pos": "명사",
+      "choices": [
+        "사람",
+        "서리",
+        "소라",
+        "수레"
+      ],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-소라",
+      "answer": "소라",
+      "definition": "돌돔 따위의 낚시 미끼로 쓰는 조개 무리.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=190304",
+      "pos": "명사",
+      "choices": [
+        "사람",
+        "서리",
+        "소라",
+        "수레"
+      ],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-거울",
+      "answer": "거울",
+      "definition": "빛의 반사를 이용하여 물체의 모양을 비추어 보는 물건. 옛날에는 구리나 돌을 매끄럽게 갈아서 만들었는데, 지금은 보통 유리 뒤쪽에 아말감을 발라 만든다.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=390650",
+      "pos": "명사",
+      "choices": [
+        "가을",
+        "거울",
+        "겨울",
+        "기억"
+      ],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-기억",
+      "answer": "기억",
+      "definition": "어린아이가 영리하고 지혜로움. ≪시경≫ <생민(生民)>편에서 유래한 말이다.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=50552",
+      "pos": "명사",
+      "choices": [
+        "가을",
+        "거울",
+        "겨울",
+        "기억"
+      ],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-자취",
+      "answer": "자취",
+      "definition": "어떤 것이 남긴 표시나 자리.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=476042",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-흔적",
+      "answer": "흔적",
+      "definition": "어떤 현상이나 실체가 없어졌거나 지나간 뒤에 남은 자국이나 자취.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=504507",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-노래",
+      "answer": "노래",
+      "definition": "가사에 곡조를 붙여 목소리로 부를 수 있게 만든 음악. 또는 그 음악을 목소리로 부름.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=67005",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-가락",
+      "answer": "가락",
+      "definition": "물레로 실을 자을 때 실이 감기는 쇠꼬챙이.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=383279",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-이야기",
+      "answer": "이야기",
+      "definition": "어떤 사물이나 사실, 현상에 대하여 일정한 줄거리를 가지고 하는 말이나 글.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=469480",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-웃음",
+      "answer": "웃음",
+      "definition": "웃는 일. 또는 그런 소리나 표정.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=468268",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-눈물",
+      "answer": "눈물",
+      "definition": "눈알 바깥면의 위에 있는 눈물샘에서 나오는 분비물. 늘 조금씩 나와서 눈을 축이거나 이물질을 씻어 내는데, 자극이나 감동을 받으면 더 많이 나온다.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=409963",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-한숨",
+      "answer": "한숨",
+      "definition": "숨을 한 번 쉴 동안. 또는 잠깐 동안.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=499708",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
     }
   ]
 }
