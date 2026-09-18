@@ -1,0 +1,73 @@
+name: K달인 문항 로봇
+
+# 🔴 **기존 로봇(daily_update_.yml)과 «별도 워크플로»다.**
+#    한 워크플로에 섞으면 한쪽 실패가 다른 쪽을 끌고 죽는다 — 기존 로봇이 퀴즈와 지문을
+#    별도 «스텝»으로 나눠 둔 것과 같은 이유이고, 여기서는 아예 파일을 나눈다.
+#    KDailyUtil이 쓰는 korean.json·passages_2026.json은 이 워크플로가 **건드리지 않는다.**
+on:
+  schedule:
+    # 🔑 기존 로봇(19:40 UTC)보다 **1시간 뒤**에 돈다.
+    #    ③달인이 passages_2026.json을 읽을 수 있으려면 그쪽이 먼저 끝나 있어야 한다.
+    #    ⚠️ GitHub 스케줄은 밀린다(실측 2시간) — 밀려도 순서가 뒤집히지 않게 간격을 둔다.
+    - cron: '40 20 * * *'
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - uses: actions/setup-python@v5
+      with:
+        python-version: '3.11'
+
+    - name: 준비물 설치
+      run: pip install google-generativeai
+
+    # ── ①초성 · ②일반 — 🔑 국립국어원 API만 쓴다. Gemini가 죽어도 이건 돈다 ──
+    - name: ①초성 · ②일반 문항 만들기
+      id: quiz
+      continue-on-error: true
+      env:
+        NIKL_API_KEY: ${{ secrets.NIKL_API_KEY }}
+      run: python kdalin/build_quiz.py
+
+    # ── ③달인 — 지문이 필요해 Gemini를 쓴다 ──
+    # 🔴 위 스텝과 실패 반경을 나눈다. ③이 실패해도 ①②는 이미 저장돼 있다.
+    - name: ③달인 문항 만들기
+      id: dalin
+      continue-on-error: true
+      env:
+        NIKL_API_KEY: ${{ secrets.NIKL_API_KEY }}
+        GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        QUIZ_MODEL: ${{ vars.QUIZ_MODEL }}      # 🔧 기존 로봇과 «같은» 비상 레버
+      run: python kdalin/build_dalin.py
+
+    # 🔴 **검사가 실패하면 커밋하지 않는다.** `01` §1 — 오타 하나로 100문항이
+    #    앱에서 통째로 안 보인 사고가 있었다. 깨진 것을 올리지 않는 것이 가장 싸다.
+    - name: 문항 검사
+      run: python kdalin/validate_kdalin.py
+
+    - name: 결과 커밋
+      run: |
+        git config user.name  "github-actions[bot]"
+        git config user.email "github-actions[bot]@users.noreply.github.com"
+        # 🔴 K달인 파일 셋만 스테이징한다 — 기존 파일을 실수로라도 올리지 않는다.
+        git add -- dalin_2026.json choseong_2026.json general_2026.json 2>/dev/null || true
+        if git diff --cached --quiet; then
+          echo "바뀐 것이 없다 — 커밋하지 않는다"
+        else
+          git commit -m "🤖 K달인 문항 갱신 (①초성 ②일반 ③달인)"
+          git push
+        fi
+
+    # 🔑 어느 스텝이 실패했는지 여기서 한 번에 세운다 — continue-on-error로 넘긴 것들.
+    - name: 실패 표시
+      if: steps.quiz.outcome == 'failure' && steps.dalin.outcome == 'failure'
+      run: |
+        echo "🔴 ①②와 ③이 «둘 다» 실패했다"
+        exit 1

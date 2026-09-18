@@ -1,0 +1,150 @@
+{
+  "version": 1,
+  "items": [
+    {
+      "id": "cho-마음",
+      "answer": "마음",
+      "definition": "사람이 본래부터 지닌 성격이나 품성.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=422607",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-사람",
+      "answer": "사람",
+      "definition": "생각을 하고 언어를 사용하며, 도구를 만들어 쓰고 사회를 이루어 사는 동물.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=439972",
+      "pos": "명사",
+      "choices": [
+        "사람",
+        "서리",
+        "소라",
+        "수레"
+      ],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-바람",
+      "answer": "바람",
+      "definition": "기압의 변화 또는 사람이나 기계에 의하여 일어나는 공기의 움직임.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=426114",
+      "pos": "명사",
+      "choices": [
+        "바람",
+        "버릇",
+        "벼락",
+        "보리"
+      ],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-가을",
+      "answer": "가을",
+      "definition": "한 해의 네 철 가운데 셋째 철. 여름과 겨울의 사이이며, 달로는 9~11월, 절기(節氣)로는 입추부터 입동 전까지를 이른다.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=389762",
+      "pos": "명사",
+      "choices": [
+        "가을",
+        "거울",
+        "겨울",
+        "기억"
+      ],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-겨울",
+      "answer": "겨울",
+      "definition": "한 해의 네 철 가운데 넷째 철. 가을과 봄 사이이며, 낮이 짧고 추운 계절로, 달로는 12~2월, 절기(節氣)로는 입동부터 입춘 전까지를 이른다.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=390808",
+      "pos": "명사",
+      "choices": [
+        "가을",
+        "거울",
+        "겨울",
+        "기억"
+      ],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-여름",
+      "answer": "여름",
+      "definition": "한 해의 네 철 가운데 둘째 철. 봄과 가을 사이이며, 낮이 길고 더운 계절로, 달로는 6~8월, 절기(節氣)로는 입하부터 입추 전까지를 이른다.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=460034",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-노을",
+      "answer": "노을",
+      "definition": "해가 뜨거나 질 무렵에, 하늘이 햇빛에 물들어 벌겋게 보이는 현상.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=409358",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-이슬",
+      "answer": "이슬",
+      "definition": "공기 중의 수증기가 기온이 내려가거나 찬 물체에 부딪힐 때 엉겨서 생기는 물방울.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=470005",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-서리",
+      "answer": "서리",
+      "definition": "떼를 지어 남의 과일, 곡식, 가축 따위를 훔쳐 먹는 장난.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=175491",
+      "pos": "명사",
+      "choices": [
+        "사람",
+        "서리",
+        "소라",
+        "수레"
+      ],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-안개",
+      "answer": "안개",
+      "definition": "지표면 가까이에 아주 작은 물방울이 부옇게 떠 있는 현상.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=216005",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-구름",
+      "answer": "구름",
+      "definition": "공기 중의 수분이 엉기어서 미세한 물방울이나 얼음 결정의 덩어리가 되어 공중에 떠 있는 것.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=36385",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-달빛",
+      "answer": "달빛",
+      "definition": "달에서 비쳐 오는 빛.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=77317",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    }
+  ]
+}

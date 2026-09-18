@@ -1,0 +1,221 @@
+{
+  "version": 1,
+  "items": [
+    {
+      "id": "gen-def-마음",
+      "kind": "definition",
+      "question": "다음 뜻풀이에 해당하는 낱말은?",
+      "prompt": "사람이 본래부터 지닌 성격이나 품성.",
+      "answer": "마음",
+      "choices": [
+        "가을",
+        "마음",
+        "바람",
+        "사람"
+      ],
+      "definition": "사람이 본래부터 지닌 성격이나 품성.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=422607",
+      "rule": "",
+      "note": "",
+      "level": "normal"
+    },
+    {
+      "id": "gen-def-사람",
+      "kind": "definition",
+      "question": "다음 뜻풀이에 해당하는 낱말은?",
+      "prompt": "생각을 하고 언어를 사용하며, 도구를 만들어 쓰고 사회를 이루어 사는 동물.",
+      "answer": "사람",
+      "choices": [
+        "가을",
+        "마음",
+        "바람",
+        "사람"
+      ],
+      "definition": "생각을 하고 언어를 사용하며, 도구를 만들어 쓰고 사회를 이루어 사는 동물.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=439972",
+      "rule": "",
+      "note": "",
+      "level": "normal"
+    },
+    {
+      "id": "gen-def-바람",
+      "kind": "definition",
+      "question": "다음 뜻풀이에 해당하는 낱말은?",
+      "prompt": "기압의 변화 또는 사람이나 기계에 의하여 일어나는 공기의 움직임.",
+      "answer": "바람",
+      "choices": [
+        "가을",
+        "마음",
+        "바람",
+        "사람"
+      ],
+      "definition": "기압의 변화 또는 사람이나 기계에 의하여 일어나는 공기의 움직임.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=426114",
+      "rule": "",
+      "note": "",
+      "level": "normal"
+    },
+    {
+      "id": "gen-def-가을",
+      "kind": "definition",
+      "question": "다음 뜻풀이에 해당하는 낱말은?",
+      "prompt": "한 해의 네 철 가운데 셋째 철. 여름과 겨울의 사이이며, 달로는 9~11월, 절기(節氣)로는 입추부터 입동 전까지를 이른다.",
+      "answer": "가을",
+      "choices": [
+        "가을",
+        "마음",
+        "바람",
+        "사람"
+      ],
+      "definition": "한 해의 네 철 가운데 셋째 철. 여름과 겨울의 사이이며, 달로는 9~11월, 절기(節氣)로는 입추부터 입동 전까지를 이른다.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=389762",
+      "rule": "",
+      "note": "",
+      "level": "normal"
+    },
+    {
+      "id": "gen-def-겨울",
+      "kind": "definition",
+      "question": "다음 뜻풀이에 해당하는 낱말은?",
+      "prompt": "한 해의 네 철 가운데 넷째 철. 가을과 봄 사이이며, 낮이 짧고 추운 계절로, 달로는 12~2월, 절기(節氣)로는 입동부터 입춘 전까지를 이른다.",
+      "answer": "겨울",
+      "choices": [
+        "겨울",
+        "마음",
+        "바람",
+        "사람"
+      ],
+      "definition": "한 해의 네 철 가운데 넷째 철. 가을과 봄 사이이며, 낮이 짧고 추운 계절로, 달로는 12~2월, 절기(節氣)로는 입동부터 입춘 전까지를 이른다.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=390808",
+      "rule": "",
+      "note": "",
+      "level": "normal"
+    },
+    {
+      "id": "gen-def-여름",
+      "kind": "definition",
+      "question": "다음 뜻풀이에 해당하는 낱말은?",
+      "prompt": "한 해의 네 철 가운데 둘째 철. 봄과 가을 사이이며, 낮이 길고 더운 계절로, 달로는 6~8월, 절기(節氣)로는 입하부터 입추 전까지를 이른다.",
+      "answer": "여름",
+      "choices": [
+        "마음",
+        "바람",
+        "사람",
+        "여름"
+      ],
+      "definition": "한 해의 네 철 가운데 둘째 철. 봄과 가을 사이이며, 낮이 길고 더운 계절로, 달로는 6~8월, 절기(節氣)로는 입하부터 입추 전까지를 이른다.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=460034",
+      "rule": "",
+      "note": "",
+      "level": "normal"
+    },
+    {
+      "id": "gen-idiom-발",
+      "kind": "idiom",
+      "question": "다음 뜻의 관용구는?",
+      "prompt": "매우 안타까워하거나 다급해하다.",
+      "answer": "발(을) 구르다",
+      "choices": [
+        "발(을) 구르다",
+        "발(을) 끊다",
+        "발(을) 들여놓을 자리 하나 없다",
+        "발(을) 디디다"
+      ],
+      "definition": "매우 안타까워하거나 다급해하다.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=521612",
+      "rule": "",
+      "note": "",
+      "level": "normal"
+    },
+    {
+      "id": "gen-idiom-손",
+      "kind": "idiom",
+      "question": "다음 뜻의 관용구는?",
+      "prompt": "일이 손에 익숙해지다.",
+      "answer": "손(에) 익다",
+      "choices": [
+        "손(에) 익다",
+        "손(을) 거치다",
+        "손(을) 걸다",
+        "손(을) 끊다"
+      ],
+      "definition": "일이 손에 익숙해지다.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=529759",
+      "rule": "",
+      "note": "",
+      "level": "normal"
+    },
+    {
+      "id": "gen-idiom-눈",
+      "kind": "idiom",
+      "question": "다음 뜻의 관용구는?",
+      "prompt": "두드러지게 드러나다.",
+      "answer": "눈(에) 띄다",
+      "choices": [
+        "눈(에) 띄다",
+        "눈(에) 어리다",
+        "눈(을) 까뒤집다",
+        "눈(을) 돌리다"
+      ],
+      "definition": "두드러지게 드러나다.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=526490",
+      "rule": "",
+      "note": "",
+      "level": "normal"
+    },
+    {
+      "id": "gen-proverb-발",
+      "kind": "proverb",
+      "question": "다음 뜻의 속담은?",
+      "prompt": "신발까지 벗고 쫓아가도 따라가지 못하겠다는 뜻으로, 능력이나 수준의 차이가 너무 심해서 경쟁 상대가 되지 못하는 경우를 비유적으로 이르는 말.",
+      "answer": "발(을) 벗고 따라가도 못 따르겠다",
+      "choices": [
+        "발(을) 벗고 따라가도 못 따르겠다",
+        "발(을) 뻗을 자리를 보고 누우랬다",
+        "발만 보고도 무엇까지 보았다고",
+        "발보다 발가락이 더 크다"
+      ],
+      "definition": "신발까지 벗고 쫓아가도 따라가지 못하겠다는 뜻으로, 능력이나 수준의 차이가 너무 심해서 경쟁 상대가 되지 못하는 경우를 비유적으로 이르는 말.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=521602",
+      "rule": "",
+      "note": "",
+      "level": "normal"
+    },
+    {
+      "id": "gen-proverb-손",
+      "kind": "proverb",
+      "question": "다음 뜻의 속담은?",
+      "prompt": "손조차 사용하지 아니하고 코를 푼다는 뜻으로, 일을 힘 안 들이고 아주 쉽게 해치움을 비유적으로 이르는 말.",
+      "answer": "손 안 대고 코 풀기",
+      "choices": [
+        "손 안 대고 코 풀기",
+        "손에 붙은 밥[밥풀] 아니 먹을까",
+        "손에 쥐인 듯 들여다보인다",
+        "손으로 샅 막듯"
+      ],
+      "definition": "손조차 사용하지 아니하고 코를 푼다는 뜻으로, 일을 힘 안 들이고 아주 쉽게 해치움을 비유적으로 이르는 말.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=529746",
+      "rule": "",
+      "note": "",
+      "level": "normal"
+    },
+    {
+      "id": "gen-proverb-눈",
+      "kind": "proverb",
+      "question": "다음 뜻의 속담은?",
+      "prompt": "얕은수로 남을 속이려 한다는 말.",
+      "answer": "눈 가리고 아웅",
+      "choices": [
+        "눈 가리고 아웅",
+        "눈 감고 따라간다",
+        "눈 감고 아웅 한다",
+        "눈 감으면 코 베어 먹을 세상[인심]"
+      ],
+      "definition": "얕은수로 남을 속이려 한다는 말.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=526454",
+      "rule": "",
+      "note": "",
+      "level": "normal"
+    }
+  ]
+}
