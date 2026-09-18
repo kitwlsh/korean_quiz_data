@@ -28,9 +28,23 @@ jobs:
     - name: 준비물 설치
       run: pip install google-generativeai
 
+    # 🔑 **키가 아직 없으면 조용히 끝낸다.** 없는 키로 매일 돌면 저장소에 빨간 X가
+    #    쌓이고, 그러면 «진짜» 실패가 묻힌다. 🔴 NIKL_API_KEY는 ①②③ 전부가 쓴다.
+    - name: 키 확인
+      id: keys
+      run: |
+        if [ -z "${{ secrets.NIKL_API_KEY }}" ]; then
+          echo "has_nikl=false" >> "$GITHUB_OUTPUT"
+          echo "⏭ NIKL_API_KEY가 아직 없다 — 이번 실행은 건너뛴다."
+          echo "   저장소 Settings › Secrets and variables › Actions 에 추가하면 돈다."
+        else
+          echo "has_nikl=true" >> "$GITHUB_OUTPUT"
+        fi
+
     # ── ①초성 · ②일반 — 🔑 국립국어원 API만 쓴다. Gemini가 죽어도 이건 돈다 ──
     - name: ①초성 · ②일반 문항 만들기
       id: quiz
+      if: steps.keys.outputs.has_nikl == 'true'
       continue-on-error: true
       env:
         NIKL_API_KEY: ${{ secrets.NIKL_API_KEY }}
@@ -40,6 +54,7 @@ jobs:
     # 🔴 위 스텝과 실패 반경을 나눈다. ③이 실패해도 ①②는 이미 저장돼 있다.
     - name: ③달인 문항 만들기
       id: dalin
+      if: steps.keys.outputs.has_nikl == 'true'
       continue-on-error: true
       env:
         NIKL_API_KEY: ${{ secrets.NIKL_API_KEY }}
@@ -50,9 +65,11 @@ jobs:
     # 🔴 **검사가 실패하면 커밋하지 않는다.** `01` §1 — 오타 하나로 100문항이
     #    앱에서 통째로 안 보인 사고가 있었다. 깨진 것을 올리지 않는 것이 가장 싸다.
     - name: 문항 검사
+      if: steps.keys.outputs.has_nikl == 'true'
       run: python kdalin/validate_kdalin.py
 
     - name: 결과 커밋
+      if: steps.keys.outputs.has_nikl == 'true'
       run: |
         git config user.name  "github-actions[bot]"
         git config user.email "github-actions[bot]@users.noreply.github.com"
@@ -67,7 +84,7 @@ jobs:
 
     # 🔑 어느 스텝이 실패했는지 여기서 한 번에 세운다 — continue-on-error로 넘긴 것들.
     - name: 실패 표시
-      if: steps.quiz.outcome == 'failure' && steps.dalin.outcome == 'failure'
+      if: steps.keys.outputs.has_nikl == 'true' && steps.quiz.outcome == 'failure' && steps.dalin.outcome == 'failure'
       run: |
         echo "🔴 ①②와 ③이 «둘 다» 실패했다"
         exit 1
