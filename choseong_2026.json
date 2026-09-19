@@ -420,6 +420,131 @@
       "choices": [],
       "accepted": [],
       "level": "normal"
+    },
+    {
+      "id": "cho-걸음",
+      "answer": "걸음",
+      "definition": "두 발을 번갈아 옮겨 놓는 동작.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=394958",
+      "pos": "명사",
+      "choices": [
+        "가을",
+        "거울",
+        "걸음",
+        "겨울"
+      ],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-손길",
+      "answer": "손길",
+      "definition": "내밀거나 잡거나 닿거나 만지거나 할 때의 손.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=448644",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-눈길",
+      "answer": "눈길",
+      "definition": "눈이 가는 곳. 또는 눈으로 보는 방향.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=71293",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-발길",
+      "answer": "발길",
+      "definition": "앞으로 움직여 걸어 나가는 발.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=426915",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-아침",
+      "answer": "아침",
+      "definition": "날이 새면서 오전 반나절쯤까지의 동안.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=458645",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-저녁",
+      "answer": "저녁",
+      "definition": "해가 질 무렵부터 밤이 되기까지의 사이.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=475740",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-새벽",
+      "answer": "새벽",
+      "definition": "먼동이 트려 할 무렵.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=444770",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-한낮",
+      "answer": "한낮",
+      "definition": "낮의 한가운데. 곧, 낮 열두 시를 전후한 때를 이른다.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=360508",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-밤중",
+      "answer": "밤중",
+      "definition": "밤이 깊은 때.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=432508",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-어제",
+      "answer": "어제",
+      "definition": "오늘의 바로 하루 전날.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=231840",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-오늘",
+      "answer": "오늘",
+      "definition": "지금 지나가고 있는 이날.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=460284",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-내일",
+      "answer": "내일",
+      "definition": "오늘의 바로 다음 날.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=406113",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
     }
   ]
 }

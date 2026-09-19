@@ -612,6 +612,150 @@
       "rule": "",
       "note": "",
       "level": "normal"
+    },
+    {
+      "id": "gen-def-강물",
+      "kind": "definition",
+      "question": "다음 뜻풀이에 해당하는 낱말은?",
+      "prompt": "강에 흐르는 물.",
+      "answer": "강물",
+      "choices": [
+        "강물",
+        "마음",
+        "바람",
+        "사람"
+      ],
+      "definition": "강에 흐르는 물.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=391806",
+      "rule": "",
+      "note": "",
+      "level": "normal"
+    },
+    {
+      "id": "gen-def-들판",
+      "kind": "definition",
+      "question": "다음 뜻풀이에 해당하는 낱말은?",
+      "prompt": "들을 이룬 벌판.",
+      "answer": "들판",
+      "choices": [
+        "들판",
+        "마음",
+        "바람",
+        "사람"
+      ],
+      "definition": "들을 이룬 벌판.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=94186",
+      "rule": "",
+      "note": "",
+      "level": "normal"
+    },
+    {
+      "id": "gen-def-나무",
+      "kind": "definition",
+      "question": "다음 뜻풀이에 해당하는 낱말은?",
+      "prompt": "줄기나 가지가 목질로 된 여러해살이 식물.",
+      "answer": "나무",
+      "choices": [
+        "나무",
+        "마음",
+        "바람",
+        "사람"
+      ],
+      "definition": "줄기나 가지가 목질로 된 여러해살이 식물.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=404765",
+      "rule": "",
+      "note": "",
+      "level": "normal"
+    },
+    {
+      "id": "gen-def-벼락",
+      "kind": "definition",
+      "question": "다음 뜻풀이에 해당하는 낱말은?",
+      "prompt": "공중의 전기와 땅 위의 물체에 흐르는 전기 사이에 방전 작용으로 일어나는 자연 현상.",
+      "answer": "벼락",
+      "choices": [
+        "마음",
+        "바람",
+        "벼락",
+        "사람"
+      ],
+      "definition": "공중의 전기와 땅 위의 물체에 흐르는 전기 사이에 방전 작용으로 일어나는 자연 현상.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=435533",
+      "rule": "",
+      "note": "",
+      "level": "normal"
+    },
+    {
+      "id": "gen-def-버릇",
+      "kind": "definition",
+      "question": "다음 뜻풀이에 해당하는 낱말은?",
+      "prompt": "오랫동안 자꾸 반복하여 몸에 익어 버린 행동.",
+      "answer": "버릇",
+      "choices": [
+        "마음",
+        "바람",
+        "버릇",
+        "사람"
+      ],
+      "definition": "오랫동안 자꾸 반복하여 몸에 익어 버린 행동.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=434034",
+      "rule": "",
+      "note": "",
+      "level": "normal"
+    },
+    {
+      "id": "gen-idiom-다리",
+      "kind": "idiom",
+      "question": "다음 뜻의 관용구는?",
+      "prompt": "마음 놓고 편히 자다.",
+      "answer": "다리(를) 뻗고[펴고] 자다",
+      "choices": [
+        "다리(를) 뻗고[펴고] 자다",
+        "다리가 길다",
+        "다리를 들리다",
+        "다리야 날 살려라"
+      ],
+      "definition": "마음 놓고 편히 자다.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=526683",
+      "rule": "",
+      "note": "",
+      "level": "normal"
+    },
+    {
+      "id": "gen-idiom-말",
+      "kind": "idiom",
+      "question": "다음 뜻의 관용구는?",
+      "prompt": "어떤 사실이 보통 이상임을 상대편에게 강조하여 이르는 말.",
+      "answer": "말(도)[말(을)] 마라",
+      "choices": [
+        "말(도)[말(을)] 마라",
+        "말(을) 내다",
+        "말(을) 듣다",
+        "말(을)[말(도)] 못 하다"
+      ],
+      "definition": "어떤 사실이 보통 이상임을 상대편에게 강조하여 이르는 말.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=527375",
+      "rule": "",
+      "note": "",
+      "level": "normal"
+    },
+    {
+      "id": "gen-idiom-밥",
+      "kind": "idiom",
+      "question": "다음 뜻의 관용구는?",
+      "prompt": "일정한 노력을 들여서 먹을 것이나 대가를 얻다.",
+      "answer": "밥(을) 벌다",
+      "choices": [
+        "밥 구경(을) 하다",
+        "밥 구경을 못 하다",
+        "밥(을) 벌다",
+        "밥(을) 주다"
+      ],
+      "definition": "일정한 노력을 들여서 먹을 것이나 대가를 얻다.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=528561",
+      "rule": "",
+      "note": "",
+      "level": "normal"
     }
   ]
 }
