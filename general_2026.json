@@ -756,6 +756,150 @@
       "rule": "",
       "note": "",
       "level": "normal"
+    },
+    {
+      "id": "gen-def-수레",
+      "kind": "definition",
+      "question": "다음 뜻풀이에 해당하는 낱말은?",
+      "prompt": "바퀴를 달아서 굴러가게 만든 기구. 사람이 타거나 짐을 싣는다.",
+      "answer": "수레",
+      "choices": [
+        "마음",
+        "바람",
+        "사람",
+        "수레"
+      ],
+      "definition": "바퀴를 달아서 굴러가게 만든 기구. 사람이 타거나 짐을 싣는다.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=447785",
+      "rule": "",
+      "note": "",
+      "level": "normal"
+    },
+    {
+      "id": "gen-def-소라",
+      "kind": "definition",
+      "question": "다음 뜻풀이에 해당하는 낱말은?",
+      "prompt": "돌돔 따위의 낚시 미끼로 쓰는 조개 무리.",
+      "answer": "소라",
+      "choices": [
+        "마음",
+        "바람",
+        "사람",
+        "소라"
+      ],
+      "definition": "돌돔 따위의 낚시 미끼로 쓰는 조개 무리.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=190304",
+      "rule": "",
+      "note": "",
+      "level": "normal"
+    },
+    {
+      "id": "gen-def-거울",
+      "kind": "definition",
+      "question": "다음 뜻풀이에 해당하는 낱말은?",
+      "prompt": "빛의 반사를 이용하여 물체의 모양을 비추어 보는 물건. 옛날에는 구리나 돌을 매끄럽게 갈아서 만들었는데, 지금은 보통 유리 뒤쪽에 아말감을 발라 만든다.",
+      "answer": "거울",
+      "choices": [
+        "거울",
+        "마음",
+        "바람",
+        "사람"
+      ],
+      "definition": "빛의 반사를 이용하여 물체의 모양을 비추어 보는 물건. 옛날에는 구리나 돌을 매끄럽게 갈아서 만들었는데, 지금은 보통 유리 뒤쪽에 아말감을 발라 만든다.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=390650",
+      "rule": "",
+      "note": "",
+      "level": "normal"
+    },
+    {
+      "id": "gen-def-기억",
+      "kind": "definition",
+      "question": "다음 뜻풀이에 해당하는 낱말은?",
+      "prompt": "어린아이가 영리하고 지혜로움. ≪시경≫ <생민(生民)>편에서 유래한 말이다.",
+      "answer": "기억",
+      "choices": [
+        "기억",
+        "마음",
+        "바람",
+        "사람"
+      ],
+      "definition": "어린아이가 영리하고 지혜로움. ≪시경≫ <생민(生民)>편에서 유래한 말이다.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=50552",
+      "rule": "",
+      "note": "",
+      "level": "normal"
+    },
+    {
+      "id": "gen-def-자취",
+      "kind": "definition",
+      "question": "다음 뜻풀이에 해당하는 낱말은?",
+      "prompt": "어떤 것이 남긴 표시나 자리.",
+      "answer": "자취",
+      "choices": [
+        "마음",
+        "바람",
+        "사람",
+        "자취"
+      ],
+      "definition": "어떤 것이 남긴 표시나 자리.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=476042",
+      "rule": "",
+      "note": "",
+      "level": "normal"
+    },
+    {
+      "id": "gen-idiom-물",
+      "kind": "idiom",
+      "question": "다음 뜻의 관용구는?",
+      "prompt": "떡가루에 꿀물이나 찬물을 뿌려 손으로 비벼 체로 다시 치다.",
+      "answer": "물(을) 내리다",
+      "choices": [
+        "물(을) 내리다",
+        "물(을) 맞다",
+        "물(을) 잡다",
+        "물(이) 내리다"
+      ],
+      "definition": "떡가루에 꿀물이나 찬물을 뿌려 손으로 비벼 체로 다시 치다.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=528133",
+      "rule": "",
+      "note": "",
+      "level": "normal"
+    },
+    {
+      "id": "gen-idiom-불",
+      "kind": "idiom",
+      "question": "다음 뜻의 관용구는?",
+      "prompt": "광산에서 폭약을 터뜨리려고 도화선에 불을 붙이다.",
+      "answer": "불(을) 놓다",
+      "choices": [
+        "불(을) 놓다",
+        "불(을) 맞다",
+        "불(을) 받다",
+        "불(을) 보듯 뻔하다[훤하다]"
+      ],
+      "definition": "광산에서 폭약을 터뜨리려고 도화선에 불을 붙이다.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=528776",
+      "rule": "",
+      "note": "",
+      "level": "normal"
+    },
+    {
+      "id": "gen-idiom-길",
+      "kind": "idiom",
+      "question": "다음 뜻의 관용구는?",
+      "prompt": "방도를 찾아내다.",
+      "answer": "길(을) 뚫다",
+      "choices": [
+        "길(을) 뚫다",
+        "길(을) 쓸다",
+        "길(을) 죄다",
+        "길(이) 닿다"
+      ],
+      "definition": "방도를 찾아내다.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=525905",
+      "rule": "",
+      "note": "",
+      "level": "normal"
     }
   ]
 }

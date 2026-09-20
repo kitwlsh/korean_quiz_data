@@ -545,6 +545,126 @@
       "choices": [],
       "accepted": [],
       "level": "normal"
+    },
+    {
+      "id": "cho-시간",
+      "answer": "시간",
+      "definition": "화살의 몸을 이루는 대.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=203093",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-세월",
+      "answer": "세월",
+      "definition": "음력 초하루부터 며칠 동안 보이는 달. 초저녁에 잠깐 서쪽 지평선 부근에서 볼 수 있다.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=180689",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-창문",
+      "answer": "창문",
+      "definition": "공기나 햇빛을 받을 수 있고, 밖을 내다볼 수 있도록 벽이나 지붕에 낸 문.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=328102",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-문턱",
+      "answer": "문턱",
+      "definition": "제법 큰 덩이로 뚝 끊어지거나 잘라지는 모양. ‘문덕’보다 거센 느낌을 준다.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=124483",
+      "pos": "부사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-지붕",
+      "answer": "지붕",
+      "definition": "집의 맨 꼭대기 부분을 덮어 씌우는 덮개.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=484100",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-기둥",
+      "answer": "기둥",
+      "definition": "건축물에서, 주춧돌 위에 세워 보·도리 따위를 받치는 나무. 또는 돌·쇠·벽돌·콘크리트 따위로 모나거나 둥글게 만들어 곧추 높이 세운 것.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=406561",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-마루",
+      "answer": "마루",
+      "definition": "등성이를 이루는 지붕이나 산 따위의 꼭대기.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=417760",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-부엌",
+      "answer": "부엌",
+      "definition": "일정한 시설을 갖추어 놓고 음식을 만들고 설거지를 하는 등 식사에 관련된 일을 하는 곳.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=159783",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-마당",
+      "answer": "마당",
+      "definition": "집의 앞이나 뒤에 평평하게 닦아 놓은 땅.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=420031",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-우물",
+      "answer": "우물",
+      "definition": "물을 긷기 위하여 땅을 파서 지하수를 괴게 한 곳. 또는 그런 시설.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=467621",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-담장",
+      "answer": "담장",
+      "definition": "집이나 일정한 공간을 둘러막기 위하여 흙, 돌, 벽돌 따위로 쌓아 올린 것.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=77475",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-대문",
+      "answer": "대문",
+      "definition": "주해(註解)가 있는 책의 본문.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=79279",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
     }
   ]
 }
