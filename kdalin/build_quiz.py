@@ -30,7 +30,9 @@ CHO_BASE = 0xAC00
 CHO = 'ㄱㄲㄴㄷㄸㄹㅁㅂㅃㅅㅆㅇㅈㅉㅊㅋㅌㅍㅎ'
 
 # 🔑 한 번에 새로 만들 개수. 쿼터(하루 50,000건)는 넉넉하지만 실행이 길어지면 실패 반경이 커진다.
-NEW_PER_RUN = 12
+# 🔑 평소엔 12개. 🔴 풀을 «몰아서» 채울 때만 환경변수로 올린다 —
+#    평소에 크게 잡으면 실행이 길어지고 실패 반경이 커진다.
+NEW_PER_RUN = int(os.environ.get('KDALIN_NEW_PER_RUN', '12'))
 KEEP_ITEMS = 400
 
 QUESTION_BY_KIND = {
@@ -47,6 +49,28 @@ def choseong_of(word):
         c = ord(ch)
         out.append(CHO[(c - CHO_BASE) // 588] if CHO_BASE <= c <= 0xD7A3 else ch)
     return ''.join(out)
+
+
+def pick_balanced(entries, count):
+    """🔑 **글자 수를 번갈아** 뽑는다. (2026-09-21 리서치 반영)
+
+    🔴 전에는 목록 앞에서부터 잘랐다(`[:count]`). `WORDS`가 2글자부터 나열돼 있어
+    **60문항이 쌓일 때까지 98%가 2글자**였다 — 3·4글자를 목록에 넣어 두고도 차례가 안 왔다.
+
+    🔑 방송은 2~4글자가 고루 나오고 **중심이 3글자**다(KBS 클립 15개 실측).
+    """
+    by_len = {}
+    for word, sense in entries:
+        by_len.setdefault(len(word), []).append((word, sense))
+    lengths = sorted(by_len)
+    out = []
+    while len(out) < count and any(by_len[n] for n in lengths):
+        for n in lengths:
+            if by_len[n]:
+                out.append(by_len[n].pop(0))
+                if len(out) >= count:
+                    break
+    return out
 
 
 def load(path):
@@ -67,7 +91,7 @@ def save(path, items):
 
 # ── ① 초성 ──────────────────────────────────────────────────────────────────
 
-def build_choseong(key, words, pool):
+def build_choseong(key, entries, pool):
     """🔴 4지선다의 보기는 **초성이 전부 같아야** 한다 — 앱의 `QuizValidation`이 막는다.
 
     🔑 초성이 같은 낱말을 넷 모으기는 어렵다. 못 모으면 **주관식**으로 낸다 —
@@ -78,10 +102,11 @@ def build_choseong(key, words, pool):
     for w in pool:
         by_cho.setdefault(choseong_of(w), []).append(w)
 
-    for word in words:
-        got = nikl.definition_of(key, word)
+    for word, sense in entries:
+        # 🔑 sense가 None이면 로봇이 고른다(한계 안에서 가장 앞선 뜻).
+        got = nikl.definition_of(key, word, sense)
         if not got:
-            print('  ↪ 사전에 없다: %s' % word)
+            print('  ↪ 사전에 없다(또는 지정한 뜻이 없다): %s' % word)
             continue
         cho = choseong_of(word)
         same = [w for w in by_cho.get(cho, []) if w != word]
@@ -96,7 +121,9 @@ def build_choseong(key, words, pool):
             'accepted': [],
             'level': 'normal',
         })
-        print('  ✅ %-6s %s  %s' % (word, cho, '4지선다' if choices else '주관식'))
+        print('  ✅ %-6s %-5s %s  뜻 %d자%s'
+              % (word, cho, '4지선다' if choices else '주관식 ',
+                 len(got['definition']), ' (뜻 %s번 지정)' % sense if sense else ''))
     return made
 
 
@@ -168,13 +195,16 @@ def main():
     key = nikl.read_key()
     rng = random.Random(os.environ.get('KDALIN_SEED', ''))
 
-    pool = wordlist.dedup(wordlist.WORDS)
+    all_entries = wordlist.entries()
+    pool = [w for w, _ in all_entries]
 
     # ── ① 초성 ──
     cho_feed = load(OUT_CHOSEONG)
     done_cho = {it['id'] for it in cho_feed['items']}
-    todo = [w for w in pool if 'cho-%s' % w not in done_cho][:NEW_PER_RUN]
-    print('① 초성 — 새로 만들 것 %d개' % len(todo))
+    remaining = [(w, s) for w, s in all_entries if 'cho-%s' % w not in done_cho]
+    todo = pick_balanced(remaining, NEW_PER_RUN)
+    print('① 초성 — 새로 만들 것 %d개 (글자 수 %s)'
+          % (len(todo), '·'.join(str(len(w)) for w, _ in todo)))
     cho_new = build_choseong(key, todo, pool) if todo else []
 
     # ── ② 일반 ──
@@ -182,7 +212,9 @@ def main():
     done_gen = {it['id'] for it in gen_feed['items']}
     gen_new = []
 
-    def_todo = [w for w in pool if 'gen-def-%s' % w not in done_gen][: NEW_PER_RUN // 2]
+    def_todo = [w for w, _ in pick_balanced(
+        [(w, s) for w, s in all_entries if 'gen-def-%s' % w not in done_gen],
+        NEW_PER_RUN // 2)]
     if def_todo:
         print('② 일반 — 뜻풀이 %d개' % len(def_todo))
         gen_new += build_general_definitions(key, def_todo, pool)

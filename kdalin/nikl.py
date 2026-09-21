@@ -111,6 +111,28 @@ def senses(key, word, target_code=None):
     return out, WORD_URL % code
 
 
+# 🔑 초성 힌트로 쓰기에 «너무 긴» 뜻풀이의 기준.
+#    방송 힌트를 실측하니 10~20자였다(2026-09-21). 첫 문장이 이보다 길면 다음 뜻을 본다.
+SENSE_LIMIT = 60
+
+
+def best_sense_no(senses, limit=SENSE_LIMIT):
+    """뜻이 여럿일 때 **몇 번째를 쓸까**. (2026-09-21 리서치 반영)
+
+    🔑 **한계 안에서 «가장 앞선» 뜻**을 쓴다 — 1번이 대표 뜻이므로 앞쪽을 우선하되,
+    너무 길면 다음으로 넘어간다. 「가장 짧은 뜻」을 고르면 「바람 = 매우 빠름을 이르는 말」처럼
+    **너무 막연해 못 맞히는** 문항이 나온다(실측).
+
+    🔴 전부 한계를 넘으면 **1번을 쓴다** — 앱이 첫 문장으로 접어 보여준다.
+    ⚠️ 「어느 뜻이 «더 유명한가»」는 사전에 없다. 「마당발」처럼 어긋나는 말은
+    `wordlist.py`에 뜻 번호를 손으로 적는다.
+    """
+    for n, s in enumerate(senses, start=1):
+        if len(s['definition']) <= limit:
+            return n
+    return 1
+
+
 def definition_of(key, word, sense_no=1):
     """한 뜻만. 🔴 몇 번째 뜻인지가 중요하다 — 1번이 늘 맞는 뜻은 아니다.
 
@@ -118,7 +140,12 @@ def definition_of(key, word, sense_no=1):
     그대로 쓰면 **해설이 틀린 말을 한다.**
     """
     got, link = senses(key, word)
-    if not got or sense_no > len(got):
+    if not got:
+        return None
+    # 🔑 sense_no가 None이면 «우리가» 고른다(위 best_sense_no). 숫자면 그대로 쓴다.
+    if sense_no is None:
+        sense_no = best_sense_no(got)
+    if sense_no > len(got):
         return None
     return {
         'definition': got[sense_no - 1]['definition'],   # 🔴 원문 그대로

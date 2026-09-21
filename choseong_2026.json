@@ -665,6 +665,1076 @@
       "choices": [],
       "accepted": [],
       "level": "normal"
+    },
+    {
+      "id": "cho-종이",
+      "answer": "종이",
+      "definition": "식물성 섬유를 원료로 하여 만든 얇은 물건. 주로 글을 쓰거나 그림을 그리거나 인쇄를 하는 데 쓴다.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=486086",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-무지개",
+      "answer": "무지개",
+      "definition": "공중에 떠 있는 물방울이 햇빛을 받아 나타나는, 반원 모양의 일곱 빛깔의 줄. 흔히 비가 그친 뒤 태양의 반대쪽에서 나타난다. 보통 바깥쪽에서부터 빨강, 주황, 노랑, 초록, 파랑, 남색, 보라의 차례이다.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=424333",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-보금자리",
+      "answer": "보금자리",
+      "definition": "새가 알을 낳거나 깃들이는 곳.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=436952",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-연필",
+      "answer": "연필",
+      "definition": "필기도구의 하나. 흑연과 점토의 혼합물을 구워 만든 가느다란 심을 속에 넣고, 겉은 나무로 둘러싸서 만든다. 1565년에 영국에서 처음으로 만들었다.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=458796",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-도서관",
+      "answer": "도서관",
+      "definition": "온갖 종류의 도서, 문서, 기록, 출판물 따위의 자료를 모아 두고 일반이 볼 수 있도록 한 시설.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=85301",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-풍전등화",
+      "answer": "풍전등화",
+      "definition": "바람 앞의 등불이라는 뜻으로, 사물이 매우 위태로운 처지에 놓여 있음을 비유적으로 이르는 말.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=363618",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-책상",
+      "answer": "책상",
+      "definition": "앉아서 책을 읽거나 글을 쓰거나 사무를 보거나 할 때에 앞에 놓고 쓰는 상.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=483676",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-소나기",
+      "answer": "소나기",
+      "definition": "갑자기 세차게 쏟아지다가 곧 그치는 비. 특히 여름에 많으며 번개나 천둥, 강풍 따위를 동반한다.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=443981",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-절치부심",
+      "answer": "절치부심",
+      "definition": "몹시 분하여 이를 갈며 속을 썩임.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=287946",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-의자",
+      "answer": "의자",
+      "definition": "옷을 짓는 데 쓰는 천.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=267674",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-고드름",
+      "answer": "고드름",
+      "definition": "낙숫물 따위가 밑으로 흐르다가 길게 얼어붙은 얼음.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=399339",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-가방",
+      "answer": "가방",
+      "definition": "물건을 넣어 들거나 메고 다닐 수 있게 만든 용구. 가죽이나 천, 비닐 따위로 만든다.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=385301",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-보름달",
+      "answer": "보름달",
+      "definition": "음력 보름날 밤에 뜨는 둥근달.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=144143",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-자초지종",
+      "answer": "자초지종",
+      "definition": "처음부터 끝까지의 과정.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=475878",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-신발",
+      "answer": "신발",
+      "definition": "땅을 딛고 서거나 걸을 때 발에 신는 물건을 통틀어 이르는 말. 가죽·고무·비닐·헝겊·나무·짚·삼 따위로 만들며, 모양과 용도에 따라 여러 가지가 있다.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=451972",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-나침반",
+      "answer": "나침반",
+      "definition": "항공, 항해 따위에 쓰는 지리적인 방향 지시 계기. 자침(磁針)이 남북을 가리키는 특성을 이용하여 만든다.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=58616",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-일취월장",
+      "answer": "일취월장",
+      "definition": "나날이 다달이 자라거나 발전함.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=476094",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-모자",
+      "answer": "모자",
+      "definition": "어머니와 아들을 아울러 이르는 말.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=119012",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-유비무환",
+      "answer": "유비무환",
+      "definition": "미리 준비가 되어 있으면 걱정할 것이 없음. ≪서경≫의 <열명편>에 나오는 말이다.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=252854",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-장갑",
+      "answer": "장갑",
+      "definition": "손을 보호하거나 추위를 막거나 장식하기 위하여 손에 끼는 물건. 천, 가죽, 털실 따위로 만든다.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=475154",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-가랑비",
+      "answer": "가랑비",
+      "definition": "가늘게 내리는 비. 이슬비보다는 좀 굵다.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=385043",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-조삼모사",
+      "answer": "조삼모사",
+      "definition": "간사한 꾀로 남을 속여 희롱함을 이르는 말. 중국 송나라의 저공(狙公)의 고사로, 먹이를 아침에 세 개, 저녁에 네 개씩 주겠다는 말에는 원숭이들이 적다고 화를 내더니 아침에 네 개, 저녁에 세 개씩 주겠다는 말에는 좋아하였다는 데서 유래한다.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=484601",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-우산",
+      "answer": "우산",
+      "definition": "우비(雨備)의 하나. 펴고 접을 수 있어 비가 올 때에 펴서 손에 들고 머리 위를 가린다. 박쥐우산, 비닐우산, 지우산 따위가 있다.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=251182",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-함박눈",
+      "answer": "함박눈",
+      "definition": "굵고 탐스럽게 내리는 눈.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=365040",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-대기만성",
+      "answer": "대기만성",
+      "definition": "큰 그릇을 만드는 데는 시간이 오래 걸린다는 뜻으로, 크게 될 사람은 늦게 이루어짐을 이르는 말.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=79752",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-거리",
+      "answer": "거리",
+      "definition": "사람이나 차가 많이 다니는 길.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=12369",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-살얼음",
+      "answer": "살얼음",
+      "definition": "얇게 살짝 언 얼음.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=441711",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-동고동락",
+      "answer": "동고동락",
+      "definition": "괴로움도 즐거움도 함께함.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=89144",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-달인",
+      "answer": "달인",
+      "definition": "학문이나 기예에 통달하여 남달리 뛰어난 역량을 가진 사람.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=76719",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-민들레",
+      "answer": "민들레",
+      "definition": "국화과의 여러해살이풀. 원줄기는 없고 이른 봄에 뿌리에서 깃 모양으로 깊이 갈라진 잎이 배게 난다. 높이 30cm 정도의 꽃줄기 끝에 누런 꽃이 4~5월에 두상(頭狀) 화서로 피는데 밤에는 오므라든다. 씨는 수과(瘦果)로 흰 갓털이 있어 바람에 날려 멀리 퍼진다. 잎은 식용하고 꽃 피기 전의 뿌리와 줄기는 한방에서 땀을 내게 하거나 강장(強壯)하는 약으로 쓴다. 한국, 중국 등지에 분포한다.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=126787",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-명실상부",
+      "answer": "명실상부",
+      "definition": "이름과 실상이 서로 꼭 맞음.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=116862",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-솜씨",
+      "answer": "솜씨",
+      "definition": "손을 놀려 무엇을 만들거나 어떤 일을 하는 재주.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=447545",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-봉숭아",
+      "answer": "봉숭아",
+      "definition": "봉선화과의 한해살이풀. 줄기는 높이가 60cm 정도 되는 고성종(高性種)과 25~40cm로 낮은 왜성종(矮性種)이 있는데, 곧게 서며 살이 찌고 밑에는 마디가 있으며 막뿌리가 나오기도 한다. 잎은 어긋나고 피침 모양으로 잔톱니가 있다. 7~10월에 잎겨드랑이에서 나온 2~3개의 가는 꽃자루 끝에 붉은색, 흰색, 분홍색, 누런색 따위의 꽃이 아래로 늘어져서 핀다. 열매는 삭과(蒴果)로 잔털이 있으며, 익으면 탄성에 의하여 다섯 조각으로 갈라져 누런 갈색의 씨가 튀어 나와 먼 곳까지 퍼져 나간다. 꽃잎을 따서 백반, 소금 따위와 함께 찧어 손톱에 붉게 물을 들이기도 한다. 인도, 동남아시아가 원산지로 전 세계에서 관상용으로 재배한다.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=147904",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-반신반의",
+      "answer": "반신반의",
+      "definition": "얼마쯤 믿으면서도 한편으로는 의심함.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=427376",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-재주",
+      "answer": "재주",
+      "definition": "무엇을 잘할 수 있는 타고난 능력과 슬기.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=473928",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-개나리",
+      "answer": "개나리",
+      "definition": "물푸레나뭇과의 낙엽 활엽 관목. 높이는 2~3미터이며, 잎은 마주난다. 이른 봄에 잎보다 먼저 노란 꽃이 피고 9월에 삭과(蒴果)인 열매를 맺는데, 옴·여드름·종기·연주창 따위에 약재로 쓰인다. 흔히 울타리용으로 재배한다. 우리나라 특산종이고 중국, 일본 등지에는 다른 변종이 분포한다.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=10115",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-설상가상",
+      "answer": "설상가상",
+      "definition": "눈 위에 서리가 덮인다는 뜻으로, 난처한 일이나 불행한 일이 잇따라 일어남을 이르는 말.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=448384",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-까치발",
+      "answer": "까치발",
+      "definition": "발뒤꿈치를 든 발.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=54616",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-어부지리",
+      "answer": "어부지리",
+      "definition": "두 사람이 이해관계로 서로 싸우는 사이에 엉뚱한 사람이 애쓰지 않고 가로챈 이익을 이르는 말. 도요새가 무명조개의 속살을 먹으려고 부리를 조가비 안에 넣는 순간 무명조개가 껍데기를 꼭 다물고 부리를 안 놔 주자, 서로 다투는 틈을 타서 어부가 둘 다 잡아 이익을 얻었다는 데서 유래한다.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=461107",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-고집",
+      "answer": "고집",
+      "definition": "옛날의 시가·문장 따위를 모아 엮은 책.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=25108",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-손사래",
+      "answer": "손사래",
+      "definition": "어떤 말이나 사실을 부인하거나 남에게 조용히 하라고 할 때 손을 펴서 휘젓는 일.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=448223",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-오리무중",
+      "answer": "오리무중",
+      "definition": "오 리나 되는 짙은 안개 속에 있다는 뜻으로, 무슨 일에 대하여 방향이나 갈피를 잡을 수 없음을 이르는 말. ≪후한서≫의 <장해전(張楷傳)>에 나오는 말이다.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=461971",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-끈기",
+      "answer": "끈기",
+      "definition": "물건의 끈끈한 기운.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=56170",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-어깨춤",
+      "answer": "어깨춤",
+      "definition": "신이 나서 어깨를 위아래로 으쓱거리는 일. 또는 그렇게 추는 춤.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=231755",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-우유부단",
+      "answer": "우유부단",
+      "definition": "어물어물 망설이기만 하고 결단성이 없음.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=465372",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-용기",
+      "answer": "용기",
+      "definition": "기구를 사용함. 또는 그 기구.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=250806",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-두레박",
+      "answer": "두레박",
+      "definition": "줄을 길게 달아 우물물을 퍼 올리는 데 쓰는 도구. 바가지나 판자 또는 양철 따위로 만든다.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=412660",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-이심전심",
+      "answer": "이심전심",
+      "definition": "마음과 마음으로 서로 뜻이 통함. ≪전등록≫에 나오는 말로 원래는 불교의 법통을 계승할 때에 쓰였다.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=469328",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-지혜",
+      "answer": "지혜",
+      "definition": "종이로 노를 꼬아 만든 신.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=316641",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-지팡이",
+      "answer": "지팡이",
+      "definition": "걸을 때에 도움을 얻기 위하여 짚는 막대기.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=482285",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-일석이조",
+      "answer": "일석이조",
+      "definition": "돌 한 개를 던져 새 두 마리를 잡는다는 뜻으로, 동시에 두 가지 이득을 봄을 이르는 말.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=472215",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-슬기",
+      "answer": "슬기",
+      "definition": "사리를 바르게 판단하고 일을 잘 처리해 내는 재능.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=451941",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-다듬이",
+      "answer": "다듬이",
+      "definition": "다듬이질을 할 때 쓰는 방망이. 두 개가 한 쌍이 되도록 나무로 만든다.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=410826",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-전전긍긍",
+      "answer": "전전긍긍",
+      "definition": "몹시 두려워서 벌벌 떨며 조심함. ≪시경≫의 <소민편(小旻篇)>에서 유래한다.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=479064",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-눈치",
+      "answer": "눈치",
+      "definition": "남의 마음을 그때그때 상황으로 미루어 알아내는 것.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=410095",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-화롯불",
+      "answer": "화롯불",
+      "definition": "화로에 담아 놓은 불.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=374164",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-천고마비",
+      "answer": "천고마비",
+      "definition": "하늘이 높고 말이 살찐다는 뜻으로, 하늘이 맑아 높푸르게 보이고 온갖 곡식이 익는 가을철을 이르는 말.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=323184",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-오솔길",
+      "answer": "오솔길",
+      "definition": "폭이 좁은 호젓한 길.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=464158",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-청출어람",
+      "answer": "청출어람",
+      "definition": "쪽에서 뽑아낸 푸른 물감이 쪽보다 더 푸르다는 뜻으로, 제자나 후배가 스승이나 선배보다 나음을 비유적으로 이르는 말. ≪순자(荀子)≫의 <권학편(勸學篇)>에 나오는 말이다.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=488401",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-조바심",
+      "answer": "조바심",
+      "definition": "조마조마하여 마음을 졸임. 또는 그렇게 졸이는 마음.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=482023",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-호시탐탐",
+      "answer": "호시탐탐",
+      "definition": "범이 눈을 부릅뜨고 먹이를 노려본다는 뜻으로, 남의 것을 빼앗기 위하여 형세를 살피며 가만히 기회를 엿봄. 또는 그런 모양. ≪주역≫의 <이괘편(頥卦篇)>에 나오는 말이다.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=504797",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-마당발",
+      "answer": "마당발",
+      "definition": "인간관계가 넓어서 폭넓게 활동하는 사람.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=420032",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-화룡점정",
+      "answer": "화룡점정",
+      "definition": "무슨 일을 하는 데에 가장 중요한 부분을 완성함을 비유적으로 이르는 말. 용을 그리고 난 후에 마지막으로 눈동자를 그려 넣었더니 그 용이 실제 용이 되어 홀연히 구름을 타고 하늘로 날아 올라갔다는 고사에서 유래한다.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=374772",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-나들이",
+      "answer": "나들이",
+      "definition": "집을 떠나 가까운 곳에 잠시 다녀오는 일.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=405891",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-괄목상대",
+      "answer": "괄목상대",
+      "definition": "눈을 비비고 상대편을 본다는 뜻으로, 남의 학식이나 재주가 놀랄 만큼 부쩍 늚을 이르는 말.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=401298",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-실마리",
+      "answer": "실마리",
+      "definition": "감겨 있거나 헝클어진 실의 첫머리.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=453185",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-구사일생",
+      "answer": "구사일생",
+      "definition": "아홉 번 죽을 뻔하다 한 번 살아난다는 뜻으로, 죽을 고비를 여러 차례 넘기고 겨우 살아남을 이르는 말.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=38389",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-발자국",
+      "answer": "발자국",
+      "definition": "발로 밟은 자리에 남은 모양.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=427735",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-금상첨화",
+      "answer": "금상첨화",
+      "definition": "비단 위에 꽃을 더한다는 뜻으로, 좋은 일 위에 또 좋은 일이 더하여짐을 비유적으로 이르는 말. 왕안석의 글에서 유래한다.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=401345",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-물보라",
+      "answer": "물보라",
+      "definition": "물결이 바위 따위에 부딪쳐 사방으로 흩어지는 자잘한 물방울.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=424761",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-다다익선",
+      "answer": "다다익선",
+      "definition": "많으면 많을수록 더욱 좋음. 중국 한(漢)나라의 장수 한신이 고조(高祖)와 장수의 역량에 대하여 얘기할 때, 고조는 10만 정도의 병사를 지휘할 수 있는 그릇이지만, 자신은 병사의 수가 많을수록 잘 지휘할 수 있다고 한 말에서 유래한다.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=73407",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-이슬비",
+      "answer": "이슬비",
+      "definition": "아주 가늘게 내리는 비. 는개보다 굵고 가랑비보다는 가늘다.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=467846",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-견물생심",
+      "answer": "견물생심",
+      "definition": "어떠한 실물을 보게 되면 그것을 가지고 싶은 욕심이 생김.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=392348",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-잔소리",
+      "answer": "잔소리",
+      "definition": "쓸데없이 자질구레한 말을 늘어놓음. 또는 그 말.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=278723",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-동병상련",
+      "answer": "동병상련",
+      "definition": "같은 병을 앓는 사람끼리 서로 가엾게 여긴다는 뜻으로, 어려운 처지에 있는 사람끼리 서로 가엾게 여김을 이르는 말. ≪오월춘추≫의 <합려내전(闔閭內傳)>에 나온다.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=417068",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-밑거름",
+      "answer": "밑거름",
+      "definition": "어떤 일을 이루는 데 기초가 되는 요인.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=127489",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-막상막하",
+      "answer": "막상막하",
+      "definition": "더 낫고 더 못함의 차이가 거의 없음.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=107944",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-헛걸음",
+      "answer": "헛걸음",
+      "definition": "목적을 이루지 못하고 헛수고만 하고 가거나 옴. 또는 그런 걸음.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=371537",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-각골난망",
+      "answer": "각골난망",
+      "definition": "남에게 입은 은혜가 뼈에 새길 만큼 커서 잊히지 아니함.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=390212",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-뒷걸음",
+      "answer": "뒷걸음",
+      "definition": "발을 뒤로 떼어 놓으며 걷는 걸음.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=94093",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-새옹지마",
+      "answer": "새옹지마",
+      "definition": "인생의 길흉화복은 변화가 많아서 예측하기가 어렵다는 말. 옛날에 새옹이 기르던 말이 오랑캐 땅으로 달아나서 노인이 낙심하였는데, 그 후에 달아났던 말이 준마를 한 필 끌고 와서 그 덕분에 훌륭한 말을 얻게 되었으나 아들이 그 준마를 타다가 떨어져서 다리가 부러졌으므로 노인이 다시 낙심하였는데, 그로 인하여 아들이 전쟁에 끌려 나가지 아니하고 죽음을 면할 수 있었다는 이야기에서 유래한다. 중국 ≪회남자≫의 ‘인간훈(人間訓)’에 나오는 말이다.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=446587",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-잔가지",
+      "answer": "잔가지",
+      "definition": "풀과 나무의 작은 가지. 또는 자질구레한 가지.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=475812",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-고이고이",
+      "answer": "고이고이",
+      "definition": "매우 곱게.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=25788",
+      "pos": "부사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-들머리",
+      "answer": "들머리",
+      "definition": "들어가는 맨 첫머리.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=417561",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-가만가만",
+      "answer": "가만가만",
+      "definition": "움직임 따위가 드러나지 않도록 조용조용.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=853",
+      "pos": "부사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-첫걸음",
+      "answer": "첫걸음",
+      "definition": "목적지를 향하여 처음 내디디는 걸음.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=490351",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-두근두근",
+      "answer": "두근두근",
+      "definition": "몹시 놀라거나 불안하여 자꾸 가슴이 뛰는 소리. 또는 그 모양.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=90406",
+      "pos": "부사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-목소리",
+      "answer": "목소리",
+      "definition": "목구멍에서 나는 소리.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=425389",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-오순도순",
+      "answer": "오순도순",
+      "definition": "정답게 이야기하거나 의좋게 지내는 모양. ‘오손도손’보다 큰 느낌을 준다.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=462168",
+      "pos": "부사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-손거울",
+      "answer": "손거울",
+      "definition": "가지고 다니기 편하게 만든 작은 거울.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=448744",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-티격태격",
+      "answer": "티격태격",
+      "definition": "서로 뜻이 맞지 아니하여 이러니저러니 시비를 따지며 가리는 모양.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=350614",
+      "pos": "부사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-밤하늘",
+      "answer": "밤하늘",
+      "definition": "밤의 하늘.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=134572",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-옥신각신",
+      "answer": "옥신각신",
+      "definition": "서로 옳으니 그르니 하며 다툼. 또는 그런 행위.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=461605",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-봄나물",
+      "answer": "봄나물",
+      "definition": "봄에 산이나 들에 돋아나는 나물.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=434700",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-아기자기",
+      "answer": "아기자기",
+      "definition": "여러 가지가 오밀조밀 어울려 예쁜 모양.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=454993",
+      "pos": "부사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-겨울잠",
+      "answer": "겨울잠",
+      "definition": "발전이 없는 상태가 오랫동안 지속되는 일을 비유적으로 이르는 말.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=16868",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-알쏭달쏭",
+      "answer": "알쏭달쏭",
+      "definition": "여러 가지 빛깔로 된 점이나 줄이 고르지 않게 뒤섞여 무늬를 이룬 모양.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=217133",
+      "pos": "부사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-가을밤",
+      "answer": "가을밤",
+      "definition": "가을철의 밤.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=3019",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-싱글벙글",
+      "answer": "싱글벙글",
+      "definition": "눈과 입을 슬며시 움직이며 소리 없이 정답고 환하게 웃는 모양.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=451055",
+      "pos": "부사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-여름날",
+      "answer": "여름날",
+      "definition": "여름철의 날. 또는 그날의 날씨.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=459126",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-울긋불긋",
+      "answer": "울긋불긋",
+      "definition": "짙고 옅은 여러 가지 빛깔들이 야단스럽게 한데 뒤섞여 있는 모양.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=254795",
+      "pos": "부사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-구름다리",
+      "answer": "구름다리",
+      "definition": "도로나 계곡 따위를 건너질러 공중에 걸쳐 놓은 다리.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=36649",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-아지랑이",
+      "answer": "아지랑이",
+      "definition": "주로 봄날 햇빛이 강하게 쬘 때 공기가 공중에서 아른아른 움직이는 현상.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=222933",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-물레방아",
+      "answer": "물레방아",
+      "definition": "떨어지는 물의 힘으로 바퀴를 돌려 곡식을 찧거나 빻는 기구. 큰 나무 바퀴와 굴대에 공이를 장치하여, 바퀴가 돌 때마다 공이가 오르내리며 곡식을 찧거나 빻는다.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=128360",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-해바라기",
+      "answer": "해바라기",
+      "definition": "추울 때 양지바른 곳에 나와 햇볕을 쬐는 일.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=499124",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-부지깽이",
+      "answer": "부지깽이",
+      "definition": "아궁이 따위에 불을 땔 때에, 불을 헤치거나 끌어내거나 거두어 넣거나 하는 데 쓰는 가느스름한 막대기.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=437550",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-새침데기",
+      "answer": "새침데기",
+      "definition": "새침한 성격을 지닌 사람.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=175098",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
     }
   ]
 }

@@ -900,6 +900,1464 @@
       "rule": "",
       "note": "",
       "level": "normal"
+    },
+    {
+      "id": "gen-def-이야기",
+      "kind": "definition",
+      "question": "다음 뜻풀이에 해당하는 낱말은?",
+      "prompt": "어떤 사물이나 사실, 현상에 대하여 일정한 줄거리를 가지고 하는 말이나 글.",
+      "answer": "이야기",
+      "choices": [
+        "마음",
+        "바람",
+        "사람",
+        "이야기"
+      ],
+      "definition": "어떤 사물이나 사실, 현상에 대하여 일정한 줄거리를 가지고 하는 말이나 글.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=469480",
+      "rule": "",
+      "note": "",
+      "level": "normal"
+    },
+    {
+      "id": "gen-def-보금자리",
+      "kind": "definition",
+      "question": "다음 뜻풀이에 해당하는 낱말은?",
+      "prompt": "새가 알을 낳거나 깃들이는 곳.",
+      "answer": "보금자리",
+      "choices": [
+        "마음",
+        "바람",
+        "보금자리",
+        "사람"
+      ],
+      "definition": "새가 알을 낳거나 깃들이는 곳.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=436952",
+      "rule": "",
+      "note": "",
+      "level": "normal"
+    },
+    {
+      "id": "gen-def-이야깃거리",
+      "kind": "definition",
+      "question": "다음 뜻풀이에 해당하는 낱말은?",
+      "prompt": "이야기할 만한 재료나 소재.",
+      "answer": "이야깃거리",
+      "choices": [
+        "마음",
+        "바람",
+        "사람",
+        "이야깃거리"
+      ],
+      "definition": "이야기할 만한 재료나 소재.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=469392",
+      "rule": "",
+      "note": "",
+      "level": "normal"
+    },
+    {
+      "id": "gen-def-흔적",
+      "kind": "definition",
+      "question": "다음 뜻풀이에 해당하는 낱말은?",
+      "prompt": "어떤 현상이나 실체가 없어졌거나 지나간 뒤에 남은 자국이나 자취.",
+      "answer": "흔적",
+      "choices": [
+        "마음",
+        "바람",
+        "사람",
+        "흔적"
+      ],
+      "definition": "어떤 현상이나 실체가 없어졌거나 지나간 뒤에 남은 자국이나 자취.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=504507",
+      "rule": "",
+      "note": "",
+      "level": "normal"
+    },
+    {
+      "id": "gen-def-무지개",
+      "kind": "definition",
+      "question": "다음 뜻풀이에 해당하는 낱말은?",
+      "prompt": "공중에 떠 있는 물방울이 햇빛을 받아 나타나는, 반원 모양의 일곱 빛깔의 줄. 흔히 비가 그친 뒤 태양의 반대쪽에서 나타난다. 보통 바깥쪽에서부터 빨강, 주황, 노랑, 초록, 파랑, 남색, 보라의 차례이다.",
+      "answer": "무지개",
+      "choices": [
+        "마음",
+        "무지개",
+        "바람",
+        "사람"
+      ],
+      "definition": "공중에 떠 있는 물방울이 햇빛을 받아 나타나는, 반원 모양의 일곱 빛깔의 줄. 흔히 비가 그친 뒤 태양의 반대쪽에서 나타난다. 보통 바깥쪽에서부터 빨강, 주황, 노랑, 초록, 파랑, 남색, 보라의 차례이다.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=424333",
+      "rule": "",
+      "note": "",
+      "level": "normal"
+    },
+    {
+      "id": "gen-idiom-돈",
+      "kind": "idiom",
+      "question": "다음 뜻의 관용구는?",
+      "prompt": "돈을 여기저기 빌려주어 이익을 늘리다.",
+      "answer": "돈(을) 굴리다",
+      "choices": [
+        "돈(을) 굴리다",
+        "돈(을) 주다",
+        "돈(을) 치다",
+        "돈을 만지다"
+      ],
+      "definition": "돈을 여기저기 빌려주어 이익을 늘리다.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=526838",
+      "rule": "",
+      "note": "",
+      "level": "normal"
+    },
+    {
+      "id": "gen-def-도서관",
+      "kind": "definition",
+      "question": "다음 뜻풀이에 해당하는 낱말은?",
+      "prompt": "온갖 종류의 도서, 문서, 기록, 출판물 따위의 자료를 모아 두고 일반이 볼 수 있도록 한 시설.",
+      "answer": "도서관",
+      "choices": [
+        "도서관",
+        "마음",
+        "바람",
+        "사람"
+      ],
+      "definition": "온갖 종류의 도서, 문서, 기록, 출판물 따위의 자료를 모아 두고 일반이 볼 수 있도록 한 시설.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=85301",
+      "rule": "",
+      "note": "",
+      "level": "normal"
+    },
+    {
+      "id": "gen-def-풍전등화",
+      "kind": "definition",
+      "question": "다음 뜻풀이에 해당하는 낱말은?",
+      "prompt": "바람 앞의 등불이라는 뜻으로, 사물이 매우 위태로운 처지에 놓여 있음을 비유적으로 이르는 말.",
+      "answer": "풍전등화",
+      "choices": [
+        "마음",
+        "바람",
+        "사람",
+        "풍전등화"
+      ],
+      "definition": "바람 앞의 등불이라는 뜻으로, 사물이 매우 위태로운 처지에 놓여 있음을 비유적으로 이르는 말.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=363618",
+      "rule": "",
+      "note": "",
+      "level": "normal"
+    },
+    {
+      "id": "gen-def-노래",
+      "kind": "definition",
+      "question": "다음 뜻풀이에 해당하는 낱말은?",
+      "prompt": "가사에 곡조를 붙여 목소리로 부를 수 있게 만든 음악. 또는 그 음악을 목소리로 부름.",
+      "answer": "노래",
+      "choices": [
+        "노래",
+        "마음",
+        "바람",
+        "사람"
+      ],
+      "definition": "가사에 곡조를 붙여 목소리로 부를 수 있게 만든 음악. 또는 그 음악을 목소리로 부름.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=67005",
+      "rule": "",
+      "note": "",
+      "level": "normal"
+    },
+    {
+      "id": "gen-def-소나기",
+      "kind": "definition",
+      "question": "다음 뜻풀이에 해당하는 낱말은?",
+      "prompt": "갑자기 세차게 쏟아지다가 곧 그치는 비. 특히 여름에 많으며 번개나 천둥, 강풍 따위를 동반한다.",
+      "answer": "소나기",
+      "choices": [
+        "마음",
+        "바람",
+        "사람",
+        "소나기"
+      ],
+      "definition": "갑자기 세차게 쏟아지다가 곧 그치는 비. 특히 여름에 많으며 번개나 천둥, 강풍 따위를 동반한다.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=443981",
+      "rule": "",
+      "note": "",
+      "level": "normal"
+    },
+    {
+      "id": "gen-def-절치부심",
+      "kind": "definition",
+      "question": "다음 뜻풀이에 해당하는 낱말은?",
+      "prompt": "몹시 분하여 이를 갈며 속을 썩임.",
+      "answer": "절치부심",
+      "choices": [
+        "마음",
+        "바람",
+        "사람",
+        "절치부심"
+      ],
+      "definition": "몹시 분하여 이를 갈며 속을 썩임.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=287946",
+      "rule": "",
+      "note": "",
+      "level": "normal"
+    },
+    {
+      "id": "gen-def-가락",
+      "kind": "definition",
+      "question": "다음 뜻풀이에 해당하는 낱말은?",
+      "prompt": "물레로 실을 자을 때 실이 감기는 쇠꼬챙이.",
+      "answer": "가락",
+      "choices": [
+        "가락",
+        "마음",
+        "바람",
+        "사람"
+      ],
+      "definition": "물레로 실을 자을 때 실이 감기는 쇠꼬챙이.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=383279",
+      "rule": "",
+      "note": "",
+      "level": "normal"
+    },
+    {
+      "id": "gen-def-고드름",
+      "kind": "definition",
+      "question": "다음 뜻풀이에 해당하는 낱말은?",
+      "prompt": "낙숫물 따위가 밑으로 흐르다가 길게 얼어붙은 얼음.",
+      "answer": "고드름",
+      "choices": [
+        "고드름",
+        "마음",
+        "바람",
+        "사람"
+      ],
+      "definition": "낙숫물 따위가 밑으로 흐르다가 길게 얼어붙은 얼음.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=399339",
+      "rule": "",
+      "note": "",
+      "level": "normal"
+    },
+    {
+      "id": "gen-def-자초지종",
+      "kind": "definition",
+      "question": "다음 뜻풀이에 해당하는 낱말은?",
+      "prompt": "처음부터 끝까지의 과정.",
+      "answer": "자초지종",
+      "choices": [
+        "마음",
+        "바람",
+        "사람",
+        "자초지종"
+      ],
+      "definition": "처음부터 끝까지의 과정.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=475878",
+      "rule": "",
+      "note": "",
+      "level": "normal"
+    },
+    {
+      "id": "gen-def-웃음",
+      "kind": "definition",
+      "question": "다음 뜻풀이에 해당하는 낱말은?",
+      "prompt": "웃는 일. 또는 그런 소리나 표정.",
+      "answer": "웃음",
+      "choices": [
+        "마음",
+        "바람",
+        "사람",
+        "웃음"
+      ],
+      "definition": "웃는 일. 또는 그런 소리나 표정.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=468268",
+      "rule": "",
+      "note": "",
+      "level": "normal"
+    },
+    {
+      "id": "gen-def-보름달",
+      "kind": "definition",
+      "question": "다음 뜻풀이에 해당하는 낱말은?",
+      "prompt": "음력 보름날 밤에 뜨는 둥근달.",
+      "answer": "보름달",
+      "choices": [
+        "마음",
+        "바람",
+        "보름달",
+        "사람"
+      ],
+      "definition": "음력 보름날 밤에 뜨는 둥근달.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=144143",
+      "rule": "",
+      "note": "",
+      "level": "normal"
+    },
+    {
+      "id": "gen-def-일취월장",
+      "kind": "definition",
+      "question": "다음 뜻풀이에 해당하는 낱말은?",
+      "prompt": "나날이 다달이 자라거나 발전함.",
+      "answer": "일취월장",
+      "choices": [
+        "마음",
+        "바람",
+        "사람",
+        "일취월장"
+      ],
+      "definition": "나날이 다달이 자라거나 발전함.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=476094",
+      "rule": "",
+      "note": "",
+      "level": "normal"
+    },
+    {
+      "id": "gen-def-나침반",
+      "kind": "definition",
+      "question": "다음 뜻풀이에 해당하는 낱말은?",
+      "prompt": "항공, 항해 따위에 쓰는 지리적인 방향 지시 계기. 자침(磁針)이 남북을 가리키는 특성을 이용하여 만든다.",
+      "answer": "나침반",
+      "choices": [
+        "나침반",
+        "마음",
+        "바람",
+        "사람"
+      ],
+      "definition": "항공, 항해 따위에 쓰는 지리적인 방향 지시 계기. 자침(磁針)이 남북을 가리키는 특성을 이용하여 만든다.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=58616",
+      "rule": "",
+      "note": "",
+      "level": "normal"
+    },
+    {
+      "id": "gen-def-유비무환",
+      "kind": "definition",
+      "question": "다음 뜻풀이에 해당하는 낱말은?",
+      "prompt": "미리 준비가 되어 있으면 걱정할 것이 없음. ≪서경≫의 <열명편>에 나오는 말이다.",
+      "answer": "유비무환",
+      "choices": [
+        "마음",
+        "바람",
+        "사람",
+        "유비무환"
+      ],
+      "definition": "미리 준비가 되어 있으면 걱정할 것이 없음. ≪서경≫의 <열명편>에 나오는 말이다.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=252854",
+      "rule": "",
+      "note": "",
+      "level": "normal"
+    },
+    {
+      "id": "gen-def-한숨",
+      "kind": "definition",
+      "question": "다음 뜻풀이에 해당하는 낱말은?",
+      "prompt": "숨을 한 번 쉴 동안. 또는 잠깐 동안.",
+      "answer": "한숨",
+      "choices": [
+        "마음",
+        "바람",
+        "사람",
+        "한숨"
+      ],
+      "definition": "숨을 한 번 쉴 동안. 또는 잠깐 동안.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=499708",
+      "rule": "",
+      "note": "",
+      "level": "normal"
+    },
+    {
+      "id": "gen-def-조삼모사",
+      "kind": "definition",
+      "question": "다음 뜻풀이에 해당하는 낱말은?",
+      "prompt": "간사한 꾀로 남을 속여 희롱함을 이르는 말. 중국 송나라의 저공(狙公)의 고사로, 먹이를 아침에 세 개, 저녁에 네 개씩 주겠다는 말에는 원숭이들이 적다고 화를 내더니 아침에 네 개, 저녁에 세 개씩 주겠다는 말에는 좋아하였다는 데서 유래한다.",
+      "answer": "조삼모사",
+      "choices": [
+        "마음",
+        "바람",
+        "사람",
+        "조삼모사"
+      ],
+      "definition": "간사한 꾀로 남을 속여 희롱함을 이르는 말. 중국 송나라의 저공(狙公)의 고사로, 먹이를 아침에 세 개, 저녁에 네 개씩 주겠다는 말에는 원숭이들이 적다고 화를 내더니 아침에 네 개, 저녁에 세 개씩 주겠다는 말에는 좋아하였다는 데서 유래한다.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=484601",
+      "rule": "",
+      "note": "",
+      "level": "normal"
+    },
+    {
+      "id": "gen-def-걸음",
+      "kind": "definition",
+      "question": "다음 뜻풀이에 해당하는 낱말은?",
+      "prompt": "두 발을 번갈아 옮겨 놓는 동작.",
+      "answer": "걸음",
+      "choices": [
+        "걸음",
+        "마음",
+        "바람",
+        "사람"
+      ],
+      "definition": "두 발을 번갈아 옮겨 놓는 동작.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=394958",
+      "rule": "",
+      "note": "",
+      "level": "normal"
+    },
+    {
+      "id": "gen-def-가랑비",
+      "kind": "definition",
+      "question": "다음 뜻풀이에 해당하는 낱말은?",
+      "prompt": "가늘게 내리는 비. 이슬비보다는 좀 굵다.",
+      "answer": "가랑비",
+      "choices": [
+        "가랑비",
+        "마음",
+        "바람",
+        "사람"
+      ],
+      "definition": "가늘게 내리는 비. 이슬비보다는 좀 굵다.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=385043",
+      "rule": "",
+      "note": "",
+      "level": "normal"
+    },
+    {
+      "id": "gen-def-대기만성",
+      "kind": "definition",
+      "question": "다음 뜻풀이에 해당하는 낱말은?",
+      "prompt": "큰 그릇을 만드는 데는 시간이 오래 걸린다는 뜻으로, 크게 될 사람은 늦게 이루어짐을 이르는 말.",
+      "answer": "대기만성",
+      "choices": [
+        "대기만성",
+        "마음",
+        "바람",
+        "사람"
+      ],
+      "definition": "큰 그릇을 만드는 데는 시간이 오래 걸린다는 뜻으로, 크게 될 사람은 늦게 이루어짐을 이르는 말.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=79752",
+      "rule": "",
+      "note": "",
+      "level": "normal"
+    },
+    {
+      "id": "gen-def-손길",
+      "kind": "definition",
+      "question": "다음 뜻풀이에 해당하는 낱말은?",
+      "prompt": "내밀거나 잡거나 닿거나 만지거나 할 때의 손.",
+      "answer": "손길",
+      "choices": [
+        "마음",
+        "바람",
+        "사람",
+        "손길"
+      ],
+      "definition": "내밀거나 잡거나 닿거나 만지거나 할 때의 손.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=448644",
+      "rule": "",
+      "note": "",
+      "level": "normal"
+    },
+    {
+      "id": "gen-def-함박눈",
+      "kind": "definition",
+      "question": "다음 뜻풀이에 해당하는 낱말은?",
+      "prompt": "굵고 탐스럽게 내리는 눈.",
+      "answer": "함박눈",
+      "choices": [
+        "마음",
+        "바람",
+        "사람",
+        "함박눈"
+      ],
+      "definition": "굵고 탐스럽게 내리는 눈.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=365040",
+      "rule": "",
+      "note": "",
+      "level": "normal"
+    },
+    {
+      "id": "gen-def-동고동락",
+      "kind": "definition",
+      "question": "다음 뜻풀이에 해당하는 낱말은?",
+      "prompt": "괴로움도 즐거움도 함께함.",
+      "answer": "동고동락",
+      "choices": [
+        "동고동락",
+        "마음",
+        "바람",
+        "사람"
+      ],
+      "definition": "괴로움도 즐거움도 함께함.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=89144",
+      "rule": "",
+      "note": "",
+      "level": "normal"
+    },
+    {
+      "id": "gen-def-눈길",
+      "kind": "definition",
+      "question": "다음 뜻풀이에 해당하는 낱말은?",
+      "prompt": "눈이 가는 곳. 또는 눈으로 보는 방향.",
+      "answer": "눈길",
+      "choices": [
+        "눈길",
+        "마음",
+        "바람",
+        "사람"
+      ],
+      "definition": "눈이 가는 곳. 또는 눈으로 보는 방향.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=71293",
+      "rule": "",
+      "note": "",
+      "level": "normal"
+    },
+    {
+      "id": "gen-def-살얼음",
+      "kind": "definition",
+      "question": "다음 뜻풀이에 해당하는 낱말은?",
+      "prompt": "얇게 살짝 언 얼음.",
+      "answer": "살얼음",
+      "choices": [
+        "마음",
+        "바람",
+        "사람",
+        "살얼음"
+      ],
+      "definition": "얇게 살짝 언 얼음.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=441711",
+      "rule": "",
+      "note": "",
+      "level": "normal"
+    },
+    {
+      "id": "gen-def-명실상부",
+      "kind": "definition",
+      "question": "다음 뜻풀이에 해당하는 낱말은?",
+      "prompt": "이름과 실상이 서로 꼭 맞음.",
+      "answer": "명실상부",
+      "choices": [
+        "마음",
+        "명실상부",
+        "바람",
+        "사람"
+      ],
+      "definition": "이름과 실상이 서로 꼭 맞음.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=116862",
+      "rule": "",
+      "note": "",
+      "level": "normal"
+    },
+    {
+      "id": "gen-def-발길",
+      "kind": "definition",
+      "question": "다음 뜻풀이에 해당하는 낱말은?",
+      "prompt": "앞으로 움직여 걸어 나가는 발.",
+      "answer": "발길",
+      "choices": [
+        "마음",
+        "바람",
+        "발길",
+        "사람"
+      ],
+      "definition": "앞으로 움직여 걸어 나가는 발.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=426915",
+      "rule": "",
+      "note": "",
+      "level": "normal"
+    },
+    {
+      "id": "gen-def-민들레",
+      "kind": "definition",
+      "question": "다음 뜻풀이에 해당하는 낱말은?",
+      "prompt": "국화과의 여러해살이풀. 원줄기는 없고 이른 봄에 뿌리에서 깃 모양으로 깊이 갈라진 잎이 배게 난다. 높이 30cm 정도의 꽃줄기 끝에 누런 꽃이 4~5월에 두상(頭狀) 화서로 피는데 밤에는 오므라든다. 씨는 수과(瘦果)로 흰 갓털이 있어 바람에 날려 멀리 퍼진다. 잎은 식용하고 꽃 피기 전의 뿌리와 줄기는 한방에서 땀을 내게 하거나 강장(強壯)하는 약으로 쓴다. 한국, 중국 등지에 분포한다.",
+      "answer": "민들레",
+      "choices": [
+        "마음",
+        "민들레",
+        "바람",
+        "사람"
+      ],
+      "definition": "국화과의 여러해살이풀. 원줄기는 없고 이른 봄에 뿌리에서 깃 모양으로 깊이 갈라진 잎이 배게 난다. 높이 30cm 정도의 꽃줄기 끝에 누런 꽃이 4~5월에 두상(頭狀) 화서로 피는데 밤에는 오므라든다. 씨는 수과(瘦果)로 흰 갓털이 있어 바람에 날려 멀리 퍼진다. 잎은 식용하고 꽃 피기 전의 뿌리와 줄기는 한방에서 땀을 내게 하거나 강장(強壯)하는 약으로 쓴다. 한국, 중국 등지에 분포한다.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=126787",
+      "rule": "",
+      "note": "",
+      "level": "normal"
+    },
+    {
+      "id": "gen-def-반신반의",
+      "kind": "definition",
+      "question": "다음 뜻풀이에 해당하는 낱말은?",
+      "prompt": "얼마쯤 믿으면서도 한편으로는 의심함.",
+      "answer": "반신반의",
+      "choices": [
+        "마음",
+        "바람",
+        "반신반의",
+        "사람"
+      ],
+      "definition": "얼마쯤 믿으면서도 한편으로는 의심함.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=427376",
+      "rule": "",
+      "note": "",
+      "level": "normal"
+    },
+    {
+      "id": "gen-def-아침",
+      "kind": "definition",
+      "question": "다음 뜻풀이에 해당하는 낱말은?",
+      "prompt": "날이 새면서 오전 반나절쯤까지의 동안.",
+      "answer": "아침",
+      "choices": [
+        "마음",
+        "바람",
+        "사람",
+        "아침"
+      ],
+      "definition": "날이 새면서 오전 반나절쯤까지의 동안.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=458645",
+      "rule": "",
+      "note": "",
+      "level": "normal"
+    },
+    {
+      "id": "gen-def-봉숭아",
+      "kind": "definition",
+      "question": "다음 뜻풀이에 해당하는 낱말은?",
+      "prompt": "봉선화과의 한해살이풀. 줄기는 높이가 60cm 정도 되는 고성종(高性種)과 25~40cm로 낮은 왜성종(矮性種)이 있는데, 곧게 서며 살이 찌고 밑에는 마디가 있으며 막뿌리가 나오기도 한다. 잎은 어긋나고 피침 모양으로 잔톱니가 있다. 7~10월에 잎겨드랑이에서 나온 2~3개의 가는 꽃자루 끝에 붉은색, 흰색, 분홍색, 누런색 따위의 꽃이 아래로 늘어져서 핀다. 열매는 삭과(蒴果)로 잔털이 있으며, 익으면 탄성에 의하여 다섯 조각으로 갈라져 누런 갈색의 씨가 튀어 나와 먼 곳까지 퍼져 나간다. 꽃잎을 따서 백반, 소금 따위와 함께 찧어 손톱에 붉게 물을 들이기도 한다. 인도, 동남아시아가 원산지로 전 세계에서 관상용으로 재배한다.",
+      "answer": "봉숭아",
+      "choices": [
+        "마음",
+        "바람",
+        "봉숭아",
+        "사람"
+      ],
+      "definition": "봉선화과의 한해살이풀. 줄기는 높이가 60cm 정도 되는 고성종(高性種)과 25~40cm로 낮은 왜성종(矮性種)이 있는데, 곧게 서며 살이 찌고 밑에는 마디가 있으며 막뿌리가 나오기도 한다. 잎은 어긋나고 피침 모양으로 잔톱니가 있다. 7~10월에 잎겨드랑이에서 나온 2~3개의 가는 꽃자루 끝에 붉은색, 흰색, 분홍색, 누런색 따위의 꽃이 아래로 늘어져서 핀다. 열매는 삭과(蒴果)로 잔털이 있으며, 익으면 탄성에 의하여 다섯 조각으로 갈라져 누런 갈색의 씨가 튀어 나와 먼 곳까지 퍼져 나간다. 꽃잎을 따서 백반, 소금 따위와 함께 찧어 손톱에 붉게 물을 들이기도 한다. 인도, 동남아시아가 원산지로 전 세계에서 관상용으로 재배한다.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=147904",
+      "rule": "",
+      "note": "",
+      "level": "normal"
+    },
+    {
+      "id": "gen-def-설상가상",
+      "kind": "definition",
+      "question": "다음 뜻풀이에 해당하는 낱말은?",
+      "prompt": "눈 위에 서리가 덮인다는 뜻으로, 난처한 일이나 불행한 일이 잇따라 일어남을 이르는 말.",
+      "answer": "설상가상",
+      "choices": [
+        "마음",
+        "바람",
+        "사람",
+        "설상가상"
+      ],
+      "definition": "눈 위에 서리가 덮인다는 뜻으로, 난처한 일이나 불행한 일이 잇따라 일어남을 이르는 말.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=448384",
+      "rule": "",
+      "note": "",
+      "level": "normal"
+    },
+    {
+      "id": "gen-def-저녁",
+      "kind": "definition",
+      "question": "다음 뜻풀이에 해당하는 낱말은?",
+      "prompt": "해가 질 무렵부터 밤이 되기까지의 사이.",
+      "answer": "저녁",
+      "choices": [
+        "마음",
+        "바람",
+        "사람",
+        "저녁"
+      ],
+      "definition": "해가 질 무렵부터 밤이 되기까지의 사이.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=475740",
+      "rule": "",
+      "note": "",
+      "level": "normal"
+    },
+    {
+      "id": "gen-def-개나리",
+      "kind": "definition",
+      "question": "다음 뜻풀이에 해당하는 낱말은?",
+      "prompt": "물푸레나뭇과의 낙엽 활엽 관목. 높이는 2~3미터이며, 잎은 마주난다. 이른 봄에 잎보다 먼저 노란 꽃이 피고 9월에 삭과(蒴果)인 열매를 맺는데, 옴·여드름·종기·연주창 따위에 약재로 쓰인다. 흔히 울타리용으로 재배한다. 우리나라 특산종이고 중국, 일본 등지에는 다른 변종이 분포한다.",
+      "answer": "개나리",
+      "choices": [
+        "개나리",
+        "마음",
+        "바람",
+        "사람"
+      ],
+      "definition": "물푸레나뭇과의 낙엽 활엽 관목. 높이는 2~3미터이며, 잎은 마주난다. 이른 봄에 잎보다 먼저 노란 꽃이 피고 9월에 삭과(蒴果)인 열매를 맺는데, 옴·여드름·종기·연주창 따위에 약재로 쓰인다. 흔히 울타리용으로 재배한다. 우리나라 특산종이고 중국, 일본 등지에는 다른 변종이 분포한다.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=10115",
+      "rule": "",
+      "note": "",
+      "level": "normal"
+    },
+    {
+      "id": "gen-def-어부지리",
+      "kind": "definition",
+      "question": "다음 뜻풀이에 해당하는 낱말은?",
+      "prompt": "두 사람이 이해관계로 서로 싸우는 사이에 엉뚱한 사람이 애쓰지 않고 가로챈 이익을 이르는 말. 도요새가 무명조개의 속살을 먹으려고 부리를 조가비 안에 넣는 순간 무명조개가 껍데기를 꼭 다물고 부리를 안 놔 주자, 서로 다투는 틈을 타서 어부가 둘 다 잡아 이익을 얻었다는 데서 유래한다.",
+      "answer": "어부지리",
+      "choices": [
+        "마음",
+        "바람",
+        "사람",
+        "어부지리"
+      ],
+      "definition": "두 사람이 이해관계로 서로 싸우는 사이에 엉뚱한 사람이 애쓰지 않고 가로챈 이익을 이르는 말. 도요새가 무명조개의 속살을 먹으려고 부리를 조가비 안에 넣는 순간 무명조개가 껍데기를 꼭 다물고 부리를 안 놔 주자, 서로 다투는 틈을 타서 어부가 둘 다 잡아 이익을 얻었다는 데서 유래한다.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=461107",
+      "rule": "",
+      "note": "",
+      "level": "normal"
+    },
+    {
+      "id": "gen-def-새벽",
+      "kind": "definition",
+      "question": "다음 뜻풀이에 해당하는 낱말은?",
+      "prompt": "먼동이 트려 할 무렵.",
+      "answer": "새벽",
+      "choices": [
+        "마음",
+        "바람",
+        "사람",
+        "새벽"
+      ],
+      "definition": "먼동이 트려 할 무렵.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=444770",
+      "rule": "",
+      "note": "",
+      "level": "normal"
+    },
+    {
+      "id": "gen-def-까치발",
+      "kind": "definition",
+      "question": "다음 뜻풀이에 해당하는 낱말은?",
+      "prompt": "발뒤꿈치를 든 발.",
+      "answer": "까치발",
+      "choices": [
+        "까치발",
+        "마음",
+        "바람",
+        "사람"
+      ],
+      "definition": "발뒤꿈치를 든 발.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=54616",
+      "rule": "",
+      "note": "",
+      "level": "normal"
+    },
+    {
+      "id": "gen-def-오리무중",
+      "kind": "definition",
+      "question": "다음 뜻풀이에 해당하는 낱말은?",
+      "prompt": "오 리나 되는 짙은 안개 속에 있다는 뜻으로, 무슨 일에 대하여 방향이나 갈피를 잡을 수 없음을 이르는 말. ≪후한서≫의 <장해전(張楷傳)>에 나오는 말이다.",
+      "answer": "오리무중",
+      "choices": [
+        "마음",
+        "바람",
+        "사람",
+        "오리무중"
+      ],
+      "definition": "오 리나 되는 짙은 안개 속에 있다는 뜻으로, 무슨 일에 대하여 방향이나 갈피를 잡을 수 없음을 이르는 말. ≪후한서≫의 <장해전(張楷傳)>에 나오는 말이다.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=461971",
+      "rule": "",
+      "note": "",
+      "level": "normal"
+    },
+    {
+      "id": "gen-def-한낮",
+      "kind": "definition",
+      "question": "다음 뜻풀이에 해당하는 낱말은?",
+      "prompt": "낮의 한가운데. 곧, 낮 열두 시를 전후한 때를 이른다.",
+      "answer": "한낮",
+      "choices": [
+        "마음",
+        "바람",
+        "사람",
+        "한낮"
+      ],
+      "definition": "낮의 한가운데. 곧, 낮 열두 시를 전후한 때를 이른다.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=360508",
+      "rule": "",
+      "note": "",
+      "level": "normal"
+    },
+    {
+      "id": "gen-def-손사래",
+      "kind": "definition",
+      "question": "다음 뜻풀이에 해당하는 낱말은?",
+      "prompt": "어떤 말이나 사실을 부인하거나 남에게 조용히 하라고 할 때 손을 펴서 휘젓는 일.",
+      "answer": "손사래",
+      "choices": [
+        "마음",
+        "바람",
+        "사람",
+        "손사래"
+      ],
+      "definition": "어떤 말이나 사실을 부인하거나 남에게 조용히 하라고 할 때 손을 펴서 휘젓는 일.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=448223",
+      "rule": "",
+      "note": "",
+      "level": "normal"
+    },
+    {
+      "id": "gen-def-우유부단",
+      "kind": "definition",
+      "question": "다음 뜻풀이에 해당하는 낱말은?",
+      "prompt": "어물어물 망설이기만 하고 결단성이 없음.",
+      "answer": "우유부단",
+      "choices": [
+        "마음",
+        "바람",
+        "사람",
+        "우유부단"
+      ],
+      "definition": "어물어물 망설이기만 하고 결단성이 없음.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=465372",
+      "rule": "",
+      "note": "",
+      "level": "normal"
+    },
+    {
+      "id": "gen-def-밤중",
+      "kind": "definition",
+      "question": "다음 뜻풀이에 해당하는 낱말은?",
+      "prompt": "밤이 깊은 때.",
+      "answer": "밤중",
+      "choices": [
+        "마음",
+        "바람",
+        "밤중",
+        "사람"
+      ],
+      "definition": "밤이 깊은 때.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=432508",
+      "rule": "",
+      "note": "",
+      "level": "normal"
+    },
+    {
+      "id": "gen-def-어깨춤",
+      "kind": "definition",
+      "question": "다음 뜻풀이에 해당하는 낱말은?",
+      "prompt": "신이 나서 어깨를 위아래로 으쓱거리는 일. 또는 그렇게 추는 춤.",
+      "answer": "어깨춤",
+      "choices": [
+        "마음",
+        "바람",
+        "사람",
+        "어깨춤"
+      ],
+      "definition": "신이 나서 어깨를 위아래로 으쓱거리는 일. 또는 그렇게 추는 춤.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=231755",
+      "rule": "",
+      "note": "",
+      "level": "normal"
+    },
+    {
+      "id": "gen-def-이심전심",
+      "kind": "definition",
+      "question": "다음 뜻풀이에 해당하는 낱말은?",
+      "prompt": "마음과 마음으로 서로 뜻이 통함. ≪전등록≫에 나오는 말로 원래는 불교의 법통을 계승할 때에 쓰였다.",
+      "answer": "이심전심",
+      "choices": [
+        "마음",
+        "바람",
+        "사람",
+        "이심전심"
+      ],
+      "definition": "마음과 마음으로 서로 뜻이 통함. ≪전등록≫에 나오는 말로 원래는 불교의 법통을 계승할 때에 쓰였다.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=469328",
+      "rule": "",
+      "note": "",
+      "level": "normal"
+    },
+    {
+      "id": "gen-def-어제",
+      "kind": "definition",
+      "question": "다음 뜻풀이에 해당하는 낱말은?",
+      "prompt": "오늘의 바로 하루 전날.",
+      "answer": "어제",
+      "choices": [
+        "마음",
+        "바람",
+        "사람",
+        "어제"
+      ],
+      "definition": "오늘의 바로 하루 전날.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=231840",
+      "rule": "",
+      "note": "",
+      "level": "normal"
+    },
+    {
+      "id": "gen-def-두레박",
+      "kind": "definition",
+      "question": "다음 뜻풀이에 해당하는 낱말은?",
+      "prompt": "줄을 길게 달아 우물물을 퍼 올리는 데 쓰는 도구. 바가지나 판자 또는 양철 따위로 만든다.",
+      "answer": "두레박",
+      "choices": [
+        "두레박",
+        "마음",
+        "바람",
+        "사람"
+      ],
+      "definition": "줄을 길게 달아 우물물을 퍼 올리는 데 쓰는 도구. 바가지나 판자 또는 양철 따위로 만든다.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=412660",
+      "rule": "",
+      "note": "",
+      "level": "normal"
+    },
+    {
+      "id": "gen-def-일석이조",
+      "kind": "definition",
+      "question": "다음 뜻풀이에 해당하는 낱말은?",
+      "prompt": "돌 한 개를 던져 새 두 마리를 잡는다는 뜻으로, 동시에 두 가지 이득을 봄을 이르는 말.",
+      "answer": "일석이조",
+      "choices": [
+        "마음",
+        "바람",
+        "사람",
+        "일석이조"
+      ],
+      "definition": "돌 한 개를 던져 새 두 마리를 잡는다는 뜻으로, 동시에 두 가지 이득을 봄을 이르는 말.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=472215",
+      "rule": "",
+      "note": "",
+      "level": "normal"
+    },
+    {
+      "id": "gen-def-오늘",
+      "kind": "definition",
+      "question": "다음 뜻풀이에 해당하는 낱말은?",
+      "prompt": "지금 지나가고 있는 이날.",
+      "answer": "오늘",
+      "choices": [
+        "마음",
+        "바람",
+        "사람",
+        "오늘"
+      ],
+      "definition": "지금 지나가고 있는 이날.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=460284",
+      "rule": "",
+      "note": "",
+      "level": "normal"
+    },
+    {
+      "id": "gen-def-지팡이",
+      "kind": "definition",
+      "question": "다음 뜻풀이에 해당하는 낱말은?",
+      "prompt": "걸을 때에 도움을 얻기 위하여 짚는 막대기.",
+      "answer": "지팡이",
+      "choices": [
+        "마음",
+        "바람",
+        "사람",
+        "지팡이"
+      ],
+      "definition": "걸을 때에 도움을 얻기 위하여 짚는 막대기.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=482285",
+      "rule": "",
+      "note": "",
+      "level": "normal"
+    },
+    {
+      "id": "gen-def-전전긍긍",
+      "kind": "definition",
+      "question": "다음 뜻풀이에 해당하는 낱말은?",
+      "prompt": "몹시 두려워서 벌벌 떨며 조심함. ≪시경≫의 <소민편(小旻篇)>에서 유래한다.",
+      "answer": "전전긍긍",
+      "choices": [
+        "마음",
+        "바람",
+        "사람",
+        "전전긍긍"
+      ],
+      "definition": "몹시 두려워서 벌벌 떨며 조심함. ≪시경≫의 <소민편(小旻篇)>에서 유래한다.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=479064",
+      "rule": "",
+      "note": "",
+      "level": "normal"
+    },
+    {
+      "id": "gen-def-내일",
+      "kind": "definition",
+      "question": "다음 뜻풀이에 해당하는 낱말은?",
+      "prompt": "오늘의 바로 다음 날.",
+      "answer": "내일",
+      "choices": [
+        "내일",
+        "마음",
+        "바람",
+        "사람"
+      ],
+      "definition": "오늘의 바로 다음 날.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=406113",
+      "rule": "",
+      "note": "",
+      "level": "normal"
+    },
+    {
+      "id": "gen-def-천고마비",
+      "kind": "definition",
+      "question": "다음 뜻풀이에 해당하는 낱말은?",
+      "prompt": "하늘이 높고 말이 살찐다는 뜻으로, 하늘이 맑아 높푸르게 보이고 온갖 곡식이 익는 가을철을 이르는 말.",
+      "answer": "천고마비",
+      "choices": [
+        "마음",
+        "바람",
+        "사람",
+        "천고마비"
+      ],
+      "definition": "하늘이 높고 말이 살찐다는 뜻으로, 하늘이 맑아 높푸르게 보이고 온갖 곡식이 익는 가을철을 이르는 말.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=323184",
+      "rule": "",
+      "note": "",
+      "level": "normal"
+    },
+    {
+      "id": "gen-def-시간",
+      "kind": "definition",
+      "question": "다음 뜻풀이에 해당하는 낱말은?",
+      "prompt": "화살의 몸을 이루는 대.",
+      "answer": "시간",
+      "choices": [
+        "마음",
+        "바람",
+        "사람",
+        "시간"
+      ],
+      "definition": "화살의 몸을 이루는 대.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=203093",
+      "rule": "",
+      "note": "",
+      "level": "normal"
+    },
+    {
+      "id": "gen-idiom-배",
+      "kind": "idiom",
+      "question": "다음 뜻의 관용구는?",
+      "prompt": "주로 부정한 관계의 남녀 사이에서 남모르게 마음이 맞아 서로 성관계를 맺다.",
+      "answer": "배(가) 맞다",
+      "choices": [
+        "배(가) 맞다",
+        "배(가) 아프다",
+        "배(를) 내밀다",
+        "배(를) 두드리다"
+      ],
+      "definition": "주로 부정한 관계의 남녀 사이에서 남모르게 마음이 맞아 서로 성관계를 맺다.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=528261",
+      "rule": "",
+      "note": "",
+      "level": "normal"
+    },
+    {
+      "id": "gen-idiom-등",
+      "kind": "idiom",
+      "question": "다음 뜻의 관용구는?",
+      "prompt": "남의 세력에 의지하다.",
+      "answer": "등(을) 대다",
+      "choices": [
+        "등(을) 대다",
+        "등(을) 돌리다",
+        "등(을) 타다",
+        "등(이) 달다"
+      ],
+      "definition": "남의 세력에 의지하다.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=527447",
+      "rule": "",
+      "note": "",
+      "level": "normal"
+    },
+    {
+      "id": "gen-idiom-마음",
+      "kind": "idiom",
+      "question": "다음 뜻의 관용구는?",
+      "prompt": "어떤 것에 마음을 자리 잡게 하거나 전념하다.",
+      "answer": "마음(을) 붙이다",
+      "choices": [
+        "마음(을) 붙이다",
+        "마음(을) 주다",
+        "마음에 두다",
+        "마음에 붙다"
+      ],
+      "definition": "어떤 것에 마음을 자리 잡게 하거나 전념하다.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=527622",
+      "rule": "",
+      "note": "",
+      "level": "normal"
+    },
+    {
+      "id": "gen-idiom-속",
+      "kind": "idiom",
+      "question": "다음 뜻의 관용구는?",
+      "prompt": "남의 속이 뒤집히게 비위를 살살 건드리다.",
+      "answer": "속(을) 긁다",
+      "choices": [
+        "속(을) 긁다",
+        "속(을) 끓이다",
+        "속(을) 뜨다[떠보다]",
+        "속(을) 빼놓다"
+      ],
+      "definition": "남의 속이 뒤집히게 비위를 살살 건드리다.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=529672",
+      "rule": "",
+      "note": "",
+      "level": "normal"
+    },
+    {
+      "id": "gen-idiom-얼굴",
+      "kind": "idiom",
+      "question": "다음 뜻의 관용구는?",
+      "prompt": "부끄러움을 모르고 염치가 없다.",
+      "answer": "얼굴 가죽이 두껍다",
+      "choices": [
+        "얼굴 가죽이 두껍다",
+        "얼굴만 쳐다보다",
+        "얼굴에 씌어 있다",
+        "얼굴에 외꽃이 피다"
+      ],
+      "definition": "부끄러움을 모르고 염치가 없다.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=530286",
+      "rule": "",
+      "note": "",
+      "level": "normal"
+    },
+    {
+      "id": "gen-idiom-목",
+      "kind": "idiom",
+      "question": "다음 뜻의 관용구는?",
+      "prompt": "주로 울거나 부르짖을 때에 참거나 삼가지 않고 소리를 크게 내어.",
+      "answer": "목(을) 놓아[놓고]",
+      "choices": [
+        "목(을) 놓아[놓고]",
+        "목(을) 베다",
+        "목(을) 자르다",
+        "목(을) 파다"
+      ],
+      "definition": "주로 울거나 부르짖을 때에 참거나 삼가지 않고 소리를 크게 내어.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=527867",
+      "rule": "",
+      "note": "",
+      "level": "normal"
+    },
+    {
+      "id": "gen-idiom-무릎",
+      "kind": "idiom",
+      "question": "다음 뜻의 관용구는?",
+      "prompt": "항복하거나 굴복하다.",
+      "answer": "무릎(을) 꿇다",
+      "choices": [
+        "무릎(을) 꿇다",
+        "무릎(을) 꿇리다",
+        "무릎(을) 치다",
+        "무릎을 마주하다[같이하다/맞대다]"
+      ],
+      "definition": "항복하거나 굴복하다.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=521462",
+      "rule": "",
+      "note": "",
+      "level": "normal"
+    },
+    {
+      "id": "gen-idiom-허리",
+      "kind": "idiom",
+      "question": "다음 뜻의 관용구는?",
+      "prompt": "나이에 비하여 젊다.",
+      "answer": "허리가 꼿꼿하다",
+      "choices": [
+        "허리가 꼿꼿하다",
+        "허리가 끊어지다",
+        "허리가 부러지다",
+        "허리가 잘리다"
+      ],
+      "definition": "나이에 비하여 젊다.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=524790",
+      "rule": "",
+      "note": "",
+      "level": "normal"
+    },
+    {
+      "id": "gen-idiom-뼈",
+      "kind": "idiom",
+      "question": "다음 뜻의 관용구는?",
+      "prompt": "오랫동안 육체적 고통을 견디어 내면서 힘겨운 일을 치러 나가는 것을 비유적으로 이르는 말.",
+      "answer": "뼈(가) 빠지게",
+      "choices": [
+        "뼈(가) 빠지게",
+        "뼈가 녹다[녹아나다]",
+        "뼈가 휘도록",
+        "뼈도 못 추리다"
+      ],
+      "definition": "오랫동안 육체적 고통을 견디어 내면서 힘겨운 일을 치러 나가는 것을 비유적으로 이르는 말.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=528923",
+      "rule": "",
+      "note": "",
+      "level": "normal"
+    },
+    {
+      "id": "gen-proverb-말",
+      "kind": "proverb",
+      "question": "다음 뜻의 속담은?",
+      "prompt": "입으로는 그럴듯하게 말하지만 실상은 좋지 못하다는 말.",
+      "answer": "말 단 집에 장 단 법 없다",
+      "choices": [
+        "말 단 집 장맛이 쓰다",
+        "말 단 집에 장 단 법 없다",
+        "말 단 집에 장이 곤다",
+        "말 뒤에 말이 있다"
+      ],
+      "definition": "입으로는 그럴듯하게 말하지만 실상은 좋지 못하다는 말.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=527314",
+      "rule": "",
+      "note": "",
+      "level": "normal"
+    },
+    {
+      "id": "gen-proverb-밥",
+      "kind": "proverb",
+      "question": "다음 뜻의 속담은?",
+      "prompt": "‘밥 군’과 ‘바꾼’의 음이 비슷한 데서, 물건을 바꾼 것이 좋지 않음을 비유적으로 이르는 말.",
+      "answer": "밥 군 것이 떡 군 것보다 못하다",
+      "choices": [
+        "밥 군 것이 떡 군 것보다 못하다",
+        "밥 먹을 때는 개도 안 때린다",
+        "밥 빌어다가 죽을 쑤어 먹을 놈[자식]",
+        "밥 빌어먹기는 장타령이 제일"
+      ],
+      "definition": "‘밥 군’과 ‘바꾼’의 음이 비슷한 데서, 물건을 바꾼 것이 좋지 않음을 비유적으로 이르는 말.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=528534",
+      "rule": "",
+      "note": "",
+      "level": "normal"
+    },
+    {
+      "id": "gen-proverb-물",
+      "kind": "proverb",
+      "question": "다음 뜻의 속담은?",
+      "prompt": "강가에 사는 뱃사공 같은 사람을 경멸하는 뜻으로 이르는 말.",
+      "answer": "물 거슬러 먹는 놈",
+      "choices": [
+        "물 거슬러 먹는 놈",
+        "물 건너 손자 죽은 사람 같다",
+        "물 건너온 범",
+        "물과 불과 악처는 삼대 재액"
+      ],
+      "definition": "강가에 사는 뱃사공 같은 사람을 경멸하는 뜻으로 이르는 말.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=528078",
+      "rule": "",
+      "note": "",
+      "level": "normal"
+    },
+    {
+      "id": "gen-proverb-불",
+      "kind": "proverb",
+      "question": "다음 뜻의 속담은?",
+      "prompt": "시키는 일과 전혀 딴 일을 함을 비유적으로 이르는 말.",
+      "answer": "불 가져오라는데 물 가져온다",
+      "choices": [
+        "불 가져오라는데 물 가져온다",
+        "불 안 때도 절로 익는 솥",
+        "불 안 땐 굴뚝에 연기 날까",
+        "불 없는[꺼진] 화로 딸 없는[죽은] 사위"
+      ],
+      "definition": "시키는 일과 전혀 딴 일을 함을 비유적으로 이르는 말.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=528765",
+      "rule": "",
+      "note": "",
+      "level": "normal"
+    },
+    {
+      "id": "gen-proverb-길",
+      "kind": "proverb",
+      "question": "다음 뜻의 속담은?",
+      "prompt": "길을 잘 닦아 놓으니까 깍정이나 거지 등이 먼저 지나간다는 뜻으로, 정성을 들여 한 일이 보람 없이 되었음을 비유적으로 이르는 말.",
+      "answer": "길 닦아 놓으니까 깍정이가[거지가/미친년이] 먼저 지나간다",
+      "choices": [
+        "길 닦아 놓으니까 깍정이가[거지가/미친년이] 먼저 지나간다",
+        "길 아래 돌부처",
+        "길 아래 돌부처도 돌아앉는다",
+        "길로 가라니까 뫼로 간다"
+      ],
+      "definition": "길을 잘 닦아 놓으니까 깍정이나 거지 등이 먼저 지나간다는 뜻으로, 정성을 들여 한 일이 보람 없이 되었음을 비유적으로 이르는 말.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=525892",
+      "rule": "",
+      "note": "",
+      "level": "normal"
+    },
+    {
+      "id": "gen-proverb-집",
+      "kind": "proverb",
+      "question": "다음 뜻의 속담은?",
+      "prompt": "집은 손질하기에 달렸고 아내는 가르치기에 달렸다는 말.",
+      "answer": "집과 계집은 가꾸기 탓",
+      "choices": [
+        "집 떠나면 고생이다",
+        "집 안에 연기 차면 비 올 징조",
+        "집과 계집은 가꾸기 탓",
+        "집도 절도 없다"
+      ],
+      "definition": "집은 손질하기에 달렸고 아내는 가르치기에 달렸다는 말.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=532047",
+      "rule": "",
+      "note": "",
+      "level": "normal"
+    },
+    {
+      "id": "gen-proverb-옷",
+      "kind": "proverb",
+      "question": "다음 뜻의 속담은?",
+      "prompt": "옷차림 따위의 모든 일을 나이나 경우에 어울리게 하여야 한다는 말.",
+      "answer": "옷은 나이로 입는다",
+      "choices": [
+        "옷은 나이로 입는다",
+        "옷은 새 옷이 좋고 사람은 옛 사람이 좋다",
+        "옷은 새 옷이 좋고 임은 옛 임이 좋다",
+        "옷은 시집올 때처럼 음식은 한가위처럼"
+      ],
+      "definition": "옷차림 따위의 모든 일을 나이나 경우에 어울리게 하여야 한다는 말.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=530956",
+      "rule": "",
+      "note": "",
+      "level": "normal"
+    },
+    {
+      "id": "gen-proverb-돈",
+      "kind": "proverb",
+      "question": "다음 뜻의 속담은?",
+      "prompt": "세상에서 돈 벌기가 가장 어려운 일이라는 말.",
+      "answer": "돈 나는 모퉁이 죽는 모퉁이",
+      "choices": [
+        "돈 나는 모퉁이 죽는 모퉁이",
+        "돈 놓고는 못 웃어도 아이 놓고는 웃는다",
+        "돈 떨어지자 입맛 난다",
+        "돈만 있으면 개도 멍첨지라"
+      ],
+      "definition": "세상에서 돈 벌기가 가장 어려운 일이라는 말.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=526804",
+      "rule": "",
+      "note": "",
+      "level": "normal"
+    },
+    {
+      "id": "gen-proverb-배",
+      "kind": "proverb",
+      "question": "다음 뜻의 속담은?",
+      "prompt": "배가 불러 앞으로 나왔다는 뜻으로, 임신부의 배가 부름을 비유적으로 이르는 말.",
+      "answer": "배가 남산만[앞 남산만] 하다",
+      "choices": [
+        "배 안엣[안에] 조부는 있어도 배 안엣[안에] 형은 없다",
+        "배가 남산만[앞 남산만] 하다",
+        "배만 부르면 제 세상인 줄 안다",
+        "배보다 배꼽이 더 크다"
+      ],
+      "definition": "배가 불러 앞으로 나왔다는 뜻으로, 임신부의 배가 부름을 비유적으로 이르는 말.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=528253",
+      "rule": "",
+      "note": "",
+      "level": "normal"
+    },
+    {
+      "id": "gen-proverb-등",
+      "kind": "proverb",
+      "question": "다음 뜻의 속담은?",
+      "prompt": "자기가 푸대접한 사람에게 극진한 대접을 받는 것은 등에 소름 끼치는 것같이 기분 좋지 아니하다는 말.",
+      "answer": "등 시린 절 받기 싫다",
+      "choices": [
+        "등 시린 절 받기 싫다",
+        "등에 풀 바른 것 같다",
+        "등을 쓰다듬어 준 강아지 발등 문다",
+        "등이 더우랴 배가 부르랴"
+      ],
+      "definition": "자기가 푸대접한 사람에게 극진한 대접을 받는 것은 등에 소름 끼치는 것같이 기분 좋지 아니하다는 말.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=527441",
+      "rule": "",
+      "note": "",
+      "level": "normal"
+    },
+    {
+      "id": "gen-proverb-마음",
+      "kind": "proverb",
+      "question": "다음 뜻의 속담은?",
+      "prompt": "하고 싶지 아니한 일을 마지못하여 하는 것을 이르는 말.",
+      "answer": "마음 없는 염불",
+      "choices": [
+        "마음 없는 염불",
+        "마음에 없으면 보이지도 않는다",
+        "마음에 있어야 꿈도 꾸지",
+        "마음은 걸걸해도 왕골자리에 똥 싼다"
+      ],
+      "definition": "하고 싶지 아니한 일을 마지못하여 하는 것을 이르는 말.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=527604",
+      "rule": "",
+      "note": "",
+      "level": "normal"
+    },
+    {
+      "id": "gen-proverb-속",
+      "kind": "proverb",
+      "question": "다음 뜻의 속담은?",
+      "prompt": "하는 말과 생각이 서로 다른 경우를 이르는 말.",
+      "answer": "속 각각 말 각각",
+      "choices": [
+        "속 각각 말 각각",
+        "속 빈 강정(의 잉어등 같다)",
+        "속에 대감이 몇 개 들어앉았다",
+        "속에 뼈 있는 소리"
+      ],
+      "definition": "하는 말과 생각이 서로 다른 경우를 이르는 말.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=529659",
+      "rule": "",
+      "note": "",
+      "level": "normal"
+    },
+    {
+      "id": "gen-proverb-얼굴",
+      "kind": "proverb",
+      "question": "다음 뜻의 속담은?",
+      "prompt": "얼굴보다 거기에 붙은 코가 더 크다는 뜻으로, 기본이 되는 것보다 덧붙이는 것이 더 많거나 큰 경우를 비유적으로 이르는 말.",
+      "answer": "얼굴보다 코가 더 크다",
+      "choices": [
+        "얼굴 보아 가며 이름 짓는다",
+        "얼굴보다 코가 더 크다",
+        "얼굴에 모닥불을 담아 붓듯",
+        "얼굴이 요패(腰牌)라"
+      ],
+      "definition": "얼굴보다 거기에 붙은 코가 더 크다는 뜻으로, 기본이 되는 것보다 덧붙이는 것이 더 많거나 큰 경우를 비유적으로 이르는 말.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=530282",
+      "rule": "",
+      "note": "",
+      "level": "normal"
+    },
+    {
+      "id": "gen-proverb-목",
+      "kind": "proverb",
+      "question": "다음 뜻의 속담은?",
+      "prompt": "이미 목이 멘 개가 겨를 먹으면 더 심하게 멜 텐데도 불구하고 겨를 탐낸다는 뜻으로, 자기 분수를 돌보지 않고 분수에 겨운 일을 바란다는 말.",
+      "answer": "목 멘 개 겨 탐하듯",
+      "choices": [
+        "목 멘 개 겨 탐하듯",
+        "목 벤 놈 허리 베고 허리 벤 놈 목밖에 더 베겠는가",
+        "목 짧은 강아지 겻섬 넘어다보듯 한다",
+        "목의 때도 못 씻는 살림"
+      ],
+      "definition": "이미 목이 멘 개가 겨를 먹으면 더 심하게 멜 텐데도 불구하고 겨를 탐낸다는 뜻으로, 자기 분수를 돌보지 않고 분수에 겨운 일을 바란다는 말.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=527862",
+      "rule": "",
+      "note": "",
+      "level": "normal"
+    },
+    {
+      "id": "gen-proverb-주먹",
+      "kind": "proverb",
+      "question": "다음 뜻의 속담은?",
+      "prompt": "아주 쭈그러져서 다시는 어찌할 도리가 없이 된 모양을 이르는 말.",
+      "answer": "주먹 맞은 감투(라)",
+      "choices": [
+        "주먹 맞은 감투(라)",
+        "주먹으로 물 찧기",
+        "주먹은 가깝고 법은 멀다",
+        "주먹이 운다[울다]"
+      ],
+      "definition": "아주 쭈그러져서 다시는 어찌할 도리가 없이 된 모양을 이르는 말.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=532077",
+      "rule": "",
+      "note": "",
+      "level": "normal"
     }
   ]
 }
