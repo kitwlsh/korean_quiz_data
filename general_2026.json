@@ -2394,6 +2394,42 @@
       "rule": "",
       "note": "",
       "level": "normal"
+    },
+    {
+      "id": "gen-def-화룡점정",
+      "kind": "definition",
+      "question": "다음 뜻풀이에 해당하는 낱말은?",
+      "prompt": "무슨 일을 하는 데에 가장 중요한 부분을 완성함을 비유적으로 이르는 말. 용을 그리고 난 후에 마지막으로 눈동자를 그려 넣었더니 그 용이 실제 용이 되어 홀연히 구름을 타고 하늘로 날아 올라갔다는 고사에서 유래한다.",
+      "answer": "화룡점정",
+      "choices": [
+        "마음",
+        "바람",
+        "사람",
+        "화룡점정"
+      ],
+      "definition": "무슨 일을 하는 데에 가장 중요한 부분을 완성함을 비유적으로 이르는 말. 용을 그리고 난 후에 마지막으로 눈동자를 그려 넣었더니 그 용이 실제 용이 되어 홀연히 구름을 타고 하늘로 날아 올라갔다는 고사에서 유래한다.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=374772",
+      "rule": "",
+      "note": "",
+      "level": "normal"
+    },
+    {
+      "id": "gen-def-괄목상대",
+      "kind": "definition",
+      "question": "다음 뜻풀이에 해당하는 낱말은?",
+      "prompt": "눈을 비비고 상대편을 본다는 뜻으로, 남의 학식이나 재주가 놀랄 만큼 부쩍 늚을 이르는 말.",
+      "answer": "괄목상대",
+      "choices": [
+        "괄목상대",
+        "마음",
+        "바람",
+        "사람"
+      ],
+      "definition": "눈을 비비고 상대편을 본다는 뜻으로, 남의 학식이나 재주가 놀랄 만큼 부쩍 늚을 이르는 말.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=401298",
+      "rule": "",
+      "note": "",
+      "level": "normal"
     }
   ]
 }
