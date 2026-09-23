@@ -2430,6 +2430,42 @@
       "rule": "",
       "note": "",
       "level": "normal"
+    },
+    {
+      "id": "gen-def-구사일생",
+      "kind": "definition",
+      "question": "다음 뜻풀이에 해당하는 낱말은?",
+      "prompt": "아홉 번 죽을 뻔하다 한 번 살아난다는 뜻으로, 죽을 고비를 여러 차례 넘기고 겨우 살아남을 이르는 말.",
+      "answer": "구사일생",
+      "choices": [
+        "구사일생",
+        "마음",
+        "바람",
+        "사람"
+      ],
+      "definition": "아홉 번 죽을 뻔하다 한 번 살아난다는 뜻으로, 죽을 고비를 여러 차례 넘기고 겨우 살아남을 이르는 말.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=38389",
+      "rule": "",
+      "note": "",
+      "level": "normal"
+    },
+    {
+      "id": "gen-def-금상첨화",
+      "kind": "definition",
+      "question": "다음 뜻풀이에 해당하는 낱말은?",
+      "prompt": "비단 위에 꽃을 더한다는 뜻으로, 좋은 일 위에 또 좋은 일이 더하여짐을 비유적으로 이르는 말. 왕안석의 글에서 유래한다.",
+      "answer": "금상첨화",
+      "choices": [
+        "금상첨화",
+        "마음",
+        "바람",
+        "사람"
+      ],
+      "definition": "비단 위에 꽃을 더한다는 뜻으로, 좋은 일 위에 또 좋은 일이 더하여짐을 비유적으로 이르는 말. 왕안석의 글에서 유래한다.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=401345",
+      "rule": "",
+      "note": "",
+      "level": "normal"
     }
   ]
 }
