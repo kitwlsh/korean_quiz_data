@@ -2574,6 +2574,42 @@
       "rule": "",
       "note": "",
       "level": "normal"
+    },
+    {
+      "id": "gen-def-고이고이",
+      "kind": "definition",
+      "question": "다음 뜻풀이에 해당하는 낱말은?",
+      "prompt": "매우 곱게.",
+      "answer": "고이고이",
+      "choices": [
+        "고이고이",
+        "마음",
+        "바람",
+        "사람"
+      ],
+      "definition": "매우 곱게.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=25788",
+      "rule": "",
+      "note": "",
+      "level": "normal"
+    },
+    {
+      "id": "gen-def-가만가만",
+      "kind": "definition",
+      "question": "다음 뜻풀이에 해당하는 낱말은?",
+      "prompt": "움직임 따위가 드러나지 않도록 조용조용.",
+      "answer": "가만가만",
+      "choices": [
+        "가만가만",
+        "마음",
+        "바람",
+        "사람"
+      ],
+      "definition": "움직임 따위가 드러나지 않도록 조용조용.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=853",
+      "rule": "",
+      "note": "",
+      "level": "normal"
     }
   ]
 }
