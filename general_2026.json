@@ -2610,6 +2610,42 @@
       "rule": "",
       "note": "",
       "level": "normal"
+    },
+    {
+      "id": "gen-def-두근두근",
+      "kind": "definition",
+      "question": "다음 뜻풀이에 해당하는 낱말은?",
+      "prompt": "몹시 놀라거나 불안하여 자꾸 가슴이 뛰는 소리. 또는 그 모양.",
+      "answer": "두근두근",
+      "choices": [
+        "두근두근",
+        "마음",
+        "바람",
+        "사람"
+      ],
+      "definition": "몹시 놀라거나 불안하여 자꾸 가슴이 뛰는 소리. 또는 그 모양.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=90406",
+      "rule": "",
+      "note": "",
+      "level": "normal"
+    },
+    {
+      "id": "gen-def-오순도순",
+      "kind": "definition",
+      "question": "다음 뜻풀이에 해당하는 낱말은?",
+      "prompt": "정답게 이야기하거나 의좋게 지내는 모양. ‘오손도손’보다 큰 느낌을 준다.",
+      "answer": "오순도순",
+      "choices": [
+        "마음",
+        "바람",
+        "사람",
+        "오순도순"
+      ],
+      "definition": "정답게 이야기하거나 의좋게 지내는 모양. ‘오손도손’보다 큰 느낌을 준다.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=462168",
+      "rule": "",
+      "note": "",
+      "level": "normal"
     }
   ]
 }
