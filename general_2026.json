@@ -2646,6 +2646,42 @@
       "rule": "",
       "note": "",
       "level": "normal"
+    },
+    {
+      "id": "gen-def-티격태격",
+      "kind": "definition",
+      "question": "다음 뜻풀이에 해당하는 낱말은?",
+      "prompt": "서로 뜻이 맞지 아니하여 이러니저러니 시비를 따지며 가리는 모양.",
+      "answer": "티격태격",
+      "choices": [
+        "마음",
+        "바람",
+        "사람",
+        "티격태격"
+      ],
+      "definition": "서로 뜻이 맞지 아니하여 이러니저러니 시비를 따지며 가리는 모양.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=350614",
+      "rule": "",
+      "note": "",
+      "level": "normal"
+    },
+    {
+      "id": "gen-def-옥신각신",
+      "kind": "definition",
+      "question": "다음 뜻풀이에 해당하는 낱말은?",
+      "prompt": "서로 옳으니 그르니 하며 다툼. 또는 그런 행위.",
+      "answer": "옥신각신",
+      "choices": [
+        "마음",
+        "바람",
+        "사람",
+        "옥신각신"
+      ],
+      "definition": "서로 옳으니 그르니 하며 다툼. 또는 그런 행위.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=461605",
+      "rule": "",
+      "note": "",
+      "level": "normal"
     }
   ]
 }
