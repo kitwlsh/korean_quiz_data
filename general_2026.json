@@ -2682,6 +2682,42 @@
       "rule": "",
       "note": "",
       "level": "normal"
+    },
+    {
+      "id": "gen-def-아기자기",
+      "kind": "definition",
+      "question": "다음 뜻풀이에 해당하는 낱말은?",
+      "prompt": "여러 가지가 오밀조밀 어울려 예쁜 모양.",
+      "answer": "아기자기",
+      "choices": [
+        "마음",
+        "바람",
+        "사람",
+        "아기자기"
+      ],
+      "definition": "여러 가지가 오밀조밀 어울려 예쁜 모양.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=454993",
+      "rule": "",
+      "note": "",
+      "level": "normal"
+    },
+    {
+      "id": "gen-def-알쏭달쏭",
+      "kind": "definition",
+      "question": "다음 뜻풀이에 해당하는 낱말은?",
+      "prompt": "여러 가지 빛깔로 된 점이나 줄이 고르지 않게 뒤섞여 무늬를 이룬 모양.",
+      "answer": "알쏭달쏭",
+      "choices": [
+        "마음",
+        "바람",
+        "사람",
+        "알쏭달쏭"
+      ],
+      "definition": "여러 가지 빛깔로 된 점이나 줄이 고르지 않게 뒤섞여 무늬를 이룬 모양.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=217133",
+      "rule": "",
+      "note": "",
+      "level": "normal"
     }
   ]
 }
