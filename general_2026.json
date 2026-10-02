@@ -2718,6 +2718,42 @@
       "rule": "",
       "note": "",
       "level": "normal"
+    },
+    {
+      "id": "gen-def-싱글벙글",
+      "kind": "definition",
+      "question": "다음 뜻풀이에 해당하는 낱말은?",
+      "prompt": "눈과 입을 슬며시 움직이며 소리 없이 정답고 환하게 웃는 모양.",
+      "answer": "싱글벙글",
+      "choices": [
+        "마음",
+        "바람",
+        "사람",
+        "싱글벙글"
+      ],
+      "definition": "눈과 입을 슬며시 움직이며 소리 없이 정답고 환하게 웃는 모양.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=451055",
+      "rule": "",
+      "note": "",
+      "level": "normal"
+    },
+    {
+      "id": "gen-def-울긋불긋",
+      "kind": "definition",
+      "question": "다음 뜻풀이에 해당하는 낱말은?",
+      "prompt": "짙고 옅은 여러 가지 빛깔들이 야단스럽게 한데 뒤섞여 있는 모양.",
+      "answer": "울긋불긋",
+      "choices": [
+        "마음",
+        "바람",
+        "사람",
+        "울긋불긋"
+      ],
+      "definition": "짙고 옅은 여러 가지 빛깔들이 야단스럽게 한데 뒤섞여 있는 모양.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=254795",
+      "rule": "",
+      "note": "",
+      "level": "normal"
     }
   ]
 }
