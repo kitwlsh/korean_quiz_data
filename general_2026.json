@@ -2790,6 +2790,42 @@
       "rule": "",
       "note": "",
       "level": "normal"
+    },
+    {
+      "id": "gen-def-물레방아",
+      "kind": "definition",
+      "question": "다음 뜻풀이에 해당하는 낱말은?",
+      "prompt": "떨어지는 물의 힘으로 바퀴를 돌려 곡식을 찧거나 빻는 기구. 큰 나무 바퀴와 굴대에 공이를 장치하여, 바퀴가 돌 때마다 공이가 오르내리며 곡식을 찧거나 빻는다.",
+      "answer": "물레방아",
+      "choices": [
+        "마음",
+        "물레방아",
+        "바람",
+        "사람"
+      ],
+      "definition": "떨어지는 물의 힘으로 바퀴를 돌려 곡식을 찧거나 빻는 기구. 큰 나무 바퀴와 굴대에 공이를 장치하여, 바퀴가 돌 때마다 공이가 오르내리며 곡식을 찧거나 빻는다.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=128360",
+      "rule": "",
+      "note": "",
+      "level": "normal"
+    },
+    {
+      "id": "gen-def-해바라기",
+      "kind": "definition",
+      "question": "다음 뜻풀이에 해당하는 낱말은?",
+      "prompt": "추울 때 양지바른 곳에 나와 햇볕을 쬐는 일.",
+      "answer": "해바라기",
+      "choices": [
+        "마음",
+        "바람",
+        "사람",
+        "해바라기"
+      ],
+      "definition": "추울 때 양지바른 곳에 나와 햇볕을 쬐는 일.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=499124",
+      "rule": "",
+      "note": "",
+      "level": "normal"
     }
   ]
 }
