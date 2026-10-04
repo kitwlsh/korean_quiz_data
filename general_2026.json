@@ -2826,6 +2826,42 @@
       "rule": "",
       "note": "",
       "level": "normal"
+    },
+    {
+      "id": "gen-def-부지깽이",
+      "kind": "definition",
+      "question": "다음 뜻풀이에 해당하는 낱말은?",
+      "prompt": "아궁이 따위에 불을 땔 때에, 불을 헤치거나 끌어내거나 거두어 넣거나 하는 데 쓰는 가느스름한 막대기.",
+      "answer": "부지깽이",
+      "choices": [
+        "마음",
+        "바람",
+        "부지깽이",
+        "사람"
+      ],
+      "definition": "아궁이 따위에 불을 땔 때에, 불을 헤치거나 끌어내거나 거두어 넣거나 하는 데 쓰는 가느스름한 막대기.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=437550",
+      "rule": "",
+      "note": "",
+      "level": "normal"
+    },
+    {
+      "id": "gen-def-새침데기",
+      "kind": "definition",
+      "question": "다음 뜻풀이에 해당하는 낱말은?",
+      "prompt": "새침한 성격을 지닌 사람.",
+      "answer": "새침데기",
+      "choices": [
+        "마음",
+        "바람",
+        "사람",
+        "새침데기"
+      ],
+      "definition": "새침한 성격을 지닌 사람.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=175098",
+      "rule": "",
+      "note": "",
+      "level": "normal"
     }
   ]
 }
