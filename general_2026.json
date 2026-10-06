@@ -2862,6 +2862,42 @@
       "rule": "",
       "note": "",
       "level": "normal"
+    },
+    {
+      "id": "gen-def-세월",
+      "kind": "definition",
+      "question": "다음 뜻풀이에 해당하는 낱말은?",
+      "prompt": "음력 초하루부터 며칠 동안 보이는 달. 초저녁에 잠깐 서쪽 지평선 부근에서 볼 수 있다.",
+      "answer": "세월",
+      "choices": [
+        "마음",
+        "바람",
+        "사람",
+        "세월"
+      ],
+      "definition": "음력 초하루부터 며칠 동안 보이는 달. 초저녁에 잠깐 서쪽 지평선 부근에서 볼 수 있다.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=180689",
+      "rule": "",
+      "note": "",
+      "level": "normal"
+    },
+    {
+      "id": "gen-def-화롯불",
+      "kind": "definition",
+      "question": "다음 뜻풀이에 해당하는 낱말은?",
+      "prompt": "화로에 담아 놓은 불.",
+      "answer": "화롯불",
+      "choices": [
+        "마음",
+        "바람",
+        "사람",
+        "화롯불"
+      ],
+      "definition": "화로에 담아 놓은 불.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=374164",
+      "rule": "",
+      "note": "",
+      "level": "normal"
     }
   ]
 }
