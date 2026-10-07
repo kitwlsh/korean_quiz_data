@@ -1,6 +1,6 @@
 {
   "status": "ok",
-  "ranAtUtc": "2026-10-06T23:19:12+00:00",
+  "ranAtUtc": "2026-10-07T23:49:18+00:00",
   "model": "gemini-3.5-flash",
   "savedThisRun": 5,
   "skipped": {
@@ -9,18 +9,18 @@
     "concept": 0
   },
   "totals": {
-    "korean.json": 147,
-    "trend.json": 121,
-    "knowledge.json": 273,
-    "travel.json": 124,
+    "korean.json": 148,
+    "trend.json": 122,
+    "knowledge.json": 275,
+    "travel.json": 125,
     "quiz_updates.json": 0
   },
-  "totalAll": 665,
+  "totalAll": 670,
   "quotaWaits": 0,
   "error": null,
   "passages": {
     "status": "ok",
-    "ranAtUtc": "2026-10-06T23:19:22+00:00",
+    "ranAtUtc": "2026-10-07T23:49:26+00:00",
     "model": "gemini-3.5-flash",
     "savedThisRun": 1,
     "skipped": {
@@ -29,7 +29,7 @@
       "malformed": 0
     },
     "file": "passages_2026.json",
-    "total": 30,
+    "total": 31,
     "longDay": false,
     "error": null
   }
