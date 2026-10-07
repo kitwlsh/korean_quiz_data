@@ -2898,6 +2898,42 @@
       "rule": "",
       "note": "",
       "level": "normal"
+    },
+    {
+      "id": "gen-def-창문",
+      "kind": "definition",
+      "question": "다음 뜻풀이에 해당하는 낱말은?",
+      "prompt": "공기나 햇빛을 받을 수 있고, 밖을 내다볼 수 있도록 벽이나 지붕에 낸 문.",
+      "answer": "창문",
+      "choices": [
+        "마음",
+        "바람",
+        "사람",
+        "창문"
+      ],
+      "definition": "공기나 햇빛을 받을 수 있고, 밖을 내다볼 수 있도록 벽이나 지붕에 낸 문.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=328102",
+      "rule": "",
+      "note": "",
+      "level": "normal"
+    },
+    {
+      "id": "gen-def-오솔길",
+      "kind": "definition",
+      "question": "다음 뜻풀이에 해당하는 낱말은?",
+      "prompt": "폭이 좁은 호젓한 길.",
+      "answer": "오솔길",
+      "choices": [
+        "마음",
+        "바람",
+        "사람",
+        "오솔길"
+      ],
+      "definition": "폭이 좁은 호젓한 길.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=464158",
+      "rule": "",
+      "note": "",
+      "level": "normal"
     }
   ]
 }
