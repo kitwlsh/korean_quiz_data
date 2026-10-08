@@ -2934,6 +2934,42 @@
       "rule": "",
       "note": "",
       "level": "normal"
+    },
+    {
+      "id": "gen-def-문턱",
+      "kind": "definition",
+      "question": "다음 뜻풀이에 해당하는 낱말은?",
+      "prompt": "제법 큰 덩이로 뚝 끊어지거나 잘라지는 모양. ‘문덕’보다 거센 느낌을 준다.",
+      "answer": "문턱",
+      "choices": [
+        "마음",
+        "문턱",
+        "바람",
+        "사람"
+      ],
+      "definition": "제법 큰 덩이로 뚝 끊어지거나 잘라지는 모양. ‘문덕’보다 거센 느낌을 준다.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=124483",
+      "rule": "",
+      "note": "",
+      "level": "normal"
+    },
+    {
+      "id": "gen-def-조바심",
+      "kind": "definition",
+      "question": "다음 뜻풀이에 해당하는 낱말은?",
+      "prompt": "조마조마하여 마음을 졸임. 또는 그렇게 졸이는 마음.",
+      "answer": "조바심",
+      "choices": [
+        "마음",
+        "바람",
+        "사람",
+        "조바심"
+      ],
+      "definition": "조마조마하여 마음을 졸임. 또는 그렇게 졸이는 마음.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=482023",
+      "rule": "",
+      "note": "",
+      "level": "normal"
     }
   ]
 }
