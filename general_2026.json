@@ -2970,6 +2970,42 @@
       "rule": "",
       "note": "",
       "level": "normal"
+    },
+    {
+      "id": "gen-def-지붕",
+      "kind": "definition",
+      "question": "다음 뜻풀이에 해당하는 낱말은?",
+      "prompt": "집의 맨 꼭대기 부분을 덮어 씌우는 덮개.",
+      "answer": "지붕",
+      "choices": [
+        "마음",
+        "바람",
+        "사람",
+        "지붕"
+      ],
+      "definition": "집의 맨 꼭대기 부분을 덮어 씌우는 덮개.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=484100",
+      "rule": "",
+      "note": "",
+      "level": "normal"
+    },
+    {
+      "id": "gen-def-마당발",
+      "kind": "definition",
+      "question": "다음 뜻풀이에 해당하는 낱말은?",
+      "prompt": "볼이 넓고 바닥이 평평하게 생긴 발.",
+      "answer": "마당발",
+      "choices": [
+        "마당발",
+        "마음",
+        "바람",
+        "사람"
+      ],
+      "definition": "볼이 넓고 바닥이 평평하게 생긴 발.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=420032",
+      "rule": "",
+      "note": "",
+      "level": "normal"
     }
   ]
 }
