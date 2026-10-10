@@ -3006,6 +3006,42 @@
       "rule": "",
       "note": "",
       "level": "normal"
+    },
+    {
+      "id": "gen-def-기둥",
+      "kind": "definition",
+      "question": "다음 뜻풀이에 해당하는 낱말은?",
+      "prompt": "건축물에서, 주춧돌 위에 세워 보·도리 따위를 받치는 나무. 또는 돌·쇠·벽돌·콘크리트 따위로 모나거나 둥글게 만들어 곧추 높이 세운 것.",
+      "answer": "기둥",
+      "choices": [
+        "기둥",
+        "마음",
+        "바람",
+        "사람"
+      ],
+      "definition": "건축물에서, 주춧돌 위에 세워 보·도리 따위를 받치는 나무. 또는 돌·쇠·벽돌·콘크리트 따위로 모나거나 둥글게 만들어 곧추 높이 세운 것.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=406561",
+      "rule": "",
+      "note": "",
+      "level": "normal"
+    },
+    {
+      "id": "gen-def-나들이",
+      "kind": "definition",
+      "question": "다음 뜻풀이에 해당하는 낱말은?",
+      "prompt": "집을 떠나 가까운 곳에 잠시 다녀오는 일.",
+      "answer": "나들이",
+      "choices": [
+        "나들이",
+        "마음",
+        "바람",
+        "사람"
+      ],
+      "definition": "집을 떠나 가까운 곳에 잠시 다녀오는 일.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=405891",
+      "rule": "",
+      "note": "",
+      "level": "normal"
     }
   ]
 }
