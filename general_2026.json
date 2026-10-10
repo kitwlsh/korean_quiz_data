@@ -3042,6 +3042,42 @@
       "rule": "",
       "note": "",
       "level": "normal"
+    },
+    {
+      "id": "gen-def-마루",
+      "kind": "definition",
+      "question": "다음 뜻풀이에 해당하는 낱말은?",
+      "prompt": "등성이를 이루는 지붕이나 산 따위의 꼭대기.",
+      "answer": "마루",
+      "choices": [
+        "마루",
+        "마음",
+        "바람",
+        "사람"
+      ],
+      "definition": "등성이를 이루는 지붕이나 산 따위의 꼭대기.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=417760",
+      "rule": "",
+      "note": "",
+      "level": "normal"
+    },
+    {
+      "id": "gen-def-실마리",
+      "kind": "definition",
+      "question": "다음 뜻풀이에 해당하는 낱말은?",
+      "prompt": "감겨 있거나 헝클어진 실의 첫머리.",
+      "answer": "실마리",
+      "choices": [
+        "마음",
+        "바람",
+        "사람",
+        "실마리"
+      ],
+      "definition": "감겨 있거나 헝클어진 실의 첫머리.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=453185",
+      "rule": "",
+      "note": "",
+      "level": "normal"
     }
   ]
 }
