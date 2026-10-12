@@ -3078,6 +3078,42 @@
       "rule": "",
       "note": "",
       "level": "normal"
+    },
+    {
+      "id": "gen-def-부엌",
+      "kind": "definition",
+      "question": "다음 뜻풀이에 해당하는 낱말은?",
+      "prompt": "일정한 시설을 갖추어 놓고 음식을 만들고 설거지를 하는 등 식사에 관련된 일을 하는 곳.",
+      "answer": "부엌",
+      "choices": [
+        "마음",
+        "바람",
+        "부엌",
+        "사람"
+      ],
+      "definition": "일정한 시설을 갖추어 놓고 음식을 만들고 설거지를 하는 등 식사에 관련된 일을 하는 곳.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=159783",
+      "rule": "",
+      "note": "",
+      "level": "normal"
+    },
+    {
+      "id": "gen-def-발자국",
+      "kind": "definition",
+      "question": "다음 뜻풀이에 해당하는 낱말은?",
+      "prompt": "발로 밟은 자리에 남은 모양.",
+      "answer": "발자국",
+      "choices": [
+        "마음",
+        "바람",
+        "발자국",
+        "사람"
+      ],
+      "definition": "발로 밟은 자리에 남은 모양.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=427735",
+      "rule": "",
+      "note": "",
+      "level": "normal"
     }
   ]
 }
