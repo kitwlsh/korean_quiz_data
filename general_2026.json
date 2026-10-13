@@ -3114,6 +3114,42 @@
       "rule": "",
       "note": "",
       "level": "normal"
+    },
+    {
+      "id": "gen-def-마당",
+      "kind": "definition",
+      "question": "다음 뜻풀이에 해당하는 낱말은?",
+      "prompt": "집의 앞이나 뒤에 평평하게 닦아 놓은 땅.",
+      "answer": "마당",
+      "choices": [
+        "마당",
+        "마음",
+        "바람",
+        "사람"
+      ],
+      "definition": "집의 앞이나 뒤에 평평하게 닦아 놓은 땅.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=420031",
+      "rule": "",
+      "note": "",
+      "level": "normal"
+    },
+    {
+      "id": "gen-def-물보라",
+      "kind": "definition",
+      "question": "다음 뜻풀이에 해당하는 낱말은?",
+      "prompt": "물결이 바위 따위에 부딪쳐 사방으로 흩어지는 자잘한 물방울.",
+      "answer": "물보라",
+      "choices": [
+        "마음",
+        "물보라",
+        "바람",
+        "사람"
+      ],
+      "definition": "물결이 바위 따위에 부딪쳐 사방으로 흩어지는 자잘한 물방울.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=424761",
+      "rule": "",
+      "note": "",
+      "level": "normal"
     }
   ]
 }
