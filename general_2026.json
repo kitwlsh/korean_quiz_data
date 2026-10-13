@@ -3150,6 +3150,42 @@
       "rule": "",
       "note": "",
       "level": "normal"
+    },
+    {
+      "id": "gen-def-우물",
+      "kind": "definition",
+      "question": "다음 뜻풀이에 해당하는 낱말은?",
+      "prompt": "물을 긷기 위하여 땅을 파서 지하수를 괴게 한 곳. 또는 그런 시설.",
+      "answer": "우물",
+      "choices": [
+        "마음",
+        "바람",
+        "사람",
+        "우물"
+      ],
+      "definition": "물을 긷기 위하여 땅을 파서 지하수를 괴게 한 곳. 또는 그런 시설.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=467621",
+      "rule": "",
+      "note": "",
+      "level": "normal"
+    },
+    {
+      "id": "gen-def-이슬비",
+      "kind": "definition",
+      "question": "다음 뜻풀이에 해당하는 낱말은?",
+      "prompt": "아주 가늘게 내리는 비. 는개보다 굵고 가랑비보다는 가늘다.",
+      "answer": "이슬비",
+      "choices": [
+        "마음",
+        "바람",
+        "사람",
+        "이슬비"
+      ],
+      "definition": "아주 가늘게 내리는 비. 는개보다 굵고 가랑비보다는 가늘다.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=467846",
+      "rule": "",
+      "note": "",
+      "level": "normal"
     }
   ]
 }
