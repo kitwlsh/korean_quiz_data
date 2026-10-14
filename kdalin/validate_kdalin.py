@@ -51,9 +51,21 @@ def spacing_of(text):
     return ''.join(chars), gaps
 
 
+def wrong_types(item, fields):
+    """🔴 앱(kotlinx-serialization)은 타입이 하나만 틀려도 **파일 전체**를 버린다.
+
+    파이썬은 숫자와 문자열을 가리지 않아 로봇이 숫자를 써도 아무 일 없이 지나간다 —
+    2026-10-03 `sourcePassageId: 20261003001` 한 칸 때문에 ③달인 111편이 앱에 하나도 안 들어갔다.
+    """
+    return ['%s가 문자열이 아니다 (%s: %r)' % (k, type(item[k]).__name__, item[k])
+            for k in fields if k in item and not isinstance(item[k], str)]
+
+
 def check_dalin(item):
     """doc/08 §4의 검사 + ③ 어휘력."""
-    p = []
+    p = wrong_types(item, ('id', 'sourcePassageId', 'level', 'title', 'answerText'))
+    if any(not isinstance(b, bool) for b in (item.get('initialSpacing') or [])):
+        p.append('initialSpacing에 true/false가 아닌 값이 있다')
     if not item.get('id'):
         p.append('id가 비었다')
     if item.get('level') not in LEVELS:

@@ -181,7 +181,10 @@ def build_item(key, passage, level, rng, index):
 
     item = {
         'id': 'dalin-%s-%s' % (passage['id'], level),
-        'sourcePassageId': passage['id'],
+        # 🔴 **반드시 문자열로.** 원본(passages_2026.json)의 id는 대개 문자열이지만 숫자인 것이
+        #    섞여 있다(20261003001). 앱은 String으로 읽어 **파일 전체를 버린다** — 2026-10-03부터
+        #    ③달인이 111편 중 하나도 안 들어간 사고. 원본은 KDailyUtil 소유라 고치지 않고 여기서 맞춘다.
+        'sourcePassageId': str(passage['id']),
         'level': level,
         'title': passage.get('title', ''),
         'answerText': text,
@@ -259,6 +262,9 @@ def main():
             existing = json.load(io.open(OUT, encoding='utf-8')).get('items', [])
         except ValueError:
             existing = []
+    # 🔴 이미 만든 것도 고친다 — 숫자 sourcePassageId가 파일에 남아 있으면 앱이 통째로 버린다.
+    for it in existing:
+        it['sourcePassageId'] = str(it.get('sourcePassageId', ''))
     done = {it['id'] for it in existing}
 
     # 🔑 ① 기존 지문에서 혼동쌍이 나오는 것만 고른다 (API 0회 · 공짜)
