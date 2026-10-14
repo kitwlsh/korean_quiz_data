@@ -3186,6 +3186,42 @@
       "rule": "",
       "note": "",
       "level": "normal"
+    },
+    {
+      "id": "gen-def-담장",
+      "kind": "definition",
+      "question": "다음 뜻풀이에 해당하는 낱말은?",
+      "prompt": "집이나 일정한 공간을 둘러막기 위하여 흙, 돌, 벽돌 따위로 쌓아 올린 것.",
+      "answer": "담장",
+      "choices": [
+        "담장",
+        "마음",
+        "바람",
+        "사람"
+      ],
+      "definition": "집이나 일정한 공간을 둘러막기 위하여 흙, 돌, 벽돌 따위로 쌓아 올린 것.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=77475",
+      "rule": "",
+      "note": "",
+      "level": "normal"
+    },
+    {
+      "id": "gen-def-잔소리",
+      "kind": "definition",
+      "question": "다음 뜻풀이에 해당하는 낱말은?",
+      "prompt": "쓸데없이 자질구레한 말을 늘어놓음. 또는 그 말.",
+      "answer": "잔소리",
+      "choices": [
+        "마음",
+        "바람",
+        "사람",
+        "잔소리"
+      ],
+      "definition": "쓸데없이 자질구레한 말을 늘어놓음. 또는 그 말.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=278723",
+      "rule": "",
+      "note": "",
+      "level": "normal"
     }
   ]
 }
