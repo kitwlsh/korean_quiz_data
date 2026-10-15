@@ -3222,6 +3222,42 @@
       "rule": "",
       "note": "",
       "level": "normal"
+    },
+    {
+      "id": "gen-def-대문",
+      "kind": "definition",
+      "question": "다음 뜻풀이에 해당하는 낱말은?",
+      "prompt": "주해(註解)가 있는 책의 본문.",
+      "answer": "대문",
+      "choices": [
+        "대문",
+        "마음",
+        "바람",
+        "사람"
+      ],
+      "definition": "주해(註解)가 있는 책의 본문.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=79279",
+      "rule": "",
+      "note": "",
+      "level": "normal"
+    },
+    {
+      "id": "gen-def-밑거름",
+      "kind": "definition",
+      "question": "다음 뜻풀이에 해당하는 낱말은?",
+      "prompt": "어떤 일을 이루는 데 기초가 되는 요인.",
+      "answer": "밑거름",
+      "choices": [
+        "마음",
+        "밑거름",
+        "바람",
+        "사람"
+      ],
+      "definition": "어떤 일을 이루는 데 기초가 되는 요인.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=127489",
+      "rule": "",
+      "note": "",
+      "level": "normal"
     }
   ]
 }
