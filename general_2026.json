@@ -3258,6 +3258,42 @@
       "rule": "",
       "note": "",
       "level": "normal"
+    },
+    {
+      "id": "gen-def-종이",
+      "kind": "definition",
+      "question": "다음 뜻풀이에 해당하는 낱말은?",
+      "prompt": "식물성 섬유를 원료로 하여 만든 얇은 물건. 주로 글을 쓰거나 그림을 그리거나 인쇄를 하는 데 쓴다.",
+      "answer": "종이",
+      "choices": [
+        "마음",
+        "바람",
+        "사람",
+        "종이"
+      ],
+      "definition": "식물성 섬유를 원료로 하여 만든 얇은 물건. 주로 글을 쓰거나 그림을 그리거나 인쇄를 하는 데 쓴다.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=486086",
+      "rule": "",
+      "note": "",
+      "level": "normal"
+    },
+    {
+      "id": "gen-def-헛걸음",
+      "kind": "definition",
+      "question": "다음 뜻풀이에 해당하는 낱말은?",
+      "prompt": "목적을 이루지 못하고 헛수고만 하고 가거나 옴. 또는 그런 걸음.",
+      "answer": "헛걸음",
+      "choices": [
+        "마음",
+        "바람",
+        "사람",
+        "헛걸음"
+      ],
+      "definition": "목적을 이루지 못하고 헛수고만 하고 가거나 옴. 또는 그런 걸음.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=371537",
+      "rule": "",
+      "note": "",
+      "level": "normal"
     }
   ]
 }
