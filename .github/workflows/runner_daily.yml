@@ -1,0 +1,75 @@
+name: K줄달음 문항 로봇
+
+# 🔴 **기존 로봇들과 «별도 워크플로»다** (kdalin_daily.yml과 같은 이유 — 한쪽 실패가 다른 쪽을 끌고 죽지 않게).
+#    knowledge.json 등(KDailyUtil)·general_2026.json(K달인)은 **읽기만** 하고 runner_2026.json 하나만 쓴다.
+on:
+  schedule:
+    # 🔑 **가장 늦게** 돈다 — 기존 로봇(19:40)·K달인(20:40 UTC) 뒤.
+    #    Gemini 무료 한도를 같이 쓰므로 기존 앱의 문항이 먼저 만들어지게 한다 (K줄달음 doc/03 10-16 Q2).
+    #    ⚠️ GitHub 스케줄은 밀린다(실측 2시간) — 그래도 순서가 뒤집히지 않게 1시간 간격을 둔다.
+    - cron: '40 21 * * *'
+  workflow_dispatch:
+
+# 🔑 이 워크플로가 두 번 겹쳐 돌면 같은 문항을 두 번 변환하고 push가 부딪친다
+concurrency:
+  group: runner-daily
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - uses: actions/setup-python@v5
+      with:
+        python-version: '3.11'
+
+    - name: 준비물 설치
+      run: pip install google-generativeai
+
+    # 🔑 키가 없거나 한도가 막혀도 «죽지 않는다» — 정해진 문장(우리말 사전·맞춤법)과
+    #    이미 변환한 문항으로 파일을 만들고, 못 한 변환은 내일 이어서 한다.
+    - name: 문항 합치기 · OX 변환(하루치)
+      id: build
+      continue-on-error: true
+      env:
+        GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        QUIZ_MODEL: ${{ vars.QUIZ_MODEL }}      # 🔧 기존 로봇과 «같은» 비상 레버
+        # 🔧 하루치 — 기존 로봇이 한도에 밀리면 Variables에 RUNNER_CALLS_PER_RUN=1 (0이면 변환 멈춤)
+        RUNNER_CALLS_PER_RUN: ${{ vars.RUNNER_CALLS_PER_RUN }}
+      run: python runner/build_runner.py
+
+    - name: 자체 테스트
+      run: python runner/test_runner.py
+
+    # 🔴 **검사가 실패하면 커밋하지 않는다.**
+    - name: 문항 검사
+      run: python runner/validate_runner.py
+
+    - name: 결과 커밋
+      run: |
+        git config user.name  "github-actions[bot]"
+        git config user.email "github-actions[bot]@users.noreply.github.com"
+        # 🔴 이 파일 하나만 스테이징한다 — 기존 파일을 실수로라도 올리지 않는다.
+        git add -- runner_2026.json
+        if git diff --cached --quiet; then
+          echo "바뀐 것이 없다 — 커밋하지 않는다"
+          exit 0
+        fi
+        git commit -m "🤖 K줄달음 문항 갱신 (runner_2026.json)"
+        # 🔑 다른 로봇이 밀려서 먼저 push했으면 위에 얹고 다시 민다 (이 파일은 이 로봇만 쓴다 → 충돌 없음)
+        for i in 1 2 3; do
+          git pull --rebase && git push && exit 0
+          sleep 10
+        done
+        exit 1
+
+    - name: 실패 표시
+      if: steps.build.outcome == 'failure'
+      run: |
+        echo "🔴 문항 합치기가 실패했다 — 위 로그를 본다 (검사를 통과한 기존 파일은 그대로다)"
+        exit 1

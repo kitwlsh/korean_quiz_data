@@ -170,3 +170,36 @@ python kdalin/validate_kdalin.py       # 🔴 푸시 전 검사 — 실패하면
 **혼동쌍이 한 개도 안 나왔다**(2026-09-18 실측). 그 파일은 읽기 훈련용 문학 지문이라
 '며칠'·'왠지'·'꼼꼼히' 같은 낱말이 애초에 안 쓰인다. 🔑 그래서 **낱말을 먼저 정하고**
 지문을 쓰게 한다. 기존 지문에서 혼동쌍이 나오면 그건 그대로 쓴다(API 0회).
+
+---
+
+## 🏃 K줄달음 문항 (`runner/` · 2026-10-16 추가)
+
+> 퀴즈 러너 게임 K줄달음용. 출처마다 형식이 다른 문항을 **`runner_2026.json` 하나로 합친다.**
+> 🔴 기존 파일(`knowledge.json` 등 · `general_2026.json`)은 **읽기만** 한다. 워크플로도 별도다(`runner_daily.yml`, 가장 늦게 21:40 UTC).
+> 설계 근거의 정본은 K줄달음 저장소 `doc/03`·`doc/04`.
+
+| 출처 | 카테고리 | OX 문장 |
+|---|---|---|
+| `knowledge` · `travel` · `korean` · `trend.json` | 상식 · 세계여행 · 우리말 · 신조어 | Gemini가 만든 **문장 틀** `…{X}(이)다.`에 보기를 넣는다 |
+| `runner/sources/주식용어사전.kquiz` | 경제 | 〃 |
+| `general_2026.json` | 우리말 사전 | 정해진 문장(AI 없음) · 🔴 뜻풀이는 `prompt`에 원문 그대로 + `credit` 출처 |
+| `kdalin/confusables.py` | 맞춤법 | 정해진 문장(AI 없음) |
+
+**형식** — 문항 하나 = 한 줄 `{id, category, subCategory, level, question, prompt, mc, ox, explanation, credit}`
+- `mc`: `{options, answer}` 또는 `null`(보기가 10자를 넘어 관문에 안 들어간다)
+- `ox`: `[{text, answer: "O"|"X"}]` — O 1개 + X 여럿. 아직 변환 전이면 `[]`
+- 🔴 앱은 한 판에 같은 `id`를 한 번만 낸다(같은 문항의 O/X가 이어 나오면 답이 샌다)
+- `oxKey` · `oxTemplate` · `oxSkip`은 로봇의 변환 캐시다(원 문항이 바뀌면 다시 변환). 앱은 무시한다
+
+**무료 한도로 며칠에 나눠 돈다** — 하루 2번 × 30문항(약 790문항 → 2주 남짓).
+기존 로봇이 한도에 밀리면 Variables에 `RUNNER_CALLS_PER_RUN=1`(0이면 변환만 멈추고 파일은 계속 만든다).
+AI가 「부적합」이라 하거나 틀 검사(`ox_template.verify`)에 걸린 문항은 `oxSkip`에 이유를 남기고 다시 묻지 않는다.
+
+**직접 돌려 보기**
+```
+python runner/test_runner.py              # 조사·틀 검사 테스트 (키 불필요)
+python runner/build_runner.py --selftest  # 가짜 응답으로 한 바퀴 (파일 안 씀)
+python runner/build_runner.py --no-ai     # Gemini 없이 파일 만들기
+python runner/validate_runner.py          # 🔴 푸시 전 검사
+```
