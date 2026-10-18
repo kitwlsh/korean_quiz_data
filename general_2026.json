@@ -3330,6 +3330,42 @@
       "rule": "",
       "note": "",
       "level": "normal"
+    },
+    {
+      "id": "gen-def-책상",
+      "kind": "definition",
+      "question": "다음 뜻풀이에 해당하는 낱말은?",
+      "prompt": "앉아서 책을 읽거나 글을 쓰거나 사무를 보거나 할 때에 앞에 놓고 쓰는 상.",
+      "answer": "책상",
+      "choices": [
+        "마음",
+        "바람",
+        "사람",
+        "책상"
+      ],
+      "definition": "앉아서 책을 읽거나 글을 쓰거나 사무를 보거나 할 때에 앞에 놓고 쓰는 상.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=483676",
+      "rule": "",
+      "note": "",
+      "level": "normal"
+    },
+    {
+      "id": "gen-def-잔가지",
+      "kind": "definition",
+      "question": "다음 뜻풀이에 해당하는 낱말은?",
+      "prompt": "풀과 나무의 작은 가지. 또는 자질구레한 가지.",
+      "answer": "잔가지",
+      "choices": [
+        "마음",
+        "바람",
+        "사람",
+        "잔가지"
+      ],
+      "definition": "풀과 나무의 작은 가지. 또는 자질구레한 가지.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=475812",
+      "rule": "",
+      "note": "",
+      "level": "normal"
     }
   ]
 }
