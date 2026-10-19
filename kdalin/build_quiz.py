@@ -129,6 +129,49 @@ def build_choseong(key, entries, pool):
 
 # ── ② 일반 ──────────────────────────────────────────────────────────────────
 
+def definition_distractors(word, prompt, pool):
+    """뜻풀이 문항의 오답 보기 3개.
+
+    🔴 전에는 풀 앞에서 3개를 잘랐다(`[:3]`). 140문항 중 139문항의 오답이
+    「마음·바람·사람」으로 같아 **보기만 보고 답이 지워졌다** — K줄달음 OX에서는
+    「이 셋은 늘 X」로 외워진다(2026-10-19 발견).
+
+    🔑 **글자 수가 같은 낱말**에서 먼저 고른다 — 혼자 긴 보기가 답으로 보이지 않게.
+    🔑 시드 = 낱말 → 다시 돌려도 같은 보기가 나온다(앱 캐시·커밋 diff가 흔들리지 않는다).
+    🔴 제시문에 나오는 낱말은 보기로 쓰지 않는다 — 뜻풀이 속 낱말이 보기에 있으면 헷갈린다.
+    """
+    rng = random.Random('gen-def-%s' % word)
+    usable = sorted({w for w in pool if w != word and w not in prompt})
+    same = [w for w in usable if len(w) == len(word)]
+    rng.shuffle(same)
+    picked = same[:3]
+    if len(picked) < 3:
+        rest = [w for w in usable if w not in picked]
+        rng.shuffle(rest)
+        picked += rest[:3 - len(picked)]
+    return picked
+
+
+def refresh_definition_choices(items, pool):
+    """이미 만든 뜻풀이 문항의 보기를 `definition_distractors`로 다시 고른다.
+
+    🔑 사전 API를 다시 부르지 않는다 — 제시문은 그대로, 보기만 바뀐다. 같은 결과가 나오므로
+    매번 돌려도 바뀌는 게 없다. 바꾼 개수를 돌려준다.
+    """
+    changed = 0
+    for it in items:
+        if it.get('kind') != 'definition':
+            continue
+        others = definition_distractors(it['answer'], it.get('prompt') or '', pool)
+        if len(others) < 3:
+            continue
+        choices = sorted([it['answer']] + others)
+        if choices != it.get('choices'):
+            it['choices'] = choices
+            changed += 1
+    return changed
+
+
 def build_general_definitions(key, words, pool_defs):
     """뜻풀이 → 낱말. 🔴 제시문에 정답이 그대로 들어 있으면 답이 보인다 → 버린다."""
     made = []
@@ -140,7 +183,7 @@ def build_general_definitions(key, words, pool_defs):
         if word in prompt:
             print('  ↪ 제시문에 정답이 들어 있다: %s' % word)
             continue
-        others = [w for w in pool_defs if w != word][:3]
+        others = definition_distractors(word, prompt, pool_defs)
         if len(others) < 3:
             continue
         made.append({
@@ -211,6 +254,9 @@ def main():
     gen_feed = load(OUT_GENERAL)
     done_gen = {it['id'] for it in gen_feed['items']}
     gen_new = []
+    refreshed = refresh_definition_choices(gen_feed['items'], pool)
+    if refreshed:
+        print('② 일반 — 기존 뜻풀이 보기 %d개 다시 고름' % refreshed)
 
     def_todo = [w for w, _ in pick_balanced(
         [(w, s) for w, s in all_entries if 'gen-def-%s' % w not in done_gen],
@@ -228,7 +274,7 @@ def main():
 
     if cho_new:
         save(OUT_CHOSEONG, cho_feed['items'] + cho_new)
-    if gen_new:
+    if gen_new or refreshed:
         save(OUT_GENERAL, gen_feed['items'] + gen_new)
 
     print('\n① 초성  새로 %2d개 · 전체 %d개' % (len(cho_new), len(cho_feed['items']) + len(cho_new)))

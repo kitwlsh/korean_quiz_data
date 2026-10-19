@@ -184,6 +184,28 @@ def check_general(item):
     return p
 
 
+def check_general_file(items):
+    """파일 전체를 본다 — 문항 하나씩 봐서는 안 보이는 문제.
+
+    🔴 같은 오답 보기가 뜻풀이 문항 곳곳에 나오면 «늘 오답인 낱말»이 외워진다.
+    2026-10-19: 140문항 중 139문항의 오답이 「마음·바람·사람」이었다(`build_quiz.py` `[:3]`).
+    🔑 앱 검사에는 없는 규칙이다 — 앱은 문항 하나씩만 보므로 여기서만 막는다.
+    """
+    defs = [it for it in items if it.get('kind') == 'definition']
+    counts = {}
+    for it in defs:
+        for c in it.get('choices') or []:
+            if c != it.get('answer'):
+                counts[c] = counts.get(c, 0) + 1
+    limit = max(5, len(defs) // 10)
+    return ['오답 보기 「%s」가 뜻풀이 %d문항에 나온다 (한도 %d)' % (w, n, limit)
+            for w, n in sorted(counts.items(), key=lambda kv: -kv[1]) if n > limit]
+
+
+FILE_CHECKS = {
+    'general_2026.json': check_general_file,
+}
+
 CHECKS = [
     ('dalin_2026.json', check_dalin),
     ('choseong_2026.json', check_choseong),
@@ -218,6 +240,9 @@ def main():
                 bad += 1
                 if bad <= 5:
                     print('🔴 %s [%s]: %s' % (name, item.get('id'), '; '.join(problems)))
+        for problem in FILE_CHECKS.get(name, lambda _: [])(items):
+            print('🔴 %s: %s' % (name, problem))
+            bad += 1
         total_errors += bad
         mark = '✅' if bad == 0 else '🔴'
         print('%s %-22s %3d문항 · 문제 %d건' % (mark, name, len(items), bad))
