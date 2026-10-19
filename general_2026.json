@@ -3366,6 +3366,42 @@
       "rule": "",
       "note": "",
       "level": "normal"
+    },
+    {
+      "id": "gen-def-의자",
+      "kind": "definition",
+      "question": "다음 뜻풀이에 해당하는 낱말은?",
+      "prompt": "옷을 짓는 데 쓰는 천.",
+      "answer": "의자",
+      "choices": [
+        "강물",
+        "기둥",
+        "보리",
+        "의자"
+      ],
+      "definition": "옷을 짓는 데 쓰는 천.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=267674",
+      "rule": "",
+      "note": "",
+      "level": "normal"
+    },
+    {
+      "id": "gen-def-들머리",
+      "kind": "definition",
+      "question": "다음 뜻풀이에 해당하는 낱말은?",
+      "prompt": "들어가는 맨 첫머리.",
+      "answer": "들머리",
+      "choices": [
+        "들머리",
+        "무지개",
+        "봉숭아",
+        "조바심"
+      ],
+      "definition": "들어가는 맨 첫머리.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=417561",
+      "rule": "",
+      "note": "",
+      "level": "normal"
     }
   ]
 }
