@@ -73,9 +73,13 @@ def _get(url, params, timeout=20, retries=3):
     raise NiklError('요청 실패: %s' % last)
 
 
-def find(key, word):
-    """표제어를 찾아 `target_code`를 돌려준다. 없으면 None."""
-    raw = _get(SEARCH, {'key': key, 'q': word, 'req_type': 'json', 'method': 'exact'})
+def find(key, word, homograph=None):
+    """표제어를 찾아 `target_code`를 돌려준다. 없으면 None.
+
+    🔴 동음이의어는 **사전 순서**로 온다 — 첫 번째가 흔한 말이 아니다(「세월」 1번 = 초승달).
+       [homograph]에 어깨번호를 주면 그 표제어를 쓴다(`wordlist.HOMOGRAPH`). 없으면 첫 번째.
+    """
+    raw = _get(SEARCH, {'key': key, 'q': word, 'req_type': 'json', 'method': 'exact', 'num': 20})
     try:
         hit = json.loads(raw).get('channel', {}).get('item')
     except ValueError:
@@ -84,15 +88,20 @@ def find(key, word):
         return None
     if isinstance(hit, dict):
         hit = [hit]
+    if homograph:
+        for h in hit:
+            if str(h.get('sup_no')) == str(homograph):
+                return h.get('target_code')
+        return None  # 🔴 번호가 없어졌으면 엉뚱한 뜻을 내느니 건너뛴다
     return hit[0].get('target_code')
 
 
-def senses(key, word, target_code=None):
+def senses(key, word, target_code=None, homograph=None):
     """표제어의 **일반어** 뜻 목록. 🔑 방언·북한어·옛말은 거른다.
 
     @return [{'definition': 원문, 'pos': 품사}], 그리고 link
     """
-    code = target_code or find(key, word)
+    code = target_code or find(key, word, homograph)
     if not code:
         return [], ''
     xml = _get(VIEW, {'key': key, 'method': 'target_code', 'q': code})
@@ -133,13 +142,14 @@ def best_sense_no(senses, limit=SENSE_LIMIT):
     return 1
 
 
-def definition_of(key, word, sense_no=1):
+def definition_of(key, word, sense_no=1, homograph=None):
     """한 뜻만. 🔴 몇 번째 뜻인지가 중요하다 — 1번이 늘 맞는 뜻은 아니다.
 
     예: '며칠'의 1번은 「그달의 몇째 되는 날」이고 「몇 날」은 2번이다.
     그대로 쓰면 **해설이 틀린 말을 한다.**
+    🔑 [homograph]는 동음이의어 어깨번호(표제어 고르기), [sense_no]는 그 표제어 안의 뜻 번호.
     """
-    got, link = senses(key, word)
+    got, link = senses(key, word, homograph=homograph)
     if not got:
         return None
     # 🔑 sense_no가 None이면 «우리가» 고른다(위 best_sense_no). 숫자면 그대로 쓴다.

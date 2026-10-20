@@ -104,8 +104,8 @@
     {
       "id": "cho-서리",
       "answer": "서리",
-      "definition": "떼를 지어 남의 과일, 곡식, 가축 따위를 훔쳐 먹는 장난.",
-      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=175491",
+      "definition": "대기 중의 수증기가 지상의 물체 표면에 얼어붙은 것. 땅 위의 표면이 복사 냉각으로 차가워지고, 그 위에서 수증기가 승화하여 생긴다.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=442978",
       "pos": "명사",
       "choices": [
         "사람",
@@ -299,8 +299,8 @@
     {
       "id": "cho-소라",
       "answer": "소라",
-      "definition": "돌돔 따위의 낚시 미끼로 쓰는 조개 무리.",
-      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=190304",
+      "definition": "소랏과의 연체동물. 껍데기의 높이는 10cm, 지름은 8cm 정도이며 두껍고 견고하다. 검은 갈색 또는 어두운 청색이고 안쪽은 희고 광택이 난다. 나사탑은 높고 6층인데 껍데기에 뿔 같은 돌기가 있다. 밤에 해초를 먹고 여름에 녹색 알을 낳는다. 살은 식용하고 껍데기는 자개, 단추, 바둑돌 따위를 만드는 데 쓴다. 조간대와 수심 10미터 사이의 바다에서 사는데 한국, 일본, 중국 등지에 분포한다.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=190305",
       "pos": "명사",
       "choices": [
         "사람",
@@ -329,8 +329,8 @@
     {
       "id": "cho-기억",
       "answer": "기억",
-      "definition": "어린아이가 영리하고 지혜로움. ≪시경≫ <생민(生民)>편에서 유래한 말이다.",
-      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=50552",
+      "definition": "이전의 인상이나 경험을 의식 속에 간직하거나 도로 생각해 냄.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=48755",
       "pos": "명사",
       "choices": [
         "가을",
@@ -374,8 +374,8 @@
     {
       "id": "cho-가락",
       "answer": "가락",
-      "definition": "물레로 실을 자을 때 실이 감기는 쇠꼬챙이.",
-      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=383279",
+      "definition": "목소리의 높낮이나 길이를 통해 느껴지는 말의 기운.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=1115",
       "pos": "명사",
       "choices": [],
       "accepted": [],
@@ -414,8 +414,8 @@
     {
       "id": "cho-한숨",
       "answer": "한숨",
-      "definition": "숨을 한 번 쉴 동안. 또는 잠깐 동안.",
-      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=499708",
+      "definition": "근심이나 설움이 있을 때, 또는 긴장하였다가 안도할 때 길게 몰아서 내쉬는 숨.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=365942",
       "pos": "명사",
       "choices": [],
       "accepted": [],
@@ -549,8 +549,8 @@
     {
       "id": "cho-시간",
       "answer": "시간",
-      "definition": "화살의 몸을 이루는 대.",
-      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=203093",
+      "definition": "어떤 시각에서 어떤 시각까지의 사이.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=448126",
       "pos": "명사",
       "choices": [],
       "accepted": [],
@@ -559,8 +559,8 @@
     {
       "id": "cho-세월",
       "answer": "세월",
-      "definition": "음력 초하루부터 며칠 동안 보이는 달. 초저녁에 잠깐 서쪽 지평선 부근에서 볼 수 있다.",
-      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=180689",
+      "definition": "흘러가는 시간.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=180690",
       "pos": "명사",
       "choices": [],
       "accepted": [],
@@ -579,9 +579,9 @@
     {
       "id": "cho-문턱",
       "answer": "문턱",
-      "definition": "제법 큰 덩이로 뚝 끊어지거나 잘라지는 모양. ‘문덕’보다 거센 느낌을 준다.",
-      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=124483",
-      "pos": "부사",
+      "definition": "문짝의 밑이 닿는 문지방의 윗부분.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=425010",
+      "pos": "명사",
       "choices": [],
       "accepted": [],
       "level": "normal"
@@ -609,8 +609,8 @@
     {
       "id": "cho-마루",
       "answer": "마루",
-      "definition": "등성이를 이루는 지붕이나 산 따위의 꼭대기.",
-      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=417760",
+      "definition": "집채 안에 바닥과 사이를 띄우고 깐 널빤지. 또는 그 널빤지를 깔아 놓은 곳.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=107633",
       "pos": "명사",
       "choices": [],
       "accepted": [],
@@ -659,8 +659,8 @@
     {
       "id": "cho-대문",
       "answer": "대문",
-      "definition": "주해(註解)가 있는 책의 본문.",
-      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=79279",
+      "definition": "큰 문. 주로, 한 집의 주가 되는 출입문을 이른다.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=411783",
       "pos": "명사",
       "choices": [],
       "accepted": [],
@@ -759,8 +759,8 @@
     {
       "id": "cho-의자",
       "answer": "의자",
-      "definition": "옷을 짓는 데 쓰는 천.",
-      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=267674",
+      "definition": "사람이 걸터앉는 데 쓰는 기구. 보통 뒤에 등받이가 있고 종류가 다양하다.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=267675",
       "pos": "명사",
       "choices": [],
       "accepted": [],
@@ -839,8 +839,8 @@
     {
       "id": "cho-모자",
       "answer": "모자",
-      "definition": "어머니와 아들을 아울러 이르는 말.",
-      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=119012",
+      "definition": "머리에 쓰는 물건의 하나. 예의를 차리거나 추위, 더위, 먼지 따위를 막기 위한 것이다.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=425739",
       "pos": "명사",
       "choices": [],
       "accepted": [],
@@ -1059,8 +1059,8 @@
     {
       "id": "cho-고집",
       "answer": "고집",
-      "definition": "옛날의 시가·문장 따위를 모아 엮은 책.",
-      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=25108",
+      "definition": "자기의 의견을 바꾸거나 고치지 않고 굳게 버팀. 또는 그렇게 버티는 성미.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=393834",
       "pos": "명사",
       "choices": [],
       "accepted": [],
@@ -1119,8 +1119,8 @@
     {
       "id": "cho-용기",
       "answer": "용기",
-      "definition": "기구를 사용함. 또는 그 기구.",
-      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=250806",
+      "definition": "씩씩하고 굳센 기운. 또는 사물을 겁내지 아니하는 기개.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=468084",
       "pos": "명사",
       "choices": [],
       "accepted": [],
@@ -1149,8 +1149,8 @@
     {
       "id": "cho-지혜",
       "answer": "지혜",
-      "definition": "종이로 노를 꼬아 만든 신.",
-      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=316641",
+      "definition": "사물의 이치를 빨리 깨닫고 사물을 정확하게 처리하는 정신적 능력.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=488595",
       "pos": "명사",
       "choices": [],
       "accepted": [],
@@ -1709,8 +1709,8 @@
     {
       "id": "cho-해바라기",
       "answer": "해바라기",
-      "definition": "추울 때 양지바른 곳에 나와 햇볕을 쬐는 일.",
-      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=499124",
+      "definition": "국화과의 한해살이풀. 높이는 2미터 정도이며, 잎은 어긋나고 넓은 달걀 모양인데 가장자리에 굵은 톱니가 있다. 8~9월에 노란색의 큰 두상화(頭狀花)가 줄기 끝이나 가지 끝에 피고 열매는 수과(瘦果)를 맺는다. 씨는 기름을 짜서 등유로 쓰거나 식용하고 줄기 속은 이뇨, 진해, 지혈에 약재로 쓴다. 관상용이고 중앙아메리카가 원산지로 세계 각지에 분포한다.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=499125",
       "pos": "명사",
       "choices": [],
       "accepted": [],

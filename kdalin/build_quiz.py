@@ -104,7 +104,7 @@ def build_choseong(key, entries, pool):
 
     for word, sense in entries:
         # 🔑 sense가 None이면 로봇이 고른다(한계 안에서 가장 앞선 뜻).
-        got = nikl.definition_of(key, word, sense)
+        got = nikl.definition_of(key, word, sense, wordlist.HOMOGRAPH.get(word))
         if not got:
             print('  ↪ 사전에 없다(또는 지정한 뜻이 없다): %s' % word)
             continue
@@ -172,11 +172,47 @@ def refresh_definition_choices(items, pool):
     return changed
 
 
+def repair_homographs(key, items, senses_by_word):
+    """`wordlist.HOMOGRAPH`에 있는 낱말의 기존 문항을 «맞는 표제어»의 뜻풀이로 다시 받는다.
+
+    🔑 링크(`word_no`)가 맞는 표제어를 가리키면 건드리지 않는다 — 고친 뒤로는 낱말마다 검색 1번뿐.
+    🔴 다시 받은 뜻풀이에 정답이 그대로 들어 있으면(답이 보이면) 문항을 버린다.
+    @return (남길 문항, 고친 수, 버린 수)
+    """
+    kept, fixed, dropped = [], 0, 0
+    for it in items:
+        word = it.get('answer')
+        homograph = wordlist.HOMOGRAPH.get(word)
+        if not homograph or it.get('kind', 'definition') != 'definition':
+            kept.append(it)
+            continue
+        code = nikl.find(key, word, homograph)
+        if not code or it.get('link') == nikl.WORD_URL % code:
+            kept.append(it)
+            continue
+        sense = senses_by_word.get(word) if 'kind' not in it else 1
+        got = nikl.definition_of(key, word, sense, homograph)
+        if not got or word in got['definition']:
+            dropped += 1
+            print('  ✂️ %s — 맞는 뜻풀이를 못 받았거나 답이 보인다' % word)
+            continue
+        it['definition'] = got['definition']           # 🔴 원문 그대로
+        it['link'] = got['link']
+        if 'kind' in it:
+            it['prompt'] = got['definition']
+        else:
+            it['pos'] = got['pos']
+        kept.append(it)
+        fixed += 1
+        print('  🔧 %-4s → %s' % (word, got['definition'][:30]))
+    return kept, fixed, dropped
+
+
 def build_general_definitions(key, words, pool_defs):
     """뜻풀이 → 낱말. 🔴 제시문에 정답이 그대로 들어 있으면 답이 보인다 → 버린다."""
     made = []
     for word in words:
-        got = nikl.definition_of(key, word)
+        got = nikl.definition_of(key, word, 1, wordlist.HOMOGRAPH.get(word))
         if not got:
             continue
         prompt = got['definition']
@@ -242,7 +278,9 @@ def main():
     pool = [w for w, _ in all_entries]
 
     # ── ① 초성 ──
+    senses_by_word = dict(all_entries)
     cho_feed = load(OUT_CHOSEONG)
+    cho_feed['items'], cho_fixed, cho_dropped = repair_homographs(key, cho_feed['items'], senses_by_word)
     done_cho = {it['id'] for it in cho_feed['items']}
     remaining = [(w, s) for w, s in all_entries if 'cho-%s' % w not in done_cho]
     todo = pick_balanced(remaining, NEW_PER_RUN)
@@ -252,9 +290,10 @@ def main():
 
     # ── ② 일반 ──
     gen_feed = load(OUT_GENERAL)
+    gen_feed['items'], gen_fixed, gen_dropped = repair_homographs(key, gen_feed['items'], senses_by_word)
     done_gen = {it['id'] for it in gen_feed['items']}
     gen_new = []
-    refreshed = refresh_definition_choices(gen_feed['items'], pool)
+    refreshed = refresh_definition_choices(gen_feed['items'], pool) + gen_fixed + gen_dropped
     if refreshed:
         print('② 일반 — 기존 뜻풀이 보기 %d개 다시 고름' % refreshed)
 
@@ -272,7 +311,7 @@ def main():
             print('② 일반 — %s %d개' % (kind, len(heads)))
             gen_new += build_general_relations(key, heads, kind, rng)
 
-    if cho_new:
+    if cho_new or cho_fixed or cho_dropped:
         save(OUT_CHOSEONG, cho_feed['items'] + cho_new)
     if gen_new or refreshed:
         save(OUT_GENERAL, gen_feed['items'] + gen_new)

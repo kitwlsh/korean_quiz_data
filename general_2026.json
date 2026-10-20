@@ -257,7 +257,7 @@
       "id": "gen-def-서리",
       "kind": "definition",
       "question": "다음 뜻풀이에 해당하는 낱말은?",
-      "prompt": "떼를 지어 남의 과일, 곡식, 가축 따위를 훔쳐 먹는 장난.",
+      "prompt": "대기 중의 수증기가 지상의 물체 표면에 얼어붙은 것. 땅 위의 표면이 복사 냉각으로 차가워지고, 그 위에서 수증기가 승화하여 생긴다.",
       "answer": "서리",
       "choices": [
         "달인",
@@ -265,8 +265,8 @@
         "우물",
         "우산"
       ],
-      "definition": "떼를 지어 남의 과일, 곡식, 가축 따위를 훔쳐 먹는 장난.",
-      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=175491",
+      "definition": "대기 중의 수증기가 지상의 물체 표면에 얼어붙은 것. 땅 위의 표면이 복사 냉각으로 차가워지고, 그 위에서 수증기가 승화하여 생긴다.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=442978",
       "rule": "",
       "note": "",
       "level": "normal"
@@ -779,16 +779,16 @@
       "id": "gen-def-소라",
       "kind": "definition",
       "question": "다음 뜻풀이에 해당하는 낱말은?",
-      "prompt": "돌돔 따위의 낚시 미끼로 쓰는 조개 무리.",
+      "prompt": "소랏과의 연체동물. 껍데기의 높이는 10cm, 지름은 8cm 정도이며 두껍고 견고하다. 검은 갈색 또는 어두운 청색이고 안쪽은 희고 광택이 난다. 나사탑은 높고 6층인데 껍데기에 뿔 같은 돌기가 있다. 밤에 해초를 먹고 여름에 녹색 알을 낳는다. 살은 식용하고 껍데기는 자개, 단추, 바둑돌 따위를 만드는 데 쓴다. 조간대와 수심 10미터 사이의 바다에서 사는데 한국, 일본, 중국 등지에 분포한다.",
       "answer": "소라",
       "choices": [
-        "그늘",
-        "눈치",
+        "모자",
         "소라",
-        "슬기"
+        "아침",
+        "햇살"
       ],
-      "definition": "돌돔 따위의 낚시 미끼로 쓰는 조개 무리.",
-      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=190304",
+      "definition": "소랏과의 연체동물. 껍데기의 높이는 10cm, 지름은 8cm 정도이며 두껍고 견고하다. 검은 갈색 또는 어두운 청색이고 안쪽은 희고 광택이 난다. 나사탑은 높고 6층인데 껍데기에 뿔 같은 돌기가 있다. 밤에 해초를 먹고 여름에 녹색 알을 낳는다. 살은 식용하고 껍데기는 자개, 단추, 바둑돌 따위를 만드는 데 쓴다. 조간대와 수심 10미터 사이의 바다에서 사는데 한국, 일본, 중국 등지에 분포한다.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=190305",
       "rule": "",
       "note": "",
       "level": "normal"
@@ -815,16 +815,16 @@
       "id": "gen-def-기억",
       "kind": "definition",
       "question": "다음 뜻풀이에 해당하는 낱말은?",
-      "prompt": "어린아이가 영리하고 지혜로움. ≪시경≫ <생민(生民)>편에서 유래한 말이다.",
+      "prompt": "이전의 인상이나 경험을 의식 속에 간직하거나 도로 생각해 냄.",
       "answer": "기억",
       "choices": [
         "가을",
-        "걸음",
+        "거리",
         "기억",
-        "세월"
+        "담장"
       ],
-      "definition": "어린아이가 영리하고 지혜로움. ≪시경≫ <생민(生民)>편에서 유래한 말이다.",
-      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=50552",
+      "definition": "이전의 인상이나 경험을 의식 속에 간직하거나 도로 생각해 냄.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=48755",
       "rule": "",
       "note": "",
       "level": "normal"
@@ -1103,7 +1103,7 @@
       "id": "gen-def-가락",
       "kind": "definition",
       "question": "다음 뜻풀이에 해당하는 낱말은?",
-      "prompt": "물레로 실을 자을 때 실이 감기는 쇠꼬챙이.",
+      "prompt": "목소리의 높낮이나 길이를 통해 느껴지는 말의 기운.",
       "answer": "가락",
       "choices": [
         "가락",
@@ -1111,8 +1111,8 @@
         "눈길",
         "부엌"
       ],
-      "definition": "물레로 실을 자을 때 실이 감기는 쇠꼬챙이.",
-      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=383279",
+      "definition": "목소리의 높낮이나 길이를 통해 느껴지는 말의 기운.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=1115",
       "rule": "",
       "note": "",
       "level": "normal"
@@ -1247,7 +1247,7 @@
       "id": "gen-def-한숨",
       "kind": "definition",
       "question": "다음 뜻풀이에 해당하는 낱말은?",
-      "prompt": "숨을 한 번 쉴 동안. 또는 잠깐 동안.",
+      "prompt": "근심이나 설움이 있을 때, 또는 긴장하였다가 안도할 때 길게 몰아서 내쉬는 숨.",
       "answer": "한숨",
       "choices": [
         "강물",
@@ -1255,8 +1255,8 @@
         "사람",
         "한숨"
       ],
-      "definition": "숨을 한 번 쉴 동안. 또는 잠깐 동안.",
-      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=499708",
+      "definition": "근심이나 설움이 있을 때, 또는 긴장하였다가 안도할 때 길게 몰아서 내쉬는 숨.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=365942",
       "rule": "",
       "note": "",
       "level": "normal"
@@ -1913,7 +1913,7 @@
       "id": "gen-def-시간",
       "kind": "definition",
       "question": "다음 뜻풀이에 해당하는 낱말은?",
-      "prompt": "화살의 몸을 이루는 대.",
+      "prompt": "어떤 시각에서 어떤 시각까지의 사이.",
       "answer": "시간",
       "choices": [
         "바람",
@@ -1921,8 +1921,8 @@
         "시간",
         "자취"
       ],
-      "definition": "화살의 몸을 이루는 대.",
-      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=203093",
+      "definition": "어떤 시각에서 어떤 시각까지의 사이.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=448126",
       "rule": "",
       "note": "",
       "level": "normal"
@@ -2813,7 +2813,7 @@
       "id": "gen-def-해바라기",
       "kind": "definition",
       "question": "다음 뜻풀이에 해당하는 낱말은?",
-      "prompt": "추울 때 양지바른 곳에 나와 햇볕을 쬐는 일.",
+      "prompt": "국화과의 한해살이풀. 높이는 2미터 정도이며, 잎은 어긋나고 넓은 달걀 모양인데 가장자리에 굵은 톱니가 있다. 8~9월에 노란색의 큰 두상화(頭狀花)가 줄기 끝이나 가지 끝에 피고 열매는 수과(瘦果)를 맺는다. 씨는 기름을 짜서 등유로 쓰거나 식용하고 줄기 속은 이뇨, 진해, 지혈에 약재로 쓴다. 관상용이고 중앙아메리카가 원산지로 세계 각지에 분포한다.",
       "answer": "해바라기",
       "choices": [
         "괄목상대",
@@ -2821,8 +2821,8 @@
         "울긋불긋",
         "해바라기"
       ],
-      "definition": "추울 때 양지바른 곳에 나와 햇볕을 쬐는 일.",
-      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=499124",
+      "definition": "국화과의 한해살이풀. 높이는 2미터 정도이며, 잎은 어긋나고 넓은 달걀 모양인데 가장자리에 굵은 톱니가 있다. 8~9월에 노란색의 큰 두상화(頭狀花)가 줄기 끝이나 가지 끝에 피고 열매는 수과(瘦果)를 맺는다. 씨는 기름을 짜서 등유로 쓰거나 식용하고 줄기 속은 이뇨, 진해, 지혈에 약재로 쓴다. 관상용이고 중앙아메리카가 원산지로 세계 각지에 분포한다.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=499125",
       "rule": "",
       "note": "",
       "level": "normal"
@@ -2867,16 +2867,16 @@
       "id": "gen-def-세월",
       "kind": "definition",
       "question": "다음 뜻풀이에 해당하는 낱말은?",
-      "prompt": "음력 초하루부터 며칠 동안 보이는 달. 초저녁에 잠깐 서쪽 지평선 부근에서 볼 수 있다.",
+      "prompt": "흘러가는 시간.",
       "answer": "세월",
       "choices": [
         "눈물",
         "마당",
         "세월",
-        "의자"
+        "이슬"
       ],
-      "definition": "음력 초하루부터 며칠 동안 보이는 달. 초저녁에 잠깐 서쪽 지평선 부근에서 볼 수 있다.",
-      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=180689",
+      "definition": "흘러가는 시간.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=180690",
       "rule": "",
       "note": "",
       "level": "normal"
@@ -2939,7 +2939,7 @@
       "id": "gen-def-문턱",
       "kind": "definition",
       "question": "다음 뜻풀이에 해당하는 낱말은?",
-      "prompt": "제법 큰 덩이로 뚝 끊어지거나 잘라지는 모양. ‘문덕’보다 거센 느낌을 준다.",
+      "prompt": "문짝의 밑이 닿는 문지방의 윗부분.",
       "answer": "문턱",
       "choices": [
         "기억",
@@ -2947,8 +2947,8 @@
         "이슬",
         "저녁"
       ],
-      "definition": "제법 큰 덩이로 뚝 끊어지거나 잘라지는 모양. ‘문덕’보다 거센 느낌을 준다.",
-      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=124483",
+      "definition": "문짝의 밑이 닿는 문지방의 윗부분.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=425010",
       "rule": "",
       "note": "",
       "level": "normal"
@@ -3047,16 +3047,16 @@
       "id": "gen-def-마루",
       "kind": "definition",
       "question": "다음 뜻풀이에 해당하는 낱말은?",
-      "prompt": "등성이를 이루는 지붕이나 산 따위의 꼭대기.",
+      "prompt": "집채 안에 바닥과 사이를 띄우고 깐 널빤지. 또는 그 널빤지를 깔아 놓은 곳.",
       "answer": "마루",
       "choices": [
         "구름",
         "마루",
         "문턱",
-        "수레"
+        "소라"
       ],
-      "definition": "등성이를 이루는 지붕이나 산 따위의 꼭대기.",
-      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=417760",
+      "definition": "집채 안에 바닥과 사이를 띄우고 깐 널빤지. 또는 그 널빤지를 깔아 놓은 곳.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=107633",
       "rule": "",
       "note": "",
       "level": "normal"
@@ -3227,7 +3227,7 @@
       "id": "gen-def-대문",
       "kind": "definition",
       "question": "다음 뜻풀이에 해당하는 낱말은?",
-      "prompt": "주해(註解)가 있는 책의 본문.",
+      "prompt": "큰 문. 주로, 한 집의 주가 되는 출입문을 이른다.",
       "answer": "대문",
       "choices": [
         "가방",
@@ -3235,8 +3235,8 @@
         "여름",
         "우산"
       ],
-      "definition": "주해(註解)가 있는 책의 본문.",
-      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=79279",
+      "definition": "큰 문. 주로, 한 집의 주가 되는 출입문을 이른다.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=411783",
       "rule": "",
       "note": "",
       "level": "normal"
@@ -3371,7 +3371,7 @@
       "id": "gen-def-의자",
       "kind": "definition",
       "question": "다음 뜻풀이에 해당하는 낱말은?",
-      "prompt": "옷을 짓는 데 쓰는 천.",
+      "prompt": "사람이 걸터앉는 데 쓰는 기구. 보통 뒤에 등받이가 있고 종류가 다양하다.",
       "answer": "의자",
       "choices": [
         "강물",
@@ -3379,8 +3379,8 @@
         "보리",
         "의자"
       ],
-      "definition": "옷을 짓는 데 쓰는 천.",
-      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=267674",
+      "definition": "사람이 걸터앉는 데 쓰는 기구. 보통 뒤에 등받이가 있고 종류가 다양하다.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=267675",
       "rule": "",
       "note": "",
       "level": "normal"
