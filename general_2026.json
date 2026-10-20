@@ -3402,6 +3402,42 @@
       "rule": "",
       "note": "",
       "level": "normal"
+    },
+    {
+      "id": "gen-def-가방",
+      "kind": "definition",
+      "question": "다음 뜻풀이에 해당하는 낱말은?",
+      "prompt": "물건을 넣어 들거나 메고 다닐 수 있게 만든 용구. 가죽이나 천, 비닐 따위로 만든다.",
+      "answer": "가방",
+      "choices": [
+        "가방",
+        "문턱",
+        "수레",
+        "용기"
+      ],
+      "definition": "물건을 넣어 들거나 메고 다닐 수 있게 만든 용구. 가죽이나 천, 비닐 따위로 만든다.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=385301",
+      "rule": "",
+      "note": "",
+      "level": "normal"
+    },
+    {
+      "id": "gen-def-첫걸음",
+      "kind": "definition",
+      "question": "다음 뜻풀이에 해당하는 낱말은?",
+      "prompt": "목적지를 향하여 처음 내디디는 걸음.",
+      "answer": "첫걸음",
+      "choices": [
+        "도서관",
+        "목소리",
+        "첫걸음",
+        "함박눈"
+      ],
+      "definition": "목적지를 향하여 처음 내디디는 걸음.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=490351",
+      "rule": "",
+      "note": "",
+      "level": "normal"
     }
   ]
 }
