@@ -19,7 +19,7 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(HERE)
 sys.path.insert(0, HERE)
 
-from build_runner import CATEGORY_ORDER, CREDIT, FORBIDDEN, MC_MAX_OPTION_CHARS  # noqa: E402
+from build_runner import CATEGORY_ORDER, CREDIT, FORBIDDEN, GRADES, MC_MAX_OPTION_CHARS  # noqa: E402
 from josa import MARKERS, SLOT  # noqa: E402
 
 NAME = 'runner_2026.json'
@@ -39,6 +39,11 @@ def check(item):
         p.append('category가 이상하다 (%s)' % item['category'])
     if item['level'] not in LEVELS:
         p.append('level이 easy|normal|hard가 아니다 (%s)' % item['level'])
+    # 🔑 수준(교과 과정 기준)은 아직 없는 문항도 있다 — 있으면 값만 본다 (K줄달음 doc/03 2026-10-20)
+    if 'grade' in item and item['grade'] not in GRADES.values():
+        p.append('grade가 elem|middle|high|expert가 아니다 (%s)' % item['grade'])
+    if 'grade' in item and item.get('tier') not in (1, 2, 3):
+        p.append('tier가 1~3이 아니다 (%s)' % item.get('tier'))
     if not item['question'].strip():
         p.append('question이 비었다')
     if item['category'] == '우리말 사전':

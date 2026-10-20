@@ -41,12 +41,39 @@ PROMPT = """너는 한국어 퀴즈 편집자다. 아래 4지선다 문항마다
 6. 원문의 뜻을 바꾸지 말고, 짧고 자연스럽게 쓴다(80자 이내). 물음표로 끝내지 않는다.
 
 [함께 매길 것]
-- level: 1 = 대부분 아는 쉬운 상식, 2 = 보통, 3 = 어려움
+""" + '{grading}' + """
 - ok: 다음이면 false — 「○○년 기준」처럼 시간이 지나면 답이 바뀌는 문항, 정답이 하나로 갈리지 않는 문항,
   사실이 틀린 문항, 평서문으로 바꾸면 어색해지는 문항. false면 why에 짧은 이유를 쓴다.
 
 [출력] JSON 배열만. 설명·머리말·코드블록 금지.
-[{"id": "...", "template": "...", "level": 1, "ok": true, "why": ""}]
+[{"id": "...", "template": "...", "grade": 2, "tier": 1, "ok": true, "why": ""}]
+
+[문항]
+{items}"""
+
+# 🔑 수준 = «교과 과정 몇 학년에서 배우나» (K줄달음 doc/03 2026-10-20).
+#    🔴 전에는 「1 = 대부분 아는 쉬운 상식」 한 줄이었다 → 슈뢰딩거의 고양이·기화열까지 «쉬움»(57%).
+#    「유명한 용어인가」가 아니라 «그 나이대 보통 사람이 맞히나»로 매기게 예시를 붙인다.
+GRADING = """- grade (수준): 이 문항을 «보통 사람이 맞힐 수 있는» 가장 낮은 단계.
+  교과서에 나오는 내용은 «처음 배우는 학년», 시사·생활·신조어는 «대략 몇 살이면 아는가»로 정한다.
+  1 = 초등 — 초등학생도 안다. 예: 태양계에서 가장 큰 행성은 목성 · 한글을 만든 왕은 세종대왕 · 일본의 수도는 도쿄
+  2 = 중등 — 중학교 수준. 예: 3·1 운동은 1919년 · 물체를 위로 밀어 올리는 힘은 부력 · 대기에 가장 많은 기체는 질소
+  3 = 고등 — 고등학교·수능 수준. 예: 영조·정조의 탕평책 · 갑신정변(1884) · 액체가 기체로 변할 때 흡수하는 열은 기화열
+  4 = 전문 — 대학·전공이거나 그 분야에 관심이 깊어야 안다. 예: 슈뢰딩거의 고양이 · 달의 조석 고정 · 보일의 법칙
+  🔴 «유명한 용어»라고 낮게 매기지 마라. 이름은 들어 봤어도 «정답을 고를 수 있나»가 기준이다.
+  🔴 헷갈리면 높은 쪽으로 매긴다 — 쉬운 단계에 어려운 문항이 섞이면 처음 하는 사람이 바로 그만둔다.
+- tier (같은 수준 안에서): 1 = 그 수준에서 쉬운 편, 2 = 보통, 3 = 그 수준에서 어려운 편"""
+
+PROMPT = PROMPT.replace('{grading}', GRADING)
+
+# 🔑 이미 변환한 문항의 수준만 다시 묻는다 — 틀은 그대로 두고 한도를 덜 쓴다.
+#    변환 대기가 다 끝난 뒤에만 돈다(build_runner.regrade_pending).
+REGRADE_PROMPT = """너는 한국어 퀴즈 편집자다. 아래 4지선다 문항마다 수준을 매겨라.
+
+""" + GRADING + """
+
+[출력] JSON 배열만. 설명·머리말·코드블록 금지.
+[{"id": "...", "grade": 2, "tier": 1}]
 
 [문항]
 {items}"""
@@ -73,7 +100,12 @@ class Stats:
     model = None
 
 
-def ask(items):
+def ask_grades(items):
+    """수준만 다시 묻는다(틀은 그대로). 응답 형식·실패 처리는 [ask]와 같다."""
+    return ask(items, REGRADE_PROMPT)
+
+
+def ask(items, template=None):
     """문항 묶음을 보내고 {id: 응답} 을 받는다. 실패하면 {} — 로봇이 죽지는 않는다(내일 다시).
 
     items: [{'id', 'question', 'options', 'answer'}]
@@ -88,7 +120,7 @@ def ask(items):
         {'id': it['id'], 'question': it['question'], 'options': it['options'], 'answer': it['answer']},
         ensure_ascii=False) for it in items)
     # 🔴 format()을 쓰지 않는다 — 틀 표기 {X}가 자리표시자로 잡혀 KeyError가 난다
-    prompt = PROMPT.replace('{items}', lines)
+    prompt = (template or PROMPT).replace('{items}', lines)
 
     for name in MODEL_CANDIDATES:
         for attempt in range(RETRY_ON_429 + 1):

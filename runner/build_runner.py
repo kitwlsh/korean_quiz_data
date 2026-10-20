@@ -73,7 +73,13 @@ SKIP_IDS = {
 }
 
 CATEGORY_ORDER = ['상식', '세계여행', '우리말', '신조어', '경제', '우리말 사전', '맞춤법']
-LEVEL_OF = {1: 'easy', 2: 'normal', 3: 'hard'}
+LEVEL_OF = {1: 'easy', 2: 'normal', 3: 'hard'}   # 옛 응답(수준 도입 전) 읽기용
+
+# 🔑 수준 = 교과 과정 기준 4단계 + 그 안의 1~3 (K줄달음 doc/03 2026-10-20)
+#    🔑 tier는 앱이 «같은 수준 안에서 쉬운 것부터» 내는 순서에만 쓴다 — 화면에 안 보인다.
+GRADES = {1: 'elem', 2: 'middle', 3: 'high', 4: 'expert'}
+# 옛 앱(level만 읽는다)이 그대로 돌게 level도 채운다
+LEVEL_BY_GRADE = {'elem': 'easy', 'middle': 'normal', 'high': 'normal', 'expert': 'hard'}
 
 
 def load(path, default):
@@ -210,6 +216,8 @@ def make_item(src, conv):
     c = conv.get(src['id'])
     if c and c.get('oxKey') == ox_key(src['question'], options, answer):
         item['level'] = c.get('level') or 'normal'
+        if c.get('grade'):
+            item['grade'], item['tier'] = c['grade'], c['tier']
         item['oxKey'] = c['oxKey']
         if c.get('oxSkip'):
             item['oxSkip'] = c['oxSkip']
@@ -219,25 +227,41 @@ def make_item(src, conv):
     return item
 
 
+def grading(row):
+    """응답의 grade·tier → {'grade', 'tier', 'level'}. 🔴 값이 이상하면 {} — 매기지 않은 채로 둔다."""
+    grade, tier = row.get('grade'), row.get('tier')
+    if not isinstance(grade, int) or grade not in GRADES:
+        return {}
+    if not isinstance(tier, int) or tier not in (1, 2, 3):
+        tier = 2
+    name = GRADES[grade]
+    return {'grade': name, 'tier': tier, 'level': LEVEL_BY_GRADE[name]}
+
+
 def apply_answer(src, row):
     """Gemini 응답 한 줄 → 캐시 항목. 🔴 검사에 걸리면 내지 않고 이유를 남긴다(매일 다시 묻지 않게)."""
     key = ox_key(src['question'], src['options'], src['answer'])
-    level = LEVEL_OF.get(row.get('level') if isinstance(row.get('level'), int) else None, 'normal')
+    graded = grading(row) or {
+        'level': LEVEL_OF.get(row.get('level') if isinstance(row.get('level'), int) else None, 'normal')}
     if row.get('ok') is False:
-        return {'oxKey': key, 'level': level, 'oxSkip': 'AI: %s' % (row.get('why') or '부적합')}
+        return dict(graded, oxKey=key, oxSkip='AI: %s' % (row.get('why') or '부적합'))
     template = row.get('template')
     problems = ox_template.verify(template, src['options'], src['answer'])
     if problems:
-        return {'oxKey': key, 'level': level, 'oxSkip': '검사: %s' % '; '.join(problems)}
-    return {'oxKey': key, 'level': level, 'oxTemplate': normalize(template.strip())}
+        return dict(graded, oxKey=key, oxSkip='검사: %s' % '; '.join(problems))
+    return dict(graded, oxKey=key, oxTemplate=normalize(template.strip()))
 
 
 def all_sources():
     return legacy_sources() + kquiz_sources() + general_sources() + pair_sources()
 
 
-def build(ask, use_ai=True):
-    """ask(batch) → {id: row}. 반환: (items, 요약)."""
+def build(ask, use_ai=True, ask_grades=None):
+    """ask(batch) → {id: row}. 반환: (items, 요약).
+
+    🔑 ask_grades가 있으면 변환 대기가 다 끝난 뒤 남는 호출로 «수준 없는» 옛 변환을 다시 매긴다
+       (수준 도입 전 240문항 — K줄달음 doc/03 2026-10-20). 틀은 건드리지 않는다.
+    """
     existing = load(OUT, {}).get('items', [])
     conv = {it['id']: it for it in existing if it.get('oxKey')}
     sources = all_sources()
@@ -246,22 +270,43 @@ def build(ask, use_ai=True):
                and conv.get(s['id'], {}).get('oxKey') != ox_key(s['question'], s['options'], s['answer'])]
     print('출처 %d문항 · OX 변환 대기 %d' % (len(sources), len(pending)))
 
-    converted = 0
+    converted, regraded, calls = 0, 0, 0
     if use_ai and pending:
         for n in range(CALLS_PER_RUN):
             batch = pending[n * BATCH:(n + 1) * BATCH]
             if not batch:
                 break
+            calls += 1
             print('  🤖 변환 %d/%d — %d문항' % (n + 1, CALLS_PER_RUN, len(batch)))
             rows = ask(batch)
             if not rows:
                 print('  ↪ 이번 실행은 여기까지 — 내일 이어서 한다')
+                calls = CALLS_PER_RUN   # 🔴 한도에 막혔으면 다시 매기기도 하지 않는다
                 break
             for s in batch:
                 row = rows.get(s['id'])
                 if row:
                     conv[s['id']] = apply_answer(s, row)
                     converted += 1
+
+    # 🔑 변환이 다 끝났을 때만 — 한도를 나눠 쓰지 않는다
+    still_pending = len(pending) - converted
+    regrade = [s for s in sources if s['via'] == 'ai' and s['id'] in conv and not conv[s['id']].get('grade')
+               and conv[s['id']].get('oxKey') == ox_key(s['question'], s['options'], s['answer'])]
+    if use_ai and ask_grades and still_pending == 0 and regrade:
+        for n in range(CALLS_PER_RUN - calls):
+            batch = regrade[n * BATCH:(n + 1) * BATCH]
+            if not batch:
+                break
+            print('  🤖 수준 다시 매기기 — %d문항' % len(batch))
+            rows = ask_grades(batch)
+            if not rows:
+                break
+            for s in batch:
+                graded = grading(rows.get(s['id']) or {})
+                if graded:
+                    conv[s['id']] = dict(conv[s['id']], **graded)
+                    regraded += 1
 
     items = [make_item(s, conv) for s in sources]
     items.sort(key=lambda it: (CATEGORY_ORDER.index(it['category']), it['id']))
@@ -274,6 +319,9 @@ def build(ask, use_ai=True):
         'skipped': sum(1 for it in items if it.get('oxSkip')),
         'pending': sum(1 for it in items if not it['ox'] and not it.get('oxSkip')),
         'convertedThisRun': converted,
+        'graded': sum(1 for it in items if it.get('grade')),
+        'regradePending': len(regrade) - regraded,
+        'regradedThisRun': regraded,
     }
     return items, summary
 
@@ -300,21 +348,36 @@ def selftest():
         rows = {}
         for s in batch:
             if s['id'] == 'q-30002':
-                rows[s['id']] = {'id': s['id'], 'template': '태양계에서 가장 큰 행성은 {X}이다.', 'level': 1, 'ok': True}
+                rows[s['id']] = {'id': s['id'], 'template': '태양계에서 가장 큰 행성은 {X}이다.',
+                                 'grade': 1, 'tier': 1, 'ok': True}
             elif s['id'] == 'q-30067':
-                rows[s['id']] = {'id': s['id'], 'ok': False, 'why': '기준 연도가 있다', 'level': 1}
+                rows[s['id']] = {'id': s['id'], 'ok': False, 'why': '기준 연도가 있다', 'grade': 1}
+            elif s['id'] == 'q-30004':
+                # 옛 형식(수준 도입 전) — level만 온다
+                rows[s['id']] = {'id': s['id'], 'template': "'별이 빛나는 밤'을 그린 작가는 {X}(이)다.",
+                                 'level': 1, 'ok': True}
             else:
-                rows[s['id']] = {'id': s['id'], 'template': s['question'], 'level': 2, 'ok': True}
+                rows[s['id']] = {'id': s['id'], 'template': s['question'], 'grade': 9, 'ok': True}
         return rows
 
+    asked = []
+
+    def fake_grades(batch):
+        asked.extend(s['id'] for s in batch)
+        return {s['id']: {'id': s['id'], 'grade': 4, 'tier': 3} for s in batch}
+
     global CALLS_PER_RUN, BATCH
-    CALLS_PER_RUN, BATCH = 1, 400
-    items, summary = build(fake_ask)
+    CALLS_PER_RUN, BATCH = 2, 2000
+    items, summary = build(fake_ask, ask_grades=fake_grades)
     by_id = {it['id']: it for it in items}
     jupiter = by_id['q-30002']
     print(json.dumps(jupiter['ox'], ensure_ascii=False))
     assert jupiter['ox'][0] == {'text': '태양계에서 가장 큰 행성은 목성이다.', 'answer': 'O'}, jupiter['ox']
-    assert jupiter['level'] == 'easy'
+    assert (jupiter['grade'], jupiter['tier'], jupiter['level']) == ('elem', 1, 'easy'), jupiter
+    # 🔑 수준이 없는 변환(옛 형식·이상한 값)은 변환이 끝난 뒤 남은 호출로 다시 매긴다 — 틀은 그대로
+    assert 'q-30002' not in asked and 'q-30004' in asked
+    assert (by_id['q-30004']['grade'], by_id['q-30004']['level']) == ('expert', 'hard')
+    assert by_id['q-30004']['ox'], '다시 매겨도 OX 문장은 그대로'
     assert 'oxSkip' in by_id['q-30067']
     assert by_id['sp-며칠']['ox'][0]['answer'] == 'O'
     assert all(it['credit'] == CREDIT for it in items if it['category'] == '우리말 사전')
@@ -328,7 +391,7 @@ def main():
         selftest()
         return 0
     use_ai = '--no-ai' not in args
-    items, summary = build(ox_template.ask, use_ai=use_ai)
+    items, summary = build(ox_template.ask, use_ai=use_ai, ask_grades=ox_template.ask_grades)
     write(items)
     print('요약', json.dumps(summary, ensure_ascii=False),
           '· Gemini 호출 %d회 · 한도 대기 %d회 · 모델 %s'
