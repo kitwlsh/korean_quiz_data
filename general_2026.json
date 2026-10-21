@@ -3438,6 +3438,42 @@
       "rule": "",
       "note": "",
       "level": "normal"
+    },
+    {
+      "id": "gen-def-신발",
+      "kind": "definition",
+      "question": "다음 뜻풀이에 해당하는 낱말은?",
+      "prompt": "땅을 딛고 서거나 걸을 때 발에 신는 물건을 통틀어 이르는 말. 가죽·고무·비닐·헝겊·나무·짚·삼 따위로 만들며, 모양과 용도에 따라 여러 가지가 있다.",
+      "answer": "신발",
+      "choices": [
+        "버릇",
+        "신발",
+        "여름",
+        "책상"
+      ],
+      "definition": "땅을 딛고 서거나 걸을 때 발에 신는 물건을 통틀어 이르는 말. 가죽·고무·비닐·헝겊·나무·짚·삼 따위로 만들며, 모양과 용도에 따라 여러 가지가 있다.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=451972",
+      "rule": "",
+      "note": "",
+      "level": "normal"
+    },
+    {
+      "id": "gen-def-목소리",
+      "kind": "definition",
+      "question": "다음 뜻풀이에 해당하는 낱말은?",
+      "prompt": "목구멍에서 나는 소리.",
+      "answer": "목소리",
+      "choices": [
+        "목소리",
+        "물보라",
+        "어깨춤",
+        "지팡이"
+      ],
+      "definition": "목구멍에서 나는 소리.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=425389",
+      "rule": "",
+      "note": "",
+      "level": "normal"
     }
   ]
 }
