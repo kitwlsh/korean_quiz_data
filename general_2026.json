@@ -3474,6 +3474,42 @@
       "rule": "",
       "note": "",
       "level": "normal"
+    },
+    {
+      "id": "gen-def-모자",
+      "kind": "definition",
+      "question": "다음 뜻풀이에 해당하는 낱말은?",
+      "prompt": "머리에 쓰는 물건의 하나. 예의를 차리거나 추위, 더위, 먼지 따위를 막기 위한 것이다.",
+      "answer": "모자",
+      "choices": [
+        "모자",
+        "문턱",
+        "서리",
+        "슬기"
+      ],
+      "definition": "머리에 쓰는 물건의 하나. 예의를 차리거나 추위, 더위, 먼지 따위를 막기 위한 것이다.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=425739",
+      "rule": "",
+      "note": "",
+      "level": "normal"
+    },
+    {
+      "id": "gen-def-손거울",
+      "kind": "definition",
+      "question": "다음 뜻풀이에 해당하는 낱말은?",
+      "prompt": "가지고 다니기 편하게 만든 작은 거울.",
+      "answer": "손거울",
+      "choices": [
+        "나들이",
+        "손거울",
+        "여름날",
+        "헛걸음"
+      ],
+      "definition": "가지고 다니기 편하게 만든 작은 거울.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=448744",
+      "rule": "",
+      "note": "",
+      "level": "normal"
     }
   ]
 }
