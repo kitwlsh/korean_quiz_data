@@ -3510,6 +3510,42 @@
       "rule": "",
       "note": "",
       "level": "normal"
+    },
+    {
+      "id": "gen-def-장갑",
+      "kind": "definition",
+      "question": "다음 뜻풀이에 해당하는 낱말은?",
+      "prompt": "손을 보호하거나 추위를 막거나 장식하기 위하여 손에 끼는 물건. 천, 가죽, 털실 따위로 만든다.",
+      "answer": "장갑",
+      "choices": [
+        "달빛",
+        "바다",
+        "솜씨",
+        "장갑"
+      ],
+      "definition": "손을 보호하거나 추위를 막거나 장식하기 위하여 손에 끼는 물건. 천, 가죽, 털실 따위로 만든다.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=475154",
+      "rule": "",
+      "note": "",
+      "level": "normal"
+    },
+    {
+      "id": "gen-def-밤하늘",
+      "kind": "definition",
+      "question": "다음 뜻풀이에 해당하는 낱말은?",
+      "prompt": "밤의 하늘.",
+      "answer": "밤하늘",
+      "choices": [
+        "물보라",
+        "밤하늘",
+        "살얼음",
+        "소나기"
+      ],
+      "definition": "밤의 하늘.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=134572",
+      "rule": "",
+      "note": "",
+      "level": "normal"
     }
   ]
 }
