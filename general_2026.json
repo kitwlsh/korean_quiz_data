@@ -3546,6 +3546,24 @@
       "rule": "",
       "note": "",
       "level": "normal"
+    },
+    {
+      "id": "gen-def-봄나물",
+      "kind": "definition",
+      "question": "다음 뜻풀이에 해당하는 낱말은?",
+      "prompt": "봄에 산이나 들에 돋아나는 나물.",
+      "answer": "봄나물",
+      "choices": [
+        "들머리",
+        "무지개",
+        "민들레",
+        "봄나물"
+      ],
+      "definition": "봄에 산이나 들에 돋아나는 나물.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=434700",
+      "rule": "",
+      "note": "",
+      "level": "normal"
     }
   ]
 }
