@@ -271,8 +271,12 @@ def main():
     done = {it['id'] for it in existing}
 
     # 🔑 ① 기존 지문에서 혼동쌍이 나오는 것만 고른다 (API 0회 · 공짜)
+    # 🔴 «이미 다 만든» 지문은 세지 않는다. 전에는 셌다 → 10-03 지문 하나가 하루 몫 2편 중
+    #    1편을 매일 차지해 Gemini에는 1편만 시켰다(10-04~10-26 실제 생성이 설계의 절반).
     usable_existing = [p for p in passages
-                       if len(confusables.usable_pairs(' '.join(p['text'].split()))) >= 2]
+                       if len(confusables.usable_pairs(' '.join(p['text'].split()))) >= 2
+                       and any('dalin-%s-%s' % (p['id'], lv) not in done
+                               for lv in ('easy', 'normal', 'hard'))]
     print('기존 지문 중 쓸 수 있는 것: %d편' % len(usable_existing))
 
     # 🔑 ② 모자라면 «낱말을 주고» 새로 쓰게 한다
