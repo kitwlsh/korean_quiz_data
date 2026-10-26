@@ -247,6 +247,8 @@ def apply_answer(src, row):
         return dict(graded, oxKey=key, oxSkip='AI: %s' % (row.get('why') or '부적합'))
     template = row.get('template')
     problems = ox_template.verify(template, src['options'], src['answer'])
+    if not problems and has_forbidden(template):
+        problems = ['금지어가 들어 있다']
     if problems:
         return dict(graded, oxKey=key, oxSkip='검사: %s' % '; '.join(problems))
     return dict(graded, oxKey=key, oxTemplate=normalize(template.strip()))

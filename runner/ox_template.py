@@ -16,7 +16,7 @@ import os
 import re
 import time
 
-from josa import SLOT, fill, normalize
+from josa import MARKERS, SLOT, fill, normalize
 
 MODEL_CANDIDATES = [
     m for m in [
@@ -183,6 +183,12 @@ def verify(template, options, answer):
         p.append('조사를 정할 수 없는 보기가 있다')
     elif len(set(filled)) != len(filled):
         p.append('채운 문장이 서로 같다')
+    else:
+        # 🔴 validate_runner.py와 같은 잣대 — fill()은 {X} 바로 뒤 표지만 푼다.
+        #    딴 자리의 「물(을)」이 남으면 여기서 못 막고 검사에서 걸려 하루치 푸시가 통째로 막혔다(2026-10-25).
+        left = sorted({m for f in filled for m in [SLOT] + list(MARKERS) if m in f})
+        if left:
+            p.append('채운 문장에 틀 표기가 남았다 (%s)' % ', '.join(left))
     return p
 
 

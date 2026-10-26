@@ -74,6 +74,7 @@ eq(any('답이 샌다' in x for x in verify('목성은 {X}(이)다.', OPTS, '목
 eq(any('물음표' in x for x in verify('가장 큰 행성은 {X}?', OPTS, '목성')), True, '물음표')
 eq(verify('', OPTS, '목성'), ['틀이 비었다'], '빈 틀')
 eq(verify(None, OPTS, '목성'), ['틀이 비었다'], 'None 틀')
+eq(any('틀 표기가 남았다' in x for x in verify('{X}(은)는 물(을)를 품은 행성이다.', OPTS, '목성')), True, '딴 자리 표지')
 
 st = statements('태양계에서 가장 큰 행성은 {X}(이)다.', OPTS, '목성')
 eq(st[0], {'text': '태양계에서 가장 큰 행성은 목성이다.', 'answer': 'O'}, '정답 문장이 맨 앞')
