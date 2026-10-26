@@ -41,6 +41,8 @@ jobs:
         QUIZ_MODEL: ${{ vars.QUIZ_MODEL }}      # 🔧 기존 로봇과 «같은» 비상 레버
         # 🔧 하루치 — 기존 로봇이 한도에 밀리면 Variables에 RUNNER_CALLS_PER_RUN=1 (0이면 변환 멈춤)
         RUNNER_CALLS_PER_RUN: ${{ vars.RUNNER_CALLS_PER_RUN }}
+        # 🔧 초등 문항 새로 만들기 — 하루 호출 수(기본 1, 0이면 멈춤)
+        RUNNER_GEN_CALLS: ${{ vars.RUNNER_GEN_CALLS }}
       run: python runner/build_runner.py
 
     - name: 자체 테스트
@@ -54,8 +56,8 @@ jobs:
       run: |
         git config user.name  "github-actions[bot]"
         git config user.email "github-actions[bot]@users.noreply.github.com"
-        # 🔴 이 파일 하나만 스테이징한다 — 기존 파일을 실수로라도 올리지 않는다.
-        git add -- runner_2026.json
+        # 🔴 이 로봇이 쓰는 파일만 스테이징한다 — 기존 파일을 실수로라도 올리지 않는다.
+        git add -- runner_2026.json runner/sources/elem_gen.json
         if git diff --cached --quiet; then
           echo "바뀐 것이 없다 — 커밋하지 않는다"
           exit 0

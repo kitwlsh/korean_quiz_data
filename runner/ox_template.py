@@ -30,15 +30,17 @@ MODEL_CANDIDATES = [
 RETRY_ON_429 = 2
 RETRY_SLEEP_CAP = 90
 
-PROMPT = """너는 한국어 퀴즈 편집자다. 아래 4지선다 문항마다 «OX 문장 틀»을 하나씩 만들어라.
-
-[틀 규칙]
+TEMPLATE_RULES = """[틀 규칙]
 1. 틀은 평서문 한 문장이다. 정답이 들어갈 자리에 {X}를 «정확히 한 번» 쓴다.
 2. {X}에 «정답»을 넣으면 참, «다른 보기»를 넣으면 거짓인 문장이어야 한다.
 3. {X} 바로 뒤 조사는 괄호형으로 쓴다: {X}(이)다, {X}(은)는, {X}(이)가, {X}(을)를, {X}(과)와, {X}(으)로
 4. 틀 안에 정답이나 다른 보기의 낱말을 쓰지 마라(빈칸 자리에만 들어간다).
 5. 문항이 「~이 아닌 것은?」이면 부정문으로 만든다. 예: {X}(은)는 온실가스가 아니다.
-6. 원문의 뜻을 바꾸지 말고, 짧고 자연스럽게 쓴다(80자 이내). 물음표로 끝내지 않는다.
+6. 원문의 뜻을 바꾸지 말고, 짧고 자연스럽게 쓴다(80자 이내). 물음표로 끝내지 않는다."""
+
+PROMPT = """너는 한국어 퀴즈 편집자다. 아래 4지선다 문항마다 «OX 문장 틀»을 하나씩 만들어라.
+
+""" + TEMPLATE_RULES + """
 
 [함께 매길 것]
 """ + '{grading}' + """
@@ -79,6 +81,38 @@ REGRADE_PROMPT = """너는 한국어 퀴즈 편집자다. 아래 4지선다 문�
 {items}"""
 
 
+# 🔑 1단계(초등)가 모자라 «새로» 만든다 (K줄달음 doc/03 2026-10-26). 기존 출처를 바꾸지 않고
+#    문항 + 틀을 한 번에 받는다 — 변환을 다시 거치지 않아 한도를 덜 쓴다.
+#    🔴 AI 말을 믿지 않는다 — build_runner.accept_generated가 «우리가» 검사한다.
+GEN_PROMPT = """너는 한국어 퀴즈 편집자다. «초등학생도 맞힐 수 있는» 4지선다 문항을 {count}개 새로 만들어라.
+
+[문항 규칙]
+1. category는 상식·세계여행·우리말 중 하나. 고루 섞는다. subCategory는 짧게(과학·역사·수도·명소·속담 등).
+2. 질문은 60자 이내 한 문장, 물음표로 끝난다. 보기 4개는 서로 다르고 각 10자 이내. 정답은 하나뿐이다.
+3. 초등 교과서·생활에서 배우는 수준. 예: 태양계에서 가장 큰 행성은 목성 · 한글을 만든 왕은 세종대왕 · 일본의 수도는 도쿄
+4. 사실이 확실한 것만. 「○○년 기준」·순위·인구·최신처럼 시간이 지나면 답이 바뀌는 것, 의견이 갈리는 것은 만들지 마라.
+5. 아래 «이미 있는 정답»을 정답으로 쓰지 마라. 방송·시험 기출을 베끼지 마라.
+6. explanation은 1~2문장 해설이다.
+
+""" + TEMPLATE_RULES + """
+
+[함께 매길 것]
+- tier: 초등 안에서 1 = 아주 쉬움, 2 = 보통, 3 = 초등 고학년
+
+[출력] JSON 배열만. 설명·머리말·코드블록 금지. id는 "1"부터 차례로.
+[{"id": "1", "category": "상식", "subCategory": "과학", "question": "...", "options": ["...", "...", "...", "..."], "answer": "...", "explanation": "...", "template": "...", "tier": 1}]
+
+[이미 있는 정답]
+{avoid}"""
+
+
+def ask_new(count, avoid):
+    """초등 문항을 새로 받는다 → [row]. 실패하면 [] (내일 다시)."""
+    # 🔴 format()을 쓰지 않는다 — 틀 표기 {X}가 자리표시자로 잡힌다
+    prompt = GEN_PROMPT.replace('{count}', str(count)).replace('{avoid}', ' · '.join(avoid))
+    return list(_generate(prompt).values())
+
+
 def _genai():
     import google.generativeai as genai
     key = os.environ.get('GEMINI_API_KEY', '').strip()
@@ -110,17 +144,20 @@ def ask(items, template=None):
 
     items: [{'id', 'question', 'options', 'answer'}]
     """
+    lines = '\n'.join(json.dumps(
+        {'id': it['id'], 'question': it['question'], 'options': it['options'], 'answer': it['answer']},
+        ensure_ascii=False) for it in items)
+    # 🔴 format()을 쓰지 않는다 — 틀 표기 {X}가 자리표시자로 잡혀 KeyError가 난다
+    return _generate((template or PROMPT).replace('{items}', lines))
+
+
+def _generate(prompt):
+    """프롬프트 하나 → {id: 응답}. 모델 후보·429 재시도를 여기서 한다."""
     try:
         genai = _genai()
     except Exception as e:                                           # noqa: BLE001
         print('  ↪ Gemini를 못 쓴다: %s' % e)
         return {}
-
-    lines = '\n'.join(json.dumps(
-        {'id': it['id'], 'question': it['question'], 'options': it['options'], 'answer': it['answer']},
-        ensure_ascii=False) for it in items)
-    # 🔴 format()을 쓰지 않는다 — 틀 표기 {X}가 자리표시자로 잡혀 KeyError가 난다
-    prompt = (template or PROMPT).replace('{items}', lines)
 
     for name in MODEL_CANDIDATES:
         for attempt in range(RETRY_ON_429 + 1):

@@ -8,6 +8,7 @@
   runner/sources/*.kquiz        경제          〃
   general_2026.json             우리말 사전   정해진 문장 (AI 없음 · 뜻풀이는 원문 그대로)
   kdalin/confusables.py         맞춤법        정해진 문장 (AI 없음)
+  runner/sources/elem_gen.json  상식 등(초등) 로봇이 새로 만든 문항 + 틀 (하루 20문항, 목표 수까지)
 
 🔴 **기존 파일은 읽기만 한다** — knowledge.json 등은 KDailyUtil, general_2026.json은 K달인이 쓴다.
 🔴 문항 하나 = 항목 하나(`id` = 원 문항). 4지선다(`mc`)와 OX 문장들(`ox`)을 같이 담는다 —
@@ -41,6 +42,15 @@ OUT = os.path.join(ROOT, 'runner_2026.json')
 # 🔑 하루치 — 기존 로봇들과 무료 한도를 나눠 쓴다. 비상시 워크플로 env로 줄이거나 늘린다.
 CALLS_PER_RUN = int(os.environ.get('RUNNER_CALLS_PER_RUN') or 2)
 BATCH = int(os.environ.get('RUNNER_BATCH') or 30)   # 2회 × 30 = 하루 60문항 → 약 790문항이 2주 남짓
+
+# 🔑 초등 문항 새로 만들기 (K줄달음 doc/03 2026-10-26) — 1단계가 7판쯤이면 겹친다.
+#    하루 1회 × 20문항, 초등(OX 있는 것)이 목표 수에 닿으면 멈춘다. 0이면 만들지 않는다.
+GEN_CALLS_PER_RUN = int(os.environ.get('RUNNER_GEN_CALLS') or 1)
+GEN_BATCH = 20
+ELEM_TARGET = int(os.environ.get('RUNNER_ELEM_TARGET') or 300)
+GEN_FILE = os.path.join(HERE, 'sources', 'elem_gen.json')
+GEN_CATEGORIES = ('상식', '세계여행', '우리말')
+GEN_MAX_QUESTION_CHARS = 60
 
 # 🔑 관문(레인)에 들어가는 보기 길이 — 넘으면 4지선다로는 안 쓰고 OX로만 쓴다 (K줄달음 P0: 6자 확인)
 MC_MAX_OPTION_CHARS = 10
@@ -169,6 +179,50 @@ def general_sources():
     return out
 
 
+def gen_sources(gen):
+    """runner/sources/elem_gen.json — 로봇이 새로 만든 초등 문항. 틀까지 같이 있다(변환을 거치지 않는다)."""
+    return [{
+        'id': g['id'], 'via': 'gen', 'category': g['category'], 'subCategory': g['subCategory'],
+        'question': g['question'], 'prompt': '', 'options': g['options'], 'answer': g['answer'],
+        'explanation': g['explanation'], 'credit': '', 'template': g['template'], 'tier': g['tier'],
+    } for g in gen]
+
+
+def accept_generated(row, known_answers):
+    """새로 받은 문항 한 줄 → (저장할 항목, None) 또는 (None, 이유). 🔴 하나라도 걸리면 버린다."""
+    def text(k):
+        v = row.get(k)
+        return v.strip() if isinstance(v, str) else ''
+
+    question, answer, template = text('question'), text('answer'), text('template')
+    options = row.get('options')
+    if not isinstance(options, list) or not all(isinstance(o, str) for o in options):
+        return None, '보기가 문자열 목록이 아니다'
+    options = [o.strip() for o in options]
+    if text('category') not in GEN_CATEGORIES:
+        return None, 'category가 이상하다 (%s)' % text('category')
+    if not question or len(question) > GEN_MAX_QUESTION_CHARS:
+        return None, '질문이 비었거나 %d자를 넘는다' % GEN_MAX_QUESTION_CHARS
+    if not sane_mc(options, answer):
+        return None, '보기 4개·정답이 맞지 않다'
+    if any(len(o) > MC_MAX_OPTION_CHARS for o in options):
+        return None, '보기가 %d자를 넘는다' % MC_MAX_OPTION_CHARS
+    if answer in known_answers:
+        return None, "이미 있는 정답 '%s'" % answer
+    if has_forbidden(question, text('explanation'), template, *options):
+        return None, '금지어가 들어 있다'
+    problems = ox_template.verify(template, options, answer)
+    if problems:
+        return None, '틀: ' + '; '.join(problems)
+    tier = row.get('tier') if row.get('tier') in (1, 2, 3) else 2
+    return {
+        'id': 'el-' + hashlib.sha1(question.encode('utf-8')).hexdigest()[:8],
+        'category': text('category'), 'subCategory': text('subCategory'),
+        'question': question, 'options': options, 'answer': answer,
+        'explanation': text('explanation'), 'template': normalize(template), 'tier': tier,
+    }, None
+
+
 def pair_sources():
     """kdalin/confusables.py — 「바른 표기로 달려라」 2갈래. 한쪽만 맞는 짝만 있다(허용 규정 제외)."""
     from confusables import PAIRS
@@ -210,6 +264,10 @@ def make_item(src, conv):
         'level': 'normal', 'question': src['question'], 'prompt': src['prompt'],
         'mc': mc, 'ox': [], 'explanation': src['explanation'], 'credit': src['credit'],
     }
+    if src['via'] == 'gen':
+        item.update(level='easy', grade='elem', tier=src['tier'], oxTemplate=src['template'],
+                    ox=ox_template.statements(src['template'], options, answer))
+        return item
     if src['via'] != 'ai':
         item['ox'] = fixed_ox(src)
         return item
@@ -254,25 +312,27 @@ def apply_answer(src, row):
     return dict(graded, oxKey=key, oxTemplate=normalize(template.strip()))
 
 
-def all_sources():
-    return legacy_sources() + kquiz_sources() + general_sources() + pair_sources()
+def all_sources(gen=()):
+    return legacy_sources() + kquiz_sources() + general_sources() + pair_sources() + gen_sources(gen)
 
 
-def build(ask, use_ai=True, ask_grades=None):
-    """ask(batch) → {id: row}. 반환: (items, 요약).
+def build(ask, use_ai=True, ask_grades=None, ask_new=None):
+    """ask(batch) → {id: row}. 반환: (items, 요약, 새로 만든 초등 문항 전체).
 
     🔑 ask_grades가 있으면 변환 대기가 다 끝난 뒤 남는 호출로 «수준 없는» 옛 변환을 다시 매긴다
        (수준 도입 전 240문항 — K줄달음 doc/03 2026-10-20). 틀은 건드리지 않는다.
+    🔑 ask_new(count, avoid)가 있으면 초등 문항을 새로 받는다 — 변환이 한도에 막히지 않았을 때만.
     """
     existing = load(OUT, {}).get('items', [])
     conv = {it['id']: it for it in existing if it.get('oxKey')}
-    sources = all_sources()
+    gen = list(load(GEN_FILE, {}).get('items', []))
+    sources = all_sources(gen)
 
     pending = [s for s in sources if s['via'] == 'ai'
                and conv.get(s['id'], {}).get('oxKey') != ox_key(s['question'], s['options'], s['answer'])]
     print('출처 %d문항 · OX 변환 대기 %d' % (len(sources), len(pending)))
 
-    converted, regraded, calls = 0, 0, 0
+    converted, regraded, calls, blocked = 0, 0, 0, False
     if use_ai and pending:
         for n in range(CALLS_PER_RUN):
             batch = pending[n * BATCH:(n + 1) * BATCH]
@@ -283,7 +343,8 @@ def build(ask, use_ai=True, ask_grades=None):
             rows = ask(batch)
             if not rows:
                 print('  ↪ 이번 실행은 여기까지 — 내일 이어서 한다')
-                calls = CALLS_PER_RUN   # 🔴 한도에 막혔으면 다시 매기기도 하지 않는다
+                calls = CALLS_PER_RUN   # 🔴 한도에 막혔으면 다시 매기기·새로 만들기도 하지 않는다
+                blocked = True
                 break
             for s in batch:
                 row = rows.get(s['id'])
@@ -310,6 +371,30 @@ def build(ask, use_ai=True, ask_grades=None):
                     conv[s['id']] = dict(conv[s['id']], **graded)
                     regraded += 1
 
+    # 🔑 초등이 목표에 못 미치면 새로 만든다 — 변환과 별도 호출 수(GEN_CALLS_PER_RUN)
+    elem = sum(1 for c in conv.values() if c.get('grade') == 'elem' and c.get('oxTemplate')) + len(gen)
+    made, rejected = 0, []
+    if use_ai and ask_new and not blocked and elem < ELEM_TARGET:
+        known = {s['answer'] for s in sources}
+        for _ in range(GEN_CALLS_PER_RUN):
+            print('  🤖 초등 문항 새로 만들기 — %d문항 (초등 %d/%d)' % (GEN_BATCH, elem + made, ELEM_TARGET))
+            rows = ask_new(GEN_BATCH, sorted(known))
+            if not rows:
+                break
+            for row in rows:
+                got, why = accept_generated(row, known) if isinstance(row, dict) else (None, '객체가 아니다')
+                if got and got['id'] in {g['id'] for g in gen}:
+                    got, why = None, '같은 질문이 있다'
+                if not got:
+                    rejected.append(why)
+                    continue
+                gen.append(got)
+                known.add(got['answer'])
+                made += 1
+        if rejected:
+            print('  ↪ 버린 것 %d: %s' % (len(rejected), ' / '.join(rejected[:5])))
+        sources = all_sources(gen)
+
     items = [make_item(s, conv) for s in sources]
     items.sort(key=lambda it: (CATEGORY_ORDER.index(it['category']), it['id']))
 
@@ -324,8 +409,12 @@ def build(ask, use_ai=True, ask_grades=None):
         'graded': sum(1 for it in items if it.get('grade')),
         'regradePending': len(regrade) - regraded,
         'regradedThisRun': regraded,
+        'elem': sum(1 for it in items if it.get('grade') == 'elem' and it['ox']),
+        'generated': len(gen),
+        'generatedThisRun': made,
+        'generatedRejected': len(rejected),
     }
-    return items, summary
+    return items, summary, gen
 
 
 def write(items):
@@ -368,10 +457,24 @@ def selftest():
         asked.extend(s['id'] for s in batch)
         return {s['id']: {'id': s['id'], 'grade': 4, 'tier': 3} for s in batch}
 
-    global CALLS_PER_RUN, BATCH
+    def fake_new(count, avoid):
+        assert '목성' in avoid, '이미 있는 정답을 알려 준다'
+        good = {'category': '상식', 'subCategory': '과학', 'question': '물이 얼면 무엇이 될까요?',
+                'options': ['얼음', '수증기', '구름', '이슬'], 'answer': '얼음',
+                'explanation': '물은 0도에서 얼어 얼음이 된다.', 'template': '물이 얼면 {X}이 된다.', 'tier': 1}
+        return [good,
+                dict(good, question='목성은?', answer='목성', options=['목성', '화성', '금성', '토성']),
+                dict(good, question='물이 얼면 무엇이 되나요?')]   # 정답이 겹친다
+
+    global CALLS_PER_RUN, BATCH, GEN_FILE
     CALLS_PER_RUN, BATCH = 2, 2000
-    items, summary = build(fake_ask, ask_grades=fake_grades)
+    GEN_FILE = os.path.join(HERE, '__selftest_none__.json')
+    items, summary, gen = build(fake_ask, ask_grades=fake_grades, ask_new=fake_new)
     by_id = {it['id']: it for it in items}
+    # 🔑 새 초등 문항 — 틀 그대로 OX가 되고, 이미 있는 정답·겹치는 정답은 버린다
+    assert [g['answer'] for g in gen] == ['얼음'], gen
+    ice = by_id[gen[0]['id']]
+    assert (ice['grade'], ice['tier'], ice['ox'][0]['text']) == ('elem', 1, '물이 얼면 얼음이 된다.'), ice
     jupiter = by_id['q-30002']
     print(json.dumps(jupiter['ox'], ensure_ascii=False))
     assert jupiter['ox'][0] == {'text': '태양계에서 가장 큰 행성은 목성이다.', 'answer': 'O'}, jupiter['ox']
@@ -393,7 +496,13 @@ def main():
         selftest()
         return 0
     use_ai = '--no-ai' not in args
-    items, summary = build(ox_template.ask, use_ai=use_ai, ask_grades=ox_template.ask_grades)
+    items, summary, gen = build(ox_template.ask, use_ai=use_ai, ask_grades=ox_template.ask_grades,
+                                ask_new=ox_template.ask_new if GEN_CALLS_PER_RUN > 0 else None)
+    if summary['generatedThisRun']:
+        with io.open(GEN_FILE, 'w', encoding='utf-8', newline='\n') as f:
+            f.write('{"version":1,"items":[\n' + ',\n'.join(
+                json.dumps(g, ensure_ascii=False, separators=(',', ':')) for g in gen) + '\n]}\n')
+        print('💾 %s 저장 (+%d)' % (os.path.basename(GEN_FILE), summary['generatedThisRun']))
     write(items)
     print('요약', json.dumps(summary, ensure_ascii=False),
           '· Gemini 호출 %d회 · 한도 대기 %d회 · 모델 %s'
