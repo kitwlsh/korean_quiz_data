@@ -1735,6 +1735,106 @@
       "choices": [],
       "accepted": [],
       "level": "normal"
+    },
+    {
+      "id": "cho-미꾸라지",
+      "answer": "미꾸라지",
+      "definition": "자기 자신에게 이롭지 않으면 요리조리 살살 피하거나 잘 빠져나가는 사람을 비유적으로 이르는 말.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=126299",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-하늘",
+      "answer": "하늘",
+      "definition": "지평선이나 수평선 위로 보이는 무한대의 넓은 공간.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=503497",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-가마솥",
+      "answer": "가마솥",
+      "definition": "아주 크고 우묵한 솥.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=385933",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-산들바람",
+      "answer": "산들바람",
+      "definition": "시원하고 가볍게 부는 바람.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=441368",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-구슬",
+      "answer": "구슬",
+      "definition": "보석이나 진주 따위로 둥글게 만든 물건. 흔히 장신구로 쓴다.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=400009",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-강아지",
+      "answer": "강아지",
+      "definition": "개의 새끼.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=388677",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-소꿉놀이",
+      "answer": "소꿉놀이",
+      "definition": "소꿉을 가지고 노는 아이들의 놀이.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=445132",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-방울",
+      "answer": "방울",
+      "definition": "작고 둥글게 맺힌 액체 덩어리.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=431920",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-거미줄",
+      "answer": "거미줄",
+      "definition": "거미가 뽑아낸 줄. 또는 그 줄로 된 그물.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=392634",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-수수께끼",
+      "answer": "수수께끼",
+      "definition": "어떤 사물에 대하여 바로 말하지 아니하고 빗대어 말하여 알아맞히는 놀이.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=452842",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
     }
   ]
 }
