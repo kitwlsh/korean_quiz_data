@@ -1835,6 +1835,106 @@
       "choices": [],
       "accepted": [],
       "level": "normal"
+    },
+    {
+      "id": "cho-우두머리",
+      "answer": "우두머리",
+      "definition": "어떤 일이나 단체에서 으뜸인 사람.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=461668",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-물결",
+      "answer": "물결",
+      "definition": "물이 움직여 그 표면이 올라갔다 내려왔다 하는 운동. 또는 그 모양.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=424611",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-고무줄",
+      "answer": "고무줄",
+      "definition": "고무로 만들어 신축성이 좋은 줄.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=399365",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-이부자리",
+      "answer": "이부자리",
+      "definition": "이불과 요를 통틀어 이르는 말.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=263850",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-꽃잎",
+      "answer": "꽃잎",
+      "definition": "꽃을 이루고 있는 낱낱의 조각 잎.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=401377",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-골짜기",
+      "answer": "골짜기",
+      "definition": "산과 산 사이에 움푹 패어 들어간 곳.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=391656",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-자린고비",
+      "answer": "자린고비",
+      "definition": "다라울 정도로 인색한 사람을 낮잡아 이르는 말.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=273506",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-고개",
+      "answer": "고개",
+      "definition": "목의 뒷등이 되는 부분.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=391826",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-구두쇠",
+      "answer": "구두쇠",
+      "definition": "돈이나 재물 따위를 쓰는 데에 몹시 인색한 사람.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=402808",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-징검다리",
+      "answer": "징검다리",
+      "definition": "개울이나 물이 괸 곳에 돌이나 흙더미를 드문드문 놓아 만든 다리.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=487377",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
     }
   ]
 }

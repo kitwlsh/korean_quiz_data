@@ -3618,6 +3618,42 @@
       "rule": "",
       "note": "",
       "level": "normal"
+    },
+    {
+      "id": "gen-def-소꿉놀이",
+      "kind": "definition",
+      "question": "다음 뜻풀이에 해당하는 낱말은?",
+      "prompt": "소꿉을 가지고 노는 아이들의 놀이.",
+      "answer": "소꿉놀이",
+      "choices": [
+        "괄목상대",
+        "소꿉놀이",
+        "일석이조",
+        "자초지종"
+      ],
+      "definition": "소꿉을 가지고 노는 아이들의 놀이.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=445132",
+      "rule": "",
+      "note": "",
+      "level": "normal"
+    },
+    {
+      "id": "gen-def-수수께끼",
+      "kind": "definition",
+      "question": "다음 뜻풀이에 해당하는 낱말은?",
+      "prompt": "어떤 사물에 대하여 바로 말하지 아니하고 빗대어 말하여 알아맞히는 놀이.",
+      "answer": "수수께끼",
+      "choices": [
+        "꽃샘추위",
+        "동병상련",
+        "수수께끼",
+        "자업자득"
+      ],
+      "definition": "어떤 사물에 대하여 바로 말하지 아니하고 빗대어 말하여 알아맞히는 놀이.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=452842",
+      "rule": "",
+      "note": "",
+      "level": "normal"
     }
   ]
 }
