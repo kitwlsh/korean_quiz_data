@@ -3654,6 +3654,42 @@
       "rule": "",
       "note": "",
       "level": "normal"
+    },
+    {
+      "id": "gen-def-우두머리",
+      "kind": "definition",
+      "question": "다음 뜻풀이에 해당하는 낱말은?",
+      "prompt": "물건의 꼭대기.",
+      "answer": "우두머리",
+      "choices": [
+        "견물생심",
+        "오리무중",
+        "우두머리",
+        "자초지종"
+      ],
+      "definition": "물건의 꼭대기.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=461668",
+      "rule": "",
+      "note": "",
+      "level": "normal"
+    },
+    {
+      "id": "gen-def-이부자리",
+      "kind": "definition",
+      "question": "다음 뜻풀이에 해당하는 낱말은?",
+      "prompt": "이불과 요를 통틀어 이르는 말.",
+      "answer": "이부자리",
+      "choices": [
+        "기사회생",
+        "반신반의",
+        "이부자리",
+        "코흘리개"
+      ],
+      "definition": "이불과 요를 통틀어 이르는 말.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=263850",
+      "rule": "",
+      "note": "",
+      "level": "normal"
     }
   ]
 }

@@ -1935,6 +1935,106 @@
       "choices": [],
       "accepted": [],
       "level": "normal"
+    },
+    {
+      "id": "cho-코흘리개",
+      "answer": "코흘리개",
+      "definition": "늘 콧물을 흘리는 아이를 놀림조로 이르는 말.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=340484",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-냇물",
+      "answer": "냇물",
+      "definition": "내에 흐르는 물.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=63750",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-굼벵이",
+      "answer": "굼벵이",
+      "definition": "동작이 굼뜨고 느린 사물이나 사람을 비유적으로 이르는 말.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=41042",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-터줏대감",
+      "answer": "터줏대감",
+      "definition": "집단의 구성원 가운데 가장 오래된 사람을 이르는 말.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=497117",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-모래",
+      "answer": "모래",
+      "definition": "자연히 잘게 부스러진 돌 부스러기.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=425263",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-그림자",
+      "answer": "그림자",
+      "definition": "물체가 빛을 가려서 그 물체의 뒷면에 드리워지는 검은 그늘.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=401104",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-허수아비",
+      "answer": "허수아비",
+      "definition": "곡식을 해치는 새, 짐승 따위를 막기 위하여 막대기와 짚 따위로 만들어 논밭에 세우는 사람 모양의 물건.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=503803",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-소매",
+      "answer": "소매",
+      "definition": "윗옷의 좌우에 있는 두 팔을 꿰는 부분.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=441423",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-나그네",
+      "answer": "나그네",
+      "definition": "자기 고장을 떠나 다른 곳에 잠시 머물거나 떠도는 사람.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=408179",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-꽃샘추위",
+      "answer": "꽃샘추위",
+      "definition": "이른 봄, 꽃이 필 무렵의 추위.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=404396",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
     }
   ]
 }
