@@ -3690,6 +3690,42 @@
       "rule": "",
       "note": "",
       "level": "normal"
+    },
+    {
+      "id": "gen-def-자린고비",
+      "kind": "definition",
+      "question": "다음 뜻풀이에 해당하는 낱말은?",
+      "prompt": "다라울 정도로 인색한 사람을 낮잡아 이르는 말.",
+      "answer": "자린고비",
+      "choices": [
+        "물레방아",
+        "반신반의",
+        "반짇고리",
+        "자린고비"
+      ],
+      "definition": "다라울 정도로 인색한 사람을 낮잡아 이르는 말.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=273506",
+      "rule": "",
+      "note": "",
+      "level": "normal"
+    },
+    {
+      "id": "gen-def-징검다리",
+      "kind": "definition",
+      "question": "다음 뜻풀이에 해당하는 낱말은?",
+      "prompt": "개울이나 물이 괸 곳에 돌이나 흙더미를 드문드문 놓아 만든 다리.",
+      "answer": "징검다리",
+      "choices": [
+        "고이고이",
+        "어부지리",
+        "자초지종",
+        "징검다리"
+      ],
+      "definition": "개울이나 물이 괸 곳에 돌이나 흙더미를 드문드문 놓아 만든 다리.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=487377",
+      "rule": "",
+      "note": "",
+      "level": "normal"
     }
   ]
 }

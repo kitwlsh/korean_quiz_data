@@ -2035,6 +2035,111 @@
       "choices": [],
       "accepted": [],
       "level": "normal"
+    },
+    {
+      "id": "cho-반짇고리",
+      "answer": "반짇고리",
+      "definition": "바늘, 실, 골무, 헝겊 따위의 바느질 도구를 담는 그릇.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=427381",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-단추",
+      "answer": "단추",
+      "definition": "눌러서 신호나 전종(電鐘) 따위를 울리거나 기계를 작동하게 하는 둥근 모양의 장치.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=413485",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-나룻배",
+      "answer": "나룻배",
+      "definition": "나루와 나루 사이를 오가며 사람이나 짐 따위를 실어 나르는 작은 배.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=57728",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-보릿고개",
+      "answer": "보릿고개",
+      "definition": "햇보리가 나올 때까지의 넘기 힘든 고개라는 뜻으로, 묵은 곡식은 거의 떨어지고 보리는 아직 여물지 아니하여 농촌의 식량 사정이 가장 어려운 때를 비유적으로 이르는 말.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=433588",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-바늘",
+      "answer": "바늘",
+      "definition": "옷 따위를 짓거나 꿰매는 데 쓰는, 가늘고 끝이 뾰족한 쇠로 된 물건. 한쪽 끝에 있는 작은 구멍에 실을 꿰어서 쓴다.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=132116",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-너스레",
+      "answer": "너스레",
+      "definition": "수다스럽게 떠벌려 늘어놓는 말이나 짓.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=406094",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-숨바꼭질",
+      "answer": "숨바꼭질",
+      "definition": "아이들 놀이의 하나. 여럿 가운데서 한 아이가 술래가 되어 숨은 사람을 찾아내는 것인데, 술래에게 들킨 아이가 다음 술래가 된다.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=452869",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-그릇",
+      "answer": "그릇",
+      "definition": "음식이나 물건 따위를 담는 기구를 통틀어 이르는 말. 세는 단위는 개, 벌, 죽 따위가 있다.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=400597",
+      "pos": "명사",
+      "choices": [
+        "가락",
+        "거리",
+        "구름",
+        "그릇"
+      ],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-넋두리",
+      "answer": "넋두리",
+      "definition": "불만을 길게 늘어놓으며 하소연하는 말.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=411097",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-진눈깨비",
+      "answer": "진눈깨비",
+      "definition": "비가 섞여 내리는 눈.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=311822",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
     }
   ]
 }
