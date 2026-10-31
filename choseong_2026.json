@@ -2140,6 +2140,111 @@
       "choices": [],
       "accepted": [],
       "level": "normal"
+    },
+    {
+      "id": "cho-너털웃음",
+      "answer": "너털웃음",
+      "definition": "크게 소리를 내어 시원하고 당당하게 웃는 웃음.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=64616",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-이웃",
+      "answer": "이웃",
+      "definition": "가까이 사는 집. 또는 그런 사람.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=265990",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-노다지",
+      "answer": "노다지",
+      "definition": "캐내려 하는 광물이 많이 묻혀 있는 광맥.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=410947",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-무지렁이",
+      "answer": "무지렁이",
+      "definition": "아무것도 모르는 어리석은 사람.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=124181",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-동무",
+      "answer": "동무",
+      "definition": "늘 친하게 어울리는 사람.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=411701",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-눈썰미",
+      "answer": "눈썰미",
+      "definition": "한두 번 보고 곧 그대로 해내는 재주.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=70484",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-어깨너머",
+      "answer": "어깨너머",
+      "definition": "남이 하는 것을 옆에서 보거나 듣거나 함.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=230570",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-살림",
+      "answer": "살림",
+      "definition": "한집안을 이루어 살아가는 일.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=446590",
+      "pos": "명사",
+      "choices": [
+        "사람",
+        "살림",
+        "서리",
+        "수레"
+      ],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-눈사람",
+      "answer": "눈사람",
+      "definition": "눈을 뭉쳐서 사람 모양으로 만든 것.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=409855",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-고슴도치",
+      "answer": "고슴도치",
+      "definition": "고슴도칫과의 하나. 몸의 길이는 20~30cm, 꼬리의 길이는 3~4cm이며, 주둥이는 거의 돼지처럼 뾰족하고 다리가 짧다. 등 전체에 갈색과 흰색의 바늘 같은 가시가 돋쳐 있어서 적이 가까이 오면 몸을 웅크리어 밤송이같이 만들어 자신을 방어한다. 겨울 동안에는 썩은 나무 틈 같은 곳에서 겨울잠을 잔다. 한국, 유럽, 아프리카, 아시아 대륙 각지에 분포한다.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=394914",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
     }
   ]
 }

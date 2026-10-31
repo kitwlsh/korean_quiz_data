@@ -3726,6 +3726,42 @@
       "rule": "",
       "note": "",
       "level": "normal"
+    },
+    {
+      "id": "gen-def-코흘리개",
+      "kind": "definition",
+      "question": "다음 뜻풀이에 해당하는 낱말은?",
+      "prompt": "늘 콧물을 흘리는 아이를 놀림조로 이르는 말.",
+      "answer": "코흘리개",
+      "choices": [
+        "옥신각신",
+        "우왕좌왕",
+        "자업자득",
+        "코흘리개"
+      ],
+      "definition": "늘 콧물을 흘리는 아이를 놀림조로 이르는 말.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=340484",
+      "rule": "",
+      "note": "",
+      "level": "normal"
+    },
+    {
+      "id": "gen-def-터줏대감",
+      "kind": "definition",
+      "question": "다음 뜻풀이에 해당하는 낱말은?",
+      "prompt": "집단의 구성원 가운데 가장 오래된 사람을 이르는 말.",
+      "answer": "터줏대감",
+      "choices": [
+        "명실상부",
+        "새옹지마",
+        "알쏭달쏭",
+        "터줏대감"
+      ],
+      "definition": "집단의 구성원 가운데 가장 오래된 사람을 이르는 말.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=497117",
+      "rule": "",
+      "note": "",
+      "level": "normal"
     }
   ]
 }
