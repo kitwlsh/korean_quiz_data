@@ -3762,6 +3762,42 @@
       "rule": "",
       "note": "",
       "level": "normal"
+    },
+    {
+      "id": "gen-def-허수아비",
+      "kind": "definition",
+      "question": "다음 뜻풀이에 해당하는 낱말은?",
+      "prompt": "곡식을 해치는 새, 짐승 따위를 막기 위하여 막대기와 짚 따위로 만들어 논밭에 세우는 사람 모양의 물건.",
+      "answer": "허수아비",
+      "choices": [
+        "십시일반",
+        "우유부단",
+        "청출어람",
+        "허수아비"
+      ],
+      "definition": "곡식을 해치는 새, 짐승 따위를 막기 위하여 막대기와 짚 따위로 만들어 논밭에 세우는 사람 모양의 물건.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=503803",
+      "rule": "",
+      "note": "",
+      "level": "normal"
+    },
+    {
+      "id": "gen-def-꽃샘추위",
+      "kind": "definition",
+      "question": "다음 뜻풀이에 해당하는 낱말은?",
+      "prompt": "이른 봄, 꽃이 필 무렵의 추위.",
+      "answer": "꽃샘추위",
+      "choices": [
+        "고이고이",
+        "꽃샘추위",
+        "막상막하",
+        "아기자기"
+      ],
+      "definition": "이른 봄, 꽃이 필 무렵의 추위.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=404396",
+      "rule": "",
+      "note": "",
+      "level": "normal"
     }
   ]
 }

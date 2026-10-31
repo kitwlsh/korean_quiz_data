@@ -2245,6 +2245,106 @@
       "choices": [],
       "accepted": [],
       "level": "normal"
+    },
+    {
+      "id": "cho-개구쟁이",
+      "answer": "개구쟁이",
+      "definition": "심하고 짓궂게 장난을 하는 아이.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=388911",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-나루",
+      "answer": "나루",
+      "definition": "강이나 내, 또는 좁은 바닷목에서 배가 건너다니는 일정한 곳.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=405003",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-달팽이",
+      "answer": "달팽이",
+      "definition": "연체동물문 달팽잇과의 동물을 통틀어 이르는 말.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=414123",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-감언이설",
+      "answer": "감언이설",
+      "definition": "귀가 솔깃하도록 남의 비위를 맞추거나 이로운 조건을 내세워 꾀는 말.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=388513",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-고향",
+      "answer": "고향",
+      "definition": "자기가 태어나서 자란 곳.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=25899",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-대들보",
+      "answer": "대들보",
+      "definition": "작은 들보의 하중을 받기 위하여 기둥과 기둥 사이에 건너지른 큰 들보.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=413968",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-결초보은",
+      "answer": "결초보은",
+      "definition": "죽은 뒤에라도 은혜를 잊지 않고 갚음을 이르는 말. 중국 춘추 시대에, 진나라의 위과(魏顆)가 아버지가 세상을 떠난 후에 서모를 개가시켜 순사(殉死)하지 않게 하였더니, 그 뒤 싸움터에서 그 서모 아버지의 혼이 적군의 앞길에 풀을 묶어 적을 넘어뜨려 위과가 공을 세울 수 있도록 하였다는 고사에서 유래한다.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=392913",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-도토리",
+      "answer": "도토리",
+      "definition": "갈참나무, 졸참나무, 물참나무, 떡갈나무 따위의 열매를 통틀어 이르는 말. 묵을 쑤어 먹기도 한다.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=86447",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-고진감래",
+      "answer": "고진감래",
+      "definition": "쓴 것이 다하면 단 것이 온다는 뜻으로, 고생 끝에 즐거움이 옴을 이르는 말.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=394076",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-돌다리",
+      "answer": "돌다리",
+      "definition": "돌로 만든 다리.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=89288",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
     }
   ]
 }
