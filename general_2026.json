@@ -3798,6 +3798,42 @@
       "rule": "",
       "note": "",
       "level": "normal"
+    },
+    {
+      "id": "gen-def-반짇고리",
+      "kind": "definition",
+      "question": "다음 뜻풀이에 해당하는 낱말은?",
+      "prompt": "바늘, 실, 골무, 헝겊 따위의 바느질 도구를 담는 그릇.",
+      "answer": "반짇고리",
+      "choices": [
+        "고슴도치",
+        "반짇고리",
+        "사필귀정",
+        "숨바꼭질"
+      ],
+      "definition": "바늘, 실, 골무, 헝겊 따위의 바느질 도구를 담는 그릇.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=427381",
+      "rule": "",
+      "note": "",
+      "level": "normal"
+    },
+    {
+      "id": "gen-def-보릿고개",
+      "kind": "definition",
+      "question": "다음 뜻풀이에 해당하는 낱말은?",
+      "prompt": "햇보리가 나올 때까지의 넘기 힘든 고개라는 뜻으로, 묵은 곡식은 거의 떨어지고 보리는 아직 여물지 아니하여 농촌의 식량 사정이 가장 어려운 때를 비유적으로 이르는 말.",
+      "answer": "보릿고개",
+      "choices": [
+        "각골난망",
+        "보릿고개",
+        "터줏대감",
+        "호시탐탐"
+      ],
+      "definition": "햇보리가 나올 때까지의 넘기 힘든 고개라는 뜻으로, 묵은 곡식은 거의 떨어지고 보리는 아직 여물지 아니하여 농촌의 식량 사정이 가장 어려운 때를 비유적으로 이르는 말.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=433588",
+      "rule": "",
+      "note": "",
+      "level": "normal"
     }
   ]
 }

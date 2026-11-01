@@ -2345,6 +2345,106 @@
       "choices": [],
       "accepted": [],
       "level": "normal"
+    },
+    {
+      "id": "cho-과유불급",
+      "answer": "과유불급",
+      "definition": "정도를 지나침은 미치지 못함과 같다는 뜻으로, 중용(中庸)이 중요함을 이르는 말. ≪논어≫의 <선진편(先進篇)>에 나오는 말이다.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=29814",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-두꺼비",
+      "answer": "두꺼비",
+      "definition": "두꺼빗과의 양서류. 모양은 개구리와 비슷하나 크기는 그보다 크며 몸은 어두운 갈색 또는 황갈색에 짙은 얼룩무늬가 있다. 등에는 많은 융기가 있으며 적을 만나면 흰색의 독액을 분비한다. 한국, 일본, 중국, 러시아 등지에 분포한다.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=414595",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-권선징악",
+      "answer": "권선징악",
+      "definition": "착한 일을 권장하고 악한 일을 징계함.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=400466",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-뜬구름",
+      "answer": "뜬구름",
+      "definition": "하늘에 떠다니는 구름.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=414664",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-기사회생",
+      "answer": "기사회생",
+      "definition": "거의 죽을 뻔하다가 도로 살아남.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=49476",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-뜨개질",
+      "answer": "뜨개질",
+      "definition": "옷이나 장갑 따위를 실이나 털실로 떠서 만드는 일.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=418931",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-노심초사",
+      "answer": "노심초사",
+      "definition": "몹시 마음을 쓰며 애를 태움.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=408545",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-마중물",
+      "answer": "마중물",
+      "definition": "펌프질을 할 때 물을 끌어 올리기 위하여 위에서 붓는 물.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=110061",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-동문서답",
+      "answer": "동문서답",
+      "definition": "물음과는 전혀 상관없는 엉뚱한 대답.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=89364",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-메아리",
+      "answer": "메아리",
+      "definition": "울려 퍼져 가던 소리가 산이나 절벽 같은 데에 부딪쳐 되울리는 소리.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=425207",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
     }
   ]
 }
