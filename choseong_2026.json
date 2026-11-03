@@ -2445,6 +2445,106 @@
       "choices": [],
       "accepted": [],
       "level": "normal"
+    },
+    {
+      "id": "cho-마이동풍",
+      "answer": "마이동풍",
+      "definition": "동풍이 말의 귀를 스쳐 간다는 뜻으로, 남의 말을 귀담아듣지 아니하고 지나쳐 흘려버림을 이르는 말.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=422770",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-모닥불",
+      "answer": "모닥불",
+      "definition": "잎나무나 검불 따위를 모아 놓고 피우는 불.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=425474",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-무용지물",
+      "answer": "무용지물",
+      "definition": "쓸모없는 물건이나 사람.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=423583",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-물거품",
+      "answer": "물거품",
+      "definition": "물이 다른 물이나 물체에 부딪쳐서 생기는 거품.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=424634",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-박장대소",
+      "answer": "박장대소",
+      "definition": "손뼉을 치며 크게 웃음.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=137241",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-물방울",
+      "answer": "물방울",
+      "definition": "작고 동글동글한 물의 덩이.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=425011",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-배은망덕",
+      "answer": "배은망덕",
+      "definition": "남에게 입은 은덕을 저버리고 배신하는 태도가 있음.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=137368",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-바가지",
+      "answer": "바가지",
+      "definition": "박을 두 쪽으로 쪼개거나 또는 나무나 플라스틱으로 그와 비슷하게 만들어 물을 푸거나 물건을 담는 데 쓰는 그릇.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=428244",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-사필귀정",
+      "answer": "사필귀정",
+      "definition": "모든 일은 반드시 바른길로 돌아감.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=166963",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-바구니",
+      "answer": "바구니",
+      "definition": "대나 싸리 따위를 쪼개어 둥글게 결어 속이 깊숙하게 만든 그릇. 테두리에 대나무를 서너 겹 둘러 손잡이가 달린 형태로도 쓸 수 있다.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=428754",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
     }
   ]
 }

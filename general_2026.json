@@ -3834,6 +3834,42 @@
       "rule": "",
       "note": "",
       "level": "normal"
+    },
+    {
+      "id": "gen-def-숨바꼭질",
+      "kind": "definition",
+      "question": "다음 뜻풀이에 해당하는 낱말은?",
+      "prompt": "아이들 놀이의 하나. 여럿 가운데서 한 아이가 술래가 되어 숨은 사람을 찾아내는 것인데, 술래에게 들킨 아이가 다음 술래가 된다.",
+      "answer": "숨바꼭질",
+      "choices": [
+        "구름다리",
+        "동문서답",
+        "숨바꼭질",
+        "어깨너머"
+      ],
+      "definition": "아이들 놀이의 하나. 여럿 가운데서 한 아이가 술래가 되어 숨은 사람을 찾아내는 것인데, 술래에게 들킨 아이가 다음 술래가 된다.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=452869",
+      "rule": "",
+      "note": "",
+      "level": "normal"
+    },
+    {
+      "id": "gen-def-진눈깨비",
+      "kind": "definition",
+      "question": "다음 뜻풀이에 해당하는 낱말은?",
+      "prompt": "비가 섞여 내리는 눈.",
+      "answer": "진눈깨비",
+      "choices": [
+        "과유불급",
+        "산전수전",
+        "진눈깨비",
+        "터줏대감"
+      ],
+      "definition": "비가 섞여 내리는 눈.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=311822",
+      "rule": "",
+      "note": "",
+      "level": "normal"
     }
   ]
 }
