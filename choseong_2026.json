@@ -2545,6 +2545,106 @@
       "choices": [],
       "accepted": [],
       "level": "normal"
+    },
+    {
+      "id": "cho-산전수전",
+      "answer": "산전수전",
+      "definition": "산에서도 싸우고 물에서도 싸웠다는 뜻으로, 세상의 온갖 고생과 어려움을 다 겪었음을 이르는 말.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=172312",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-발걸음",
+      "answer": "발걸음",
+      "definition": "발을 옮겨서 걷는 동작.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=427142",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-십시일반",
+      "answer": "십시일반",
+      "definition": "밥 열 술이 한 그릇이 된다는 뜻으로, 여러 사람이 조금씩 힘을 합하면 한 사람을 돕기 쉬움을 이르는 말.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=208041",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-방아쇠",
+      "answer": "방아쇠",
+      "definition": "소총이나 권총에서 총알을 발사하게 하는 장치. 굽은 쇠 모양이며 집게손가락으로 잡아당겨서 총을 쏘게 되어 있다.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=137447",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-역지사지",
+      "answer": "역지사지",
+      "definition": "처지를 바꾸어서 생각하여 봄.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=231313",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-버선발",
+      "answer": "버선발",
+      "definition": "버선만 신고 신을 신지 않은 발.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=138715",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-온고지신",
+      "answer": "온고지신",
+      "definition": "옛것을 익히고 그것을 미루어서 새것을 앎. ≪논어≫의 <위정편(爲政篇)>에 나오는 공자의 말이다.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=240412",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-보따리",
+      "answer": "보따리",
+      "definition": "보자기에 물건을 싸서 꾸린 뭉치.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=433572",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-용두사미",
+      "answer": "용두사미",
+      "definition": "용의 머리와 뱀의 꼬리라는 뜻으로, 처음은 왕성하나 끝이 부진한 현상을 이르는 말.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=464940",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-부채질",
+      "answer": "부채질",
+      "definition": "부채를 흔들어 바람을 일으키는 일.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=432061",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
     }
   ]
 }

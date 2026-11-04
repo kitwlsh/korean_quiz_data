@@ -3870,6 +3870,42 @@
       "rule": "",
       "note": "",
       "level": "normal"
+    },
+    {
+      "id": "gen-def-너털웃음",
+      "kind": "definition",
+      "question": "다음 뜻풀이에 해당하는 낱말은?",
+      "prompt": "크게 소리를 내어 시원하고 당당하게 웃는 웃음.",
+      "answer": "너털웃음",
+      "choices": [
+        "권선징악",
+        "너털웃음",
+        "오순도순",
+        "이부자리"
+      ],
+      "definition": "크게 소리를 내어 시원하고 당당하게 웃는 웃음.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=64616",
+      "rule": "",
+      "note": "",
+      "level": "normal"
+    },
+    {
+      "id": "gen-def-무지렁이",
+      "kind": "definition",
+      "question": "다음 뜻풀이에 해당하는 낱말은?",
+      "prompt": "아무것도 모르는 어리석은 사람.",
+      "answer": "무지렁이",
+      "choices": [
+        "각골난망",
+        "동문서답",
+        "무지렁이",
+        "반짇고리"
+      ],
+      "definition": "아무것도 모르는 어리석은 사람.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=124181",
+      "rule": "",
+      "note": "",
+      "level": "normal"
     }
   ]
 }
