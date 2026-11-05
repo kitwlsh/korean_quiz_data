@@ -2645,6 +2645,106 @@
       "choices": [],
       "accepted": [],
       "level": "normal"
+    },
+    {
+      "id": "cho-우왕좌왕",
+      "answer": "우왕좌왕",
+      "definition": "이리저리 왔다 갔다 하며 일이나 나아가는 방향을 종잡지 못함.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=464685",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-비탈길",
+      "answer": "비탈길",
+      "definition": "비탈진 언덕의 길.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=440457",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-이구동성",
+      "answer": "이구동성",
+      "definition": "입은 다르나 목소리는 같다는 뜻으로, 여러 사람의 말이 한결같음을 이르는 말.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=469668",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-빗자루",
+      "answer": "빗자루",
+      "definition": "먼지나 쓰레기를 쓸어 내는 기구. 쓰임에 따라 마당비, 방비 따위가 있는데, 짚·띠·싸리와 짐승의 털 따위로 만든다.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=437159",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-자업자득",
+      "answer": "자업자득",
+      "definition": "자기가 저지른 일의 결과를 자기가 받음.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=472063",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-뻐꾸기",
+      "answer": "뻐꾸기",
+      "definition": "두견과의 새. 두견과 비슷한데 훨씬 커서 몸의 길이는 33cm, 편 날개의 길이는 20~22cm이며, 등 쪽과 멱은 잿빛을 띤 청색, 배 쪽은 흰 바탕에 어두운 적색의 촘촘한 가로줄 무늬가 있다. 때까치, 지빠귀 따위의 둥지에 알을 낳아 까게 한다. 초여름에 남쪽에서 날아오는 여름새로 ‘뻐꾹뻐꾹’ 하고 구슬프게 운다. 산이나 숲속에 사는데 유럽과 아시아 전 지역에 걸쳐 아열대에서 북극까지 번식하고 겨울에는 아프리카 남부와 동남아시아로 남하하여 겨울을 보낸다.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=435980",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-작심삼일",
+      "answer": "작심삼일",
+      "definition": "단단히 먹은 마음이 사흘을 가지 못한다는 뜻으로, 결심이 굳지 못함을 이르는 말.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=277639",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-사다리",
+      "answer": "사다리",
+      "definition": "높은 곳이나 낮은 곳을 오르내릴 때 디딜 수 있도록 만든 기구.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=436363",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-적반하장",
+      "answer": "적반하장",
+      "definition": "도둑이 도리어 매를 든다는 뜻으로, 잘못한 사람이 아무 잘못도 없는 사람을 나무람을 이르는 말.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=473798",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-쌈짓돈",
+      "answer": "쌈짓돈",
+      "definition": "쌈지에 있는 돈이라는 뜻으로, 적은 돈을 이르는 말.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=213989",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
     }
   ]
 }
