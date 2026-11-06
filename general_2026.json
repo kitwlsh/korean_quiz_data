@@ -3942,6 +3942,42 @@
       "rule": "",
       "note": "",
       "level": "normal"
+    },
+    {
+      "id": "gen-def-개구쟁이",
+      "kind": "definition",
+      "question": "다음 뜻풀이에 해당하는 낱말은?",
+      "prompt": "심하고 짓궂게 장난을 하는 아이.",
+      "answer": "개구쟁이",
+      "choices": [
+        "개구쟁이",
+        "사필귀정",
+        "산전수전",
+        "천고마비"
+      ],
+      "definition": "심하고 짓궂게 장난을 하는 아이.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=388911",
+      "rule": "",
+      "note": "",
+      "level": "normal"
+    },
+    {
+      "id": "gen-def-감언이설",
+      "kind": "definition",
+      "question": "다음 뜻풀이에 해당하는 낱말은?",
+      "prompt": "귀가 솔깃하도록 남의 비위를 맞추거나 이로운 조건을 내세워 꾀는 말.",
+      "answer": "감언이설",
+      "choices": [
+        "감언이설",
+        "다다익선",
+        "마이동풍",
+        "호시탐탐"
+      ],
+      "definition": "귀가 솔깃하도록 남의 비위를 맞추거나 이로운 조건을 내세워 꾀는 말.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=388513",
+      "rule": "",
+      "note": "",
+      "level": "normal"
     }
   ]
 }

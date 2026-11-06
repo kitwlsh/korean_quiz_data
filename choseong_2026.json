@@ -2745,6 +2745,106 @@
       "choices": [],
       "accepted": [],
       "level": "normal"
+    },
+    {
+      "id": "cho-죽마고우",
+      "answer": "죽마고우",
+      "definition": "대말을 타고 놀던 벗이라는 뜻으로, 어릴 때부터 같이 놀며 자란 벗.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=304175",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-아궁이",
+      "answer": "아궁이",
+      "definition": "방이나 솥 따위에 불을 때기 위하여 만든 구멍.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=213147",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-함흥차사",
+      "answer": "함흥차사",
+      "definition": "심부름을 가서 오지 아니하거나 늦게 온 사람을 이르는 말. 조선 태조 이성계가 왕위를 물려주고 함흥에 있을 때에, 태종이 보낸 차사를 혹은 죽이고 혹은 잡아 가두어 돌려보내지 아니하였던 데서 유래한다.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=502562",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-아랫목",
+      "answer": "아랫목",
+      "definition": "온돌방에서 아궁이 가까운 쪽의 방바닥.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=455589",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-앞치마",
+      "answer": "앞치마",
+      "definition": "부엌일을 할 때에 몸 앞을 가리는 치마.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=223668",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-애벌레",
+      "answer": "애벌레",
+      "definition": "알에서 나온 후 아직 다 자라지 아니한 벌레.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=453100",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-얼레빗",
+      "answer": "얼레빗",
+      "definition": "빗살이 굵고 성긴 큰 빗.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=456377",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-엿가락",
+      "answer": "엿가락",
+      "definition": "가래엿의 낱개.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=237209",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-오두막",
+      "answer": "오두막",
+      "definition": "사람이 겨우 들어가 살 정도로 작게 지은 막. 또는 작고 초라한 집.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=238956",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-올가미",
+      "answer": "올가미",
+      "definition": "새끼나 노 따위로 옭아서 고를 내어 짐승을 잡는 장치.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=461713",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
     }
   ]
 }
