@@ -2945,6 +2945,106 @@
       "choices": [],
       "accepted": [],
       "level": "normal"
+    },
+    {
+      "id": "cho-초가집",
+      "answer": "초가집",
+      "definition": "짚이나 갈대 따위로 지붕을 인 집.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=328974",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-판소리",
+      "answer": "판소리",
+      "definition": "광대 한 사람이 고수(鼓手)의 북장단에 맞추어 서사적(敍事的)인 이야기를 소리와 아니리로 엮어 발림을 곁들이며 구연(口演)하는 우리 고유의 민속악. 조선 숙종 말기에서 영조 초기에 걸쳐 충청도, 전라도를 중심으로 발달하여 왔으며, 지역에 따라 동편제, 서편제, 중고제로 나뉜다. 2003년에 유네스코 세계 무형유산으로 지정되었다. 우리나라 국가 무형유산이다.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=498825",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-하룻밤",
+      "answer": "하룻밤",
+      "definition": "해가 지고 나서 다음 날 해가 뜰 때까지의 동안.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=503399",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-할미꽃",
+      "answer": "할미꽃",
+      "definition": "미나리아재빗과의 여러해살이풀. 높이는 30～40cm이며, 몸 전체에 긴 털이 촘촘히 나 있다. 잎은 뿌리에서 뭉쳐나고 5개의 작은 잎으로 된 우상 복엽이다. 4~5월에 자주색 꽃이 줄기 끝에서 밑을 향하여 피고, 열매는 긴 달걀 모양의 수과(瘦果)로 5~6월에 익는다. 독성이 있으며 뿌리는 약용한다. 산이나 들의 양지에 저절로 나는데 한국, 만주, 우수리강, 아무르 등지에 분포한다.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=502875",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-호랑이",
+      "answer": "호랑이",
+      "definition": "몹시 사납고 무서운 사람을 비유적으로 이르는 말.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=504865",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-회오리",
+      "answer": "회오리",
+      "definition": "바람이 한곳에서 뱅뱅 돌아 물이나 검불 따위가 몰려 깔때기 모양으로 하늘 높이 오르는 현상.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=508362",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-휘파람",
+      "answer": "휘파람",
+      "definition": "입술을 좁게 오므리고 혀끝으로 입김을 불어서 맑게 내는 소리. 또는 그런 일.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=386716",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-흙먼지",
+      "answer": "흙먼지",
+      "definition": "흙이 일어나서 생긴 먼지.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=378222",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-나팔꽃",
+      "answer": "나팔꽃",
+      "definition": "메꽃과의 한해살이풀. 줄기는 높이가 2~3미터이고 덩굴져 감아 올라가며, 잎은 어긋나고 심장 모양인데 세 갈래로 깊이 갈라진다. 여름에 나팔 모양의 보라색, 붉은색, 재색, 흰색 꽃이 피고 열매는 둥근 삭과(蒴果)를 맺는다. 관상용으로 재배하며 씨는 ‘견우자’라 하여 약용한다. 열대 아시아가 원산지이다.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=58318",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-도깨비",
+      "answer": "도깨비",
+      "definition": "동물이나 사람의 형상을 한 잡된 귀신의 하나. 비상한 힘과 재주를 가지고 있어 사람을 홀리기도 하고 짓궂은 장난이나 심술궂은 짓을 많이 한다고 한다.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=415068",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
     }
   ]
 }

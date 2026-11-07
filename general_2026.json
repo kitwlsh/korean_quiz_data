@@ -4014,6 +4014,42 @@
       "rule": "",
       "note": "",
       "level": "normal"
+    },
+    {
+      "id": "gen-def-과유불급",
+      "kind": "definition",
+      "question": "다음 뜻풀이에 해당하는 낱말은?",
+      "prompt": "정도를 지나침은 미치지 못함과 같다는 뜻으로, 중용(中庸)이 중요함을 이르는 말. ≪논어≫의 <선진편(先進篇)>에 나오는 말이다.",
+      "answer": "과유불급",
+      "choices": [
+        "결초보은",
+        "과유불급",
+        "무지렁이",
+        "티격태격"
+      ],
+      "definition": "정도를 지나침은 미치지 못함과 같다는 뜻으로, 중용(中庸)이 중요함을 이르는 말. ≪논어≫의 <선진편(先進篇)>에 나오는 말이다.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=29814",
+      "rule": "",
+      "note": "",
+      "level": "normal"
+    },
+    {
+      "id": "gen-def-권선징악",
+      "kind": "definition",
+      "question": "다음 뜻풀이에 해당하는 낱말은?",
+      "prompt": "착한 일을 권장하고 악한 일을 징계함.",
+      "answer": "권선징악",
+      "choices": [
+        "권선징악",
+        "동병상련",
+        "명실상부",
+        "전전긍긍"
+      ],
+      "definition": "착한 일을 권장하고 악한 일을 징계함.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=400466",
+      "rule": "",
+      "note": "",
+      "level": "normal"
     }
   ]
 }
