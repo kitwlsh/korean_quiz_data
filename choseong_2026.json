@@ -2845,6 +2845,106 @@
       "choices": [],
       "accepted": [],
       "level": "normal"
+    },
+    {
+      "id": "cho-옹달샘",
+      "answer": "옹달샘",
+      "definition": "작고 오목한 샘.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=242586",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-울타리",
+      "answer": "울타리",
+      "definition": "풀이나 나무 따위를 얽거나 엮어서 담 대신에 경계를 지어 막는 물건.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=250791",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-원두막",
+      "answer": "원두막",
+      "definition": "오이, 참외, 수박, 호박 따위를 심은 밭을 지키기 위하여 밭머리에 지은 막.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=465222",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-으름장",
+      "answer": "으름장",
+      "definition": "말과 행동으로 위협하는 짓.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=259435",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-잠자리",
+      "answer": "잠자리",
+      "definition": "잠을 자기 위해 사용하는 이부자리나 침대보 따위를 통틀어 이르는 말.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=476408",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-장난감",
+      "answer": "장난감",
+      "definition": "아이들이 가지고 노는 여러 가지 물건.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=276244",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-조각배",
+      "answer": "조각배",
+      "definition": "작은 배.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=482028",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-종달새",
+      "answer": "종달새",
+      "definition": "종다릿과의 새. 몸은 참새보다 조금 크며 붉은 갈색이고 검은색 가로무늬가 있다. 뒷머리의 깃은 길어서 뿔처럼 보인다. 봄에 공중으로 높이 날아오르면서 잘 울며 한국, 일본, 중국 등지에 분포한다.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=302892",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-주머니",
+      "answer": "주머니",
+      "definition": "자질구레한 물품 따위를 넣어 허리에 차거나 들고 다니도록 만든 물건. 천이나 가죽 따위로 만든다.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=309225",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-책갈피",
+      "answer": "책갈피",
+      "definition": "책장과 책장의 사이.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=320037",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
     }
   ]
 }
