@@ -3045,6 +3045,106 @@
       "choices": [],
       "accepted": [],
       "level": "normal"
+    },
+    {
+      "id": "cho-돋보기",
+      "answer": "돋보기",
+      "definition": "작은 것을 크게 보이도록 알의 배를 볼록하게 만든 안경. 흔히 노인들이 쓴다.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=86722",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-들기름",
+      "answer": "들기름",
+      "definition": "들깨로 짠 기름. 등잔에 쓰는 것과 물건을 겯는 데에 쓰는 것은 볶지 않고 짜며, 먹는 데에 쓰는 것은 볶아서 짠다.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=417248",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-마파람",
+      "answer": "마파람",
+      "definition": "뱃사람들의 은어로, ‘남풍’을 이르는 말.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=417210",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-맞장구",
+      "answer": "맞장구",
+      "definition": "남의 말에 덩달아 호응하거나 동의하는 일.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=113331",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-바느질",
+      "answer": "바느질",
+      "definition": "바늘에 실을 꿰어 옷 따위를 짓거나 꿰매는 일.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=129908",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-발자취",
+      "answer": "발자취",
+      "definition": "발로 밟고 지나갈 때 남는 흔적. 또는 그때 나는 소리.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=134694",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-부뚜막",
+      "answer": "부뚜막",
+      "definition": "아궁이 위에 솥을 걸어 놓는 언저리. 흙과 돌을 섞어 쌓아 편평하게 만든다.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=155960",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-붕어빵",
+      "answer": "붕어빵",
+      "definition": "붕어 모양의 틀에 묽은 밀가루 반죽과 팥소를 넣어 만든 풀빵.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=156922",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-빈대떡",
+      "answer": "빈대떡",
+      "definition": "전(煎)의 하나. 녹두를 물에 불려 껍질을 벗긴 후 맷돌에 갈아 나물, 쇠고기나 돼지고기 따위를 넣고 번철이나 프라이팬 따위에 부쳐 만든다.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=162657",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-산마루",
+      "answer": "산마루",
+      "definition": "산등성이의 가장 높은 곳.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=166397",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
     }
   ]
 }

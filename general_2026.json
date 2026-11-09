@@ -4050,6 +4050,42 @@
       "rule": "",
       "note": "",
       "level": "normal"
+    },
+    {
+      "id": "gen-def-기사회생",
+      "kind": "definition",
+      "question": "다음 뜻풀이에 해당하는 낱말은?",
+      "prompt": "거의 죽을 뻔하다가 도로 살아남.",
+      "answer": "기사회생",
+      "choices": [
+        "개구쟁이",
+        "고진감래",
+        "기사회생",
+        "일취월장"
+      ],
+      "definition": "거의 죽을 뻔하다가 도로 살아남.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=49476",
+      "rule": "",
+      "note": "",
+      "level": "normal"
+    },
+    {
+      "id": "gen-def-노심초사",
+      "kind": "definition",
+      "question": "다음 뜻풀이에 해당하는 낱말은?",
+      "prompt": "몹시 마음을 쓰며 애를 태움.",
+      "answer": "노심초사",
+      "choices": [
+        "노심초사",
+        "명실상부",
+        "우두머리",
+        "일취월장"
+      ],
+      "definition": "몹시 마음을 쓰며 애를 태움.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=408545",
+      "rule": "",
+      "note": "",
+      "level": "normal"
     }
   ]
 }
