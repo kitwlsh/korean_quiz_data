@@ -4086,6 +4086,42 @@
       "rule": "",
       "note": "",
       "level": "normal"
+    },
+    {
+      "id": "gen-def-동문서답",
+      "kind": "definition",
+      "question": "다음 뜻풀이에 해당하는 낱말은?",
+      "prompt": "물음과는 전혀 상관없는 엉뚱한 대답.",
+      "answer": "동문서답",
+      "choices": [
+        "고이고이",
+        "구사일생",
+        "너털웃음",
+        "동문서답"
+      ],
+      "definition": "물음과는 전혀 상관없는 엉뚱한 대답.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=89364",
+      "rule": "",
+      "note": "",
+      "level": "normal"
+    },
+    {
+      "id": "gen-def-마이동풍",
+      "kind": "definition",
+      "question": "다음 뜻풀이에 해당하는 낱말은?",
+      "prompt": "동풍이 말의 귀를 스쳐 간다는 뜻으로, 남의 말을 귀담아듣지 아니하고 지나쳐 흘려버림을 이르는 말.",
+      "answer": "마이동풍",
+      "choices": [
+        "과유불급",
+        "마이동풍",
+        "산전수전",
+        "이구동성"
+      ],
+      "definition": "동풍이 말의 귀를 스쳐 간다는 뜻으로, 남의 말을 귀담아듣지 아니하고 지나쳐 흘려버림을 이르는 말.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=422770",
+      "rule": "",
+      "note": "",
+      "level": "normal"
     }
   ]
 }

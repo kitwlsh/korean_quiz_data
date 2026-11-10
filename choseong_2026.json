@@ -3145,6 +3145,106 @@
       "choices": [],
       "accepted": [],
       "level": "normal"
+    },
+    {
+      "id": "cho-새우잠",
+      "answer": "새우잠",
+      "definition": "새우처럼 등을 구부리고 자는 잠. 주로 모로 누워 불편하게 자는 잠을 의미한다.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=443337",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-소쿠리",
+      "answer": "소쿠리",
+      "definition": "대나 싸리로 엮어 테가 있게 만든 그릇.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=191585",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-솜사탕",
+      "answer": "솜사탕",
+      "definition": "솜 모양으로 만든 사탕의 하나. 설탕을 불에 녹인 후 빙빙 돌아가는 기계의 작은 구멍으로 밀어 내면 바깥 공기에 닿아서 섬유 모양으로 굳어지는데, 이것을 막대기에 감아 솜 모양으로 만든다.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=195331",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-시냇물",
+      "answer": "시냇물",
+      "definition": "시내에서 흐르는 물.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=451822",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-실랑이",
+      "answer": "실랑이",
+      "definition": "이러니저러니, 옳으니 그르니 하며 남을 못살게 굴거나 괴롭히는 일.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=208152",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-쌍둥이",
+      "answer": "쌍둥이",
+      "definition": "한 어머니에게서 한꺼번에 태어난 두 아이.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=455619",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-안간힘",
+      "answer": "안간힘",
+      "definition": "어떤 일을 이루기 위해서 몹시 애쓰는 힘.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=452555",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-얼음장",
+      "answer": "얼음장",
+      "definition": "좀 넓은 얼음 조각.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=227049",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-여우비",
+      "answer": "여우비",
+      "definition": "볕이 나 있는 날 잠깐 오다가 그치는 비.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=233705",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-우스개",
+      "answer": "우스개",
+      "definition": "남을 웃기려고 익살을 부리면서 하는 말이나 짓.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=470655",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
     }
   ]
 }
