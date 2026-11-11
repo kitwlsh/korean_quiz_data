@@ -4122,6 +4122,42 @@
       "rule": "",
       "note": "",
       "level": "normal"
+    },
+    {
+      "id": "gen-def-무용지물",
+      "kind": "definition",
+      "question": "다음 뜻풀이에 해당하는 낱말은?",
+      "prompt": "쓸모없는 물건이나 사람.",
+      "answer": "무용지물",
+      "choices": [
+        "무용지물",
+        "보금자리",
+        "싱글벙글",
+        "어깨너머"
+      ],
+      "definition": "쓸모없는 물건이나 사람.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=423583",
+      "rule": "",
+      "note": "",
+      "level": "normal"
+    },
+    {
+      "id": "gen-def-박장대소",
+      "kind": "definition",
+      "question": "다음 뜻풀이에 해당하는 낱말은?",
+      "prompt": "손뼉을 치며 크게 웃음.",
+      "answer": "박장대소",
+      "choices": [
+        "권선징악",
+        "마이동풍",
+        "박장대소",
+        "우두머리"
+      ],
+      "definition": "손뼉을 치며 크게 웃음.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=137241",
+      "rule": "",
+      "note": "",
+      "level": "normal"
     }
   ]
 }

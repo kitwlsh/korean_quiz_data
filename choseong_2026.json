@@ -3245,6 +3245,106 @@
       "choices": [],
       "accepted": [],
       "level": "normal"
+    },
+    {
+      "id": "cho-은하수",
+      "answer": "은하수",
+      "definition": "‘은하’를 강(江)에 비유하여 일상적으로 이르는 말.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=257123",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-이웃집",
+      "answer": "이웃집",
+      "definition": "가까이 있거나 접하여 있는 집.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=264328",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-입버릇",
+      "answer": "입버릇",
+      "definition": "입에 배어 굳은 말버릇.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=272247",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-자갈길",
+      "answer": "자갈길",
+      "definition": "자갈이 깔려 있는 길.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=275441",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-자장가",
+      "answer": "자장가",
+      "definition": "어린아이를 재우기 위하여 부르는 노래.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=471211",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-장대비",
+      "answer": "장대비",
+      "definition": "빗줄기가 굵고 거세게 좍좍 내리는 비.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=475414",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-주춧돌",
+      "answer": "주춧돌",
+      "definition": "기둥 밑에 기초로 받쳐 놓은 돌.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=482890",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-지름길",
+      "answer": "지름길",
+      "definition": "멀리 돌지 않고 가깝게 질러 통하는 길.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=485728",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-철부지",
+      "answer": "철부지",
+      "definition": "철없는 어린아이.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=319581",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-큰소리",
+      "answer": "큰소리",
+      "definition": "목청을 돋워 가며 야단치는 소리.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=496819",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
     }
   ]
 }
