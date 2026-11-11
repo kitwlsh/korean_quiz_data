@@ -29,7 +29,10 @@ if hasattr(sys.stdout, 'reconfigure'):
 
 SEARCH = 'https://stdict.korean.go.kr/api/search.do'
 VIEW = 'https://stdict.korean.go.kr/api/view.do'
-WORD_URL = 'https://stdict.korean.go.kr/search/searchView.do?word_no=%s'
+# 🔴 `&searchKeywordTo=3`이 꼭 있어야 한다 — 2026-11 확인: `word_no`만 주면 사전 사이트가
+#    「시스템 오류가 발생하였습니다」 페이지를 돌려준다(앱 「사전에서 더 보기」가 전부 깨졌다).
+#    사전 사이트가 자기 검색 결과에서 쓰는 형식 그대로다. 앱(AppLink)도 같은 보정을 한다.
+WORD_URL = 'https://stdict.korean.go.kr/search/searchView.do?word_no=%s&searchKeywordTo=3'
 
 # 🔑 하루 쿼터는 50,000건이다(KDalin/doc/06 §2-5-2). 로봇 한 번에 수백 건이면 충분히 여유롭지만,
 #    연달아 때리면 서버가 막는다 — 호출 사이에 잠깐 쉰다.
