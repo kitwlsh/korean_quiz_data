@@ -69,9 +69,25 @@ jobs:
 
     # 데이터가 불량이면 절대 푸시하지 않는다. 그 외에는 (로봇이 실패했더라도)
     # 생존 신호만이라도 커밋한다 — 아래 「왜 매일 커밋하나」 참고.
+    # 🔴 2026-11-11: push 재시도 추가. 10-27 실행이 여기서 실패해 **그날 퀴즈 5문항·지문 1편이 사라졌다**
+    #    (같은 저장소의 다른 로봇 — K달인 · K줄달음 — 이 먼저 push하면 «뒤처졌다»로 거절된다).
+    #    다른 로봇들은 각자 자기 파일만 쓰므로(dalin/choseong/general · runner) rebase에 충돌이 없다.
+    #    continue-on-error + id: push → 실패해도 아래 «이슈로 알리기»가 돌게 한다(전에는 건너뛰어졌다).
     - name: 새로 만든 문제 깃허브 메모장에 저장(Commit & Push)하기
+      id: push
+      continue-on-error: true
       if: steps.validate.outcome == 'success'
       run: |
+        # 다른 로봇이 먼저 push했으면 그 위에 얹고 다시 민다(최대 3번).
+        push_with_retry() {
+          for i in 1 2 3; do
+            git pull --rebase --autostash && git push && return 0
+            echo "push 실패($i/3) — 10초 뒤 다시"
+            sleep 10
+          done
+          return 1
+        }
+
         git config --global user.name "Quiz Robot"
         git config --global user.email "robot@example.com"
 
@@ -88,7 +104,7 @@ jobs:
           echo "커밋할 변경이 없습니다."
         elif [ "$DATA_CHANGED" = "1" ]; then
           git commit -m "🤖 자동 업데이트 완료 (퀴즈·읽기 지문)"
-          git push
+          push_with_retry
         else
           # 왜 매일 커밋하나:
           # GitHub은 60일간 활동이 없는 저장소의 예약 워크플로를 자동으로 끈다.
@@ -96,20 +112,20 @@ jobs:
           # 지나면 스케줄 자체가 꺼져 사람이 되살릴 때까지 영구 정지한다.
           # 생존 신호(last_run.json)를 매일 갱신·커밋해 그 침묵사를 막는다.
           git commit -m "🫀 생존 신호 갱신 (새 문제 없음)"
-          git push
+          push_with_retry
         fi
 
     # 조용히 죽지 않게 한다. 이 로봇이 만드는 문제를 앱의 「오늘의 퀴즈」가 쓰기 때문에,
     # 며칠씩 실패를 모르고 지나가면 사용자에게는 앱이 멈춘 것처럼 보인다.
     # 같은 문제로 이슈가 쌓이지 않도록, 열려 있는 이슈가 있으면 댓글만 단다.
     - name: 실패하면 이슈로 알리기
-      if: steps.robot.outcome != 'success' || steps.passages.outcome != 'success' || steps.validate.outcome != 'success'
+      if: always() && (steps.robot.outcome != 'success' || steps.passages.outcome != 'success' || steps.validate.outcome != 'success' || steps.push.outcome == 'failure')
       env:
         GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
         TITLE="🚨 퀴즈 자동 업데이트 로봇 실패"
         RUN_URL="${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID}"
-        DETAIL="퀴즈 단계: ${{ steps.robot.outcome }} / 지문 단계: ${{ steps.passages.outcome }} / 검사 단계: ${{ steps.validate.outcome }}"
+        DETAIL="퀴즈 단계: ${{ steps.robot.outcome }} / 지문 단계: ${{ steps.passages.outcome }} / 검사 단계: ${{ steps.validate.outcome }} / 저장(push) 단계: ${{ steps.push.outcome }}"
         HEARTBEAT="$(cat last_run.json 2>/dev/null || echo '(생존 신호 파일 없음)')"
 
         {
@@ -132,6 +148,7 @@ jobs:
           echo "2. API 키 할당량·유효성(\`GEMINI_API_KEY\`)."
           echo "3. 데이터 검사 실패라면 \`validate.py\` 출력에 어떤 문항이 문제인지 나옵니다."
           echo "4. 지문 단계만 실패했다면 \`last_run.json\`의 \`passages\` 블록에 사유가 있습니다(퀴즈는 정상)."
+          echo "5. 저장(push) 단계만 실패했다면 만든 문제·지문이 **저장되지 않았습니다** — 실행 기록에서 push 오류를 보고, 필요하면 수동 실행(workflow_dispatch)으로 다시 돌립니다."
         } > issue_body.md
 
         EXISTING=$(gh issue list --state open --limit 1 --search "in:title 퀴즈 자동 업데이트 로봇 실패" --json number --jq '.[0].number // empty')
@@ -146,7 +163,7 @@ jobs:
     # 위에서 continue-on-error로 넘겼으므로, 실제 실패를 여기서 다시 세운다.
     # (Actions 목록에서 초록불로 보이면 실패를 영영 눈치채지 못한다)
     - name: 실패했으면 이 실행을 실패로 표시
-      if: steps.robot.outcome != 'success' || steps.passages.outcome != 'success' || steps.validate.outcome != 'success'
+      if: always() && (steps.robot.outcome != 'success' || steps.passages.outcome != 'success' || steps.validate.outcome != 'success' || steps.push.outcome == 'failure')
       run: |
-        echo "퀴즈 단계: ${{ steps.robot.outcome }} / 지문 단계: ${{ steps.passages.outcome }} / 검사 단계: ${{ steps.validate.outcome }}"
+        echo "퀴즈 단계: ${{ steps.robot.outcome }} / 지문 단계: ${{ steps.passages.outcome }} / 검사 단계: ${{ steps.validate.outcome }} / 저장 단계: ${{ steps.push.outcome }}"
         exit 1
