@@ -3345,6 +3345,106 @@
       "choices": [],
       "accepted": [],
       "level": "normal"
+    },
+    {
+      "id": "cho-피붙이",
+      "answer": "피붙이",
+      "definition": "혈육으로 볼 때 가까운 사람. 보통 부모와 자식의 관계에서 쓴다.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=501319&searchKeywordTo=3",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-하소연",
+      "answer": "하소연",
+      "definition": "억울한 일이나 잘못된 일, 딱한 사정 따위를 말함.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=503401&searchKeywordTo=3",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-한가위",
+      "answer": "한가위",
+      "definition": "우리나라 명절의 하나. 음력 팔월 보름날이다. 신라의 가배(嘉俳)에서 유래하였다고 하며, 햅쌀로 송편을 빚고 햇과일 따위의 음식을 장만하여 차례를 지낸다.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=363294&searchKeywordTo=3",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-헛기침",
+      "answer": "헛기침",
+      "definition": "인기척을 내거나 목청을 가다듬거나 하기 위하여 일부러 기침함. 또는 그렇게 하는 기침.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=503752&searchKeywordTo=3",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-호들갑",
+      "answer": "호들갑",
+      "definition": "경망스럽고 야단스러운 말이나 행동.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=505184&searchKeywordTo=3",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-흰머리",
+      "answer": "흰머리",
+      "definition": "하얗게 센 머리카락.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=389246&searchKeywordTo=3",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-가시밭",
+      "answer": "가시밭",
+      "definition": "가시덤불이 우거져 있는 곳.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=2347&searchKeywordTo=3",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-꽃가루",
+      "answer": "꽃가루",
+      "definition": "종자식물의 수술의 화분낭 속에 들어 있는 꽃의 가루. 바람, 물, 곤충 따위를 매개로 암술머리에 운반된다.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=55403&searchKeywordTo=3",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-뒤꿈치",
+      "answer": "뒤꿈치",
+      "definition": "발의 뒤쪽 발바닥과 발목 사이의 불룩한 부분.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=91487&searchKeywordTo=3",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-눈망울",
+      "answer": "눈망울",
+      "definition": "눈알 앞쪽의 도톰한 곳. 또는 눈동자가 있는 곳.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=70233&searchKeywordTo=3",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
     }
   ]
 }

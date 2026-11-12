@@ -4158,6 +4158,42 @@
       "rule": "",
       "note": "",
       "level": "normal"
+    },
+    {
+      "id": "gen-def-배은망덕",
+      "kind": "definition",
+      "question": "다음 뜻풀이에 해당하는 낱말은?",
+      "prompt": "남에게 입은 은덕을 저버리고 배신하는 태도가 있음.",
+      "answer": "배은망덕",
+      "choices": [
+        "과유불급",
+        "금상첨화",
+        "배은망덕",
+        "자린고비"
+      ],
+      "definition": "남에게 입은 은덕을 저버리고 배신하는 태도가 있음.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=137368&searchKeywordTo=3",
+      "rule": "",
+      "note": "",
+      "level": "normal"
+    },
+    {
+      "id": "gen-def-사필귀정",
+      "kind": "definition",
+      "question": "다음 뜻풀이에 해당하는 낱말은?",
+      "prompt": "모든 일은 반드시 바른길로 돌아감.",
+      "answer": "사필귀정",
+      "choices": [
+        "각골난망",
+        "동고동락",
+        "사필귀정",
+        "새옹지마"
+      ],
+      "definition": "모든 일은 반드시 바른길로 돌아감.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=166963&searchKeywordTo=3",
+      "rule": "",
+      "note": "",
+      "level": "normal"
     }
   ]
 }
