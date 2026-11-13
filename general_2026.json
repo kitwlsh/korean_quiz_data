@@ -4194,6 +4194,42 @@
       "rule": "",
       "note": "",
       "level": "normal"
+    },
+    {
+      "id": "gen-def-산전수전",
+      "kind": "definition",
+      "question": "다음 뜻풀이에 해당하는 낱말은?",
+      "prompt": "산에서도 싸우고 물에서도 싸웠다는 뜻으로, 세상의 온갖 고생과 어려움을 다 겪었음을 이르는 말.",
+      "answer": "산전수전",
+      "choices": [
+        "대기만성",
+        "산전수전",
+        "이심전심",
+        "조삼모사"
+      ],
+      "definition": "산에서도 싸우고 물에서도 싸웠다는 뜻으로, 세상의 온갖 고생과 어려움을 다 겪었음을 이르는 말.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=172312&searchKeywordTo=3",
+      "rule": "",
+      "note": "",
+      "level": "normal"
+    },
+    {
+      "id": "gen-def-십시일반",
+      "kind": "definition",
+      "question": "다음 뜻풀이에 해당하는 낱말은?",
+      "prompt": "밥 열 술이 한 그릇이 된다는 뜻으로, 여러 사람이 조금씩 힘을 합하면 한 사람을 돕기 쉬움을 이르는 말.",
+      "answer": "십시일반",
+      "choices": [
+        "과유불급",
+        "보금자리",
+        "십시일반",
+        "작심삼일"
+      ],
+      "definition": "밥 열 술이 한 그릇이 된다는 뜻으로, 여러 사람이 조금씩 힘을 합하면 한 사람을 돕기 쉬움을 이르는 말.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=208041&searchKeywordTo=3",
+      "rule": "",
+      "note": "",
+      "level": "normal"
     }
   ]
 }

@@ -3445,6 +3445,76 @@
       "choices": [],
       "accepted": [],
       "level": "normal"
+    },
+    {
+      "id": "cho-메밀묵",
+      "answer": "메밀묵",
+      "definition": "껍질을 벗긴 메밀을 갈아서 앙금을 앉혀 그것으로 쑤어 만든 묵.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=421679&searchKeywordTo=3",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-바람결",
+      "answer": "바람결",
+      "definition": "일정한 방향으로 부는 바람의 움직임.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=428449&searchKeywordTo=3",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-산울림",
+      "answer": "산울림",
+      "definition": "땅속의 변화로 산이 울리는 일. 또는 그런 소리.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=440153&searchKeywordTo=3",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-손바닥",
+      "answer": "손바닥",
+      "definition": "손의 안쪽. 곧 손금이 새겨진 쪽.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=447735&searchKeywordTo=3",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-장맛비",
+      "answer": "장맛비",
+      "definition": "장마 때에 오는 비.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=278087&searchKeywordTo=3",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-첫사랑",
+      "answer": "첫사랑",
+      "definition": "처음으로 느끼거나 맺은 사랑.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=321546&searchKeywordTo=3",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
+    },
+    {
+      "id": "cho-콧노래",
+      "answer": "콧노래",
+      "definition": "입을 다문 채 코로 소리를 내어 부르는 노래.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=491952&searchKeywordTo=3",
+      "pos": "명사",
+      "choices": [],
+      "accepted": [],
+      "level": "normal"
     }
   ]
 }
