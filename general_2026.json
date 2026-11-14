@@ -4230,6 +4230,42 @@
       "rule": "",
       "note": "",
       "level": "normal"
+    },
+    {
+      "id": "gen-def-역지사지",
+      "kind": "definition",
+      "question": "다음 뜻풀이에 해당하는 낱말은?",
+      "prompt": "처지를 바꾸어서 생각하여 봄.",
+      "answer": "역지사지",
+      "choices": [
+        "각골난망",
+        "막상막하",
+        "설상가상",
+        "역지사지"
+      ],
+      "definition": "처지를 바꾸어서 생각하여 봄.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=231313&searchKeywordTo=3",
+      "rule": "",
+      "note": "",
+      "level": "normal"
+    },
+    {
+      "id": "gen-def-온고지신",
+      "kind": "definition",
+      "question": "다음 뜻풀이에 해당하는 낱말은?",
+      "prompt": "옛것을 익히고 그것을 미루어서 새것을 앎. ≪논어≫의 <위정편(爲政篇)>에 나오는 공자의 말이다.",
+      "answer": "온고지신",
+      "choices": [
+        "박장대소",
+        "온고지신",
+        "절치부심",
+        "징검다리"
+      ],
+      "definition": "옛것을 익히고 그것을 미루어서 새것을 앎. ≪논어≫의 <위정편(爲政篇)>에 나오는 공자의 말이다.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=240412&searchKeywordTo=3",
+      "rule": "",
+      "note": "",
+      "level": "normal"
     }
   ]
 }
