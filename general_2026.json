@@ -4266,6 +4266,42 @@
       "rule": "",
       "note": "",
       "level": "normal"
+    },
+    {
+      "id": "gen-def-용두사미",
+      "kind": "definition",
+      "question": "다음 뜻풀이에 해당하는 낱말은?",
+      "prompt": "용의 머리와 뱀의 꼬리라는 뜻으로, 처음은 왕성하나 끝이 부진한 현상을 이르는 말.",
+      "answer": "용두사미",
+      "choices": [
+        "새침데기",
+        "설상가상",
+        "용두사미",
+        "일취월장"
+      ],
+      "definition": "용의 머리와 뱀의 꼬리라는 뜻으로, 처음은 왕성하나 끝이 부진한 현상을 이르는 말.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=464940&searchKeywordTo=3",
+      "rule": "",
+      "note": "",
+      "level": "normal"
+    },
+    {
+      "id": "gen-def-우왕좌왕",
+      "kind": "definition",
+      "question": "다음 뜻풀이에 해당하는 낱말은?",
+      "prompt": "이리저리 왔다 갔다 하며 일이나 나아가는 방향을 종잡지 못함.",
+      "answer": "우왕좌왕",
+      "choices": [
+        "보릿고개",
+        "우왕좌왕",
+        "작심삼일",
+        "풍전등화"
+      ],
+      "definition": "이리저리 왔다 갔다 하며 일이나 나아가는 방향을 종잡지 못함.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=464685&searchKeywordTo=3",
+      "rule": "",
+      "note": "",
+      "level": "normal"
     }
   ]
 }
