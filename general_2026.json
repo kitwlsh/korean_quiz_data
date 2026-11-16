@@ -4302,6 +4302,42 @@
       "rule": "",
       "note": "",
       "level": "normal"
+    },
+    {
+      "id": "gen-def-이구동성",
+      "kind": "definition",
+      "question": "다음 뜻풀이에 해당하는 낱말은?",
+      "prompt": "입은 다르나 목소리는 같다는 뜻으로, 여러 사람의 말이 한결같음을 이르는 말.",
+      "answer": "이구동성",
+      "choices": [
+        "고슴도치",
+        "용두사미",
+        "이구동성",
+        "이부자리"
+      ],
+      "definition": "입은 다르나 목소리는 같다는 뜻으로, 여러 사람의 말이 한결같음을 이르는 말.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=469668&searchKeywordTo=3",
+      "rule": "",
+      "note": "",
+      "level": "normal"
+    },
+    {
+      "id": "gen-def-자업자득",
+      "kind": "definition",
+      "question": "다음 뜻풀이에 해당하는 낱말은?",
+      "prompt": "자기가 저지른 일의 결과를 자기가 받음.",
+      "answer": "자업자득",
+      "choices": [
+        "자업자득",
+        "작심삼일",
+        "조삼모사",
+        "풍전등화"
+      ],
+      "definition": "자기가 저지른 일의 결과를 자기가 받음.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=472063&searchKeywordTo=3",
+      "rule": "",
+      "note": "",
+      "level": "normal"
     }
   ]
 }
