@@ -4338,6 +4338,42 @@
       "rule": "",
       "note": "",
       "level": "normal"
+    },
+    {
+      "id": "gen-def-작심삼일",
+      "kind": "definition",
+      "question": "다음 뜻풀이에 해당하는 낱말은?",
+      "prompt": "단단히 먹은 마음이 사흘을 가지 못한다는 뜻으로, 결심이 굳지 못함을 이르는 말.",
+      "answer": "작심삼일",
+      "choices": [
+        "가만가만",
+        "감언이설",
+        "산들바람",
+        "작심삼일"
+      ],
+      "definition": "단단히 먹은 마음이 사흘을 가지 못한다는 뜻으로, 결심이 굳지 못함을 이르는 말.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=277639&searchKeywordTo=3",
+      "rule": "",
+      "note": "",
+      "level": "normal"
+    },
+    {
+      "id": "gen-def-적반하장",
+      "kind": "definition",
+      "question": "다음 뜻풀이에 해당하는 낱말은?",
+      "prompt": "도둑이 도리어 매를 든다는 뜻으로, 잘못한 사람이 아무 잘못도 없는 사람을 나무람을 이르는 말.",
+      "answer": "적반하장",
+      "choices": [
+        "금상첨화",
+        "산들바람",
+        "어부지리",
+        "적반하장"
+      ],
+      "definition": "도둑이 도리어 매를 든다는 뜻으로, 잘못한 사람이 아무 잘못도 없는 사람을 나무람을 이르는 말.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=473798&searchKeywordTo=3",
+      "rule": "",
+      "note": "",
+      "level": "normal"
     }
   ]
 }
