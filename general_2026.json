@@ -4374,6 +4374,42 @@
       "rule": "",
       "note": "",
       "level": "normal"
+    },
+    {
+      "id": "gen-def-죽마고우",
+      "kind": "definition",
+      "question": "다음 뜻풀이에 해당하는 낱말은?",
+      "prompt": "대말을 타고 놀던 벗이라는 뜻으로, 어릴 때부터 같이 놀며 자란 벗.",
+      "answer": "죽마고우",
+      "choices": [
+        "반짇고리",
+        "아지랑이",
+        "죽마고우",
+        "진눈깨비"
+      ],
+      "definition": "대말을 타고 놀던 벗이라는 뜻으로, 어릴 때부터 같이 놀며 자란 벗.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=304175&searchKeywordTo=3",
+      "rule": "",
+      "note": "",
+      "level": "normal"
+    },
+    {
+      "id": "gen-def-함흥차사",
+      "kind": "definition",
+      "question": "다음 뜻풀이에 해당하는 낱말은?",
+      "prompt": "심부름을 가서 오지 아니하거나 늦게 온 사람을 이르는 말. 조선 태조 이성계가 왕위를 물려주고 함흥에 있을 때에, 태종이 보낸 차사를 혹은 죽이고 혹은 잡아 가두어 돌려보내지 아니하였던 데서 유래한다.",
+      "answer": "함흥차사",
+      "choices": [
+        "마이동풍",
+        "산들바람",
+        "자업자득",
+        "함흥차사"
+      ],
+      "definition": "심부름을 가서 오지 아니하거나 늦게 온 사람을 이르는 말. 조선 태조 이성계가 왕위를 물려주고 함흥에 있을 때에, 태종이 보낸 차사를 혹은 죽이고 혹은 잡아 가두어 돌려보내지 아니하였던 데서 유래한다.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=502562&searchKeywordTo=3",
+      "rule": "",
+      "note": "",
+      "level": "normal"
     }
   ]
 }
