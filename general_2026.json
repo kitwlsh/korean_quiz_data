@@ -4410,6 +4410,24 @@
       "rule": "",
       "note": "",
       "level": "normal"
+    },
+    {
+      "id": "gen-def-가을밤",
+      "kind": "definition",
+      "question": "다음 뜻풀이에 해당하는 낱말은?",
+      "prompt": "가을철의 밤.",
+      "answer": "가을밤",
+      "choices": [
+        "가을밤",
+        "민들레",
+        "실마리",
+        "하룻밤"
+      ],
+      "definition": "가을철의 밤.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=3019&searchKeywordTo=3",
+      "rule": "",
+      "note": "",
+      "level": "normal"
     }
   ]
 }
