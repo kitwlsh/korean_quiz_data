@@ -4428,6 +4428,24 @@
       "rule": "",
       "note": "",
       "level": "normal"
+    },
+    {
+      "id": "gen-def-여름날",
+      "kind": "definition",
+      "question": "다음 뜻풀이에 해당하는 낱말은?",
+      "prompt": "여름철의 날. 또는 그날의 날씨.",
+      "answer": "여름날",
+      "choices": [
+        "민들레",
+        "여름날",
+        "울타리",
+        "하룻밤"
+      ],
+      "definition": "여름철의 날. 또는 그날의 날씨.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=459126&searchKeywordTo=3",
+      "rule": "",
+      "note": "",
+      "level": "normal"
     }
   ]
 }
