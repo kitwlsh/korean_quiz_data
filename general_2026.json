@@ -4446,6 +4446,24 @@
       "rule": "",
       "note": "",
       "level": "normal"
+    },
+    {
+      "id": "gen-def-가마솥",
+      "kind": "definition",
+      "question": "다음 뜻풀이에 해당하는 낱말은?",
+      "prompt": "아주 크고 우묵한 솥.",
+      "answer": "가마솥",
+      "choices": [
+        "가마솥",
+        "가시밭",
+        "소나기",
+        "실랑이"
+      ],
+      "definition": "아주 크고 우묵한 솥.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=385933&searchKeywordTo=3",
+      "rule": "",
+      "note": "",
+      "level": "normal"
     }
   ]
 }
