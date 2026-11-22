@@ -4464,6 +4464,24 @@
       "rule": "",
       "note": "",
       "level": "normal"
+    },
+    {
+      "id": "gen-def-강아지",
+      "kind": "definition",
+      "question": "다음 뜻풀이에 해당하는 낱말은?",
+      "prompt": "개의 새끼.",
+      "answer": "강아지",
+      "choices": [
+        "강아지",
+        "나들이",
+        "눈망울",
+        "장난감"
+      ],
+      "definition": "개의 새끼.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=388677&searchKeywordTo=3",
+      "rule": "",
+      "note": "",
+      "level": "normal"
     }
   ]
 }
