@@ -4482,6 +4482,24 @@
       "rule": "",
       "note": "",
       "level": "normal"
+    },
+    {
+      "id": "gen-def-거미줄",
+      "kind": "definition",
+      "question": "다음 뜻풀이에 해당하는 낱말은?",
+      "prompt": "거미가 뽑아낸 줄. 또는 그 줄로 된 그물.",
+      "answer": "거미줄",
+      "choices": [
+        "거미줄",
+        "그림자",
+        "손바닥",
+        "엿가락"
+      ],
+      "definition": "거미가 뽑아낸 줄. 또는 그 줄로 된 그물.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=392634&searchKeywordTo=3",
+      "rule": "",
+      "note": "",
+      "level": "normal"
     }
   ]
 }
