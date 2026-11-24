@@ -4500,6 +4500,24 @@
       "rule": "",
       "note": "",
       "level": "normal"
+    },
+    {
+      "id": "gen-def-고무줄",
+      "kind": "definition",
+      "question": "다음 뜻풀이에 해당하는 낱말은?",
+      "prompt": "고무로 만들어 신축성이 좋은 줄.",
+      "answer": "고무줄",
+      "choices": [
+        "고무줄",
+        "까치발",
+        "애벌레",
+        "이야기"
+      ],
+      "definition": "고무로 만들어 신축성이 좋은 줄.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=399365&searchKeywordTo=3",
+      "rule": "",
+      "note": "",
+      "level": "normal"
     }
   ]
 }
