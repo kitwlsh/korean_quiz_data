@@ -4518,6 +4518,24 @@
       "rule": "",
       "note": "",
       "level": "normal"
+    },
+    {
+      "id": "gen-def-골짜기",
+      "kind": "definition",
+      "question": "다음 뜻풀이에 해당하는 낱말은?",
+      "prompt": "산과 산 사이에 움푹 패어 들어간 곳.",
+      "answer": "골짜기",
+      "choices": [
+        "골짜기",
+        "나그네",
+        "은하수",
+        "호랑이"
+      ],
+      "definition": "산과 산 사이에 움푹 패어 들어간 곳.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=391656&searchKeywordTo=3",
+      "rule": "",
+      "note": "",
+      "level": "normal"
     }
   ]
 }
