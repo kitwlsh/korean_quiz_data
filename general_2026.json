@@ -4536,6 +4536,24 @@
       "rule": "",
       "note": "",
       "level": "normal"
+    },
+    {
+      "id": "gen-def-구두쇠",
+      "kind": "definition",
+      "question": "다음 뜻풀이에 해당하는 낱말은?",
+      "prompt": "돈이나 재물 따위를 쓰는 데에 몹시 인색한 사람.",
+      "answer": "구두쇠",
+      "choices": [
+        "구두쇠",
+        "까치발",
+        "버선발",
+        "손사래"
+      ],
+      "definition": "돈이나 재물 따위를 쓰는 데에 몹시 인색한 사람.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=402808&searchKeywordTo=3",
+      "rule": "",
+      "note": "",
+      "level": "normal"
     }
   ]
 }
