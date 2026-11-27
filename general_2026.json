@@ -4554,6 +4554,24 @@
       "rule": "",
       "note": "",
       "level": "normal"
+    },
+    {
+      "id": "gen-def-굼벵이",
+      "kind": "definition",
+      "question": "다음 뜻풀이에 해당하는 낱말은?",
+      "prompt": "매미의 애벌레나 꽃무지, 풍뎅이와 같은 딱정벌레목의 애벌레. 주로 땅속에 살며, 몸통이 굵고 다리가 짧아 동작이 느리다.",
+      "answer": "굼벵이",
+      "choices": [
+        "가마솥",
+        "굼벵이",
+        "발자국",
+        "잔소리"
+      ],
+      "definition": "매미의 애벌레나 꽃무지, 풍뎅이와 같은 딱정벌레목의 애벌레. 주로 땅속에 살며, 몸통이 굵고 다리가 짧아 동작이 느리다.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=41042&searchKeywordTo=3",
+      "rule": "",
+      "note": "",
+      "level": "normal"
     }
   ]
 }
