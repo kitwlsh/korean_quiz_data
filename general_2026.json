@@ -4572,6 +4572,24 @@
       "rule": "",
       "note": "",
       "level": "normal"
+    },
+    {
+      "id": "gen-def-그림자",
+      "kind": "definition",
+      "question": "다음 뜻풀이에 해당하는 낱말은?",
+      "prompt": "물체가 빛을 가려서 그 물체의 뒷면에 드리워지는 검은 그늘.",
+      "answer": "그림자",
+      "choices": [
+        "그림자",
+        "우스개",
+        "책갈피",
+        "한가위"
+      ],
+      "definition": "물체가 빛을 가려서 그 물체의 뒷면에 드리워지는 검은 그늘.",
+      "link": "https://stdict.korean.go.kr/search/searchView.do?word_no=401104&searchKeywordTo=3",
+      "rule": "",
+      "note": "",
+      "level": "normal"
     }
   ]
 }
